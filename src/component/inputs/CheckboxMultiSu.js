@@ -3,7 +3,7 @@ import React from 'react'
 const checkedClass =
   'ml-n3 px-3 py-2 border border-warning rounded bg-orange text-darkblue'
 const uncheckedClass =
-  'ml-n3 px-3 py-2 border border-warning rounded bg-darkblue text-mywhite'
+  'ml-n3 px-3 py-2 border border-warning rounded bg-darkblue text-orange'
 const handleCilck = id => event => {
   event.target.parentNode.click()
   if (document.querySelector('#' + id).checked) {

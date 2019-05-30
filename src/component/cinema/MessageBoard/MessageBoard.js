@@ -24,7 +24,7 @@ class MessageBoard extends React.Component {
     // 天
     let day = hour / 24 >= 1 ? Math.floor(hour / 24) : ''
     let showTimeText =
-      day > 1
+      day >= 1
         ? day + '天'
         : hour >= 1
         ? hour + '小時'

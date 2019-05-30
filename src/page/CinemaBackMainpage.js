@@ -34,11 +34,11 @@ class CinemaBackMainpage extends React.Component {
       ActivityCard: [], //活動卡用
       MessageBoxData: [],
     }
-    console.log('parent-constructor')
+    // console.log('parent-constructor')
   }
 
   async componentDidMount() {
-    console.log('parent-didmount')
+    // console.log('parent-didmount')
     try {
       //取得戲院sidenav項目
       const response = await fetch('http://localhost:5555/cinemaBackSidenav', {
@@ -274,7 +274,7 @@ class CinemaBackMainpage extends React.Component {
     let isAllChecked = true
     let checkArray = Object.values(checkok)
     isAllChecked = checkArray.reduce((a, b) => a && b)
-    console.log('isAllChecked: ' + isAllChecked)
+    // console.log('isAllChecked: ' + isAllChecked)
     if (isAllChecked) {
       try {
         fetch('http://localhost:5555/cinema/' + cinemaId, {
@@ -313,10 +313,14 @@ class CinemaBackMainpage extends React.Component {
       window.location.href = '/LoginSign'
     } else {
       const pagename = this.props.location.pathname.slice(20)
+      // console.log(pagename)
       return (
         <>
           <Row>
-            <CinemaBackSidenav sidenavItems={this.state.cinemaSidenavItems} />
+            <CinemaBackSidenav
+              sidenavItems={this.state.cinemaSidenavItems}
+              pagename={pagename}
+            />
             <div //右邊內容框，之後要引入內容component
               className="col container-fluid"
               style={{
@@ -438,6 +442,7 @@ class CinemaBackMainpage extends React.Component {
                     </div>
                     <div style={{ width: '100%' }}>
                       <CinemaEditInfo
+                        img={this.state.AvatarOne.img}
                         cinemaEditInputmsg={this.state.cinemaEditInputmsg}
                         thisData={this.state.thisCinemaData}
                         allCinemaData={this.state.allCinemaData}

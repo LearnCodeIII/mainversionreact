@@ -99,7 +99,7 @@ class InputCardContent_CinemaLogin extends React.Component {
             {this.state.inputmsg.map(item => (
               <Row className="my-4">
                 <Col // 這裡是input的col
-                  className="p-0 border border-warning rounded d-flex flex-nowrap align-items-center"
+                  className="p-0 rounded d-flex flex-nowrap align-items-center"
                   style={{ width: `${item.w}` }}
                 >
                   <InputText_Su

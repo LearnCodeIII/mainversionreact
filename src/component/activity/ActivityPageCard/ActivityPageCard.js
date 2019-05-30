@@ -1,10 +1,10 @@
 import React from 'react'
-// import ActivityMap from './ActivityMap'
+import ActivityMap from './ActivityMap'
 
 const ActivityPageCard = props => (
   <>
     <div
-      class="card mb-3"
+      class="activityInfoCard card mb-3"
       style={{
         maxWidth: '1200px',
         height: '400px',
@@ -23,11 +23,11 @@ const ActivityPageCard = props => (
         }}
       >
         <div class="col-md-7">
-          {/* <ActivityMap
+          <ActivityMap
             lat={props.lat}
             lng={props.lng}
             streetView={props.streetView}
-          /> */}
+          />
         </div>
         <div class="col-md-5">
           <div

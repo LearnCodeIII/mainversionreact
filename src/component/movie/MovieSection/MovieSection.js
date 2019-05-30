@@ -20,6 +20,8 @@ const MovieSection = props => (
           bigSlogan={props.bigSlogan}
           midSlogan={props.midSlogan}
           smallSlogan={props.smallSlogan}
+          pagename={props.pagename}
+          pageid={props.pageid}
         />
       </div>
     </div>

@@ -324,7 +324,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
             document.querySelector('#' + name + 'help').innerHTML =
               '名稱已被使用'
           } else {
-            console.log(value)
+            // console.log(value)
             newcheckstate.cinemaName = true
             this.setState({ checkok: newcheckstate })
             document.querySelector('#' + name + 'help').innerHTML = ''
@@ -333,9 +333,9 @@ class InputCardContent_CinemaSignUp extends React.Component {
       } else {
         document.querySelector('#' + name + 'help').innerHTML = ''
       }
-      console.log(newcheckstate)
+      // console.log(newcheckstate)
     }
-    //戲院行政區驗證:格式、是否已被使用
+    //戲院行政區驗證:格式
     if (name === 'cinemaArea') {
       newcheckstate.cinemaArea = false //先將check狀態回復到false
       this.setState({ checkok: newcheckstate })
@@ -354,7 +354,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
       } else {
         document.querySelector('#' + name + 'help').innerHTML = ''
       }
-      console.log(newcheckstate)
+      // console.log(newcheckstate)
     }
     //戲院地址驗證:格式、是否已被使用
     if (name === 'cinemaAddress') {
@@ -364,7 +364,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
         //先判斷是否有值，有值再進行進一步判斷
 
         if (value.length < 11) {
-          //判斷是否字元數 < 11 (至少=縣市:3、行政區:3、路名:3、號碼:2)
+          //判斷是否字元數 < 10 (至少=縣市:3、行政區:2、路名:3、號碼:2)
           document.querySelector('#' + name + 'help').innerHTML =
             '請輸入正確的地址'
         } else {
@@ -377,7 +377,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
               '地址已被使用，請確認您的地址'
           } else {
             //若地址沒有重複，檢查開頭前三個字是否與所在縣市欄位的值相同
-            console.log(value)
+            // console.log(value)
             let city = this.state.usertext[0].cinemaCity
             if (value.substr(0, 3) === city) {
               //相同則回傳
@@ -394,7 +394,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
       } else {
         document.querySelector('#' + name + 'help').innerHTML = ''
       }
-      console.log(newcheckstate)
+      // console.log(newcheckstate)
     }
     //戲院類型驗證:格式、是否已被使用
     if (name === 'cinemaType') {
@@ -407,8 +407,8 @@ class InputCardContent_CinemaSignUp extends React.Component {
         newcheckstate.cinemaType = true //先將check狀態回復到false
         document.querySelector('#' + name + 'help').innerHTML = ''
       }
-      console.log(value)
-      console.log(newcheckstate)
+      // console.log(value)
+      // console.log(newcheckstate)
     }
 
     //密碼驗證:長度、及比對再次確認的密碼是否相符，並變更再次確認密碼的提示狀態
@@ -460,12 +460,12 @@ class InputCardContent_CinemaSignUp extends React.Component {
           document.querySelector('#cinemaRepwdhelp').innerHTML = ''
         }
       }
-      console.log(newcheckstate)
+      // console.log(newcheckstate)
     }
 
     //再次確認密碼驗證:判斷是否與密碼相符
     if (name === 'cinemaRepwd') {
-      console.log(1237657545)
+      // console.log(1237657545)
       newcheckstate.cinemaRepwd = false
       this.setState({ checkok: newcheckstate })
       if (value) {
@@ -491,7 +491,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
         //此欄若沒有值，則清除提示
         document.querySelector('#' + name + 'help').innerHTML = ''
       }
-      console.log(newcheckstate)
+      // console.log(newcheckstate)
     }
     //同意條款勾選狀態設定
     if (name === 'agree-cinema-rules') {
@@ -525,15 +525,15 @@ class InputCardContent_CinemaSignUp extends React.Component {
         console.log(this.state.usertext)
       )
     } else if (name === 'cinemaCity') {
-      console.log(event.target.selectedIndex) //被選取的option的index
+      // console.log(event.target.selectedIndex) //被選取的option的index
       let selectedIndex = event.target.selectedIndex
       newtext[0][name] = event.target.options[selectedIndex].text //被選取的option的文字內容
       this.setState({ usertext: newtext }, () =>
         console.log(this.state.usertext)
       )
     } else if (name === 'cinemaLogoImg' || name === 'cinemaHeroImg') {
-      console.log(event.target.files[0])
-      console.log(event.target.files[0].name)
+      // console.log(event.target.files[0])
+      // console.log(event.target.files[0].name)
 
       var file = event.target.files[0]
       var uploadFileName = event.target.files[0].name
@@ -545,7 +545,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
       })
         .then(res => res.json())
         .then(obj => {
-          console.log(obj)
+          // console.log(obj)
           if (obj.success == true) {
             newtext[0][name] = obj.filename
             this.setState({ usertext: newtext }, () =>

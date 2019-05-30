@@ -125,7 +125,7 @@ class ActivityInfo extends React.Component {
   render() {
     return (
       <>
-        <div className="container-fuild">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivityPageSection
@@ -137,7 +137,7 @@ class ActivityInfo extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container-fuild fix-content" id="text">
+        <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivityTitle
@@ -164,7 +164,7 @@ class ActivityInfo extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container-fuild fix-content" id="text">
+        <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivityTitle
@@ -192,7 +192,7 @@ class ActivityInfo extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container-fuild fix-content" id="text">
+        <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivityTitle

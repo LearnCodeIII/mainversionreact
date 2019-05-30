@@ -17,7 +17,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <div className="col-md-12 justify-content-center mx-5 px-5">
+      <div className="col-md-12 justify-content-center px-5">
         <Row className="my-4 justify-content-center">
           <Col className="" md={8}>
             <div className="">

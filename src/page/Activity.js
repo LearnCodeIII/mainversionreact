@@ -12,9 +12,9 @@ class Activity extends React.Component {
     this.state = {
       bigSlogan: '擇你所愛，愛你所擇',
       midSlogan: '找尋您的專屬活動',
-      smallSlogan: '開始找尋',
+      smallSlogan: '3,2,1,Action!',
       heroSectionPic:
-        'https://images.unsplash.com/photo-1506512420485-a28339abb3b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        'https://images.unsplash.com/photo-1558953669-e58e1c99995f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
       title: ['活動列表'],
       activityCardData: [],
       activityCardDataResult: 0,
@@ -209,7 +209,7 @@ class Activity extends React.Component {
   render() {
     return (
       <>
-        <div className="container-fuild position-relative">
+        <div className="container-fluid position-relative">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivitySection
@@ -229,7 +229,7 @@ class Activity extends React.Component {
             style={{ bottom: '72px' }}
           />
         </div>
-        <div className="container-fuild fix-content">
+        <div className="container-fluid fix-content">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivityTitle
@@ -242,6 +242,7 @@ class Activity extends React.Component {
                 <div>
                   <ActivitySearchbarTitle spanClass="mr-5" title={'地區'} />
                 </div>
+
                 <div>
                   {this.state.searchbarRegion.map((data, id) => (
                     <ActivitySearchbarContent

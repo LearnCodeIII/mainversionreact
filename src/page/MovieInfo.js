@@ -1,168 +1,234 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import MovieTitle from '../component/movie/MovieTitle/MovieTitle'
-import ActivitySection from '../component/activity/ActivitySection/ActivitySection'
-import MovieCard from '../component/movie/MovieCard/MovieCard'
-import ArticleSlider from '../component/movie/MovieSlider/ArticleList/ArticleSlider/ArticleSlider'
+import { LinkContainer } from 'react-router-bootstrap'
+import ActivityPageSection from '../component/activity/ActivityPageSection/ActivityPageSection'
+import ActivityTitle from '../component/activity/ActivityTitle/ActivityTitle'
+import ActivityPageCard from '../component/activity/ActivityPageCard/ActivityPageCard'
+import ActivityContent from '../component/activity/ActivityContent/ActivityContent'
+import ActivityQRcode from '../component/activity/ActivityQRcode/ActivityQRcode'
+import ActivityJoinBtn from '../component/activity/ActivityJoinBtn/ActivityJoinBtn'
+import ActivityCard from '../component/activity/ActivityCard/ActivityCard'
 
-class MovieInfo extends React.Component {
-  constructor() {
-    super()
+class ActivityInfo extends React.Component {
+  constructor(props) {
+    super(props)
     this.state = {
-      movietitle: '找尋電影',
-      movieListtitle: '影片清單',
-      moviesearchttl: '搜尋影片',
-      MovieCardCntTtl: '詳細資訊',
-      bigSlogan: '擇你所愛，愛你所擇',
-      midSlogan: '找尋您的專屬活動。',
-      smallSlogan: '開始找尋',
-      heroSectionPic: 'http://localhost:3000/images/filmbg.png',
-      filmData: [],
-      tableData: [],
-      // tableTtlTxt: [{}],
-      // tableData: [{}],
-      movietableData: [],
-      movieitemData: [],
+      title: ['戲院資訊', '活動資訊', '相關活動', '相關影片'],
+      activityPageData: [],
+      activityPageOtherData: [],
+      streetView: false,
+      collectActivity: '',
     }
   }
 
   async componentDidMount() {
-    //  filmData
     try {
-      const res = await fetch('http://localhost:5555/filmData', {
+      const res = await fetch('http://localhost:5555/activityCardData', {
         method: 'GET',
         headers: new Headers({
           Accept: 'application/json',
           'Content-Type': 'application/json',
         }),
       })
-      const filmdata = await res.json()
-      // console.log(filmdata)
-      this.setState({ filmData: filmdata })
+      const data = await res.json()
+      const activityPageData = data.find(
+        item => item.id === this.props.match.params.id
+      )
+      const activityPageOtherData = data.filter(
+        item => item.id !== this.props.match.params.id
+      )
+      console.log(activityPageData)
+      this.setState({ activityPageData: activityPageData })
+      this.setState({ activityPageOtherData: activityPageOtherData })
+      this.setState({ activityHeroImage: activityPageData.imgSrc })
     } catch (err) {
       console.log(err)
     }
 
-    //  tableData
+    const memberId = sessionStorage.getItem('memberId')
     try {
-      const res2 = await fetch('http://localhost:5555/movietableData', {
+      const res = await fetch('http://localhost:5555/member/' + memberId, {
         method: 'GET',
         headers: new Headers({
           Accept: 'application/json',
           'Content-Type': 'application/json',
         }),
       })
-      const movietableData = await res2.json()
-      console.log(movietableData)
-      this.setState({ movietableData: movietableData })
-    } catch (err) {
-      console.log(err)
-    }
-
-    //  movieitemData
-    try {
-      const res3 = await fetch('http://localhost:5555/movieitemData', {
-        method: 'GET',
-        headers: new Headers({
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        }),
-      })
-      const movieitemData = await res3.json()
-      console.log(movieitemData)
-      this.setState({ movieitemData: movieitemData })
+      const data = await res.json()
+      this.setState({ collectActivity: data.collectActivity })
     } catch (err) {
       console.log(err)
     }
   }
+  handleOnClick = () => {
+    this.setState({ activityPageData: [] })
+    const res = fetch('http://localhost:5555/activityCardData', {
+      method: 'GET',
+      headers: new Headers({
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }),
+    })
+    const data = res.json()
+    const activityPageData = data.find(
+      item => item.id === this.props.match.params.id
+    )
+    const activityPageOtherData = data.filter(
+      item => item.id !== this.props.match.params.id
+    )
 
+    console.log(activityPageData)
+    this.setState({ activityPageData: activityPageData })
+    this.setState({ activityPageOtherData: activityPageOtherData })
+    this.setState({ activityHeroImage: activityPageData.imgSrc })
+  }
+  handleCollect = async id => {
+    const memberId = sessionStorage.getItem('memberId')
+    if (memberId !== null) {
+      try {
+        const res = await fetch('http://localhost:5555/member/' + memberId, {
+          method: 'GET',
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+        let data = await res.json()
+        let isCollect = data.collectActivity.indexOf(id) > -1
+
+        if (isCollect) {
+          data.collectActivity = data.collectActivity
+            .split(id)
+            .toString()
+            .replace(/,/g, '')
+        } else {
+          data.collectActivity += id
+        }
+        this.setState({ collectActivity: data.collectActivity })
+        try {
+          const res = await fetch('http://localhost:5555/member/' + memberId, {
+            method: 'PUT',
+            body: JSON.stringify(data),
+            headers: new Headers({
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            }),
+          })
+          console.log('修改完成')
+        } catch (err) {
+          console.log(err)
+        }
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
   render() {
     return (
       <>
-        {/* 看版圖 */}
-        <div className="container-fuild">
+        <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12 p-0 ">
-              <ActivitySection
-                bigSlogan={this.state.bigSlogan}
-                midSlogan={this.state.midSlogan}
-                smallSlogan={this.state.smallSlogan}
-                pictureSrc={this.state.heroSectionPic}
+            <div className="col-md-12 p-0">
+              <ActivityPageSection
+                theater={this.state.activityPageData.theater}
+                title={this.state.activityPageData.title}
+                content={this.state.activityPageData.content}
+                HeroImage={this.state.activityPageData.imgSrc}
               />
             </div>
-
-            {/* 內文卡片 */}
-            {/* <div className="row">
-              <div className="col-md-12 p-0">
-                <MovieTitle title={this.state.MovieCardCntTtl} />
-              </div>
-            </div> */}
-
-            {/*  滑動圖片劇照 */}
-            <Row className="justify-content-md-center">
-              <Col md={11}>
-                <ArticleSlider SliderData={this.state.filmdata} />
-              </Col>
-            </Row>
-
-            {/* 電影列表卡片 */}
-            <div className="col-12 container justify-content-center">
-              <div className=" p-0">
-                <MovieTitle title={this.state.movietitle} />
-              </div>
-              <div className="p-0 d-flex ">
-                {this.state.filmData.map(element => (
-                  <MovieCard
-                    key={element.id}
-                    id={element.id}
-                    title={element.name_tw}
-                    subtitle={element.name_en}
-                    img={'http://localhost:3000/images/' + element.movie_pic}
-                    link={'/movie/' + element.id}
-                    collectionIcon
-                    collection={true / false}
-                    ollectionClick={this.handleClick}
-                  />
-                ))}
-              </div>
+          </div>
+        </div>
+        <div className="container-fluid fix-content" id="text">
+          <div className="row">
+            <div className="col-md-12 p-0">
+              <ActivityTitle
+                title={this.state.title[0]}
+                className="content-title"
+              />
             </div>
-
-            {/* 推薦電影列表卡片 */}
-            <div className="col-12 container justify-content-center">
-              <div className=" p-0">
-                <MovieTitle title={this.state.movietitle} />
-              </div>
-              <div className="p-0 d-flex ">
-                {this.state.filmData.map(element => (
-                  <MovieCard
-                    key={element.id}
-                    id={element.id}
-                    title={element.name_tw}
-                    subtitle={element.name_en}
-                    img={'http://localhost:3000/images/' + element.movie_pic}
-                    link={'/movie/' + element.id}
-                    collectionIcon
-                    collection={true / false}
-                    ollectionClick={this.handleClick}
-                  />
-                ))}
-              </div>
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5">
+              <ActivityPageCard
+                theater={this.state.activityPageData.theater}
+                theaterMap={this.state.activityPageData.theaterMap}
+                phone={this.state.activityPageData.phone}
+                GUINumber={this.state.activityPageData.GUINumber}
+                website={this.state.activityPageData.website}
+                email={this.state.activityPageData.email}
+                lat={this.state.activityPageData.lat}
+                lng={this.state.activityPageData.lng}
+                streetView={this.state.streetView}
+                handleOnClickMap={() => this.setState({ streetView: true })}
+                handleOnClickMaplocal={() =>
+                  this.setState({ streetView: false })
+                }
+              />
             </div>
-
-            {/* 資訊表格 */}
-            {/* <div className="row">
-              <div className="col-md-12 p-0">
-                <MovieTitle title={this.state.movieListtitle} />
-              </div>
-              <div className="col-md-12 p-2">
-                {this.state.movietableData.map(items => (
-                  <MovieTable
-                    title={items.tableTtlTxt}
-                    data={items.tableData}
+          </div>
+        </div>
+        <div className="container-fluid fix-content" id="text">
+          <div className="row">
+            <div className="col-md-12 p-0">
+              <ActivityTitle
+                title={this.state.title[1]}
+                className="content-title"
+              />
+            </div>
+            <div className="col-12 col-sm-12 col-md-12 col-lg-9 mt-5">
+              <ActivityContent
+                theater={this.state.activityPageData.theater}
+                title={this.state.activityPageData.title}
+                theaterMap={this.state.activityPageData.theaterMap}
+                content={this.state.activityPageData.content}
+                joinContent={this.state.activityPageData.joinContent}
+                joinContentCurrentPeople={
+                  this.state.activityPageData.joinContentCurrentPeople
+                }
+              />
+            </div>
+            <div className="col-12 col-sm-12 col-md-12 col-lg-3 mt-5">
+              <ActivityQRcode imgSrc={window.location.href} />
+            </div>
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5 d-flex justify-content-center">
+              <ActivityJoinBtn id={this.props.match.params.id} />
+            </div>
+          </div>
+        </div>
+        <div className="container-fluid fix-content" id="text">
+          <div className="row">
+            <div className="col-md-12 p-0">
+              <ActivityTitle
+                title={this.state.title[2]}
+                className="content-title"
+              />
+            </div>
+            {this.state.activityPageOtherData.map(data => (
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-5">
+                {sessionStorage.getItem('memberId') !== null ? (
+                  <ActivityCard
+                    routerId={data.id}
+                    handleCollect={() => this.handleCollect(data.id)}
+                    key={data.id}
+                    title={data.theater}
+                    subtitle={data.title}
+                    imgSrc={data.imgSrc}
+                    collectOpen
+                    isCollect={
+                      this.state.collectActivity.indexOf(data.id) > -1
+                        ? true
+                        : false
+                    }
                   />
-                ))}
+                ) : (
+                  <ActivityCard
+                    routerId={data.id}
+                    handleCollect={() => this.handleCollect(data.id)}
+                    key={data.id}
+                    title={data.theater}
+                    subtitle={data.title}
+                    imgSrc={data.imgSrc}
+                  />
+                )}
               </div>
-            </div> */}
+            ))}
           </div>
         </div>
       </>
@@ -170,4 +236,4 @@ class MovieInfo extends React.Component {
   }
 }
 
-export default MovieInfo
+export default ActivityInfo

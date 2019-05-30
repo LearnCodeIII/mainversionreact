@@ -297,7 +297,7 @@ class MemberEditInfo extends React.Component {
               copyData[eventName] = obj.filename
               this.setState(
                 {
-                  // thisData: copyData,
+                  thisData: copyData,
                   hasNewAvatar: true,
                   avatarUploadFailed: false,
                 },

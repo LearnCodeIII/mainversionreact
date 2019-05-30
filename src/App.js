@@ -14,7 +14,7 @@ import Footer from './component/footer/footer'
 import Mainpage from './page/Mainpage'
 import Cinema from './page/Cinema'
 import CinemaInfo from './page/CinemaInfo'
-import Movie from './page/Movie1'
+import Movie from './page/Movie'
 import MovieInfo from './page/MovieInfo'
 import Article from './page/Article'
 import ArticlePage from './page/ArticlePage'
@@ -169,7 +169,7 @@ class App extends React.Component {
                   </>
                 ) : sessionStorage.getItem('memberId') !== null ? (
                   <>
-                    <LinkContainer to="/BackMainpage">
+                    <LinkContainer to="/BackMainpage/my-preview">
                       <Nav.Link className="mr-5">會員後台</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/mainpage">
@@ -205,9 +205,13 @@ class App extends React.Component {
             <Route path="/BackMainpage" component={BackMainpage} />
             <Route path="/CinemaBackMainpage" component={CinemaBackMainpage} />
           </Switch>
-          <div className="container-fluid" style={{}}>
-            <Footer />
-          </div>
+          {window.location.pathname == '/LoginSign' ? (
+            ''
+          ) : (
+            <div className="container-fluid" style={{}}>
+              <Footer />
+            </div>
+          )}
         </ScroolToTop>
       </Router>
     )

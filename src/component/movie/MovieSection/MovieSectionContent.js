@@ -3,14 +3,14 @@ import React from 'react'
 // import { LinkContainer } from 'react-router-bootstrap'
 import { HashLink as Link } from 'react-router-hash-link'
 
-const MovieSectionContent = props => (
+const ActivitySectionContent = props => (
   <>
     <h2>{props.bigSlogan}</h2>
     <h3>{props.midSlogan}</h3>
     <h4>
       <div>
         <Link
-          to={'/activity#search'}
+          to={props.pagename + props.pageid}
           className="mt-5"
           style={{
             color: 'inherit',
@@ -28,4 +28,4 @@ const MovieSectionContent = props => (
   </>
 )
 
-export default MovieSectionContent
+export default ActivitySectionContent

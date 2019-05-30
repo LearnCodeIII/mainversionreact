@@ -87,7 +87,7 @@ class ActivityInfo extends React.Component {
       <>
         <div className="fix-height" />
 
-        <div className="container-fuild fix-content" id="text">
+        <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivityTitle
@@ -109,7 +109,7 @@ class ActivityInfo extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container-fuild fix-content" id="text">
+        <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
               <ActivityTitle

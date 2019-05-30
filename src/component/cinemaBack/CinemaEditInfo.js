@@ -538,7 +538,7 @@ class CinemaEditInfo extends React.Component {
             {/* 這裡放頭像(含編輯按鈕)、email、權限 */}
             <AvatarTwo
               img={'/images/cinemaImg/' + this.state.thisData.cinemaLogoImg}
-              name={this.state.thisData.name}
+              name={this.state.thisData.cinemaName}
               purview={this.state.thisData.purview}
               SignUpDate={this.state.thisData.cinemaSignUpDate}
               onChange={this.handleInputTextChange}

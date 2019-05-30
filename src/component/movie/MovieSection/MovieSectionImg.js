@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MovieSectionImg = props => (
+const ActivitySectionImg = props => (
   <>
     <img
       className="img-fluid"
@@ -13,4 +13,4 @@ const MovieSectionImg = props => (
   </>
 )
 
-export default MovieSectionImg
+export default ActivitySectionImg
