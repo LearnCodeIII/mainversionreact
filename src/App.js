@@ -8,11 +8,14 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom'
+import Footer from './component/footer/footer'
 
 //Import Page
 import Mainpage from './page/Mainpage'
-import Theater from './page/Theater'
-import Movie from './page/Movie'
+import Cinema from './page/Cinema'
+import CinemaInfo from './page/CinemaInfo'
+import Movie from './page/Movie1'
+import MovieInfo from './page/MovieInfo'
 import Article from './page/Article'
 import ArticlePage from './page/ArticlePage'
 import Activity from './page/Activity'
@@ -21,6 +24,7 @@ import ActivityJoin from './page/ActivityJoin'
 import Forum from './page/Forum'
 import LoginSign from './page/SignUp'
 import BackMainpage from './page/BackMainpage'
+import CinemaBackMainpage from './page/CinemaBackMainpage'
 
 //Import Component
 import ScroolToTop from './component/activity/ActivityScrollToTop/ActivityScrollToTop'
@@ -29,39 +33,99 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      navbar: '',
+      navbar: 'active',
       currentHeight: 0,
       prevHeight: 0,
     }
   }
-  componentDidMount() {
+  async componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
-    const isBackmainpage = window.location.href.toString().indexOf('BackMainpage')
-    if(isBackmainpage>0){this.setState({ navbar: 'active' })}
+
+    if (
+      window.location.pathname.indexOf('BackMainpage') == -1 &&
+      window.location.pathname.indexOf('CinemaBackMainpage') == -1
+    ) {
+      let currentHeight = document.documentElement.scrollTop
+      this.setState({ currentHeight: currentHeight })
+      let prevHeight = this.state.prevHeight
+      if (document.documentElement.scrollTop > 630) {
+        this.setState({ navbar: 'active' })
+        if (document.documentElement.scrollTop > 750) {
+          if (currentHeight > prevHeight) {
+            this.setState({ navbar: 'active hiddenNav' })
+          } else {
+            this.setState({ navbar: 'active showNav' })
+          }
+        }
+      } else {
+        this.setState({ navbar: '' })
+      }
+      prevHeight = JSON.parse(JSON.stringify(currentHeight))
+      this.setState({ prevHeight: prevHeight })
+    }
+    const memberId = sessionStorage.getItem('memberId')
+    try {
+      const res = await fetch('http://localhost:5555/member/' + memberId, {
+        method: 'GET',
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      })
+      const data = await res.json()
+      this.setState({ memberData: data })
+    } catch (err) {
+      console.log(err)
+    }
+
+    const cinemaId = sessionStorage.getItem('cinemaId')
+    try {
+      const res = await fetch('http://localhost:5555/cinema/' + cinemaId, {
+        method: 'GET',
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      })
+      const data = await res.json()
+      this.setState({ cinemaData: data })
+    } catch (err) {
+      console.log(err)
+    }
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   }
   handleScroll = event => {
-    let currentHeight = document.documentElement.scrollTop
-    this.setState({ currentHeight: currentHeight })
-    let prevHeight = this.state.prevHeight
-    if (document.documentElement.scrollTop > 630) {
-      this.setState({ navbar: 'active' })
-      if (document.documentElement.scrollTop > 750) {
-        if (currentHeight > prevHeight) {
-          this.setState({ navbar: 'active hiddenNav' })
-        } else {
-          this.setState({ navbar: 'active showNav' })
+    if (
+      window.location.pathname.indexOf('BackMainpage') == -1 &&
+      window.location.pathname.indexOf('CinemaBackMainpage') == -1
+    ) {
+      console.log('here')
+      let currentHeight = document.documentElement.scrollTop
+      this.setState({ currentHeight: currentHeight })
+      let prevHeight = this.state.prevHeight
+      if (document.documentElement.scrollTop > 630) {
+        this.setState({ navbar: 'active' })
+        if (document.documentElement.scrollTop > 750) {
+          if (currentHeight > prevHeight) {
+            this.setState({ navbar: 'active hiddenNav' })
+          } else {
+            this.setState({ navbar: 'active showNav' })
+          }
         }
+      } else {
+        this.setState({ navbar: '' })
       }
-    } else {
-      this.setState({ navbar: '' })
+      prevHeight = JSON.parse(JSON.stringify(currentHeight))
+      this.setState({ prevHeight: prevHeight })
     }
-    prevHeight = JSON.parse(JSON.stringify(currentHeight))
-    this.setState({ prevHeight: prevHeight })
-    const isBackmainpage = window.location.href.toString().indexOf('BackMainpage')
-    if(isBackmainpage>0){this.setState({ navbar: 'active' })}
+  }
+  handleLogout = () => {
+    //點擊登出，清除session並導回主頁
+    // sessionStorage.removeItem('memberID') //不知道為什麼這個方法無效
+    sessionStorage.clear()
+    window.location.href = '/mainpage'
   }
   render() {
     return (
@@ -77,7 +141,7 @@ class App extends React.Component {
               id="basic-navbar-nav"
             >
               <Nav>
-                <LinkContainer to="/theater">
+                <LinkContainer to="/cinema">
                   <Nav.Link className="mr-5">戲院</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/movie">
@@ -92,21 +156,45 @@ class App extends React.Component {
                 <LinkContainer to="/forum">
                   <Nav.Link className="mr-5">論壇</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/LoginSign">
-                  <Nav.Link className="mr-5">登入</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/LoginSign">
-                  <Nav.Link>註冊</Nav.Link>
-                </LinkContainer>
+                {sessionStorage.getItem('cinemaId') !== null ? (
+                  <>
+                    <LinkContainer to="/CinemaBackMainpage">
+                      <Nav.Link className="mr-5">戲院後台</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/mainpage">
+                      <Nav.Link className="mr-5" onClick={this.handleLogout}>
+                        戲院登出
+                      </Nav.Link>
+                    </LinkContainer>
+                  </>
+                ) : sessionStorage.getItem('memberId') !== null ? (
+                  <>
+                    <LinkContainer to="/BackMainpage">
+                      <Nav.Link className="mr-5">會員後台</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/mainpage">
+                      <Nav.Link className="mr-5" onClick={this.handleLogout}>
+                        會員登出
+                      </Nav.Link>
+                    </LinkContainer>
+                  </>
+                ) : (
+                  <LinkContainer to="/LoginSign">
+                    <Nav.Link className="mr-5">登入</Nav.Link>
+                  </LinkContainer>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Navbar>
           <Switch>
             <Route exact path="/" component={Mainpage} />
-            <Route path="/theater" component={Theater} />
+            <Route path="/mainpage" component={Mainpage} />
+            <Route path="/cinema/:id" component={CinemaInfo} />
+            <Route path="/cinema" component={Cinema} />
+            <Route path="/movie/:id" component={MovieInfo} />
             <Route path="/movie" component={Movie} />
-            <Route path="/article" component={Article} />
             <Route path="/article/:id" component={ArticlePage} />
+            <Route path="/article" component={Article} />
             <Route exact path="/activity/join/:id" component={ActivityJoin} />
             <Redirect from="/activity/:id/return" to="/activity/:id" />
             <Route exact path="/activity/:id" component={ActivityInfo} />
@@ -115,7 +203,11 @@ class App extends React.Component {
             <Route path="/forum" component={Forum} />
             <Route path="/LoginSign" component={LoginSign} />
             <Route path="/BackMainpage" component={BackMainpage} />
+            <Route path="/CinemaBackMainpage" component={CinemaBackMainpage} />
           </Switch>
+          <div className="container-fluid" style={{}}>
+            <Footer />
+          </div>
         </ScroolToTop>
       </Router>
     )

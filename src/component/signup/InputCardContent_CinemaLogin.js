@@ -10,7 +10,7 @@ class InputCardContent_CinemaLogin extends React.Component {
       inputH: '48px', //設定所有input高
       inputmsg: [
         {
-          id: 'account',
+          id: 'cinemaAccount',
           w: '100%',
           h: '48px',
           iconL: 'fas fa-envelope',
@@ -20,7 +20,7 @@ class InputCardContent_CinemaLogin extends React.Component {
           iconRS: '',
         },
         {
-          id: 'pwd',
+          id: 'cinemaPassword',
           w: '',
           h: '48px',
           iconL: 'fas fa-key',
@@ -34,8 +34,8 @@ class InputCardContent_CinemaLogin extends React.Component {
       usertext: [
         //儲存使用者輸入的文字
         {
-          account: '',
-          pwd: '',
+          cinemaAccount: '',
+          cinemaPassword: '',
           captcha: '',
           captchatext: '',
         },
@@ -74,9 +74,12 @@ class InputCardContent_CinemaLogin extends React.Component {
     console.log(newtext)
 
     //判斷如果拿到的name屬於state裡面的屬性，就把剛才複製的state的該項目更新，然後再setState回去
-    if (name === 'account' || name === 'pwd' || name === 'captchatext') {
+    if (
+      name === 'cinemaAccount' ||
+      name === 'cinemaPassword' ||
+      name === 'captchatext'
+    ) {
       newtext[0][name] = value
-
       this.setState({ usertext: newtext }, () =>
         console.log(this.state.usertext)
       )
@@ -119,11 +122,12 @@ class InputCardContent_CinemaLogin extends React.Component {
             {/* 這裡是驗證碼的Row */}
             <Row className="my-4 d-flex justify-content-between">
               <input
-                className="border border-warning roundedy"
+                className="border border-warning rounded"
                 style={{
                   background: '#1f242a',
                   color: '#FFA510',
                   textAlign: 'center',
+                  // borderWidth: '2px',
                 }}
                 name="captchatext"
                 type="text"

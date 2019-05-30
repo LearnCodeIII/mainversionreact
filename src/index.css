@@ -4,12 +4,16 @@
 html,
 body {
   background: #242b34;
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: 'Noto Sans TC', sans-serif;
   box-sizing: border-box;
   color: #d4d1cc !important;
   scroll-behavior: smooth;
 }
 .container-fuild {
+  padding: 0;
+  margin: 0;
   max-width: 100%;
 }
 
@@ -31,6 +35,20 @@ img.img-fluid {
   max-height: 750px;
   height: 100%;
   object-fit: cover;
+}
+/*card */
+.card.activityCard {
+  border: none !important;
+  transition: 0.5s;
+}
+.card.activityCard img {
+  transition: 0.5s !important;
+  filter: grayscale(20%) !important;
+  filter: brightness(70%) !important;
+}
+.card.activityCard img:hover {
+  filter: grayscale(100%) !important;
+  filter: brightness(100%) !important;
 }
 /*button*/
 
@@ -85,29 +103,27 @@ nav.navbar a.active.navbar-brand {
   color: #d4d1cc !important;
 }
 
-
 /* --------searchbar------- */
-.searchbar-wrapper span{
-  display:inline-block;
-  padding:4px 16px;
-  font-size:24px;
-  color:#ffa510;
-  border:2px solid #ffa510;
-  border-radius:4px;
-  cursor:pointer;
-  transition:0.5s;
+.searchbar-wrapper span {
+  display: inline-block;
+  padding: 4px 16px;
+  font-size: 24px;
+  color: #ffa510;
+  border: 2px solid #ffa510;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
 }
-.searchbar-wrapper span.active{
-  display:inline-block;
-  padding:4px 16px;
-  font-size:24px;
-  background:#ffa510;
-  color:#242b34;
-  border:2px solid #ffa510;
-  border-radius:4px;
-  cursor:pointer;
+.searchbar-wrapper span.active {
+  display: inline-block;
+  padding: 4px 16px;
+  font-size: 24px;
+  background: #ffa510;
+  color: #242b34;
+  border: 2px solid #ffa510;
+  border-radius: 4px;
+  cursor: pointer;
 }
-
 
 /* --------signup------- */
 .box {
@@ -165,3 +181,71 @@ input {
   background: rgba(0, 0, 0, 0.7);
 } */
 
+input.activitySearch::placeholder {
+  color: #ffa510;
+}
+
+/* -------------------SU------------------------ */
+.text-mywhite {
+  color: #d4d1cc !important;
+}
+.text-darkblue {
+  color: #2b333d !important;
+}
+.bg-darkblue {
+  background: #242b34 !important;
+}
+.bg-second-darkblue {
+  background: #2b333d !important;
+}
+.bg-orange {
+  background: #ffa510 !important;
+}
+.bg-back-table {
+  background: #394149;
+}
+.mytransition5 {
+  transition: 0.5s;
+}
+.sidenavLink:hover {
+  color: #ffa510;
+}
+/* -----------------------------------------------------Kaga */
+.cardAreaBgKaga {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 390px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.cardTopMaskKaga {
+  background: rgba(0, 0, 0, 0.2);
+  height: 260px;
+  transition: 0.5s cubic-bezier(0.36, 0.71, 0.3, 0.87);
+}
+.cardTopMaskKagaZero {
+  background: rgba(0, 0, 0, 0.2);
+  height: 0;
+  transition: 0.5s cubic-bezier(0.36, 0.71, 0.3, 0.87);
+}
+.cardBottomMaskKaga {
+  background: rgba(0, 0, 0, 0.8);
+  height: 130px;
+}
+.cardPopupMaskKaga {
+  background: rgba(0, 0, 0, 0.8);
+  height: 0;
+}
+.cardStar {
+  color: #ffa510;
+}
+/* -------------------------------------------------------forum */
+.articleInput,
+.card-body.articleInput {
+  background: '#1f242a';
+}
+
+#forumListScollTop::-webkit-scrollbar {
+  width: 0 !important;
+}

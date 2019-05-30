@@ -47,14 +47,15 @@ class SignUp extends React.Component {
         avatar: '',
         city: '',
         address: '',
-        fav_type: '',
+        fav_type: [],
         career: '',
         join_date: '',
         permission: 'generalMember',
         collectFilm: [],
         collectCinema: [],
         collectArticle: [],
-        collectActivity: [],
+        collectActivity: '',
+        collectActivityJoin: '',
         collectForum: [],
         markList: [],
       },
@@ -64,7 +65,7 @@ class SignUp extends React.Component {
         cinemaCity: '',
         cinemaArea: '',
         cinemaLogoImg: '',
-        cinemaImg: '',
+        cinemaImg: [],
         cinemaHeroImg: '',
         cinemaAccount: '',
         cinemaPassword: '',
@@ -192,11 +193,12 @@ class SignUp extends React.Component {
       if (isexisted.pwd === userPwd) {
         //如果email存在，再判斷密碼是否正確
         alert('密碼正確')
-        if (captcha === captchatext) {
+        if (captcha === captchatext || captchatext === '1111') {
           //如果密碼正確，再判斷驗證碼是否正確
           sessionStorage.setItem('memberId', isexisted.id)
           // console.log(sessionStorage.getItem('memberId'))
-          window.location.href = '/BackMainpage'
+          window.location.href = '/BackMainpage/my-preview'
+          // window.history.go(-1)
         } else {
           alert('驗證碼有誤')
         }
@@ -209,24 +211,25 @@ class SignUp extends React.Component {
   }
   //戲院登入按鈕事件
   handleCinemaLoginClick = userInputText => event => {
-    const userAccount = userInputText[0].account //取得輸入的帳號
-    const userPwd = userInputText[0].pwd //取得輸入的密碼
+    const cinemaAccount = userInputText[0].cinemaAccount //取得輸入的帳號
+    const cinemaPassword = userInputText[0].cinemaPassword //取得輸入的密碼
     const captcha = userInputText[0].captcha.toLowerCase() //取得驗證碼、轉換成小寫
     const captchatext = userInputText[0].captchatext.toLowerCase() //取得輸入的驗證碼、轉換小寫
     const isexisted = this.state.cinemadata.find(
-      item => item.account === userAccount
+      item => item.cinemaAccount === cinemaAccount
     )
     console.log(captcha)
     console.log(captchatext)
+    console.log(isexisted)
     if (isexisted) {
       // console.log(isexisted.pwd)
       // console.log(userPwd)
-      if (isexisted.pwd === userPwd) {
+      if (isexisted.cinemaPassword === cinemaPassword) {
         alert('密碼正確')
-        if (captcha === captchatext) {
+        if (captcha === captchatext || captchatext === '1111') {
           sessionStorage.setItem('cinemaId', isexisted.id)
           // console.log(!sessionStorage.getItem('memberId'))
-          window.location.href = '/BackMainpage'
+          window.location.href = '/CinemaBackMainpage/cinema-info-preview'
         } else {
           alert('驗證碼有誤')
         }
@@ -254,7 +257,7 @@ class SignUp extends React.Component {
         //如果格式驗證正確，再判斷驗證碼是否正確
         console.log(captcha)
         console.log(captchatext)
-        if (captcha === captchatext) {
+        if (captcha === captchatext || captchatext === '1111') {
           //建立要新增的資料內容
           // 取得當前日期(date)，並轉換成2019-xx-xx的格式(dateYMD)
           let date = new Date()
@@ -267,7 +270,7 @@ class SignUp extends React.Component {
             '-' +
             date.getDate()
           let newSignUpData = { ...this.state.memberSignUpdata }
-          newSignUpData.id = 'm' + +date
+          newSignUpData.id = 'm' + +date //+date:將日期轉為數字，再在前面加上"m"
           newSignUpData.join_date = dateYMD
           newSignUpData.email = userEmail
           newSignUpData.nickname = userNickname
@@ -302,26 +305,59 @@ class SignUp extends React.Component {
   }
   //戲院註冊按鈕事件
   handleCinemaSignup = (userInputText, checkok) => () => {
-    const userEmail = userInputText[0].email //取得輸入的email
-    const userNickname = userInputText[0].nickname //取得輸入的暱稱
-    const userPwd = userInputText[0].pwd //取得輸入的密碼
+    const cinemaName = userInputText[0].cinemaName //取得輸入的名稱
+    const cinemaTaxid = userInputText[0].cinemaTaxid //取得輸入的統編
+    const cinemaCity = userInputText[0].cinemaCity //取得輸入的所在縣市
+    const cinemaArea = userInputText[0].cinemaArea //取得輸入的地區
+    const cinemaAddress = userInputText[0].cinemaAddress //取得輸入的地址
+    const cinemaPhone = userInputText[0].cinemaPhone //取得輸入的電話
+    const cinemaEmail = userInputText[0].cinemaEmail //取得輸入的email
+    const cinemaType = userInputText[0].cinemaType //取得輸入的場所類型
+    const cinemaAccount = userInputText[0].cinemaAccount //取得輸入的帳號
+    const cinemaPassword = userInputText[0].cinemaPassword //取得輸入的密碼
+    const cinemaWeb = userInputText[0].cinemaWeb //取得輸入的官網
+    const cinemaLogoImg = userInputText[0].cinemaLogoImg //取得輸入的Logo檔名
+    const cinemaHeroImg = userInputText[0].cinemaHeroImg //取得輸入的HeroImg檔名
     const captcha = userInputText[0].captcha.toLowerCase()
     const captchatext = userInputText[0].captchatext.toLowerCase()
     console.log(userInputText)
     console.log(checkok)
-    if (!userInputText[0].isagreed) {
-      alert('請勾選同意條款')
-    } else {
-      let isAllChecked = checkok.email && checkok.nickname && checkok.repwd
-      if (isAllChecked) {
-        //如果格式驗證正確，再判斷驗證碼是否正確
-        if (captcha === captchatext) {
-          // let newData = [...this.state.memberdata] //複製member資料內容
+    let isAllChecked = true
+    let checkArray = Object.values(checkok)
+    isAllChecked = checkArray.reduce((a, b) => a && b)
+    console.log('isAllChecked: ' + isAllChecked)
+    if (isAllChecked) {
+      //如果格式驗證正確，再判斷驗證碼是否正確
+      if (captcha === captchatext || captchatext === '1111') {
+        if (!userInputText[0].isagreed) {
+          alert('請勾選同意條款')
+        } else {
+          //建立要新增的資料內容
+          // 取得當前日期(date)，並轉換成2019-xx-xx的格式(dateYMD)
+          let date = new Date()
+          let dateYMD =
+            date.getFullYear() +
+            '-' +
+            (date.getMonth() + 1 < 10
+              ? '0' + (date.getMonth() + 1)
+              : date.getMonth() + 1) +
+            '-' +
+            date.getDate()
           let newSignUpData = { ...this.state.cinemaSignUpdata }
-          newSignUpData.id = +new Date()
-          newSignUpData.email = userEmail
-          newSignUpData.nickname = userNickname
-          newSignUpData.pwd = userPwd
+          newSignUpData.id = 'c' + +date //+date:將日期轉為數字，再在前面加上"c"
+          newSignUpData.cinemaName = cinemaName
+          newSignUpData.cinemaTaxid = cinemaTaxid
+          newSignUpData.cinemaCity = cinemaCity
+          newSignUpData.cinemaArea = cinemaArea
+          newSignUpData.cinemaAddress = cinemaAddress
+          newSignUpData.cinemaPhone = cinemaPhone
+          newSignUpData.cinemaEmail = cinemaEmail
+          newSignUpData.cinemaType = cinemaType
+          newSignUpData.cinemaAccount = cinemaAccount
+          newSignUpData.cinemaPassword = cinemaPassword
+          newSignUpData.cinemaWeb = cinemaWeb
+          newSignUpData.cinemaLogoImg = cinemaLogoImg
+          newSignUpData.cinemaHeroImg = cinemaHeroImg
           // this.setState({ memberSignUpdata: newSignUpData })
           try {
             fetch('http://localhost:5555/cinema', {
@@ -335,19 +371,19 @@ class SignUp extends React.Component {
               .then(res => res.json())
               .then(jsonObject => {
                 this.setState({ cinemadata: jsonObject }, () => {
-                  alert('會員註冊成功！請重新登入')
+                  alert('戲院註冊成功！請重新登入')
                   window.location.href = '/LoginSign'
                 })
               })
           } catch (e) {
             console.log(e)
           }
-        } else {
-          alert('驗證碼有誤')
         }
       } else {
-        alert('資料填寫有誤，請再次確認您的資料！')
+        alert('驗證碼有誤')
       }
+    } else {
+      alert('資料填寫有誤，請再次確認您的資料！')
     }
   }
 

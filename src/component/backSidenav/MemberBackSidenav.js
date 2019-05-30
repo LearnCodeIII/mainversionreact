@@ -12,8 +12,7 @@ const MemberBackSidenav = props => (
     <div //左邊sidenave框
       className="col-lg-2 p-0"
       style={{
-        height: '100vh',
-          background: '#242B34',
+        background: '#242B34',
       }}
     >
       <div
@@ -22,7 +21,7 @@ const MemberBackSidenav = props => (
         }}
       />
       <h3 className="text-center mb-4">會員中心</h3>
-      <Accordion defaultActiveKey="0">
+      <Accordion defaultActiveKey="member-info">
         {props.sidenavItems.map(item => (
           <SidenavMenu_Su
             id={item.id}
@@ -32,12 +31,14 @@ const MemberBackSidenav = props => (
           />
         ))}
       </Accordion>
-      <button
-        className="mx-auto  btn-warning border-0 col-lg-8"
-        onClick={handleLogout}
-      >
-        登出
-      </button>
+      <div className="my-4 d-flex justify-content-center">
+        <button
+          className="mx-auto btn btn-warning border-0 col-lg-8"
+          onClick={handleLogout}
+        >
+          登出
+        </button>
+      </div>
     </div>
   </>
 )

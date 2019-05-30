@@ -16,7 +16,7 @@ const InputCard = props => {
         className="tab-box m-0"
         defaultActiveKey={props.eventKey1}
         id="uncontrolled-tab-example"
-        style={{ width: '600px' }}
+        style={{ width: '600px', fontSize: '20px' }}
       >
         <Tab //登入TAB
           className="tab-body"

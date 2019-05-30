@@ -3,12 +3,12 @@ import React from 'react'
 const ActivitySearchbarTitle = props => (
   <>
     <span
-      className="mr-5"
+      className={props.spanClass}
       style={{
         fontSize: '24px',
-        color:'#d4d1cc',
-        border:'none',
-        cursor:'default'
+        color: '#d4d1cc',
+        border: 'none',
+        cursor: 'default',
       }}
     >
       {props.title}

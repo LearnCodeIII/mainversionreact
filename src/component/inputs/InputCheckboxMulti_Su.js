@@ -21,7 +21,8 @@ const InputRadio_Su = props => {
       <Row className="mx-0 px-0 col-12 d-flex justify-content-between">
         {props.selectOptions.map(item => (
           <div
-            class="custom-control custom-radio custom-control-inline col-2 mx-0 pr-0"
+            key={item.id}
+            className="custom-control custom-radio custom-control-inline col-2 mx-0 pr-0"
             style={{
               height: `${props.inputHeight}`,
             }}
@@ -31,10 +32,10 @@ const InputRadio_Su = props => {
               id={item.id}
               name={props.id}
               onChange={props.onChange}
-              class="custom-control-input"
+              className="custom-control-input"
             />
 
-            <label class="custom-control-label" for={item.id} />
+            <label className="custom-control-label" htmlFor={item.id} />
             <button
               name="radio-btn"
               className="px-2 position-absolute rounded border border-warning bg-darkblue font-c-primary"
@@ -49,7 +50,6 @@ const InputRadio_Su = props => {
           </div>
         ))}
       </Row>
-
     </>
   )
 }

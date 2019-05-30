@@ -4,9 +4,10 @@ const InputText_Su = props => {
   return (
     <>
       <div
-        class="position-absolute d-flex align-items-center border-0 rounded"
+        className="position-absolute d-flex align-items-center border-0 rounded"
         style={{
-          width: '100%',
+          // width: '100%',
+          width: `${props.inputWidth ? props.inputWidth : '100%'}`,
           height: '100%',
           background: `${
             props.iconLeft
@@ -18,7 +19,7 @@ const InputText_Su = props => {
         }}
       >
         <i
-          class={props.iconLeft + ' position-absolute'}
+          className={props.iconLeft + ' position-absolute'}
           style={{
             background: '#1F242A',
             color: '#FFA510',
@@ -29,9 +30,10 @@ const InputText_Su = props => {
         />
       </div>
       <div
-        class="position-absolute d-flex align-items-center border-0 rounded"
+        className="position-absolute d-flex align-items-center border-0 rounded"
         style={{
-          width: '100%',
+          width: `${props.inputWidth ? props.inputWidth : '100%'}`,
+          // width: '100%',
           height: '100%',
           background: `${
             props.iconRight
@@ -43,7 +45,7 @@ const InputText_Su = props => {
         }}
       >
         <i
-          class={props.iconRight + ' position-absolute'}
+          className={props.iconRight + ' position-absolute'}
           style={{
             background: '#1F242A',
             color: '#FFA510',
@@ -58,7 +60,7 @@ const InputText_Su = props => {
         name={props.id}
         type={props.type ? props.type : 'text'}
         onChange={props.onChange}
-        class="form-control border border-warning rounded"
+        className="form-control border border-warning rounded"
         placeholder={props.placeholder}
         autoComplete="off"
         style={{
@@ -66,8 +68,10 @@ const InputText_Su = props => {
           color: '#FFA510',
           textAlign: 'center',
           height: `${props.inputHeight}`,
+          width: `${props.inputWidth ? props.inputWidth : '100%'}`,
           zIndex: '10',
         }}
+        value={props.value}
       />
     </>
   )

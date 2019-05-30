@@ -13,19 +13,10 @@ class ActivityInfo extends React.Component {
     super(props)
     this.state = {
       title: ['戲院資訊', '活動資訊', '相關活動', '相關影片'],
-      //   "id": 1,
-      //   "theater": "非凡戲院",
-      //   "title": "慶祝周年慶，非凡爆米花免費吃",
-      //   "content": "慶祝周年慶，非凡爆米花免費吃",
-      //   "imgSrc": "https://images.unsplash.com/photo-1521967906867-14ec9d64bee8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      //   "isCollect": false,
-      //   "theaterMap": "106台北市大安區通化街24巷1號",
-      //   "GUINumber": "16086448",
-      //   "website": "https://www.google.com/",
-      //   "email": "theater@gmail.com"
       activityPageData: [],
       activityPageOtherData: [],
       streetView: false,
+      collectActivity: '',
     }
   }
 
@@ -40,15 +31,30 @@ class ActivityInfo extends React.Component {
       })
       const data = await res.json()
       const activityPageData = data.find(
-        item => item.id === +this.props.match.params.id
+        item => item.id === this.props.match.params.id
       )
       const activityPageOtherData = data.filter(
-        item => item.id !== +this.props.match.params.id
+        item => item.id !== this.props.match.params.id
       )
       console.log(activityPageData)
       this.setState({ activityPageData: activityPageData })
       this.setState({ activityPageOtherData: activityPageOtherData })
       this.setState({ activityHeroImage: activityPageData.imgSrc })
+    } catch (err) {
+      console.log(err)
+    }
+
+    const memberId = sessionStorage.getItem('memberId')
+    try {
+      const res = await fetch('http://localhost:5555/member/' + memberId, {
+        method: 'GET',
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      })
+      const data = await res.json()
+      this.setState({ collectActivity: data.collectActivity })
     } catch (err) {
       console.log(err)
     }
@@ -64,15 +70,57 @@ class ActivityInfo extends React.Component {
     })
     const data = res.json()
     const activityPageData = data.find(
-      item => item.id === +this.props.match.params.id
+      item => item.id === this.props.match.params.id
     )
     const activityPageOtherData = data.filter(
-      item => item.id !== +this.props.match.params.id
+      item => item.id !== this.props.match.params.id
     )
+
     console.log(activityPageData)
     this.setState({ activityPageData: activityPageData })
     this.setState({ activityPageOtherData: activityPageOtherData })
     this.setState({ activityHeroImage: activityPageData.imgSrc })
+  }
+  handleCollect = async id => {
+    const memberId = sessionStorage.getItem('memberId')
+    if (memberId !== null) {
+      try {
+        const res = await fetch('http://localhost:5555/member/' + memberId, {
+          method: 'GET',
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+        let data = await res.json()
+        let isCollect = data.collectActivity.indexOf(id) > -1
+
+        if (isCollect) {
+          data.collectActivity = data.collectActivity
+            .split(id)
+            .toString()
+            .replace(/,/g, '')
+        } else {
+          data.collectActivity += id
+        }
+        this.setState({ collectActivity: data.collectActivity })
+        try {
+          const res = await fetch('http://localhost:5555/member/' + memberId, {
+            method: 'PUT',
+            body: JSON.stringify(data),
+            headers: new Headers({
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            }),
+          })
+          console.log('修改完成')
+        } catch (err) {
+          console.log(err)
+        }
+      } catch (err) {
+        console.log(err)
+      }
+    }
   }
   render() {
     return (
@@ -140,7 +188,7 @@ class ActivityInfo extends React.Component {
               <ActivityQRcode imgSrc={window.location.href} />
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5 d-flex justify-content-center">
-              <ActivityJoinBtn id={this.props.match.params.id}/>
+              <ActivityJoinBtn id={this.props.match.params.id} />
             </div>
           </div>
         </div>
@@ -153,19 +201,33 @@ class ActivityInfo extends React.Component {
               />
             </div>
             {this.state.activityPageOtherData.map(data => (
-              <LinkContainer to={'/activity/' + data.id + '/return'}>
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-5">
+              <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-5">
+                {sessionStorage.getItem('memberId') !== null ? (
                   <ActivityCard
-                    onClick={this.handleOnClick}
+                    routerId={data.id}
+                    handleCollect={() => this.handleCollect(data.id)}
                     key={data.id}
                     title={data.theater}
                     subtitle={data.title}
                     imgSrc={data.imgSrc}
                     collectOpen
-                    isCollect={data.isCollect}
+                    isCollect={
+                      this.state.collectActivity.indexOf(data.id) > -1
+                        ? true
+                        : false
+                    }
                   />
-                </div>
-              </LinkContainer>
+                ) : (
+                  <ActivityCard
+                    routerId={data.id}
+                    handleCollect={() => this.handleCollect(data.id)}
+                    key={data.id}
+                    title={data.theater}
+                    subtitle={data.title}
+                    imgSrc={data.imgSrc}
+                  />
+                )}
+              </div>
             ))}
           </div>
         </div>

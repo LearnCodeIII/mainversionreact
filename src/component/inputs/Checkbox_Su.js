@@ -3,21 +3,23 @@ import React from 'react'
 const Checkbox_Su = props => {
   return (
     <>
-      <div class="form-check my-4">
+      <div className="form-check my-4">
         <input
           name={props.id}
-          class="form-check-input mr-3 my-0"
+          className="form-check-input mr-3 my-0"
           type="checkbox"
           value={props.id}
           onChange={props.onChange}
           id={props.id}
-          style={{ height: '100%' }}
+          style={{
+            height: '100%',
+          }}
           // required
         />
-        <label class="form-check-label" for={props.id}>
+        <label className="form-check-label" htmlFor={props.id}>
           {props.text}
         </label>
-        {/* <div class="invalid-feedback">{props.checkRemind}</div> */}
+        {/* <div className="invalid-feedback">{props.checkRemind}</div> */}
       </div>
     </>
   )

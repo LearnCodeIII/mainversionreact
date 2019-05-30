@@ -14,6 +14,7 @@ class ActionButtonFilterRoy extends React.Component {
           variant="outline-success"
           buttonText={this.state.buttonType}
           buttonIcon={this.state.iconType}
+          className="m-0"
         />
       </>
     )

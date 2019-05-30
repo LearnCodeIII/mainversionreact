@@ -3,7 +3,7 @@ import React from 'react'
 const ForumArticleAvatarRoy = props => {
   return (
     <>
-      <div className="media d-flex align-items-center">
+      <div className="media d-flex align-items-center ">
         <div
           className="rounded-circle overflow-hidden"
           style={{ width: '75px', height: '75px' }}
@@ -14,9 +14,11 @@ const ForumArticleAvatarRoy = props => {
             alt=""
           />
         </div>
-        <div className="media-body">
+        <div className="media-body border-0">
           <p className="text-light m-3">{props.contentUserName}</p>
-          <p className="text-light m-3">一分鐘前</p>
+          <p className="text-light m-3 border-0">
+            {props.forumCreateTimeCount}
+          </p>
         </div>
       </div>
     </>

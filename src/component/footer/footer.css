@@ -1,0 +1,41 @@
+body {
+  background-color: #1f242a;
+}
+
+.container {
+  background-color: #1f242a;
+  color: #d4d1cc;
+}
+
+.footer_brand div {
+  line-height: 48px;
+}
+
+.nomarginBtn {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+a {
+  color: #d4d1cc;
+  line-height: 0.5;
+  padding: 8px 0 !important;
+}
+
+.nav-link:hover {
+  color: #ffa510;
+}
+
+.btn_Subscribe {
+  background-color: #ffa510;
+}
+
+h4 {
+  font-weight: 900;
+}
+
+.inp_email {
+  background-color: #ffffff96;
+  border: none;
+}

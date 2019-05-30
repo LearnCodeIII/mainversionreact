@@ -14,19 +14,10 @@ class ActivityInfo extends React.Component {
     super(props)
     this.state = {
       title: ['戲院資訊', '活動資訊', '報名表單'],
-      //   "id": 1,
-      //   "theater": "非凡戲院",
-      //   "title": "慶祝周年慶，非凡爆米花免費吃",
-      //   "content": "慶祝周年慶，非凡爆米花免費吃",
-      //   "imgSrc": "https://images.unsplash.com/photo-1521967906867-14ec9d64bee8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      //   "isCollect": false,
-      //   "theaterMap": "106台北市大安區通化街24巷1號",
-      //   "GUINumber": "16086448",
-      //   "website": "https://www.google.com/",
-      //   "email": "theater@gmail.com"
       activityPageData: [],
       activityPageOtherData: [],
       streetView: false,
+      memberData: {},
     }
   }
 
@@ -41,15 +32,30 @@ class ActivityInfo extends React.Component {
       })
       const data = await res.json()
       const activityPageData = data.find(
-        item => item.id === +this.props.match.params.id
+        item => item.id === this.props.match.params.id
       )
       const activityPageOtherData = data.filter(
-        item => item.id !== +this.props.match.params.id
+        item => item.id !== this.props.match.params.id
       )
       console.log(activityPageData)
       this.setState({ activityPageData: activityPageData })
       this.setState({ activityPageOtherData: activityPageOtherData })
       this.setState({ activityHeroImage: activityPageData.imgSrc })
+    } catch (err) {
+      console.log(err)
+    }
+
+    const memberId = sessionStorage.getItem('memberId')
+    try {
+      const res = await fetch('http://localhost:5555/member/' + memberId, {
+        method: 'GET',
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      })
+      const data = await res.json()
+      this.setState({ memberData: data })
     } catch (err) {
       console.log(err)
     }
@@ -65,49 +71,22 @@ class ActivityInfo extends React.Component {
     })
     const data = res.json()
     const activityPageData = data.find(
-      item => item.id === +this.props.match.params.id
+      item => item.id === this.props.match.params.id
     )
     const activityPageOtherData = data.filter(
-      item => item.id !== +this.props.match.params.id
+      item => item.id !== this.props.match.params.id
     )
     console.log(activityPageData)
     this.setState({ activityPageData: activityPageData })
     this.setState({ activityPageOtherData: activityPageOtherData })
     this.setState({ activityHeroImage: activityPageData.imgSrc })
   }
+
   render() {
     return (
       <>
-        <div className="fix-height">
-          
-        </div>
-        <div className="container-fuild fix-content" id="text">
-          <div className="row">
-            <div className="col-md-12 p-0">
-              <ActivityTitle
-                title={this.state.title[0]}
-                className="content-title"
-              />
-            </div>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5">
-              <ActivityPageCard
-                theater={this.state.activityPageData.theater}
-                theaterMap={this.state.activityPageData.theaterMap}
-                phone={this.state.activityPageData.phone}
-                GUINumber={this.state.activityPageData.GUINumber}
-                website={this.state.activityPageData.website}
-                email={this.state.activityPageData.email}
-                lat={this.state.activityPageData.lat}
-                lng={this.state.activityPageData.lng}
-                streetView={this.state.streetView}
-                handleOnClickMap={() => this.setState({ streetView: true })}
-                handleOnClickMaplocal={() =>
-                  this.setState({ streetView: false })
-                }
-              />
-            </div>
-          </div>
-        </div>
+        <div className="fix-height" />
+
         <div className="container-fuild fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
@@ -116,7 +95,7 @@ class ActivityInfo extends React.Component {
                 className="content-title"
               />
             </div>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-9 mt-5">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5">
               <ActivityContent
                 theater={this.state.activityPageData.theater}
                 title={this.state.activityPageData.title}
@@ -128,10 +107,6 @@ class ActivityInfo extends React.Component {
                 }
               />
             </div>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-3 mt-5">
-              <ActivityQRcode imgSrc={window.location.href} />
-            </div>
-            
           </div>
         </div>
         <div className="container-fuild fix-content" id="text">
@@ -142,13 +117,13 @@ class ActivityInfo extends React.Component {
                 className="content-title"
               />
             </div>
-            
-              <ActivityJoinForm
-              />
 
+            <ActivityJoinForm
+              memberAccount={this.state.memberData['name']}
+              memberEmail={this.state.memberData['email']}
+            />
           </div>
         </div>
-        
       </>
     )
   }

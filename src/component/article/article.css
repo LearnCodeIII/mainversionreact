@@ -1,0 +1,140 @@
+.article-card {
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #0000005e;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.darkBG {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+}
+
+/* 連結顏色 */
+.link-a {
+  color: #d4d1cc;
+}
+.link-a:hover {
+  color: #d4d1cc;
+  text-decoration: none;
+}
+
+.articlePageImg {
+  background-image: ;
+}
+
+/* 圖片背景遮罩 */
+.bigDarkBG {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.300);
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.slider:hover .bigDarkBG {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.109);
+}
+.articleCard:hover .bigDarkBG {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.109);
+}
+
+/* 通用頭像 */
+.avatar {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar img {
+  height: 48px;
+  object-fit: cover;
+}
+
+/* 留言區 */
+.commentGroup {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.media-body {
+  border-bottom: solid 1px #a7a7a717;
+}
+
+/* 按鈕 */
+.viewPage {
+  position: relative;
+}
+.nomarginBtn {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+.typeBtn {
+  background-color: transparent;
+  color: #d4d1cc;
+}
+.btnGroupV {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  top: 42%;
+}
+
+.textColor1 {
+  color: #d4d1cc;
+}
+
+.contentText {
+  line-height: 2;
+  /* height: 100%; */
+  overflow: hidden;
+}
+
+.darkText {
+  z-index: 99;
+}
+
+.box-shadow {
+  box-shadow: 1px 1px 5px #00000048;
+}
+
+.card-body {
+  /* padding-bottom: 0px; */
+}
+
+.mycontainer {
+  margin: 50px 0px;
+}
+
+/* 卡片右上書籤 */
+.righ-mark {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  font-size: 1.5rem;
+  z-index: 5;
+}
+
+/* 卡片下方固定按鈕位置 */
+.bottomBtn {
+  margin-top: 16px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.article_pic {
+  overflow: hidden;
+  height: 240px;
+}
+
+.img56 {
+  object-fit: cover;
+}

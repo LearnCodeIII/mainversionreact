@@ -8,12 +8,11 @@
   ],
   "activityCardData": [
     {
-      "id": 1,
+      "id": "a1558948500794",
       "theater": "總督數位影城",
       "title": "慶祝周年慶，總督數位爆米花免費吃",
       "content": "HELLO KITTY應援男友、佛心活動～帶著「世足限量造型爆米花桶」來總督數位影城，就不用吃土囉！ 爆米花免費吃到飽！ ",
       "imgSrc": "https://images.unsplash.com/photo-1521967906867-14ec9d64bee8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "isCollect": false,
       "theaterMap": "106台北市大安區通化街24巷1號",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
@@ -23,33 +22,31 @@
       "lng": "121.544851",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "place":"咖啡廳"
+      "place": "北部影院"
     },
     {
-      "id": 2,
-      "theater": "星光戲院",
-      "title": "來星光，看星際。",
-      "content": "來星光，看星際。",
+      "id": "a1558948576759",
+      "theater": "勤美術館",
+      "title": "六年走過 勤美術館感謝有你",
+      "content": "六年走過，勤美術館與你一起，建構了屬於草悟道獨有的街區生活美學。完成階段性任務之後，勤美術館即將於2019年一月開始進行整修施工工程。為了推廣更多台灣青年藝術家與創作者，為了提升草悟道生活與藝文能量，為了深耕社區和鄰里的互動脈絡，邀請國際建築大師–隈研吾先生進行未來美術館設計，期待拉起下一個藝術與人、城市、環境之間的美好藝文平台。勤美術館空間即將開始進行整修，即日起暫時停止對外開放。後續消息請注意勤美術館FB粉絲團。",
       "imgSrc": "https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80",
-      "isCollect": false,
-      "theaterMap": "10845台北市萬華區成都路88號",
+      "theaterMap": "404台中市西區館前路71號",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
       "email": "theater@gmail.com",
       "phone": "0912345678",
-      "lat": "25.0452986",
-      "lng": "121.5042042",
+      "lat": "24.152395",
+      "lng": "120.663567",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "place":"咖啡廳"
+      "place": "中部文創園區"
     },
     {
-      "id": 3,
+      "id": "a1558948598530",
       "theater": "松山文創園區 藝思空間",
       "title": "VR+3DMAX的全新觀賞體驗就在松山文創",
       "content": "3DMAX的全新觀賞體驗就在松山文創",
       "imgSrc": "https://images.unsplash.com/photo-1478358161113-b0e11994a36b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "isCollect": false,
       "theaterMap": "100台北市中正區八德路一段1號",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
@@ -59,15 +56,14 @@
       "lng": "121.561157",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "place":"咖啡廳"
+      "place": "北部文創園區"
     },
     {
-      "id": 4,
+      "id": "a1558948617225",
       "theater": "世新大學",
       "title": "影片演員招募中！",
       "content": "影片演員招募中！",
       "imgSrc": "https://images.unsplash.com/photo-1551448215-3a9aa113815c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "isCollect": false,
       "theaterMap": "10491台北市中山區南京東路三段133號",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
@@ -77,15 +73,14 @@
       "lng": "121.544043",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "place":"學校"
+      "place": "北部學校"
     },
     {
-      "id": 5,
+      "id": "a1558948627377",
       "theater": "華山1914文化創意產業園區",
       "title": "五六零年代電影串燒",
       "content": "五六零年代電影串燒",
       "imgSrc": "https://images.unsplash.com/photo-1543059047-278b7120468c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=617&q=80",
-      "isCollect": false,
       "theaterMap": "110台北市信義區菸廠路88號",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
@@ -95,15 +90,14 @@
       "lng": "121.529397",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "place":"咖啡廳"
+      "place": "北部文創園區"
     },
     {
-      "id": 6,
+      "id": "a1558948640385",
       "theater": "文山劇場",
       "title": "65歲長者，免費入場",
       "content": "65歲長者，免費入場",
       "imgSrc": "https://images.unsplash.com/photo-1508963493744-76fce69379c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "isCollect": false,
       "theaterMap": "105台北市松山區八德路四段138號B1 No. 138號八德路四段",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
@@ -113,7 +107,109 @@
       "lng": "121.541125",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "place":"咖啡廳"
+      "place": "北部文創園區"
+    },
+    {
+      "id": "a1558948651874",
+      "theater": "朝代大戲院",
+      "title": "設計力．打造新時代價值",
+      "content": "【坤豐形象設計部門】提供品牌設計、CIS企業識別系統、LOGO商標設計、名片設計、平面印刷品設計、公司型錄設計、粉絲頁客製化設計。",
+      "imgSrc": "https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80",
+      "theaterMap": "106台北市大安區通化街24巷1號",
+      "GUINumber": "16086448",
+      "website": "https://www.google.com/",
+      "email": "theater@gmail.com",
+      "phone": "0912345678",
+      "lat": "25.048434",
+      "lng": "121.544851",
+      "joinContent": "線上報名即可參加。",
+      "joinContentCurrentPeople": "無限制名額。",
+      "place": "北部影院"
+    },
+    {
+      "id": "a1558948664395",
+      "theater": "全美今日戲院",
+      "title": "全美今日戲院手繪看板文創研習營",
+      "content": "https://www.facebook.com/cmmoviesschool/有任何問題可私訊詢問",
+      "imgSrc": "https://images.unsplash.com/photo-1491245338813-c6832976196e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+      "theaterMap": "404台中市西區館前路71號",
+      "GUINumber": "16086448",
+      "website": "https://www.google.com/",
+      "email": "theater@gmail.com",
+      "phone": "0912345678",
+      "lat": "24.152395",
+      "lng": "120.663567",
+      "joinContent": "線上報名即可參加。",
+      "joinContentCurrentPeople": "無限制名額。",
+      "place": "北部戲院"
+    },
+    {
+      "id": "a1558948674978",
+      "theater": "文化資產園區雅堂館",
+      "title": "大甲馬祖結合ＶＲ現場參與",
+      "content": "大甲馬祖結合ＶＲ現場參與",
+      "imgSrc": "https://images.unsplash.com/photo-1518663392635-94580fd4ba4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "theaterMap": "100台北市中正區八德路一段1號",
+      "GUINumber": "16086448",
+      "website": "https://www.google.com/",
+      "email": "theater@gmail.com",
+      "phone": "0912345678",
+      "lat": "25.043372",
+      "lng": "121.561157",
+      "joinContent": "線上報名即可參加。",
+      "joinContentCurrentPeople": "無限制名額。",
+      "place": "中部文創園區"
+    },
+    {
+      "id": "a1558948696172",
+      "theater": "藝文沙龍",
+      "title": "IOT Studio影片展",
+      "content": "IOT Studio影片展",
+      "imgSrc": "https://images.unsplash.com/photo-1509403690534-26d3b04c8a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+      "theaterMap": "10491台北市中山區南京東路三段133號",
+      "GUINumber": "16086448",
+      "website": "https://www.google.com/",
+      "email": "theater@gmail.com",
+      "phone": "0912345678",
+      "lat": "24.988694",
+      "lng": "121.544043",
+      "joinContent": "線上報名即可參加。",
+      "joinContentCurrentPeople": "無限制名額。",
+      "place": "北部咖啡廳"
+    },
+    {
+      "id": "a1558948799830",
+      "theater": "誠品電影院",
+      "title": "赤手登峰上映",
+      "content": "赤手登峰",
+      "imgSrc": "https://images.unsplash.com/photo-1531451956312-91edefeca042?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=354&q=80",
+      "theaterMap": "110台北市信義區菸廠路88號",
+      "GUINumber": "16086448",
+      "website": "https://www.google.com/",
+      "email": "theater@gmail.com",
+      "phone": "0912345678",
+      "lat": "25.044136",
+      "lng": "121.529397",
+      "joinContent": "線上報名即可參加。",
+      "joinContentCurrentPeople": "無限制名額。",
+      "place": "北部影院"
+    },
+    {
+      "id": "a1558948812063",
+      "theater": "大墩文化中心",
+      "title": "2019台灣國際紀錄片巡迴展台中開跑",
+      "content": "2019台灣國際紀錄片巡迴展台中開跑",
+      "imgSrc": "https://images.unsplash.com/photo-1507924538820-ede94a04019d?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      "theaterMap": "105台北市松山區八德路四段138號B1 No. 138號八德路四段",
+      "GUINumber": "16086448",
+      "website": "https://www.google.com/",
+      "email": "theater@gmail.com",
+      "phone": "0912345678",
+      "lat": "24.992111",
+      "lng": "121.541125",
+      "joinContent": "線上報名即可參加。",
+      "joinContentCurrentPeople": "無限制名額。",
+      "place": "中部文創園區"
     }
   ],
   "cinema-sign-inputmsg": [
@@ -130,7 +226,7 @@
       "iconRS": ""
     },
     {
-      "id": "cinemaId",
+      "id": "cinemaTaxid",
       "w": "",
       "h": "48px",
       "inputType": "text",
@@ -251,7 +347,7 @@
       "inputLabel": "詳細地址",
       "iconL": "",
       "iconLS": "",
-      "placeholder": "範例格式",
+      "placeholder": "範例格式: 台北市XX區XX路X段X號X樓",
       "iconR": "",
       "iconRS": ""
     },
@@ -263,7 +359,7 @@
       "inputLabel": "連絡電話",
       "iconL": "",
       "iconLS": "",
-      "placeholder": "請輸入電話號碼",
+      "placeholder": "請輸入市內電話號碼 (例: 02-2222-2222)",
       "iconR": "",
       "iconRS": ""
     },
@@ -292,23 +388,23 @@
       "iconRS": "",
       "selectOptions": [
         {
-          "id": "type1",
+          "id": "gallery",
           "name": "藝廊"
         },
         {
-          "id": "type2",
+          "id": "bar",
           "name": "酒吧"
         },
         {
-          "id": "type3",
+          "id": "restaurant",
           "name": "餐廳"
         },
         {
-          "id": "type4",
+          "id": "theater",
           "name": "影院"
         },
         {
-          "id": "type5",
+          "id": "cafe",
           "name": "咖啡廳"
         }
       ]
@@ -326,7 +422,7 @@
       "iconRS": ""
     },
     {
-      "id": "cinemaPwd",
+      "id": "cinemaPassword",
       "w": "",
       "h": "48px",
       "inputType": "password",
@@ -338,7 +434,7 @@
       "iconRS": ""
     },
     {
-      "id": "repwd",
+      "id": "cinemaRepwd",
       "w": "",
       "h": "48px",
       "inputType": "password",
@@ -364,7 +460,7 @@
       "iconRS": ""
     },
     {
-      "id": "cinemaLogo",
+      "id": "cinemaLogoImg",
       "w": "",
       "h": "48px",
       "inputType": "file",
@@ -433,11 +529,11 @@
       "options": [
         {
           "id": "activityMemberBoard",
-          "name": "活動面板"
+          "name": "活動總覽"
         },
         {
           "id": "activityMemberCollect",
-          "name": "已收藏活動"
+          "name": "收藏活動"
         },
         {
           "id": "activityMemberSignUp",
@@ -451,11 +547,11 @@
       "title": "論壇紀錄",
       "options": [
         {
-          "id": "my-post",
+          "id": "myPost",
           "name": "論壇發文紀錄"
         },
         {
-          "id": "my-comment",
+          "id": "myComment",
           "name": "論壇留言紀錄"
         }
       ],
@@ -479,7 +575,7 @@
       "title": "戲院資訊",
       "options": [
         {
-          "id": "cinema-ingfo-preview",
+          "id": "cinema-info-preview",
           "name": "戲院資訊一覽"
         },
         {
@@ -593,6 +689,560 @@
       "isclicked": false
     }
   ],
+  "memberEditInputmsg": [
+    {
+      "id": "name",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "姓名",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "nickname",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "暱稱",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "gender",
+      "w": "",
+      "h": "40px",
+      "inputType": "radioGender",
+      "inputLabel": "性別",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": "",
+      "selectOptions": [
+        {
+          "id": "male",
+          "name": "男性",
+          "iconL": "fas fa-mars",
+          "iconLS": "24px"
+        },
+        {
+          "id": "female",
+          "name": "女性",
+          "iconL": "fas fa-venus",
+          "iconLS": "24px"
+        }
+      ]
+    },
+    {
+      "id": "birth",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "生日",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "格式：yyyy-mm-dd",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "career",
+      "w": "",
+      "h": "40px",
+      "inputType": "selector",
+      "inputLabel": "職業",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "fas fa-caret-square-down",
+      "iconRS": "24px",
+      "selectOptions": [
+        {
+          "id": "career0",
+          "name": "尚未選擇職業"
+        },
+        {
+          "id": "career1",
+          "name": "學生"
+        },
+        {
+          "id": "career2",
+          "name": "軍公教"
+        },
+        {
+          "id": "career3",
+          "name": "服務業"
+        },
+        {
+          "id": "career4",
+          "name": "金融業"
+        },
+        {
+          "id": "career5",
+          "name": "資訊 / 科技"
+        },
+        {
+          "id": "career6",
+          "name": "傳播 / 廣告 / 設計"
+        },
+        {
+          "id": "career7",
+          "name": "藝文"
+        },
+        {
+          "id": "career8",
+          "name": "醫療"
+        },
+        {
+          "id": "career9",
+          "name": "製造業"
+        },
+        {
+          "id": "career10",
+          "name": "農林漁牧"
+        },
+        {
+          "id": "career11",
+          "name": "家管 / 退休"
+        },
+        {
+          "id": "career12",
+          "name": "自由業"
+        },
+        {
+          "id": "career13",
+          "name": "其他"
+        }
+      ]
+    },
+    {
+      "id": "city",
+      "w": "",
+      "h": "40px",
+      "inputType": "selector",
+      "inputLabel": "所在縣市",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "fas fa-caret-square-down",
+      "iconRS": "24px",
+      "selectOptions": [
+        {
+          "id": "NOCITY",
+          "name": "尚未選擇縣市"
+        },
+        {
+          "id": "TPE",
+          "name": "台北市"
+        },
+        {
+          "id": "NTPC",
+          "name": "新北市"
+        },
+        {
+          "id": "KEL",
+          "name": "基隆市"
+        },
+        {
+          "id": "TYN",
+          "name": "桃園市"
+        },
+        {
+          "id": "HSZ",
+          "name": "新竹市"
+        },
+        {
+          "id": "ZMI",
+          "name": "苗栗縣"
+        },
+        {
+          "id": "TXG",
+          "name": "台中市"
+        },
+        {
+          "id": "CHW",
+          "name": "彰化縣"
+        },
+        {
+          "id": "NTC",
+          "name": "南投縣"
+        },
+        {
+          "id": "YUN",
+          "name": "雲林縣"
+        },
+        {
+          "id": "CYI",
+          "name": "嘉義市"
+        },
+        {
+          "id": "CHY",
+          "name": "嘉義縣"
+        },
+        {
+          "id": "TNN",
+          "name": "台南市"
+        },
+        {
+          "id": "PIF",
+          "name": "屏東縣"
+        },
+        {
+          "id": "ILA",
+          "name": "宜蘭縣"
+        },
+        {
+          "id": "HUN",
+          "name": "花蓮縣"
+        },
+        {
+          "id": "TTT",
+          "name": "台東縣"
+        },
+        {
+          "id": "PEH",
+          "name": "澎湖縣"
+        },
+        {
+          "id": "KNH",
+          "name": "金門縣"
+        }
+      ]
+    },
+    {
+      "id": "address",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "聯絡地址",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "範例格式: 台北市XX區XX路X段X號X樓",
+      "iconR": "",
+      "iconRS": ""
+    }
+  ],
+  "memberFavTypeOptions": [
+    {
+      "id": "filmTypeAll",
+      "name": "全選"
+    },
+    {
+      "id": "filmType1",
+      "name": "動作片"
+    },
+    {
+      "id": "filmType2",
+      "name": "動畫片"
+    },
+    {
+      "id": "filmType3",
+      "name": "喜劇片"
+    },
+    {
+      "id": "filmType4",
+      "name": "偵探片"
+    },
+    {
+      "id": "filmType5",
+      "name": "紀錄片"
+    },
+    {
+      "id": "filmType6",
+      "name": "戲劇片"
+    },
+    {
+      "id": "filmType7",
+      "name": "英雄片"
+    },
+    {
+      "id": "filmType8",
+      "name": "恐怖片"
+    },
+    {
+      "id": "filmType9",
+      "name": "武俠片"
+    },
+    {
+      "id": "filmType10",
+      "name": "靈異片"
+    },
+    {
+      "id": "filmType11",
+      "name": "文藝片"
+    },
+    {
+      "id": "filmType12",
+      "name": "警匪片"
+    },
+    {
+      "id": "filmType13",
+      "name": "科幻片"
+    },
+    {
+      "id": "filmType14",
+      "name": "懸疑片"
+    },
+    {
+      "id": "filmType15",
+      "name": "驚悚片"
+    },
+    {
+      "id": "filmType16",
+      "name": "戰爭片"
+    },
+    {
+      "id": "filmType17",
+      "name": "愛情片"
+    }
+  ],
+  "cinemaEditInputmsg": [
+    {
+      "id": "cinemaName",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "戲院名稱",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "cinemaTaxid",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "統一編號",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "cinemaPhone",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "連絡電話",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "請輸入市內電話號碼(例: 02-2222-2222)",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "cinemaCity",
+      "w": "",
+      "h": "40px",
+      "inputType": "selector",
+      "inputLabel": "所在縣市",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "fas fa-caret-square-down",
+      "iconRS": "24px",
+      "selectOptions": [
+        {
+          "id": "NOCITY",
+          "name": "尚未選擇縣市"
+        },
+        {
+          "id": "TPE",
+          "name": "台北市"
+        },
+        {
+          "id": "NTPC",
+          "name": "新北市"
+        },
+        {
+          "id": "KEL",
+          "name": "基隆市"
+        },
+        {
+          "id": "TYN",
+          "name": "桃園市"
+        },
+        {
+          "id": "HSZ",
+          "name": "新竹市"
+        },
+        {
+          "id": "ZMI",
+          "name": "苗栗縣"
+        },
+        {
+          "id": "TXG",
+          "name": "台中市"
+        },
+        {
+          "id": "CHW",
+          "name": "彰化縣"
+        },
+        {
+          "id": "NTC",
+          "name": "南投縣"
+        },
+        {
+          "id": "YUN",
+          "name": "雲林縣"
+        },
+        {
+          "id": "CYI",
+          "name": "嘉義市"
+        },
+        {
+          "id": "CHY",
+          "name": "嘉義縣"
+        },
+        {
+          "id": "TNN",
+          "name": "台南市"
+        },
+        {
+          "id": "PIF",
+          "name": "屏東縣"
+        },
+        {
+          "id": "ILA",
+          "name": "宜蘭縣"
+        },
+        {
+          "id": "HUN",
+          "name": "花蓮縣"
+        },
+        {
+          "id": "TTT",
+          "name": "台東縣"
+        },
+        {
+          "id": "PEH",
+          "name": "澎湖縣"
+        },
+        {
+          "id": "KNH",
+          "name": "金門縣"
+        }
+      ]
+    },
+    {
+      "id": "cinemaArea",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "所在地區",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "cinemaAddress",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "聯絡地址",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "cinemaBackupEmail",
+      "w": "",
+      "h": "40px",
+      "inputType": "text",
+      "inputLabel": "備用信箱",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "cinemaType",
+      "w": "",
+      "h": "48px",
+      "inputType": "radioCinemaType",
+      "inputLabel": "場所類別",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "5種按鈕選單",
+      "iconR": "",
+      "iconRS": "",
+      "selectOptions": [
+        {
+          "id": "gallery",
+          "name": "藝廊"
+        },
+        {
+          "id": "bar",
+          "name": "酒吧"
+        },
+        {
+          "id": "restaurant",
+          "name": "餐廳"
+        },
+        {
+          "id": "theater",
+          "name": "影院"
+        },
+        {
+          "id": "cafe",
+          "name": "咖啡廳"
+        }
+      ]
+    },
+    {
+      "id": "cinemaWeb",
+      "w": "",
+      "h": "48px",
+      "inputType": "text",
+      "inputLabel": "官方網站",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "請輸入您的官方網址",
+      "iconR": "",
+      "iconRS": ""
+    },
+    {
+      "id": "cinemaHeroImg",
+      "w": "",
+      "h": "48px",
+      "inputType": "file",
+      "inputLabel": "視覺圖片",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "請選擇一個檔案",
+      "iconR": "",
+      "iconRS": "",
+      "multiple": false
+    },
+    {
+      "id": "cinemaImg",
+      "w": "",
+      "h": "48px",
+      "inputType": "file",
+      "inputLabel": "官方相片",
+      "iconL": "",
+      "iconLS": "",
+      "placeholder": "請選擇檔案",
+      "iconR": "",
+      "iconRS": "",
+      "multiple": true
+    }
+  ],
   "member": [
     {
       "id": "m111111",
@@ -603,22 +1253,38 @@
       "birth": "1900-01-01",
       "email": "ch1@gmail.com",
       "pwd": "1111",
-      "avatar": "",
+      "avatar": "ca11cf8a-7724-4b33-8e93-6e6635eff034.jpg",
       "city": "台北市",
       "address": "",
-      "fav_type": "",
+      "fav_type": [],
       "career": "",
       "join_date": "2019-01-03",
       "permission": "generalMember",
-      "collectFilm": "",
-      "collectCinema": ["c1", "c2"],
-      "collectArticle": "",
+      "collectFilm": [
+        "001",
+        "002",
+        "003"
+      ],
+      "collectCinema": [
+        "c1",
+        "c2"
+      ],
+      "collectArticle": [],
       "collectActivity": "",
-      "collectForum": "",
+      "collectActivityJoin": "",
+      "collectForum": [],
       "markList": [
         {
-          "markId": "c1",
+          "markId": "001",
           "markcontent": "yaaaaa"
+        },
+        {
+          "markId": "002",
+          "markcontent": "nononon"
+        },
+        {
+          "markId": "003",
+          "markcontent": "ohhhhhhh"
         }
       ]
     },
@@ -631,22 +1297,36 @@
       "birth": "1900-02-02",
       "email": "ch2@gmail.com",
       "pwd": "2222",
-      "avatar": "",
+      "avatar": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
       "city": "台北市",
       "address": "",
-      "fav_type": "",
+      "fav_type": [],
       "career": "",
-      "join_date": "",
+      "join_date": "generalMember",
       "permission": "generalMember",
-      "collectFilm": "",
-      "collectCinema": ["c1", "c2"],
-      "collectArticle": "",
-      "collectActivity": "",
-      "collectForum": "",
+      "collectFilm": [
+        "001",
+        "003",
+        "004",
+        "002"
+      ],
+      "collectCinema": [
+        "c2"
+      ],
+      "collectArticle": [],
+      "collectForum": [],
       "markList": [
         {
-          "markId": "c1",
-          "markcontent": "yaaaaa"
+          "markId": "001",
+          "markcontent": "rtdfghjklghjklfghjfgchvjb"
+        },
+        {
+          "markId": "002",
+          "markcontent": "nononon"
+        },
+        {
+          "markId": "003",
+          "markcontent": "ohhhhhhh"
         }
       ]
     },
@@ -662,15 +1342,19 @@
       "avatar": "",
       "city": "",
       "address": "",
-      "fav_type": "",
+      "fav_type": [],
       "career": "",
       "join_date": "2019-05-23",
       "permission": "generalMember",
-      "collectFilm": "",
-      "collectCinema": ["c1", "c2"],
-      "collectArticle": "",
+      "collectFilm": [],
+      "collectCinema": [
+        "c1",
+        "c2"
+      ],
+      "collectArticle": [],
       "collectActivity": "",
-      "collectForum": "",
+      "collectActivityJoin": "",
+      "collectForum": [],
       "markList": [
         {
           "markId": "c1",
@@ -679,216 +1363,257 @@
       ]
     },
     {
-      "id": "m1558577493585",
-      "name": "",
-      "nickname": "test2",
-      "gender": "",
+      "id": "m1558576972555",
+      "name": "Mr. Manon",
+      "nickname": "快樂碼農",
+      "gender": "male",
       "mobile": "",
       "birth": "",
-      "email": "test2@gg.com",
-      "pwd": "123456",
-      "avatar": "",
-      "city": "",
+      "email": "1111",
+      "pwd": "1111",
+      "avatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "city": "台北市",
       "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-5-23",
+      "fav_type": [
+        "英雄片",
+        "動作片",
+        "武俠片",
+        "動畫片",
+        "驚悚片",
+        "偵探片",
+        "愛情片"
+      ],
+      "career": "資訊 / 科技",
+      "join_date": "2019-05-23",
       "permission": "generalMember",
-      "collectFilm": "",
-      "collectCinema": ["c1", "c2"],
-      "collectArticle": "",
-      "collectActivity": "",
-      "collectForum": "",
+      "collectFilm": [
+        "001",
+        "002",
+        "003"
+      ],
+      "collectCinema": [
+        "c1",
+        "c2"
+      ],
+      "collectArticle": [
+        "6",
+        "7"
+      ],
+      "collectActivity": "a1558948617225a1558948598530a1558948500794",
+      "collectActivityJoin": "a1558948500794",
+      "collectForum": [],
       "markList": [
         {
-          "markId": "c1",
-          "markcontent": "yaaaaa"
+          "markId": "001",
+          "markcontent": ""
         }
       ]
-    },
-    {
-      "id": "m1558577630407",
-      "name": "",
-      "nickname": "test3",
-      "gender": "",
-      "mobile": "",
-      "birth": "",
-      "email": "test3@gg.com",
-      "pwd": "123456",
-      "avatar": "",
-      "city": "",
-      "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-05-23",
-      "permission": "generalMember",
-      "collectFilm": "",
-      "collectCinema": ["c1", "c2"],
-      "collectArticle": "",
-      "collectActivity": "",
-      "collectForum": "",
-      "markList": [
-        {
-          "markId": "c1",
-          "markcontent": "yaaaaa"
-        }
-      ]
-    },
-    {
-      "id": "m1558577731620",
-      "name": "",
-      "nickname": "test4",
-      "gender": "",
-      "mobile": "",
-      "birth": "",
-      "email": "test4@gg.com",
-      "pwd": "123456",
-      "avatar": "",
-      "city": "",
-      "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-05-23",
-      "permission": "generalMember",
-      "collectFilm": "",
-      "collectCinema": ["c1", "c2"],
-      "collectArticle": "",
-      "collectActivity": "",
-      "collectForum": "",
-      "markList": [
-        {
-          "markId": "c1",
-          "markcontent": "yaaaaa"
-        }
-      ]
-    },
-    {
-      "id": "m1558596316025",
-      "name": "",
-      "nickname": "test5",
-      "gender": "",
-      "mobile": "",
-      "birth": "",
-      "email": "test5@gg.com",
-      "pwd": "123456",
-      "avatar": "",
-      "city": "",
-      "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-05-23",
-      "permission": "generalMember",
-      "collectFilm": [],
-      "collectCinema": [],
-      "collectArticle": [],
-      "collectActivity": [],
-      "collectForum": [],
-      "markList": []
-    },
-    {
-      "id": "m1558601508263",
-      "name": "",
-      "nickname": "try",
-      "gender": "",
-      "mobile": "",
-      "birth": "",
-      "email": "try@gg.com",
-      "pwd": "111111",
-      "avatar": "",
-      "city": "",
-      "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-05-23",
-      "permission": "generalMember",
-      "collectFilm": [],
-      "collectCinema": [],
-      "collectArticle": [],
-      "collectActivity": [],
-      "collectForum": [],
-      "markList": []
-    },
-    {
-      "id": "m1558606970757",
-      "name": "",
-      "nickname": "test6",
-      "gender": "",
-      "mobile": "",
-      "birth": "",
-      "email": "test6@gg.com",
-      "pwd": "111111",
-      "avatar": "",
-      "city": "",
-      "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-05-23",
-      "permission": "generalMember",
-      "collectFilm": [],
-      "collectCinema": [],
-      "collectArticle": [],
-      "collectActivity": [],
-      "collectForum": [],
-      "markList": []
-    },
-    {
-      "id": "m1558608707536",
-      "name": "",
-      "nickname": "test",
-      "gender": "",
-      "mobile": "",
-      "birth": "",
-      "email": "test@gmail.com",
-      "pwd": "13879428",
-      "avatar": "",
-      "city": "",
-      "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-05-23",
-      "permission": "generalMember",
-      "collectFilm": [],
-      "collectCinema": [],
-      "collectArticle": [],
-      "collectActivity": [],
-      "collectForum": [],
-      "markList": []
-    },
-    {
-      "id": "m1558610436688",
-      "name": "",
-      "nickname": "test@email.com",
-      "gender": "",
-      "mobile": "",
-      "birth": "",
-      "email": "test@email.com",
-      "pwd": "13879428",
-      "avatar": "",
-      "city": "",
-      "address": "",
-      "fav_type": "",
-      "career": "",
-      "join_date": "2019-05-23",
-      "permission": "generalMember",
-      "collectFilm": [],
-      "collectCinema": [],
-      "collectArticle": [],
-      "collectActivity": [],
-      "collectForum": [],
-      "markList": []
     }
   ],
   "cinema": [
     {
-      "id": "c1",
-      "cinemaName": "",
-      "cinemaCity": "",
-      "cinemaArea": "",
-      "cinemaLogoImg": "spott.jpg",
-      "cinemaImg": "spott.jpg",
-      "cinemaHeroImg": "spott.jpg",
-      "cinemaAccount": "tpespotlight",
+      "id": "c001",
+      "cinemaName": "碼農Cafe",
+      "cinemaCity": "台北市",
+      "cinemaArea": "大安區",
+      "cinemaLogoImg": "0465d345-669d-450d-ae97-1d26ad39ea68.png",
+      "cinemaImg": [
+        "spott.jpg",
+        "spoth.jpg",
+        "nocho.jpg",
+        "eslite.jpg",
+        "65f25c0a-1eea-45c4-984d-f3afff1f9845.jpg",
+        "e528875d-afd8-4b31-9c28-a641bb3ccf53.jpg"
+      ],
+      "cinemaHeroImg": "a2fa5157-b1b3-4aff-bded-60687f695387.png",
+      "cinemaAccount": "1111",
       "cinemaPassword": "1111",
+      "cinemaType": "cafe",
+      "cinemaStar": [
+        {
+          "starId": "m111111",
+          "star": 5
+        },
+        {
+          "starId": "m22222",
+          "star": 5
+        },
+        {
+          "starId": "m1558576972555",
+          "star": 5
+        }
+      ],
+      "cinemaAddress": "台北市大安區復興南路一段",
+      "cinemaPhone": "02-2511-1111",
+      "cinemaTaxid": "11111111",
+      "cinemaWeb": "http://manonCafe.com.tw",
+      "cinemaEmail": "manon@gg.com",
+      "cinemaBackupEmail": "manonCafe@gmail.com",
+      "cinemaAwesome": [
+        "m111111",
+        "m22222"
+      ],
+      "cinemaPageViews": "572",
+      "cinemaSignUpDate": "1955-03-12",
+      "purview": "cinemaMember",
+      "cinemaMessage": [
+        {
+          "id": 1559151687850,
+          "name": "訪客",
+          "img": "asianman.jpg",
+          "message": "ㄊsdcec",
+          "time": 1559151687850,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1559138289149,
+          "name": "光點台北",
+          "img": "spott.jpg",
+          "message": "我已改變發文放置順序...  所以下面資料順序就不要管他惹！！",
+          "time": 1559138289149,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1559138199665,
+          "name": "光點台北",
+          "img": "spott.jpg",
+          "message": "wergva",
+          "time": 1559138199665,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": "002",
+          "name": "東尼大木",
+          "img": "asianman.jpg",
+          "message": "嘎嘎嘎我要留爆這邊",
+          "time": "1558494913221",
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": "001",
+          "name": "佐佐木小次郎",
+          "img": "asian.jpg",
+          "message": "啊啊啊  不給你留爆",
+          "time": "1558494913758",
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1558975629869,
+          "name": "光點華山",
+          "img": [
+            "spoth.jpg"
+          ],
+          "message": "戲院留言測試... 接資料庫惹賣鬧喔！＠！",
+          "time": 1558975629869,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1558975673440,
+          "name": "小雪",
+          "img": "asianman.jpg",
+          "message": "會員留言測試... 三小～～不要爆在這喔",
+          "time": 1558975673440,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1558975709879,
+          "name": "訪客",
+          "img": "asianman.jpg",
+          "message": "沒登陸的訪客留言測試...   這過關就可以去抽煙惹...",
+          "time": 1558975709879,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1559132033032,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "fgchvjbk",
+          "time": 1559132033032,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132794325,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "fghvjbknm bg",
+          "time": 1559132794325,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132797535,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "ikjhbvgjbkb",
+          "time": 1559132797535,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132834170,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "fuygvhujkhj",
+          "time": 1559132834170,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132838478,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "ghcvjkbvg",
+          "time": 1559132838478,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559138044578,
+          "name": "光點台北",
+          "img": "spott.jpg",
+          "message": "test",
+          "time": 1559138044578,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        }
+      ]
+    },
+    {
+      "id": "c1",
+      "cinemaName": "光點台北",
+      "cinemaCity": "台北市",
+      "cinemaArea": "中山區",
+      "cinemaLogoImg": "spott.jpg",
+      "cinemaImg": [
+        "spott.jpg"
+      ],
+      "cinemaHeroImg": "spott.jpg",
+      "cinemaAccount": "spottaipei",
+      "cinemaPassword": "1111",
+      "cinemaType": "gallery",
       "cinemaStar": [
         {
           "starId": "m22222",
@@ -913,7 +1638,8 @@
           "message": "嘎嘎嘎我要留爆這邊",
           "time": "1558494913221",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         },
         {
           "id": "001",
@@ -922,7 +1648,8 @@
           "message": "啊啊啊  不給你留爆",
           "time": "1558494913758",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         }
       ]
     },
@@ -932,14 +1659,21 @@
       "cinemaCity": "台北市",
       "cinemaArea": "松山區",
       "cinemaLogoImg": "spoth.jpg",
-      "cinemaImg": "spoth.jpg",
+      "cinemaImg": [
+        "spoth.jpg"
+      ],
       "cinemaHeroImg": "spoth.jpg",
       "cinemaAccount": "hshspotlight",
       "cinemaPassword": "2222",
+      "cinemaType": "gallery",
       "cinemaStar": [
         {
           "starId": "m22222",
           "star": 5
+        },
+        {
+          "starId": "m1558576972555",
+          "star": 1
         }
       ],
       "cinemaMark": "testword",
@@ -949,7 +1683,9 @@
       "cinemaWeb": "http://www.spot-hs.org.tw/",
       "cinemaEmail": "taipei.spotdesign@gmail.com",
       "cinemaBackupEmail": "",
-      "cinemaAwesome": "234",
+      "cinemaAwesome": [
+        "234"
+      ],
       "cinemaPageViews": "572",
       "cinemaSignUpDate": "1955-03-12",
       "purview": "cinemaMember",
@@ -961,7 +1697,8 @@
           "message": "嘎嘎嘎我要留爆這邊",
           "time": "1558494913221",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         },
         {
           "id": "001",
@@ -970,7 +1707,8 @@
           "message": "啊啊啊  不給你留爆",
           "time": "1558494913758",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         }
       ]
     },
@@ -980,14 +1718,21 @@
       "cinemaCity": "台北市",
       "cinemaArea": "信義區",
       "cinemaLogoImg": "nocho.jpg",
-      "cinemaImg": "nocho.jpg",
+      "cinemaImg": [
+        "nocho.jpg"
+      ],
       "cinemaHeroImg": "nocho.jpg",
       "cinemaAccount": "hipster",
       "cinemaPassword": "3333",
+      "cinemaType": "cafe",
       "cinemaStar": [
         {
           "starId": "m22222",
           "star": 5
+        },
+        {
+          "starId": "m1558576972555",
+          "star": 2
         }
       ],
       "cinemaMark": "testword",
@@ -997,7 +1742,9 @@
       "cinemaWeb": "https://www.spacebarfilm.com/blank-14",
       "cinemaEmail": "spacebarroom@gmail.com",
       "cinemaBackupEmail": "",
-      "cinemaAwesome": "234",
+      "cinemaAwesome": [
+        "234"
+      ],
       "cinemaPageViews": "572",
       "cinemaSignUpDate": "1955-03-12",
       "purview": "cinemaMember",
@@ -1009,7 +1756,8 @@
           "message": "嘎嘎嘎我要留爆這邊",
           "time": "1558494913221",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         },
         {
           "id": "001",
@@ -1018,7 +1766,8 @@
           "message": "啊啊啊  不給你留爆",
           "time": "1558494913758",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         }
       ]
     },
@@ -1028,10 +1777,13 @@
       "cinemaCity": "台北市",
       "cinemaArea": "大安區",
       "cinemaLogoImg": "xiaomijo.jpg",
-      "cinemaImg": "xiaomijo.jpg",
+      "cinemaImg": [
+        "xiaomijo.jpg"
+      ],
       "cinemaHeroImg": "xiaomijo.jpg",
       "cinemaAccount": "xiaomijo",
       "cinemaPassword": "4444",
+      "cinemaType": "cafe",
       "cinemaStar": [
         {
           "starId": "m22222",
@@ -1045,7 +1797,9 @@
       "cinemaWeb": "",
       "cinemaEmail": "",
       "cinemaBackupEmail": "",
-      "cinemaAwesome": "234",
+      "cinemaAwesome": [
+        "234"
+      ],
       "cinemaPageViews": "572",
       "cinemaSignUpDate": "1955-03-12",
       "purview": "cinemaMember",
@@ -1057,7 +1811,8 @@
           "message": "嘎嘎嘎我要留爆這邊",
           "time": "1558494913221",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         },
         {
           "id": "001",
@@ -1066,7 +1821,8 @@
           "message": "啊啊啊  不給你留爆",
           "time": "1558494913758",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         }
       ]
     },
@@ -1076,10 +1832,13 @@
       "cinemaCity": "台北市",
       "cinemaArea": "松山區",
       "cinemaLogoImg": "eslite.jpg",
-      "cinemaImg": "eslite.jpg",
+      "cinemaImg": [
+        "eslite.jpg"
+      ],
       "cinemaHeroImg": "eslite.jpg",
       "cinemaAccount": "chptheater",
       "cinemaPassword": "5555",
+      "cinemaType": "theater",
       "cinemaStar": [
         {
           "starId": "m22222",
@@ -1093,7 +1852,9 @@
       "cinemaWeb": "https://meet.eslite.com/tw/tc/gallery/movieschedule/201803020001",
       "cinemaEmail": "",
       "cinemaBackupEmail": "",
-      "cinemaAwesome": "234",
+      "cinemaAwesome": [
+        "234"
+      ],
       "cinemaPageViews": "572",
       "cinemaSignUpDate": "1955-03-12",
       "purview": "cinemaMember",
@@ -1105,7 +1866,8 @@
           "message": "嘎嘎嘎我要留爆這邊",
           "time": "1558494913221",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         },
         {
           "id": "001",
@@ -1114,8 +1876,1077 @@
           "message": "啊啊啊  不給你留爆",
           "time": "1558494913758",
           "awesome": [],
-          "boo": []
+          "boo": [],
+          "imgLocation": "cinemaImg"
         }
+      ]
+    },
+    {
+      "id": "c1558763277067",
+      "cinemaName": "222222",
+      "cinemaCity": "台北市",
+      "cinemaArea": "2222",
+      "cinemaLogoImg": "2ca0315c-2e42-4f24-b3e8-c3edc7ff22a4.jpg",
+      "cinemaImg": [
+        ""
+      ],
+      "cinemaHeroImg": "16311abb-b9cc-4730-80c4-ad00b9c8484e.jpg",
+      "cinemaAccount": "aaaaaa",
+      "cinemaPassword": "aaaaaa",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市111111111",
+      "cinemaPhone": "02-2222-2222",
+      "cinemaTaxid": "22222222",
+      "cinemaWeb": "",
+      "cinemaEmail": "22@22.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [
+        ""
+      ],
+      "cinemaPageViews": "",
+      "cinemaSignUpDate": "",
+      "purview": "cinemaMember",
+      "cinemaMessage": [],
+      "cinemaType": "gallery"
+    }
+  ],
+  "articleCardData": [
+    {
+      "id": "1",
+      "title": "《因為愛你》——鹽的代價",
+      "author": "Mr.黃",
+      "avatar": "",
+      "date": "2019-03-20",
+      "content": "<p>改編自派翠西亞海史密斯（Patricia Highsmith，1921-1995）原名為《鹽的代價》（The Price of Salt，1952）的小說，《因為愛你》（Carol，2015）在超過半世紀後將這段扣人心弦的愛情故事重現在銀幕上，身為女同性戀的兩位弱勢主角和當時的保守父權社會雖很容易被視為這個故事的主要議題，但令人產生共鳴的人性情感才是最終價值所在。1952年的紐約，懷抱攝影夢卻在百貨公司裡充當櫃姐的特芮絲（魯妮瑪拉 飾）被美麗大方的顧客卡蘿（凱特布蘭琪 飾）深深吸引，在她們開始交集後，卡蘿的主動追求讓特芮絲陷入前所未有的迷戀之中，然而已婚的卡蘿面臨丈夫（凱爾錢德勒 飾）爭奪女兒扶養權的困境，讓這段千載難逢的愛情顯得前途渺茫。</p><br><p>海史密斯在1952年出版原著時，基於浪漫類型迥異於令她聲名大噪的第一本小說《火車怪客》（Strangers on a Train，1950）的心理驚悚題材，也因為其中聳動的女同志內容而使用化名克蕾兒摩根（Claire Morgan），取材自她自己於1948年聖誕節前在百貨公司工作時，與一名穿著皮草大衣金髮女人的交易互動，以及她自己喪失女兒扶養權的情人的親身經歷。其後由在海史密斯的促使下，她生前的好友費莉絲奈吉（Phyllis Nagy）選擇改編這本海史密斯自己認為「觀點太過主觀」而難以被拍成電影的作品，在奈吉的堅持和努力下，終於在距於1996年完成的初版劇本將近20年後被搬上銀幕。</p><p>&nbsp;</p><p>起初本片預定由《愛在他鄉》（Brooklyn，2015）的英國導演約翰克勞利（John Crowley）執導、亦擔任執行製片的凱特布蘭琪（Cate Blanchett）和米雅瓦許柯夫斯卡（Mia Wasikowska）主演，但在克勞利和瓦許科夫斯卡檔期衝突下由陶德海恩斯（Todd Haynes）及最初婉拒的魯妮瑪拉（Rooney Mara）接手，因而才造就出本片天衣無縫的完美組合，曾經受到已故德國名導道格拉斯瑟克（Douglas Sirk，1897-1987）的《深鎖春光一院愁》（All That Heaven Allows，1955）啟發而拍出《遠離天堂》（Far from Heaven，2002）的海恩斯，自然對1950年代美國保守社會中的禁忌戀情題材毫不陌生，由公開同志身分的他來執導更是名正言順，當然曾合作愉快的布蘭琪也是吸引他的主因之一。布蘭琪在片中的表現依舊維持水準，精彩演出卡蘿的掙扎心境，但瑪拉才是本片的真正亮點，將特芮絲初嚐愛情的純真與渴望詮釋地渾然天成。</p>",
+      "image": "article01.jpg",
+      "link": "",
+      "markId": [],
+      "likeId": [],
+      "viewCounter": "1"
+    },
+    {
+      "id": "2",
+      "title": "《海街日記》—餐桌上的人生醍醐味",
+      "author": "潔西卡",
+      "avatar": "",
+      "date": "2019-03-21",
+      "content": "<p>微潤的微笑淚眼，我想這是在看完《海街日記》後，很多人的情緒表情。</p><p>《海街日記》這部電影改編自吉田秋生於2006年在小學館『月刊フラワーズ』連載並獲得「漫畫大賞」的同名漫畫《海街 diary》。敘述住在鎌倉的香田家三姐妹，接到外遇離家多年的父親訃聞後，前往父親再娶後生活的山形參加喪禮，三姐妹對於父親的記憶各不相同，長女腦中猶記外遇鬧離婚的不快、次女對父親的懵懂體會，與三女依稀的父親形象，三人抱著或許陌生、或許複雜心情前往祭弔做為故事的開場。</p><p>在喪事中，三姐妹遇到了同父異母的妹妹鈴，因父親後妻的軟弱不可靠，長女看出鈴不得不的懂事早熟而提出同住邀約，而後連載的後續就以同父異母的第四位妹妹鈴為主視角至香田家的生活來延展故事篇章。</p><p>電影導演是枝裕和擅長利用敘事日常的拍攝手法，除去漫畫中的旁枝末節，將故事主軸濃縮聚焦在香田家四姐妹共同的生活日常，並透過父親的過去與貫穿的記憶，譜寫現在與未來可能有的新風景。</p><p>承襲前作「我的意外爸爸」或「橫山家之味」，電影中對父親角色的細膩書寫，在生活流動的風景中輕緩地剖析，呈現中年男人在家庭裡的自我。這次則透過4位個性迥然不同的姐妹，融入自己與已過世父親間實際的情感觸動，來刻劃塑出電影中未曾出現過的父親意象。</p><p>&nbsp;</p>",
+      "image": "article02.jpg",
+      "link": "",
+      "markId": [],
+      "likeId": [],
+      "viewCounter": "2"
+    },
+    {
+      "id": "3",
+      "title": "《幸福的拉札洛》：純真永遠不死",
+      "author": "Buff",
+      "avatar": "",
+      "date": "2019-03-22",
+      "content": "<p>義大利女導演愛麗絲洛瓦赫 （Alice Rohrwacher）的《幸福的拉札洛》（Happy as Lazzaro）是一部非常非常哀傷的電影。純樸善心的少年農民 Lazzaro 跟大家一起住在 Inviolata，一個虛構的義大利農村，被有著「菸草女王」之稱的 Marchesa Alfonsina de Luna 一家貴族統治。農民們不斷把沒人要做的體力活丟給善心的 Lazzaro，但他看起來並不在意；被村民戲弄，也毫不生氣。電影中這種貴族與佃農的關係看起來幾乎像中世紀，但村民們使用手機、穿著現代衣物的設計又顯示情況並非如此。</p>      <p>隨著劇情推展，Lazzaro 與貴族之子 Tancredi 結為好友（即使從 Tancredi 的角度來說，與其說是朋友，Lazzaro 跟他之間的關係更像主僕，或是一種可以隨意拋棄的玩具），一個由 Tancredi 贈予 Lazzaro 的彈弓象徵著兩人的友情，Lazzaro 從此死心塌地。有一天，病中的 Lazzaro 上山找 Tancredi，失足跌落山崖，死了。我所在的戲院響起一陣驚呼。電影的分水嶺這時出現：Lazzaro 跌落山崖的同時，統治 Inviolata 的貴族一家被發現非法剝削佃農、整件事是一個大騙局。警察介入，村民們紛紛離開了 Inviolata，只有死了的 Lazzaro 留了下來。然後發生了一件事：鏡頭中，躺在草叢中的 Lazzaro，慢慢地睜開眼睛，醒了。他看起來茫然失措，回去 Inviolata 想尋找 Tancredi，卻發現 Inviolata 已成廢墟。於是他慢慢步向充滿煙囪、排放廢氣的城市，在那裡他重逢了 Inviolata 的村民，而他們已經從少年少女長成成人。他也重新與 Tancredi 相遇（這時 Tancredi 已經變成老人），Lazzaro 就像一個來自過去的鬼魂，漫遊在破舊的城市邊緣......他沒有變老，他年輕的臉上常常沒有表情，然卻又有一切表情。Lazzaro 像一面鏡子&mdash;&mdash;&mdash;他自己本身是不變的，變的只是照鏡子的人。</p>      <p>電影後半段非常憂傷，Lazzaro 不斷地給予，卻從來沒有回報。「灰暗難看」的快樂王子其實並不在乎他的外表，他還有一顆鉛心。然而 Tancredi 在充滿煙囪的城市中把 Lazzaro 像玩具一樣地拋棄後，Lazzaro 的鉛心才真正停止跳動。Lazzaro 同時也讓我想起庫斯杜力卡《流浪者之歌》 （Time of the Gypsies）的男主角皮漢（Perhan），兩部電影的城市乞討/詐騙戲驚人地相似，在那拱廊似的幽微空間下，純真正一點一點地被現代都市腐蝕。</p>      <p>《幸福的拉札洛》還是有幾個缺點，例如 Lazzaro 這個角色過於符號化，以致於觀眾有時可能無法共感、電影後半段的基調及節奏可能需要調整等等，但瑕不掩瑜。Lazzaro 最後死了嗎？當然沒有。我們都身處於「一個極可怕的嚴寒天氣」，但純真永遠不死，對吧？</p>",
+      "image": "article03.jpg",
+      "link": "",
+      "markId": [],
+      "likeId": [
+        "m1558576972555"
+      ],
+      "viewCounter": "3"
+    },
+    {
+      "id": "4",
+      "title": "伊凡的童年",
+      "author": "unknow",
+      "avatar": "",
+      "date": "2019-03-24",
+      "content": "<p>俄國大導演塔可夫斯基Andrei Tarkovsky的處女長片──《伊凡的童年》，可以說已經標明了一位大師的誕生。塔可夫斯基以擅長詩意電影語言見稱。影片背景是二戰時期，12歲的伊凡，他的母親和姐姐被納粹德軍所殺。對德軍懷有恨意的他，冒著危險抵達蘇聯的軍事區，務求獲得偵察兵一職。軍官以他年紀少為由，勸他到戰場後方的兒童院。倔強的伊凡不肯，最後在兩名軍官的陪同下，走到了最前線，獨自一人走到戰場探勘軍情。兩名軍官目睹伊凡離開後，返回了軍營。最後，戰爭結束，兩名軍官在德軍的處決名單中，發現伊凡的相片。&nbsp;</p>      <p>《伊凡的童年》上映時在東西方都有爭議，鑑於影片多採用西方的技巧，塔可夫斯基被蘇聯列為親資產階級。肯定的是，導演探用了形式主義的拍攝手法，表現戰場的殘忍，冷眼凝視環境的扭曲。影片探用兒童視覺，構圖像德國的表現主義，尤其在伊凡的夢境，斜線的構圖反映了他內心被戰爭蹂躪過後的狀態。倘若把此片與意大利新寫實主義的作品比較，如《擦鞋童》、《德意志零年》，可以推斷塔可夫斯基更著重表現人內心的感覺多於刻劃現實環境。影片以大量的景深表現人的距離，後景、中景、近鏡的空隙，強調了戰爭時期人對死亡、分離的恐懼。前景的人表情明顯，後景的人被黑暗遮住了臉，彼此的情感受到壓抑，以側面描寫了戰爭對人的摧毀。</p>      <p>但這就是戰場裏人與人之間關係嗎的全景嗎？塔可夫斯基在某些場景放置了鏡子，給我們演示了戰場上的人的心理狀況，例如，有一位對伊凡流露同情的年輕軍官，導演的處理是這樣的：在鏡子裏的伊凡是年輕軍官；在鏡子裏的年輕軍官是伊凡。這一段暗示了遭受戰爭殘酷影響的軍官，從伊凡看到了童年的自己。伊凡拼命地想成為一名軍官，對年輕軍官來說就是莫大的諷刺。塔可夫斯基透過景深和鏡子表達人物之間的關係，表現得淋漓盡致。</p>",
+      "image": "article04.png",
+      "link": "",
+      "markId": [],
+      "likeId": [],
+      "viewCounter": "1"
+    },
+    {
+      "id": "5",
+      "title": "科幻中的科學：重力波與《星際效應》中的鬼魂",
+      "author": "于念平",
+      "avatar": "",
+      "date": "2019-03-25",
+      "content": "<p>與其他類型電影相比，科幻片特殊之處也許在於，情節設定總是要穿插進現今科學研究的發現，但同時要透過有限的知識，設計出超越目前科學技術的情節。在史上第一部科幻片《月球旅行記》（Le Voyage dans La Lune, 1902）出現之前，美俄的太空競賽根本還沒開始，登陸月球的許多細節由想像填補。有時引人入勝的不是絕對正確的科學知識，而是知識與幻想的融合。</p>  <p>&nbsp;</p>  <p>紅極一時的《星際效應》（Interstellar, 2014）中就可見到科學性極高卻又帶有幻想成分的情節設計。其劇本是由強納森・諾蘭（Jonathan Nolan）創作，由其兄長克里斯多福・諾蘭（Christopher Nolan）執導。寫作過程中強納森也獲得許多各領域專家的幫助來帶入各種真實科學預設，尤其主要故事概念發想人索恩（Kip S. Thorne）也同時擔任電影的科學顧問，他研究的主要領域是天文物理學，今年的諾貝爾物理學獎他也以重力波（Gravitational Wave）相關研究與另兩位研究者一同獲獎，而重力波在電影中也是一個重要角色。</p> <p>記得電影最後使人驚奇且謎底揭曉的場景，即男主角庫柏（Cooper）進入黑洞，並到達超越時空的第五次元後，回到地球老家的書房，以摩斯電碼透過手錶指針向女兒墨菲（Murph）傳送可以拯救人類的一組數據。這一幕讓即使最挑剔的物理學家都為之動容，也強調了人類在世上的存在所依循的愛，不過編劇強納森則在觀眾席默默為自己原本寫的結局可惜。</p>  <p>&nbsp;</p>  <p>在原本的故事裡，在庫柏試圖將資料傳遞給女兒時，蟲洞因此發生坍塌，雖然任務完滿執行，但悲劇英雄庫柏將隨著蟲洞一起消失。但諾蘭選擇讓他奇蹟似生還，拯救了大多數觀眾的好心情。而墨菲與庫柏當時一同觀察到的、書架後的「鬼魂」，事實上是愛因斯坦曾以公式預言的宇宙重力波。重力波就是在宇宙大爆炸（Big Bang）之時所產生的「時空漣漪」，由於其能量之高，直到一百三十七億年左右之後的今天都依然在餘波盪漾。但即使依然帶著能量，重力波是無法透過人類的視聽覺被感知的，所以嚴格來說，電影中角色們所感知的應該是真正的「鬼魂」！</p> <p>&nbsp;</p> <p>現已有一種儀器與技術能夠測量到重力波，被稱作「雷射干涉引力波天文台」（Laser Interferometer Gravitational-Wave Observatory，簡稱 LIGO），而今年的諾貝爾物理學獎得主們正是終於在 LIGO 計畫下捕捉到重力波的研究者們。歷經大約五十年的理論與實務發展、十年的等待與技術修正，實驗室在 2015 年觀測到重力波，這微小而無法被人類知覺到的波，卻對引力、太空的研究十分重要，並證實了愛因斯坦當年的假設。</p>   <p>&nbsp;</p>  <p>對於劇本中的科學真實被刪減並由較為浪漫的解釋取代，強納森表示覺得很可惜，而在導演位置上的克里斯多福則在科學正確與情節的情感面向上選擇了後者，也許兩者之間的拿捏沒有一定的標準，但在諾貝爾物理學獎與《星際效應》中，我們都看見了科學與物理世界的浪漫。</p>   <p>&nbsp;</p>",
+      "image": "article05.jpeg",
+      "link": "",
+      "markId": [],
+      "likeId": [],
+      "viewCounter": "1"
+    },
+    {
+      "id": "6",
+      "title": "《控方證人》：愛我者昌，棄我者亡（IMDB250 TOP 126）",
+      "author": "小眾電影",
+      "avatar": "",
+      "date": "2019-03-26",
+      "content": "<p>這是一部律政片，講述一個律師為殺人兇手辯護的故事。一個很有名氣的律師身體不適，住院了。出院之後，本不想接一些棘手的刑事案件。但是一個無辜的人被控謀殺，律師決定為他伸張正義。關鍵的證人是他的妻子。可是他的妻子騙了她的老公，在嫁給他之前已經有了丈夫，可憐的男人卻不知情，而且這個女人也不打算為他作證。在法庭上，一切不利的證據都指向他，無辜的男人就要被認定有罪。此時，一個匿名者給了律師一個關鍵證據，可以證明妻子在撒謊。在新的證據下，無辜的男人被無罪釋放。當律師為這一切太過於順利而不解時，男人的妻子說了真相，原來這一切都是騙局。原來，男人真的殺了人，妻子的所作所為只不過是煙霧彈，為了讓法庭更信服他老公。逃脫法律制裁的男人領著新的女人就要離開時，受不了背叛的妻子在法庭上捅死了男人。最後，妻子被抓緊了監獄，而律師決定為這個女人辯護。</p>      <p>&nbsp;</p>      <p>這樣的電影，情節很有看點。觀眾們會沉浸在影片的故事中，去猜測、去推論每一件事情的真偽，而且在心中會有自己的一個答案&mdash;&mdash;男人究竟有沒有殺人？我完全被電影騙到了。在影片結束前，根本沒有想到這是一個騙局，也沒有想到那個男人就是兇手。從電影的各個方面看，對於兇手的掩藏做的相當到位，男人真誠的表現，妻子冷漠的態度，這些都告訴我們，這個男人無辜的。電影也恰恰利用這些元素，迷惑觀眾，使我們猜不透事情的真相。直到結尾的時候，才真相大白，我們才知道這一切不過是一個精心的騙局。可是這個騙局卻是那麼的天衣無縫，沒有絲毫破綻，把電影中的律師騙到了，也把螢幕前的觀眾騙到了。總之，電影的情節讓觀眾沉浸在影片中，並使觀眾完全按照編導的思路去理解影片，這一方面做的非常完美。也可以換句話說，本片把觀眾玩的團團轉，而又沒有讓觀眾覺得自己像傻子，是一部水準非常高的劇情片。</p>      <p>&nbsp;</p>      <p>不過，當整部電影看完之後，再回想電影的情節，發現這樣的故事不是第一次看了。通過親友的反證，來幫犯罪者洗刷罪名，這樣的案倒在《波士頓法律》中就出現過。其實，這樣的比較是不公平的，不能拿將近六十年前的電影與二十一世紀的美劇相比較，現在的影視劇都是經過前人的探索而漸漸豐富起來的，誰又敢保證《波士頓法律》不是借鑑了本片呢？所以說，本片的劇情、故事還是很前衛的，作為一部一九五零年代的電影，能拍攝出這麼好看的律政片，名留青史是必然的，它也在電影的的歷史中留下了一席之地。</p>",
+      "image": "article06.jpg",
+      "link": "",
+      "markId": [],
+      "likeId": [],
+      "viewCounter": "10"
+    },
+    {
+      "id": "7",
+      "title": "海上鋼琴師：關於虛構中的真實、存在主義、有限與無限的抉擇",
+      "author": "黑魔笛",
+      "avatar": "",
+      "date": "2019-03-27",
+      "content": "<p>「你知道的，任何一架鋼琴必然是八十八個琴鍵 ： 雖然琴鍵有限，你卻是無限的。在有限的琴鍵裡，存在無限的曲調；無限的琴鍵上，卻無法彈奏任何樂章。」</p>      <p>&nbsp;</p>      <p>《海上鋼琴師 The Legend of 1900》</p>      <p>&nbsp;</p>      <p>&nbsp;電影講述一名被丟棄在維吉尼亞號蒸汽客輪鋼琴上的孤兒，意外地被船上的燒煤工人丹尼發現，並將他取名為「丹尼布曼&middot;TD&middot;萊蒙&middot;1900」，視為親生骨肉般扶養。而後，在某個因緣際會之際，小1900展現了過人的鋼琴天分，並受到眾人肯定，從此不用再過著躲在船艙的生活，成為一名海上鋼琴師。</p>      <p>&nbsp;</p>      <p>隨著1900逐漸成長，他高超的琴藝亦是聲名遠播，並在維吉尼亞號的樂團裡認識了知心好友Max。然而，他卻從未踏上陸地過。</p>      <p>&nbsp;</p>      <p>《海》是大導演 Giuseppe Tornatore 於1998年上映的一部作品，配樂請來獲獎無數的義大利作曲家 Ennio Morricone 操刀，因此音樂本身即是電影的一大重點。</p>      <p>&nbsp;</p>      <p>此外，電影裡以交錯的時間軸來說故事，營造出一種「故事中有故事」的感受，但同時也讓人難以在第一次觀影時就完全掌握故事脈絡。</p>      <p>&nbsp;一件：一九零零與虛構中的真實面</p>      <p>「只要你有個好故事，就永遠不會被人遺忘。」</p>      <p>&nbsp;</p>      <p>《海上鋼琴師》的故事內容改編自義大利小說家 Alessandro Baricco 的劇場文本《1900：獨白》。這個劇場文本並非人物傳記，我們無法在歷史上找到一名叫「1900」的鋼琴家，反之，應該用一點點奇幻文學的角度，探討這個虛構故事背後所寄託的真情。</p>      <p>首先，西元1900年為19世紀的最後一年。在這個時代背景下，許多歐洲移民都抱持著「美國夢」，橫越大西洋來到陌生的北美大陸，而維吉尼亞號便是其中一艘運送人們前往夢想之地的客輪。</p>      <p>從小到大生長在維吉尼亞號上的1900，不會只遇過那位彈奏手風琴的男士、不會只聽過他的故事；反之，他應閱歷了無數個掏金客的美國夢，與失落者的人生。也難怪，在1900與Max相識後挖礦那一幕，他能夠幻想出新奧爾良的輪廓。因此，《海》傾訴的是一種對「夢想」的探討。</p>      <p>&nbsp;</p>      <p>另外，1900在電影裡的設定，基本上是一個不存在的狀態。</p>      <p>&nbsp;</p>      <p>「世上沒人知道他的存在。沒有一座城市、一個教會、一間醫院、監獄或一支棒球隊，知道他的名字。他沒有國籍，他沒有生日、沒有家人。他八歲了，但是官方卻沒有他出生的紀錄。」</p>      <p>每年五趟來回漂泊於大西洋，1900不曾下過船，也沒有官方的存在證明。然而從Max眼中，他卻是存在的。而電影的設定是以Max為第一視角，因此間接地，在每位觀影者心中，1900是存在的。因此，在這樣對立的矛盾中，電影另一個探討的是「存在」這件事。</p>      <p>最後，在電影最末段，Max費盡千辛萬苦，終於在即將被炸毀的維吉尼亞號上找到1900，但他卻選擇與船一同沉入海底。這一個橋段無疑是電影的一大精華片段，藉由1900終於對Max（也就是對觀眾）講出不願下船的原因，「有限與無限」之間的抉擇成為《海》故事裡最大的記憶點。</p>      <p>&nbsp;</p>",
+      "image": "article07.jpg",
+      "link": "",
+      "markId": [],
+      "likeId": [],
+      "viewCounter": "1"
+    }
+  ],
+  "articleComment": [
+    {
+      "id": 1,
+      "aid": 1,
+      "date": "Wed May 29 2019",
+      "author": "皮卡丘",
+      "content": "這部真的很好看！"
+    }
+  ],
+  "articleResComment": [
+    {
+      "id": 1,
+      "rid": 1,
+      "date": "Wed May 29 2019",
+      "author": "薩爾達",
+      "content": "很少人關注的佳作，大推"
+    }
+  ],
+  "forum": [
+    {
+      "id": 1,
+      "headline": "《明天，最後一天》如果明天是最後一天",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 15:46",
+      "forumCreateDateInSecond": 1559029597692,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "這世上，新聞事件如此豐富，社會國家如此多元，而生活在臺灣的我們，突然透過網路看見某個消息，可能受之感動或覺得與我何干。隨手翻閱著圖書館、郵局、早餐店擺放的報紙，瀏覽某個政治事件、某個槍擊事件、某個意外事件、某個聯姻關係，但這些事情跟我們的生活沒有太多的關係。我們看見這些新聞，覺得同情或好笑，覺得無厘頭或充滿訊息，覺得生氣或悲傷。各種情感充斥每天的生活，但它們又是那麼的短暫。下一秒，就忘了。隔天，新聞又會有新的版面與故事，而我們仍舊活著。但人有悲歡離合，月有陰晴圓缺，我們怎知下一秒會以何種樣貌現身。<br><br><br><br>泰國新銳導演經由「不同」表現「同」。人生自古誰無死？死亡可能來得快，可能來得慢；有人活到一百歲，有人夭折在母親的腹中。在電影中，無時無刻傳遞淒涼悲傷，因為某位角色已經離世，但我們觀看可能是他們生命中最精華或是最普通的日子，看著他們活出死亡前的寧靜、未知、純真，像在平凡日子裡，我們跟朋友聊天，跟家人團聚，跟某個人吵架，怎麼知道，接著發生的事情會是「死亡」呢？。<br><br><br><br>我們看著腳色的「生」，但心中已經有個定調的故事結局，也就是腳色的「死」。導演改編2012到2017年發生的新聞事件，在虛實之間，展演出一套非常新鮮的敘事手法。第一段故事，我們看著一群女孩子在聊星座、聊未來，場面輕鬆平常。畢業典禮前，他們可能在某個旅館中聚會，喝啤酒，吃點零嘴，聊心事，聊著聊著可能講到男朋友，或是未來的計劃，大家都很開心，因為他們面對著未來，在充滿未知性時，人的想法是天馬行空的。他們看著星座預測出來的結果，想要改變，用隻紅色的筆劃掉原本預測的結果，這並不是預測準不準的問題，而是他們有慾望、有企圖地想要活在一個屬於自己的世界，想要掌握生命，想要過他們自己的生活，無拘無束的活著。但在這段故事之前，導演已經告訴我們，他們去買啤酒的時候，有輛大車會衝進店裡，而有個女孩子去世了，因此在看這段影片的同時，觀眾的感受可能是同情，我們在經歷一段即將逝去的時間，以及生命逝去的事實，所以我們不知不覺地更投入在這個長鏡頭之中，更去在意這幾位女孩子的想法，以及他們青春的肉體、美麗的外表，因為我們開始憐憫青春的消逝，然而，這只是電影的一開始而已。<br><br><br><br>開場，導演便透過統計數據，開宗明義說出「每秒就會有兩人死亡」的可怕事實。但觀眾無法感受，因為我們正準備看這部電影作品，所以，不會對這項事實特別有感，反而心裡可能產生一種驚訝。我們認為：現在，我們正在看電影；明天，我們依舊活著、工作、上課，根本不把死亡放在心上。早上起床，吃早餐，上班、上課；晚上回家，洗個澡，吃個飯，收拾各種心情去睡覺。而整天投注某件事情上，完全不會在意「生死」問題。然而，如同政府宣傳死於酒駕的數量與機率，我們行走在那條路上，當下平凡無奇、健健康康、整齊有序。這種資訊所傳遞的是一種訝異、驚奇、悚動。即便知道酒駕依舊發生，死亡車禍依舊存在，只不過，我們的生活沒有遇上這類事件，因此對這類事情有些距離。<br><br><br><br>人自古有命，生有貴賤長短、發達貶抑，我們無法改變。十年生死兩茫茫，怎知男友搭上了消失的馬航？等待心臟移植的女友，剛好等到了一顆心臟，並醫治了病情，該說不巧還是可巧？女兒替老父按摩，父親睡著了，女兒又去打理家務之類的事情，離開沉眠的父親，怎知竟是兩人最後之緣？姊弟在屋頂上聊天，久違的姊姊替弟弟拍照，他心不甘情不願，她能怎樣？即便是親人，因為疏遠而散了，是人之常情。姊姊想去吃對面的海產，弟弟說「人太多」不想去。隔天，她沒了，被車撞死了。我們看著一位梳妝打理的模特兒吃東西，透過聲音傳來一位知名混血模特因為助人而被車撞死的消息。我們不知道吃著東西的模特兒是誰，可能是替身或路人甲，但她因混血模特之死而獲得難忘的機會。她落下了淚，弄花了妝，別人以為她為死去的模特傷心，但，是嗎？<br><br><br><br>暗戀人太深是否會走向死亡一途？對多數人而言，也許不會，心想：他竟會為她而死？我們會暗戀某個人，需要勇氣告白。成功失敗兩面情，可能收到別人的拒絕為多的時候，埋在心底的暗戀也變多了。在這段故事中，有許多未知的訊息，這個告白的男子可能遭逢生命之難，覺得很憂鬱，覺得世間無情，想問「情為何物」。他跟他認為他愛的女子告白，但這名女子不領情，帶著厭倦狠心拒絕他的一廂情願，之後還跟朋友道他三四。觀眾可能覺得這女孩子是反派腳色，其實不是，她反像是這件悲劇的受害者。在嘻笑之中，她怎知隔天這男的就跳樓自決？她的鐵口直斷卻害他跳樓，這兩件事情之間的訊息太少了、連結太單薄了，但生命就是如此。<br><br><br><br>本片穿插著一位百歲人瑞與一位十歲小孩，老人不說，小孩的生命觀卻很超齡，有老靈魂的他在尚未知悉生命的狀態下，會找資料了解真相。兩人都傳遞出「把握當下」、「趕快去做」的觀念。其實很難，也很諷刺，一位老人家，站都站不直了，走不快了，皮皺了，對著我們年輕一代說：去做事，不要猶豫。但事實是，老人家已經在等待死亡了，卻遲遲無法，這是命給他的安排。試問：明天，怎知不會是最後一天呢？導演替觀眾展演一段段看似隨性、靜謐的生命片段，無一不是想要大家去把握所剩的生命，繼續探索明天的生命。",
+      "forumCommentCount": 3,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 2,
+          "forumComment": "暗戀人太深是否會走向死亡一途？對多數人而言，也許不會，心想：他竟會為她而死？我們會暗戀某個人，需要勇氣告白。成功失敗兩面情，可能收到別人的拒絕為多的時候，埋在心底的暗戀也變多了。在這段故事中，有許多未知的訊息，這個告白的男子可能遭逢生命之難，覺得很憂鬱，覺得世間無情，想問「情為何物」。<br /><br />他跟他認為他愛的女子告白，但這名女子不領情，帶著厭倦狠心拒絕他的一廂情願，之後還跟朋友道他三四。觀眾可能覺得這女孩子是反派腳色，其實不是，她反像是這件悲劇的受害者。在嘻笑之中，她怎知隔天這男的就跳樓自決？她的鐵口直斷卻害他跳樓，這兩件事情之間的訊息太少了、連結太單薄了，但生命就是如此。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559029847299,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "headline": "《你的臉》你的臉，你的故事",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 15:54",
+      "forumCreateDateInSecond": 1559030053224,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "<div><span style=\"font-size: 1rem;\">最後一個長鏡頭，「我們」坐在中山堂內，那是個昏暗的空間，空蕩蕩的，微光由外而內照射。我們看這中山堂內部的一角，這個視角，是種孤獨。蔡明亮導演給我們一個短暫的時間，感受屬於自己的孤獨。</span><br></div>《你的臉》用一系列的長鏡頭特寫素人的臉，對這群素人而言，導演近距離特寫人的臉，他們可能注視鏡頭，或是劇組的某個目標物，或是建築物的特定角落，那會是尷尬、奇怪、不知所措，甚至可能帶來些微恐懼，又或是莫名激發他們表演慾的契機，甚至可能因為太認真想注意鏡頭，反而讓自己累了、睡著了。<br><br><br>在短片《秋日》，導演邀請野上照代跟李康生拍片。我記得野上女士曾說過，這(鏡頭跟人的)距離會不會太近了。然後，觀眾會看見野上女士有點不安的表情，兩眼時常聚焦在他處，或無奈地看著鏡頭，我想這是正常的，除非是李康生，因為他習慣這種創作模式，甚至可以說活在這種模式中。要一個人凝視「長鏡頭」，有一定的難度在裡頭，更何況野上女士不是演員，而是當場記出身的。<br><br><br><br>鏡頭是種侵入人世的東西，鏡頭可以比喻為人的一眼，但它是機械的、無生命的、陌生的。蘇珊桑塔格在《論攝影》一書中論述過，拍攝的一系列動作都用類似於用槍的動詞來形容，而我們拿相機的動作如同用槍，對準目標，射擊目標，目標擊斃。我們用相機偷偷瞄準陌生人會被罵被瞪，是同樣的道理。<br>安迪沃荷(Andy Warhol)曾經為許多人做過”Screen Test”(螢幕測試/試鏡)，主要是演藝明星、歌手，也有素人，但每個鏡頭維持五分鐘以下，絕對沒有蔡明亮的鏡頭來的久；以前，安東尼奧尼也做過，或是去看他的《春光乍現》(Blow-Up, 1966)。再看Steven Soderbergh獲金棕櫚獎的電影《性、謊言、錄影帶》(Sex, Lies, and Videotape, 1989)，透過不舉的男性攝影師拍攝女性的私人獨白，在私密的空間中，一種真實但難以言喻的慾望被揭露出來。又或是《偷窺狂》(Peeping Tom, 1960)中性壓抑的男性攝影師對女性下毒手前，用攝影機另類侵入最隱私、最不願面對的人性世界。<br><br><br><br>蔡明亮沒有像劇情片那樣刻意，只是有意但隨意。在《你的臉》中，被攝者他們大多是有年紀的人，李康生是最年輕的參與者，他的臉讓我感覺沒有太大的差異，反而是在片中聽李康生講他跟他父親的事情，蔡導讓李康生說話，也許二十年來跟蔡明亮合作的拍片或劇場經驗，就這部電影的「台詞」最多，而李康生當最後一位被攝者，也像是理所當然的壓軸。<br><br><br>開場鏡頭，那位女士看著鏡頭，突然露出笑瞇瞇的表情，跟導演對談起來。她覺得這個場面很奇怪，也就是說，她看見的導演本人、一台攝影機、攝影師、劇照師、錄音師、打光師等。對不熟悉這個產業的人來說，這個場景遠超出她的想像，反而感到不切實際、不自然，所以演員的偉大便在於必須在不真實的環境中，做出真實的演出。這種反差是很難的，因此入戲不入戲都是一門學問。導演用這個鏡頭開場，是巧合，也是設計。<br><br><br>以筆者的淺見，最後一個鏡頭，假設我們坐在這位受訪者(被攝者)的角度，導演讓觀眾感受當時被攝者所處的樣子。試想：一個人，坐在那感受，安靜，無事忙，清閒，聽聽漸次稀落的聲音，看看光影，而我們的心思會飄到別處去，想著周末的選舉、想著準備搭的公車班次、想著一個人、想著一部電影。導演當然可以讓觀眾經歷當下被攝者所處的樣子，那樣的話，眼前會是燈光、機器、一堆幕後陌生人跟導演本人，又或是讓拍攝鏡頭對準鏡頭，讓我們知道「我們正在做『看電影』這件事」，但這些事一堆導演做過了。然而，蔡導獻給我們一次，屬於「攝影者」與「被攝者」的經驗，既讓自己被迫面對自己，也讓自己主動面對，這些皆是成就《你的臉》難能可貴之處。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "開場鏡頭，那位女士看著鏡頭，突然露出笑瞇瞇的表情，跟導演對談起來。她覺得這個場面很奇怪，也就是說，她看見的導演本人、一台攝影機、攝影師、劇照師、錄音師、打光師等。對不熟悉這個產業的人來說，這個場景遠超出她的想像，反而感到不切實際、不自然，所以演員的偉大便在於必須在不真實的環境中，做出真實的演出。這種反差是很難的，因此入戲不入戲都是一門學問。導演用這個鏡頭開場，是巧合，也是設計。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559031266574,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "headline": "《刺青舞者》天縱英才的美麗與哀愁",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:05",
+      "forumCreateDateInSecond": 1559030714213,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "當才華變成一種負擔，無法回頭的人生又該何去何從？瑟基普魯尼曾是英國皇家芭蕾舞團史上最年輕的首席舞者，他也是當時皇家芭蕾舞團的票房保證，只要掛上瑟基普魯尼的名字，演出門票就一票難求。正當人人都在讚嘆他非凡的成就時，他在鎂光燈下的人生卻開始失控，他刺青、他酗酒、他吸毒、他夜夜笙歌。原本眾人吹捧的天才舞者，那個「優雅的野獸」，一夕之間變成媒體口中譏諷的「芭蕾壞男孩」，22歲那年，他因而宣布退出皇家芭蕾舞團。<br><br><br><br>　　放蕩不羈的名聲讓他在歐洲芭蕾舞圈無處容身，瑟基普魯尼別無選擇只好流連在俄羅斯的選秀節目，將他世不二出的天賦揮霍在追求速食娛樂的芸芸眾生之前。直到2014 年，他在 Youtube 上一支點閱率破表的舞蹈影片，才再度激起了大眾對他的好奇與重視。也多虧瑟基普魯尼成名得早，曾獲奧斯卡提名的導演史蒂芬康托得以彙整大量的第一手影像資料，並採訪瑟基普魯尼本人和親朋好友，帶著觀眾一窺這位天才舞者大起大落的生涯及其背後隱藏的人生經歷。<br><br><br><br>　　說實話，現在就拍《刺青舞者》這部紀錄片似乎太早了一點。瑟基普魯尼雖然已經見過不少大風大浪人情冷暖，但他畢竟還年輕，很多事情現在說「看破」是一回事，過了十年、二十年再回過頭來看，也許他又會有另一番體悟。他還在經歷這個蛻變和調適的過程，而且也是摸著石頭過河，所以現在就用這部紀錄片將他過往的人生和未來的可能蓋棺論定，有點言之過早。不過換個角度來說，這部電影也可能拍得正是時候，因為這個世界很有可能隨時就會失去這個寶貴的舞者。<br><br><br><br>　　這倒不是在看衰或詛咒他，就如同紀錄片最大的功能是去還原現實的原貌，從電影所呈現出來的畫面和訪談，觀眾應可從他日常生活中和周遭人的相處，還有他如何看待自己作為舞者的一種態度，發現他真的是個天真單純、彷彿沒有被世俗汙染過的大男孩。他面對人生的熱忱和柔韌，在同年齡的人裡面恐怕也找不出幾個像他一樣的，但在觀賞《刺青舞者》時，有個剎那，我突然有種很強烈的感受，我不曾在看一部紀錄片時，那麼似曾相識地覺得自己在看Discovery或是動物星球頻道的「非洲草原紀實」，只不過在《刺青舞者》這部紀錄片裡，掠食者的名字是「人生」，而苦苦掙扎想要逃出生天的獵物，則是「瑟基普魯尼」。<br><br>",
+      "forumCommentCount": 2,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "這部電影其實就是在看人生的現實與無奈，如何一點一滴的蠶食瑟基普魯尼這個年輕的靈魂。以這個角度來看，史蒂芬康托這部紀錄片拍得很成功，因為觀眾可以在這不到90分鐘的電影裡，深刻了解瑟基普魯尼這個人的性格、他的抉擇，還有他的迷惘和傷痛。就訪談內容來看，他的家人未必能夠完全了解為何他在前途一片光明時會自毀前程，也並不了解他目前在經歷的人生關卡，反而是他的兩位皇家芭蕾學院同窗更能體會他從一個鄉下男孩，一路努力走向舞台，且終於在鎂光燈下大放異彩，卻人事已非的那種無能為力。從他兼具力與美的舞姿來看，瑟基普魯尼的確是舞台上令人神往的「優雅的野獸」，只不過在他眉宇間的那股漠然和迷惘之中，他或許仍然只是一隻「誤闖叢林的小白兔」。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "藏鏡人",
+          "forumCommentAvatar": "defaultAvatar.jpg",
+          "forumCommentUserId": "defaultForumCommentID",
+          "forumCommentCreateTime": 1559030784130,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        },
+        {
+          "forumCommentId": 2,
+          "forumComment": "這倒不是在看衰或詛咒他，就如同紀錄片最大的功能是去還原現實的原貌，從電影所呈現出來的畫面和訪談，觀眾應可從他日常生活中和周遭人的相處，還有他如何看待自己作為舞者的一種態度，發現他真的是個天真單純、彷彿沒有被世俗汙染過的大男孩。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559030954161,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "headline": "布萊德利庫柏原無意演《一個巨星的誕生》男主角",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:11",
+      "forumCreateDateInSecond": 1559031061038,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "布萊德利庫柏（Bradley Cooper）曾分別以《派特的幸福劇本》（Silver Linings Playbook）、《瞞天大佈局》（American Hustle）及《美國狙擊手》（American Sniper）三度入圍奧斯卡金像獎的演員項目，目前在院線上映中的《一個巨星的誕生》（A Star Is Born）是布萊德利庫柏首部擔任導演的電影，上映至今無論票房或普遍評價皆有良好成績，也被視為本屆奧斯卡金像獎的強力競爭者之一。<br /><br /><br /><br />《一個巨星的誕生》原本一度計畫由克林伊斯威特（Clint Eastwood）執導，當時洽談演出男女主角的是布萊德利庫柏及碧昂絲（Beyoncé）。布萊德利庫柏接下《一個巨星的誕生》的導演後，原希望找音樂人演出片中的男主角，也和其心目中的理想人選見了面，但讓該名音樂人演出男主角的想法遭到片廠否決，據外電報導該名音樂人是傑克懷特（Jack White），布萊德利庫柏也在輾轉發展下親身上陣演出男主角。",
+      "forumCommentCount": 2,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "此外，片中布萊德利庫柏飾演的男主角為了不拖累女神卡卡（Lady Gaga）飾演的女主角的事業發展，最終在自家車庫上吊身亡<br />。而華納影業主席托比艾莫瑞克（Toby Emmerich）透露其看到的初版劇本對結尾的安排有些微不同，雖然仍是悲劇，男主角仍是選擇不歸路，但方式是游進海中自殺身亡。<br />後來布萊德利庫柏提議進行修改，並獲得托比艾莫瑞克的支持，結尾才是目前在上映版本中看到的情形。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559031131054,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        },
+        {
+          "forumCommentId": 2,
+          "forumComment": "說得太棒了!",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559031471600,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "headline": "《她的錯誤教育》接受本真的自我",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:13",
+      "forumCreateDateInSecond": 1559031228395,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "1993年，卡麥蓉(Chloë Grace Moretz飾演)跟她的女友被發現在車上親熱，發現的人是卡麥蓉的男友，卡麥蓉因此被二等親以上的親戚送往一間名為「上帝有約」的夏令營，進行性向大改造。該營隊以泯除同志情愫(same sex attraction)為號召，強迫將卡麥蓉的性傾向扭曲為異性戀。「上帝有約」以宗教的愛為理由、以健康的生活品質為依歸，聚集一群被他人認定有問題的學員，讓他們一起學習、感化彼此。即便提供食衣住行育樂的協助、安排各種完善的團康活動或合適的心理諮商，在合法的作為下，仍無法掩飾他們為了「改變性傾向」的無理企圖。<br /><br /><br /><br />「上帝有約」假借醫療、教育名義，用心理學的冰山理論引導卡麥蓉了解自我，傳輸邪門歪道，強制讓她認為「愛上女孩子是件不正常的事」，甚至以宗教方面的迷信狂熱使她被迫否定、厭倦自己的身體，但卡麥蓉的潛意識告訴觀眾，她喜歡女孩子，而夢見跟男孩子親熱只會讓她從眠還醒。本片透過卡麥蓉的視角審視「上帝有約」這個機構，在許多故事情節中像是：自我揭露、一對一心理諮商、團康活動等，我們看見卡麥蓉的拘謹、無奈與膽怯，因為她在面對集體的謊言、虛偽與善意，造成她「非得說謊」的局面，而她的反抗則會成為其他人的眼中釘，所以她極力壓抑、說服自己成為一位「符合社會價值觀的正常人」。<br /><br /><br /><br />我們通常只見事情的「冰山一角」，代表著事情背後仍有許多隱情與真相，本片透過這個道理，讓觀眾理解到事情並非單純的如同表面那塊浮在水面的冰山，而「沉在水中的冰山」才是我們必須去認識的。在電影中，「上帝有約」反映的是社會的價值觀，而卡麥蓉代表著社會中的同志族群。「上帝有約」發現「同性戀」這個表象，並引用理論認為「同性戀」是錯誤的愛情認知所引起的，因而企圖更正之，但「同性戀」本身沒有對錯問題，只是「上帝有約」過於迷信並反對異己之端。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "選擇屬於自己的道路，不要被沒長進的守舊派所拘束。「我想這個選擇適合你」，是父母輩或師長輩時常告訴自己心愛的孩子的話。然而，許多時候他們替孩子選擇錯誤的道路，反倒奪走孩子的自信與自知。<br /><br />正確的做法應該是去認識孩子們，並用自己過來人的經驗進行溝通，並在溝通中找到平衡點，我想才是最適合孩子的。<br /><br />導演不賣弄酷兒電影常見的煽情、衝勁，以寫實的方式呈現同志青年面對社會的困境，即便故事背景設立在1993年，但在人權意識的高漲二十一世紀，本片道出的真相，才是我們該注重的",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559031332333,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "headline": "《四百擊》朦朧的少年愁緒",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:17",
+      "forumCreateDateInSecond": 1559031429670,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "法國導演法蘭索瓦楚浮(François Truffaut)的電影《四百擊》(Les quatre cents coups, 1959)講述了一名男孩的生命，由於家庭、學校生活的不順而離家出走，最後為了生存偷東西被抓去寄宿學校進行教化。那名男孩叫「安耑達諾」(Antoine Doinel)，也有人翻譯「安東達諾」、「安東杜內瓦爾」、「安托萬杜瓦內爾」或「安湍達內耳」，畢竟人家楚浮以這個腳色拍了五部片，跨越幾十年的法國社會，所以翻譯可能也很多元。<br /><br /><br /><br />達諾一家，有媽媽，有爸爸，兩人都有工作，白天都不在家。安耑媽媽的工作是什麼？不知道。早上她化了妝，穿起了皮草大衣跟紅艷的高跟鞋出門。回家後，安耑媽媽總是撲克臉，感覺非常的疲倦，準備一家三口的晚飯，之後便是洗澡梳洗，沒有跟家人聊天，要不多半時候都在跟安耑的爸爸鬥嘴。安耑的爸爸是繼父，跟安耑沒有血緣關係，看起來為人正直，在一家公司賺錢，可能是達諾一家主要的經濟來源。他很胖，也不太好看，講話很大聲，即便如此，跟安耑媽媽鬥嘴還是吵輸，可見他不如外表上看起來強勢。他有時很搞笑，會擺弄自己的醜臉或講起黃色笑話給安耑聽，要不他會帶大家去看電影，那是安耑笑得最高興的時刻。繼父會開著車，安耑坐在後座，總是縮著身體往雙人前座靠過去，因為可以夾在父母兩人之間，聞嗅著母親的胭脂味還有父親的香菸味，大家談論著安耑最喜歡的主題──電影、故事、腳色，這也是少數幾次達諾全家一起出遊的經驗。<br /><br /><br /><br />達諾一家聚在一塊的時間大致只有晚上，早上兩位家長去上班，安耑則是去上學。放學後，安耑在家裡必須傾倒垃圾、整理餐桌，利用時間讀書、寫作業，但沒有書桌，他便在餐桌上讀書。晚飯開動，安耑便得讓出餐桌，好讓大家可以吃著簡單、溫暖的食物。晚飯結束，也是安耑準備上床睡覺的時候。沒有休閒娛樂，沒有電視機，沒有音樂，小小的安耑會回到自己的房間，躺在簡陋、單薄的床上，可能看巴爾札克的小說、可能欣賞瑞典女明星的性感剪報以結束這一天。最後，他會像是表示個人崇拜之意般點根蠟燭，在自己設計的藏寶櫃膜拜自己的書與剪報。有次蠟燭倒了，差點引起火災，被爸爸痛罵一頓愚蠢，而那些書本跟剪報則成了灰燼，如同安耑家中的明燈消失了一樣。如果家中的希望不見了，他會期待明天的開始，因為他的朋友會在大街轉角處等他一起走路上學。<br /><br /><br /><br />安耑上課的時候有些調皮，被老師視為不愛上課的眼中釘。有次，安耑寫作業，引用巴爾札克的文章，卻被老師認為抄襲，在課堂上公然侮辱他，甚至移駕他到校長室。課堂上往往起頭作亂的安耑人緣還不錯，即便翹課，也有人願意理他，他們覺得安耑是對的，因為導師真的很討厭，裝成一個高等知識份子，受過大學洗禮，其實是想當作家卻沒有才華跟品格的傢伙，圓框的眼鏡、正式的服裝、刷亮的皮鞋，抬頭挺胸一副高高在上的威武模樣讓學生都不喜歡他，有時他的朋友也跟他一起翹課，看電影或是到遊樂園玩。翹課的時候，當然不能回家，不然會被家人或鄰居撞見。有次不巧，在街上與媽媽兩眼相會，但兩人只是裝作陌生人的樣子，互相擦肩而過，因為媽媽身旁有個「可以親嘴的他」，而安耑自知自己沒去上課。<br /><br /><br /><br />隔天，老師追問安耑何以曠課，安耑只是惱羞成怒地回答：「媽媽快死了。」父母發現後，繼父怒火中燒，媽媽哭容失色，安耑離家出走。為了生存在街上，學會偷拿擺放在門口的牛奶，要不就是找到一處沒有人煙的建築物住下來，當然，知道事情的朋友會幫助安耑，捎信息、帶點食物或是一件厚外套。有天，他朋友提議偷拿打字機，打字機價格很好。安耑繼父工作的地方有很多打字機，偷拿一台應該不會有人發現，安耑聽信後便去繼父工作場所偷打字機。然而趁著眾人下班之際順利到手的打字機卻賣不掉，因為買方編了藉口想詐騙年輕的安耑跟他朋友，及時識破的安耑雖拿回了打字機，但一台大機器拿在手裡很不方便，便再次潛入公司，偷偷地將打字機放回原位，不料就在這時被抓到了。<br /><br /><br /><br />憤怒的繼父怒把安耑視作流放殺人犯一般趕出了達諾家，送入寄宿學校，讓安耑住在那接受規訓。那裡除了讀書，還得工作，還得背頌經典，違反規矩、禮義、道德、倫理，就是鞭策。吃得不好，一碗稀粥，一塊奶油小麵包，整天工作下來，安耑早已飢腸轆轆，還不太知道規矩的安耑隨手拿了麵包吃，卻因為違反飯前祈禱的規則而被罰站，甚至不能吃這頓晚飯，還得面向眾人吃飯的模樣。母親前來探望安耑，但必須隔著一道玻璃看著彼此，母親發狠地說，父親要跟他斷絕關係；有時安耑的朋友騎著腳踏車從遠方而來，院方不准他探望安耑，拒絕於大門之外；有時隔著門，安耑盯著遠方。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "看了很難受",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "藏鏡人",
+          "forumCommentAvatar": "defaultAvatar.jpg",
+          "forumCommentUserId": "defaultForumCommentID",
+          "forumCommentCreateTime": 1559033670988,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "headline": "《三張面孔》翻山越嶺拍出好電影",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:19",
+      "forumCreateDateInSecond": 1559031542447,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "今年在坎城影展獲得最佳劇本獎的《三張面孔》在金馬影展首映。仍被伊朗政府禁止拍片，甚至限制出境的潘納希導演再度透過有限的資源進行場面調度。當然，如果看過《計程人生》(Taxi, 2015)的觀眾，又或是熟悉阿巴斯電影的觀眾，對此絕對不會感到陌生，但久久才出現一部這樣的電影，還是會讓觀眾眼睛為之一亮，潘納希導演的魔燈花招也不會讓我們失望。<br /><br /><br /><br />電影透過一位小女孩用手機自拍(直立狹長的鏡頭)，長達好幾分鐘的自殺宣言開場，原本以為只是個「幌子」或是「玩笑」，但隨著女孩子的眼淚與感情，氣氛漸漸凝重，慢慢地，觀眾知道這位女孩子將在自己面前自殺，讓本片立馬壟罩一股低氣壓。接著，畫面撐開，觀眾看見女主角看著手中的手機，她看著這個自殺宣言，眼珠滾滾滑落臉龐。<br /><br /><br /><br />Behnaz Jafari作為知名演員跟潘納希導演是兩位主角，的確，都是本人演出「自己」。兩人接獲這則「自殺」訊息，看見一位小女孩欲斷送生命，必然為之大驚，甚至會感到愧疚、驚恐。然而雖對影片內容感到不敢置信，眼淚也已流下，但訊息畢竟是間接接收的，導演態度模糊，女主角認為暗中有鬼，兩人因此開始了一趟偏鄉之旅，試圖找尋這個「自殺宣言」的真相與女孩子的下落。<br /><br /><br /><br />導演在本片再度玩弄了虛實之間的手法。兩人顧名思義是要來找人，甚至是救人的，在村中開著SUV，看似一趟尋訪之旅，卻見到一個偏鄉的怪異狀態。村人對於外來的兩人都給予熱情招待，卻對想要演戲的女孩子百般指責，認為「女子讀書」、「當戲子」、「搞失蹤」敗壞村中名聲，女孩子怒而想自殺、挑釁、鬧失蹤，看似女孩騙了女主角的淚水與導演的同情，其實不然，導演想做的事情仍是進行無語的控訴，並表現藝術創作者的無奈與深刻的社會觀察。<br /><br /><br /><br />小村落隱射整個社會狀態，其中的人物看似熱情如火的好客，實則種種偽善且另有企圖；無知的典禮、儀式與規則更顯荒謬，對居住城市的兩人來說，固然是覺得守舊怪異巴不得趕快離開；對女性，似乎所有生活標準都很高，卻偏偏不給發展事業的機會，動不動就以武力恫嚇試圖掩飾自己的無能、懦弱。<br /><br /><br /><br />全片在寫實的基準上，導演像是在拍一部關於找人的紀錄片，卻從一開始便打算拍成劇情片，雖說沒有像《計程人生》來得天衣無縫，但導演的企圖終究也隨著真相而明朗。導演駕駛的那輛車子化成了一種攝影眼、靈魂窗口，替伊朗人開道外，也替我們這群局外人開眼界，即便颳風下雨、雷擊霹靂，依舊能夠翻山越嶺拍出好電影。",
+      "forumCommentCount": 0,
+      "forumCommentArea": []
+    },
+    {
+      "id": 8,
+      "headline": "《最酷的旅伴》有光才有影",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:20",
+      "forumCreateDateInSecond": 1559031615787,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "電影中，出現兩位重新定義世界電影的大師名家，如今尚在世的兩位，安妮華達跟尚盧高達(Jean-Luc Godard)。兩人在《五點到七點的克萊歐》(Cléo de 5 à 7, 1962)一起合作拍攝演出，在片尾，高達沒有出現，留下謎語，話中有話地讓華達失望地哭泣，兩人最後到了海邊看海，華達說著過去跟丈夫賈克德米(Jacques Demy)、高達，以及當時是高達妻子的演員安娜卡琳娜(Anna Karina)的趣事。這段趣事似有若無地重現在《狂人皮埃洛》(Pierrot le fou, 1965)，飾演女主角的安娜卡琳娜在海邊好幾次說著「到底該做什麼事」，一旁是飾演男主角的貝爾蒙多(Jean-Paul Belmondo)正在埋頭寫作，這段應該是高達跟安娜私生活的寫照吧。<br /><br /><br /><br />JR安慰失望的華達時，說著「破壞電影敘事結構」，也就是說，高達未出現讓華達所設計的橋段沒辦法成功。兩人在火車上看著高達演出的短片，華達有兩個期望，一是見到高達，二是希望JR摘下墨鏡。在餐廳裡短暫歇息時，連口茶都沒喝巧妙凸顯華達的緊張，這裡是否在「演戲」？我當初在看的時候確實有這個疑問。的確，從電影的序場開始，是設計過的。兩人說著「沒在路上遇見」、「沒在公車站遇見」、「沒在買麵包時遇見」、「沒在夜店遇見」，但觀眾其實都假性地認為他們有相遇，只是沒有真的認識彼此，爾後才說出兩人見面的真正原因，因為大壁畫與水塔上的大照片，促成合作拍片的原因。前面這幾段故意的插曲表現出華達與JR設計的劇中劇，並引出接下來的故事；對應結尾這段高達沒有出現的劇情，替電影畫下「看似不完美，但其實完美」的句點。<br /><br /><br /><br />根據放映週報六月發表的文章，高達入圍坎城的新作《影像之書》(Le livre d'image, 2018)的開頭，是由《安達魯之犬》(Un chien Andalou, 1929)的那一刀開場；在《最酷的旅伴》亦提到了《安達魯之犬》。超現實主義作品《安達魯之犬》劃開眼睛的那一刀，由雲朵經過月亮而來，以上兩件事如何連接？其實就是「想像」(imagination)。《安達魯之犬》的歷史定位不只是超現實主義，或是布紐爾跟達利的合作，更有「開創」、「想像力」之意義，當然它也是重新定義電影的電影之一，影響的作品如希區考克的《意亂情迷》(Spellbound, 1945)、柏格曼的《假面》(Persona, 1966)、大衛林區的《穆荷蘭大道》(Mulholland Dr., 2001)、恐怖片《寂寞的豢養》(The Eyes of My Mother, 2016)等。<br /><br /><br /><br />可以說《最酷的旅伴》其實是部設計過的紀錄片，看似隨意卻是隨心所欲的故意，有意的引導出兩位導演關注的主題，如動物權、永續發展、女性主義等，最後回歸的還是「藝術家」、「作者」本身，更想做的其實還是「一部戲劇化的紀錄片」，華達的紀錄片作品向來都是如此。<br /><br /><br /><br />拍攝《五點到七點的克萊歐》時，高達是33歲；拍攝《最酷的旅伴》時，JR是33歲，身旁都有華達，兩片華達也都擔任導演。高達與JR在影片中成了對照，外在表象特徵相似外(墨鏡、西裝帽、富有理念)，而且兩個人的名字中的J皆是指”Jean”，JR全名為” Jean René”，但高達肯定比JR還要沉默跟憂鬱。本片中，二元身份照映，有角的羊跟沒角的羊、男與女、城市與鄉村、工業與農牧業、科技與手工、老與少、墨鏡與肉眼、照片中過去的人與世界中現在的人、過去的小照片與放大過的大照片、生者與亡者，以及JR對高達。當提出工業與農業的對照時，是否少了個「服務業」？藝術家是服務業，片中的服務業有畫家、郵差，以及作為導演的兩人。<br /><br /><br /><br />那台箱型車很像出現在《郵報：密戰》(The Post, 2017)、《一級玩家》(Ready Player One, 2018)裡的老式郵車，而當相機照下每個陌生臉孔時，印出來的大型肖像照，宛如替他們設計專屬的明信片。華達有收集照片、明信片的興趣，在《艾格妮撿風景》(Les glaneurs et la glaneuse, 2000)裡有提到，以此方式讓自己家中多一些陌生的家人。華達雖然只有一人，卻引導了「時間」的母題(年輕的自己跟現在的自己)，以及攝影機背後的作者。<br /><br /><br /><br />《安達魯之犬》中劃開的眼球應該是羊的眼球，眼球中是透明的水晶體，眼睛的感光元件，透過神經成像在腦中。華達在《沙灘上的安妮》(Les plages d'Agnès, 2008)中如此定義電影：「電影是什麼？光來自某處，被陰暗或絢麗的影像捕捉。」眼睛之重要，就在與「光」的感應、捕捉；沒有「光」，什麼都看不見。河瀨直美的《光》(Hikari, 2017)講述替視障者觀眾說電影的人，有光才有影像，才會讓眼睛作用，視障者無法見光，故腦中無法成像，得仰賴聲音，因此，說書者說電影，而視障者從語言中創造影像，這個過程便是透過想像力的發揮。<br /><br /><br /><br />電影中明白呈現華達眼睛的手術過程，看了的確驚心動魄；相對而言，JR的眼睛沒有見到，墨鏡一直成了他的保護傘。每個人看的事物不一樣，JR的攝影作品都是黑白的、放大的，將人忽略的事物放大，並利用這個「巨大圖像」說著有趣故事；髮蒼蒼的華達已經眼茫茫，看到的事物是模糊、遠視、抖動、淡色的，她注重人的裸體、微笑與皺紋。然而兩人專注的共通點是「臉」，一種不需文字符號來定義的圖像語言，每張臉說的故事都不一樣。當JR介紹兩人如何認識的時候，他打趣地說出「約會網站」這個答案，但華達極力否定，否定神祕主義；當華達想找一間水泥屋貼相片時，卻引來年輕團隊的笑話，認為水泥屋如此不堪入目，所以兩人的思考還有相當大的差距。<br /><br /><br /><br />高達一向不按牌理出牌，得到奧斯卡獎、坎城影展獎項也不會出席，今年坎城更用手機直播進行媒體會議，這也很新鮮，畢竟人家快九十了，但華達今年出席了坎城影展，參與凱特布蘭琪引領82位女性走紅毯的象徵典禮。高達跟華達的思維不一樣，拍出來的電影也大相逕庭，卻不約而同在電影史上佔有地位，而聯繫兩人之間的感情是什麼？華達會認為是友情，高達大概不會這麼說，他可能會說「我沒有朋友」之類的話吧。JR的確令華達想起高達，華達也讓觀眾非得想起高達。在《最酷的旅伴》中，華達讓這位沒有現身的「高達」成了法國新浪潮電影的重要符號，帶領我們進入電影史，這不也是種致敬嗎？如果要看更仔細一點，就再回顧《沙灘上的安妮》吧！",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "電影中明白呈現華達眼睛的手術過程，看了的確驚心動魄",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559031967362,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "headline": "《日常對話》只想和你說說心裏話",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:22",
+      "forumCreateDateInSecond": 1559031726131,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "今年金馬影展看了不少好電影，最打動我的，卻是部非常「小」的片子（連英文片名都有個small）：黃惠偵導演的紀錄電影《日常對話Small Talk》！這部在金馬世界首映之後，近兩週都高踞觀眾票選榜首，連《牯嶺街少年殺人事件》都屈居下風，就知道這部片子的厲害。所謂的厲害，是超越技術手法之上，回到電影本質，也就是，穿透人心的力量。那是被大場面與聲光效果、藝術姿態寵壞的電影觀眾，逐漸淡忘的觀影感受。<br /><br /><br /><br />《日常對話》片如其名，日常的生活對話，道出內心始終說不出口的肺腑之言，黃惠偵導演將人生的難言之隱，化作影像書信，寄給那身為同志的母親。導演自小與母親疏離的感情，在這部宛如告解般的電影中被重新梳理，藉由面對面的對談，將過往一切恩怨放下，彼此在情感上獲得救贖。我特別喜歡英文片名，small talk是那些言不及義的閒聊，不說心底話，只聊眼前事，那種不經意又自然的態度，反倒說著最沈重殘酷的實話，一輕一重，將這部電影的深刻，反差式的量秤出來。<br /><br /><br /><br />電影雖為紀錄形式，卻有著精心掌控的敘事策略，相較大多數台灣紀錄片在敘事結構上更為嚴謹扎實，甚至比大多數劇情片有著更峰迴路轉的跌宕轉折，純粹欣賞劇情而不深究表裡，也都富含觀賞性。我特別喜歡一開畫後，惠偵導演的閩南語口白，閒話家常的語調，娓娓道來她生命史中的那些過往傷痛、那些糾結不解、那些沈默暗啞、那些寂寞，都適得其所的還原成作者內心最真實的狀態，無論過往如何諸漏皆苦，在溫和語氣裡，都能化為一股平靜，恰似她本人說話的模樣，溫柔而堅定，更是種修為。<br /><br /><br /><br />惠偵導演從小跟著媽媽逃離具有家暴行為的爸爸，無法完成義務教育，只能輾轉跟著母親從事牽亡工作，看遍生死離別，超渡不少亡魂，終究有天得牽調自身的聚離。也許有人會覺得，家庭錄像何須拍成電影？甚至保守點的人，仍會拿著「家醜不外揚」的大旗說事。然而我私心認為，創作本身即是一種自我揭露，即使有意識地進行控制，創作者的內心世界仍難免洩露，甚至處處可見。重點從來不是題材，因為拿捏得當的話，私家情事反而更能洞見社會、反映時代。關鍵往往都在創作者的態度本身，誠摯與否罷了，如同木心所說的：「藝術是光明磊落的隱私。」<br /><br /><br /><br />《日常對話》最難得可貴，也之如此打動人心的原因在於，它方方面面揭露或展示了台灣社會之於性別、性向、階級的不平等現象。而導演的胸懷在於，她已經不試著在電影裡激烈的對抗什麼了，她只是想好好的坐下來，心平氣和的，把心底話都講出來，拿掉所有標籤，還給人本來的模樣，此時此刻，誰都不是什麼「女同志」、「異性戀」、「底層弱勢」，誰都只是一個有血有肉、需要愛與被愛、需要被理解的「人」。惠偵導演把長年身為被扭曲被忽視、被有意無意異常看待之對象的心路歷程，藉由這部電影的抒發，從此一筆勾銷，像牽亡家族的過去現在與未來，她想和解的對象不只是母親，也是整個社會，更是自己。<br /><br /><br /><br />惠偵導演彷彿只是想說，過去很糟我知道，但讓我們放下，開始彼此溝通並好好繼續活下去。唯有正常看待所有的邊緣、所有的弱勢、不抱持誰對誰錯，而是同理心的相互理解，不分高下，所謂的異與同才有和平共處的可能。《日常對話》讓我看到超越立場的姿態，回到人的本質與情感上的同理，讓所謂異同有對話的可能，有日常化的可能。<br /><br /><br /><br />最後，記得某次跟惠偵導演的「日常對話」。在一同前往午飯的路上，惠偵感嘆相比其他很大很重要的社會議題，將個人私事作為創作題材，似乎顯得微不足道，我依稀問她，這是否是你非說不可的故事？她淡淡得說，這故事她想講一輩子了，說完就沒有遺憾。我有點忘了最後我們的日常對話是如何作結，但我永遠記得一向溫柔的她，臉上閃現出那種毫無遲疑、近乎篤定的光芒。",
+      "forumCommentCount": 2,
+      "forumCommentArea": []
+    },
+    {
+      "id": 10,
+      "headline": "《計程人生》拍出的是骨氣，亦或欲拒還迎？",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:23",
+      "forumCreateDateInSecond": 1559031824965,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "「導演冒著被軟禁的風險也要拍電影，太感人了！好看！」<br><br>若身旁有影迷欣賞完《計程人生》（ تاکسی），僅有的感想便是這個，大概也不必深談了，他或他們顯然沒有看懂這部電影在講甚麼。<br><br>不難理解。礙於柏林影展第一贏家的冠冕、因於導演身處軟禁進行式的敏感、或著，出於今年香港金像獎頒給《十年》的政治對藝術風波，此時此刻上映的《計程人生》，不可免得會被如金的臺灣觀眾先入為主認定為輿論的電影、政治的故事、控訴的影像。這些觀眾看見了賈法潘納希（JAFAR PANAHI）冒著正被伊朗政府軟禁的風險拍片，稱讚他多麼骨氣傲然多麼勇氣可嘉多麼值得同情......云云。即便全片抄足了另一位伊朗導演阿巴斯(Abbas)在千禧年間的名片，一樣是計程車司機與眾乘客閒談的《十段生命的律動》（Ten）系列，似乎也值得原諒。<br><br>真的是這樣嗎？或著，真的「只有」這樣嗎？<br><br>回望一下，在電影裏，經歷一連串阿巴斯式的寡言司機與百變乘客攀談的敘事開展後，司機的姪女上車。這個想拍片的女孩趁著空擋打開車窗，拿著鏡頭對準一個在巷弄正在偷竊的扒手，她指使他不要偷，否則拍起來不像電影，「老師說，電影裡不會有罪犯」她說，扒手當然沒聽女孩的。女孩的老師要女孩，或著該說導演，對拍攝什麼的選擇做出道德的審查，女孩則以為電影只能虛構，於是她必須選擇造假才能拍出電影。其實不然，在那一刻，女孩可以選擇實拍出一部討伐街頭犯罪的紀錄片，也可以說服扒手拍成一部勸人改過的劇情片，沒有觀眾能在電影上映時質難影像的真實與否，因為無人知曉女孩是否與扒手談妥了什麼，更不提剪接與調度無比的粉飾技巧。電影沒有現實，只有看似現實的寫實，我們只能姑且聽導演的一面之辭估信其真，即使是紀錄片也一樣。<br><br>這就是那些止於輿論、止於政治、止於控訴，因而只能止於戲外花邊（是的，導演被軟禁一事與明星八卦無疑）的觀眾看不出的東西。<br><br>男孩與女孩的這段論證，同樣能指涉回《計程人生》己身。眾所皆知，本片本來真要拍成紀錄片，潘納希也真的要當司機，無奈演員與調度太困難，故事保留，改以自導自編自演，兼請專業演員唸劇本拍完。司機是真的，街景是真的，對白中種種對伊朗政府的謾罵也是真的，但這是一部真實，或著說現實的電影嗎？恐怕不是。正如女孩能在車窗上指使扒手「演」出她要的電影，司機車內車外的伊朗之一切都是他所選擇給觀眾呈現的寫實，而我們並不清楚這位沈默寡言的司機有沒有屬於他的老師，與他老師教他的自我審查標準。既然如此，當《計程人生》選擇以仿紀錄而非紀錄呈現時，即使它風格再寫實，導演批判的意圖再明確，我們都不該以同樣相信現實的心態，去信任這份只存在於車窗與銀幕框內的，不確定又曖昧的所見所聞。<br><br>但這部電影不正是以仿記錄來批判現實伊朗嗎？於是乎，潘納希在仿紀錄拍成的《計程人生》中的「質疑」政府之餘，也連帶「質疑」了自己與自己這部電影的本質－－「仿紀錄片，可信與否？」「我拍的這部電影《計程人生》，可信與否？」<br><br><br><br><br>潘納希這段之於全戲樞紐的女孩拍片事，無疑也是一場導演對著戲外的明確宣示。潘納希當然知道自己值得全球影迷同情，甚至太知道了，以至於他深知自己的敏感身份不可能讓觀眾輕易跳脫戲內戲外，給予電影公正的評價。他更清楚是：身份如此敏感之下，必然帶來某種不能說是盲目，但肯定不是理性的，觀眾出於人道而非看戲的支持－－於是，「導演冒著被軟禁的風險也要拍電影，太感人了！好看！」誕生焉。《計程人生》卻難得可貴的沒有順水推舟，反而劃出了一道隱隱的二元，後設性得將電影真實與不真實的界限，擺入他個人的境遇之中；然後，作出揶揄：<br><br>「我很誠實，但我拍的仍舊只是電影，別太相信電影！」這，才是潘納希的本意。<br><br>俄裔詩人，也是政治流犯的布洛斯基（Joseph Brodsky）勉勵也批評藝術份子該有對時局的使命感，「詩應該干涉政治，直到政治停止干涉詩」他以此句廣為人知。然而布洛斯基卻不鼓勵隨庸，反而反對詩人後輩用大眾的、街頭的、俚語式的字句入詩，在他看來，那是一種對智慧的放棄。只有當詩人放棄了出於大眾而高於大眾的觀點鍛鍊，捨棄了不人云亦云而是主動出擊的啟迪使命，詩人與藝術家才有資格使用大眾的語言、跟隨大眾的輿論、不作為號角而只作為伴奏存在。潘納希顯然不願孤處人群，也不甘說學逗唱，於是他自舒適的車廂（道德上位）內走下，化身為車窗外的小男孩，透過窗內窗內（戲內戲外）的後設界限，狠狠揶揄了現實中太容易博人同情的「自己」：ㄧ個忙於手持拍片的無知女孩。這份不為政治而怠慢藝術的辯證，這份ㄧ人雙化自嘲嘲人的自覺，才是比揶揄政府更珍貴的，一份藝術家而非政治家的超然與骨氣。<br><br>當然啦，這種自嘲嘲人也可能一種欲拒還迎的拿獎手段，證明他是個藝術政治兩不疑的大藝匠，而非汲汲營營於四大影展榮耀的投機人。為什麼潘納希在片中不願說破自己到底是扮演潘納希本人還是虛構的司機，持續混淆片內片外的認知，必然也因他心知肚明，柏林金熊獎這座太大的酬賞，值得他如此作態。此舉是骨氣亦或還迎，何為正解，就端看觀眾如何作想了。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "推",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559032590710,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "headline": "《科洛弗檔案 Cloverfield》 - 真實的偽紀錄",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:24",
+      "forumCreateDateInSecond": 1559031885611,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "美國  USA<br><br>監製  J·J·亞柏拉罕<br><br>導演  麥特李夫斯 Matt Reeves（猩球崛起）<br><br>偽紀錄片、科幻、外星入侵、驚悚、劇情<br><br><br>       《科洛弗檔案》在2008年上映以來，可以說是與《厄夜叢林 The Blair Witch Project》並駕近年來電影偽紀錄片類型中的經典。本片主要在講主角準備離開美國前往日本工作，在餞別派對結束後，外星生物大舉入侵紐約曼哈頓的故事。亮點在於由於全片都是以片中角色Hod拿著V8記錄下每一分秒的偽紀錄片，從餞別派對開始時，Hod拿著V8在人物中穿梭請朋友們錄下對主角離開的感言，藉此交代出清楚的角色個性、人物關係，一直到後來災難發生，哈德也持續紀錄，讓觀眾有著第一人稱視角的觀影體驗。<br><br>       本片主要的四個角色為即將前往日本就職的Rober（Michael Stahl-David 飾演）與曾經與Rober有過一段情的Beth（Odette Annable  飾演），以及好友Hod與Hod喜歡的Merlena（該角色後來被外星生物咬後感染，爆血身亡。）<br><br><br>『準確的切入點』<br><br>       整部片非常的乾淨俐落，不拖泥帶水，沒有浪費時間去交待外星人如何入侵地球，也沒有解釋後來外星人到底被消滅了沒有，完全的聚焦在角色的逃難過程，反而會讓觀眾對於「畫面外的災難世界」更有想像空間。導演也巧妙的利用錄影機的閃光、夜視功能，讓角色們在地鐵隧道裡的戲搭陪著外星怪物的出現，有著更驚悚的效果。<br><br><br><br>『覆寫影片的特性』<br><br>       比起《厄夜叢林》本片更高明的地方是，通常偽紀錄片為了要讓「角色拿V8記錄下一切」這個設定自然，常常會在劇情最緊張的地方不得已中斷錄影，好比面對一個巨大的危險、角色間產生劇烈衝突等等，在寫實狀況下錄影的人都不太可能還會繼續錄影，因此，在後設的電影上很容易產生節奏的斷層。 <br><br>       但《科洛弗檔案》最聰明的地方是，導演讓這卷帶子是被「覆寫」的，這卷帶子原本是紀錄Robber與Beth地下情的約會影片，（與外星入侵影片交替出現）但Hod在錄影時沒有把原本的帶子取出來，所以怪物入侵的影片就直接覆寫在原本的約會影片之上，此舉正巧可以填補前段所說到偽紀錄片的缺點。更因為外星人入侵後Robber的主要任務就是去救Beth，所以在每一段救援緊急關頭影片被切斷時，我們就會看到原本兩人甜蜜出遊的畫面，兩者跳接一緩一急的處理，讓整部偽紀錄片裡外有了更緊密的呼應。<br><br>       我認為JJ亞伯拉罕真的是一個懂戲也懂操作的高手，他了解處理這樣外星類型的驚悚片該如何切入，倘若本片把外星人從入侵到地球人如何對抗都拍出來，那的確就容易落入俗套。他改變觀眾原本全知的觀點，讓觀眾使用第一人稱跟著角色一起在曼哈頓中逃難穿梭，更聰明的讓角色爬上爬下、登上直昇機，這樣鏡頭便有更多元的選擇，觀看即將崩毀的曼哈頓市，有著主觀且身歷其境的感覺。<br><br>       2016年拍的《科洛弗10號地窖》更被視為有著本片精神的續集，非但沒有俗爛的按照續集公式延續原本的故事，更用了另一個全新的故事去觀看了同一次外星怪物入侵的災難，兩部片錢都完全花在刀口上，有著獨特說故事的脈絡，特效部分也做得不多不少，非常值得學習研究。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "寫得太好了",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559032581716,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "headline": "《時尚惡魔的盛宴》：鏡花水月",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:29",
+      "forumCreateDateInSecond": 1559032177484,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "雖然有人說片名有種文青感，其實原片名《五月的第一個星期一》更文青，但不得不說「時尚」、「惡魔」與「盛宴」，這三個詞確實無比關鍵。整部紀錄片不只是關於時尚界與展覽，更是一個藝術挑戰：大都會博物館如何在有限的時間下，挑戰最大規模的時尚展，而且主體還是中國！ <br /><br />全片其實非常娛樂，毫不沈悶，可看的東西非常多。縱使片名叫作「時尚惡魔」，但整體還是以館方策展人「安德魯」作為紀錄的出發點，跟著他了解當代時尚與藝術的關係，了解時尚策展的變化，以及「鏡花水月」的整個計劃。我們都知道對於某些老派思維的人而言，時尚是很難被稱得上藝術的，而要在大都會博物館展出更是一大挑戰，所幸已故大師McQueen當年的紀念展改變了一些，但安德魯這次可是要挑戰McQueen呢，與「Prada的惡魔」Vogue總編安娜，一同籌備「鏡花水月」。<br /><br />安娜則是另一個輔助且更為吸引人的觀點，讓觀眾得以從「時尚龍頭」去了解他們如何籌備活動，如何應對他人。我們可以看到真實安娜的強大氣場，快狠準的判斷與指揮，絕佳的品味，同時也不失幽默感與人性，一會直嗆辦公室的擺設，一會兒和員工說笑，一會冷言用報酬率算計來賓座位，一會兒為女兒裝扮，大大補足了人們對「Prada」惡魔的想像。<br /><br />此外，片中還有另一位關鍵人物──藝術總監「王家衛」，他的指導，則是站在藝術與中國文化的角度，與安德魯、安娜宛如三位一體的存在。全片我們不僅可以了解上述所提及的時尚與藝術關係，同時也可以看到西方舉辦「中國時尚主題」的有趣火花，一方面要展出西方設計師的「中國風」服裝，一方面也要避免文化錯譯，一方面邀請中國設計是設計，一方面也要面對中國「現代」與「傳統」美學的爭論。 <br /><br /><br /><br />片中有兩個橋段，非常令人印象深刻。一段是中國官員問安德魯，「你們展出的計劃都太偏向傳統，沒有現代中國美學。」見安德魯怎麼回答，都被官員嘲諷，王家衛只好介入並反問了：「什麼是中國現代美學？」頓時讓官員啞口無言，接著王家衛說了「前進的唯一方法是記得自己的過去。」<br /><br />另一段則是，安德魯覺得毛澤東在現代中國文化具極大的意義，決定設個毛澤東區，就安排在中式佛像區，王家衛一聽，臉色一沉，表示反對。安德魯表示對中國人民毛澤東就像神，但王家衛回說「這對兩方都不尊重」。這是一個很有趣的東西文化衝突。<br /><br /><br /><br />上述這些比較屬於「思辯的好看」。整部片子從中間到後半，幾乎都是以布展為主，我們可以看到整個「名流」展覽如何從零開始，各路人馬設計每個環節，視覺主題、光影、動線等等，接著就是與時間賽跑的各項工程陳設，試圖打造驚豔的視覺饗宴，而人員安排、流程制訂、彩排等等行政工作，也充斥著「戲劇般的好看」橋段，尤其預算不足、工程嚴重延宕，工作人員意見不一等狀況，都使觀眾在幽默氣氛底下，還是體會到被紀錄者的緊張，直到最後成功開幕。 <br /><br />開展後，就是「視覺的好看」高潮之始，我們可以看到大量設計大師、明星、球星、名流，穿著各家的時尚衣裳在紅毯上搶鎂光燈較勁，有趣的是，影片除了捕捉他們在會中如常人般的互動，也記錄了他們觀展的過程、大師們的「品頭論足」以及身為策展人員如何看待他們，很多真相藏在「魔鬼」的細節之中。<br /><br /><br /><br />接著，鏡頭瀏覽整個展覽的華美，看西方如何重新詮釋中國傳統之美，我們可以看到各時尚大師140套絕美的服裝，不只包括McQueen、我最愛的Galliano、中國的郭培等，從刺龍黃袍到青花瓷旗袍，甚至還有一件陶瓷服裝，以及最早在好萊塢成名的華裔女星黃柳霜的特展。但要完美地展現出這些服裝，除了要調好每件衣服的角度、打光外，還要有絕佳的展場設計，隨著鏡頭的帶領，我們可以看到各式各樣的文物，在不同的展區主題，與服裝相輔相成，而那些令人讚嘆的佈置：竹林的階梯、白色的光之竹林、映著月光的流水庭園、數十萬朵白玫瑰圍起的大花瓶、映著「末代皇帝」的迴廊、反射服裝的鏡面， 在令人驚歎這居然是大都會博物館內的同時，也巧妙地符合了「鏡花水月」的意境，貫徹了西方對中國的華美幻象，成如「時尚」、「展覽」、「美」、「名流印象」，都是一種幻的迷戀。<br /><br />《時尚惡魔的盛宴》在思維上有點到一些時尚文化的有趣之處，記錄佈展的過程也明快幽默毫不無聊，配樂選曲動聽，視覺更是歎為觀止，恰似領著觀眾進到大都會博物館、Vogue編輯室、甚至展場盛宴，與名流們共襄盛舉，觀賞時尚界與藝術集合的絕美，就後者而言，其實就非常值得進戲院一看。縱使影片還是有幾個缺點，譬如淡化或捨去了衝突，過於粉飾太平，有淪為展場宣傳片之嫌，敘事略亂，且多少陷入了「東方主義」的窠臼，但「鏡花水月」嘛，瑕不掩瑜，不懂時尚的人也可以從中獲得樂趣、知識與美學的饗宴，而懂時尚的人，看到那麼多設計師，我想應該更不用說了。",
+      "forumCommentCount": 0,
+      "forumCommentArea": []
+    },
+    {
+      "id": 13,
+      "headline": "《幸福的拉札洛》無知便是福",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:31",
+      "forumCreateDateInSecond": 1559032298313,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "《幸福的拉札洛》(Lazzaro felice, 2018)獲得去年坎城影展最佳劇本獎，真是一部令人感動與充滿反思力量的電影。一個偏鄉農村，出產菸草，拉札洛(Lazzaro)是裡頭的一名青年，長相古意、可愛、天然呆、純真、善良，不太喜色於形，對待任何人都是微笑的一號表情。他有時會發呆，站的挺直，看著遠方，旁人也不知道他在看什麼、想什麼。不管老的少的男的女的，只要能叫出他的名字，拉札洛皆聽命於他，即便不合理的事，他也乖巧照做；他任何事都可以做，吹樂器、搬重物、煮咖啡、顧雞顧羊等，他不停地做事，宛若不需要睡眠或休息，風哪往裡吹，他就往哪裡倒。<br><br><br><br>拉札洛像是宮崎駿電影裡那些可愛卻異類的腳色，如龍貓、波妞、無臉男或奇奇等，他們的好奇使他們因而改變，可能變好，波妞了解人類便保護人類；可能變壞，像無臉男因為貪欲而不停地吃，但如果回溯源頭的話，他們內心都是良善無知、沒有城府的。這類腳色不會是英雄或英雌，而是代表人的本心，那種純潔、無塵、青春的內在，時時提醒著為人該保有的初衷。電影中，相對於其他腳色，拉札洛的樣子沒變，依舊保持著老實、可愛、年輕的外貌，像是小孩一樣，但其他人都已經老化、退化、醜化，經不起歲月及人世的種種歷練，好比猜忌、心計、懷疑、困惑與迷惘，讓他們開始不相信人世，只覺得苦難不斷發生，這更顯示出拉札洛的純潔如聖、單純如一。<br><br><br><br>本片大致上分成兩段，前半段講述這群農人替一位女爵做事，透過以物易物的方式換取微薄的生活所需，沒有薪水，沒有教育，沒有科技，只有不停地工作過日子，偶爾的男女情愛、婚姻朋友關係，各自相互依靠；有天，女爵跟他兒子到莊園巡視，鬧脾氣的公子哥兒子搞失蹤，深深暗戀公子哥的女孩心急而向警方揭發了這個化外之地。這件事為世人稱作「大騙局」，因為女爵剝削這群農人，賺取非法利益，接著便開啟了後半段故事，講述這群農人進入城市後的生活，即便獲得身分證，但海海人生中沒有技能、缺乏教育，又無法務農，只能淪落街頭苟且偷生，利用偷騙的方式過日子，漸漸地被遺忘在這世界上。<br><br><br><br>拉札洛的存在是對人的提醒，成年的Antonia(Alba Rohrwacher 飾演)表示不可以讓拉札洛陪同去骨董市場騙錢，因為覺得老實的他跟著他們做壞事，實在不妥，良心過不去，對不住拉札洛。其他人不知道，因為他們從來都沒有在乎過拉札洛的存在，不是想趕走，就是利用他。因此，拉札洛是孤單的、沒有朋友的，沒有人跟他一樣，也沒有人發現他的能力，只是一味的利用、壓榨。有人說他是濫好人，但是不存不忍之心，他們就像是那女爵、剝削者、神父、銀行、財團，真正狼心狗肺的就是他們，相對的，他們所認為的狼居然是拉札洛，這也是導演最後所下的結尾。<br><br><br><br>拉札洛以為銀行讓他的朋友過得很苦，便想要去爭取，在什麼事情都不知道的狀態下，連金屬探測器或槍枝可能都不知道就跑進了銀行，被眾人誤以為是搶犯，先是低頭求饒，後來發現拉札洛根本沒有槍枝，原是虛驚一場本可避免打死他並消弭誤解，卻非得給他活生生、惡狠狠地打死，說拉札洛是嚇人的瘋子，而這些驚弓之鳥其實是現代人的寫照吧。被世局蒙蔽，認不清表象，無辜也成犯，到底什麼是真的？什麼是假的？就像是拉札洛把垃圾處理掉，發現牆頭草是可食用的植物，甚至挖到馬鈴薯，遍地都是可飽餐的野味，其他人卻只是視作無用之草。<br><br><br><br>有時，筆者反省自己是否城府極深。有天，某路人問路，一台藍色貨車違停路口，破舊的車體，一名壯年男子，整個人穿著不潔的衣物，口齒不清，嚼檳榔的紅嘴，操著一口台語，直跑到我面前。當時自己心裡也會有些恐懼，皺著眉頭露出一些嫌惡，其實這位先生只是想問路而已，當下突然發現自己多麼小人。<br><br><br><br>拉札洛進入城市後，陪著Antonia進入小小的窩，Antonia替他穿上毛外套，溫暖他。拉札洛看見熟悉的人們聚在一堂，宛若一個家庭一樣，鏡頭隨著拉札洛的眼神從門口開始橫搖360度，剎那間他們以前的模樣顯現，年輕、單純、真摯的笑顏，就像重返以前在莊園的生活，慢慢地鏡頭搖回來門口，又回到現實中。這美麗的畫面不禁讓我眼眶含淚，透過拉札洛的雙眼，了解到自己是多麼在意那些身外物、追求多少空虛而忘記在乎那些曾經同夥的朋友，好似夢到了小學的時光，見到一群好朋友，聊著無聊的小事，突然一個人講出了笑話，大家都笑了，但回到現實時，發現自己卻是寂寞的，他們在哪？過得好嗎？希望他們好。",
+      "forumCommentCount": 0,
+      "forumCommentArea": []
+    },
+    {
+      "id": 14,
+      "headline": "《明天，最後一天》如果明天是最後一天",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 15:46",
+      "forumCreateDateInSecond": 1559029597692,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "這世上，新聞事件如此豐富，社會國家如此多元，而生活在臺灣的我們，突然透過網路看見某個消息，可能受之感動或覺得與我何干。隨手翻閱著圖書館、郵局、早餐店擺放的報紙，瀏覽某個政治事件、某個槍擊事件、某個意外事件、某個聯姻關係，但這些事情跟我們的生活沒有太多的關係。我們看見這些新聞，覺得同情或好笑，覺得無厘頭或充滿訊息，覺得生氣或悲傷。各種情感充斥每天的生活，但它們又是那麼的短暫。下一秒，就忘了。隔天，新聞又會有新的版面與故事，而我們仍舊活著。但人有悲歡離合，月有陰晴圓缺，我們怎知下一秒會以何種樣貌現身。<br><br><br><br>泰國新銳導演經由「不同」表現「同」。人生自古誰無死？死亡可能來得快，可能來得慢；有人活到一百歲，有人夭折在母親的腹中。在電影中，無時無刻傳遞淒涼悲傷，因為某位角色已經離世，但我們觀看可能是他們生命中最精華或是最普通的日子，看著他們活出死亡前的寧靜、未知、純真，像在平凡日子裡，我們跟朋友聊天，跟家人團聚，跟某個人吵架，怎麼知道，接著發生的事情會是「死亡」呢？。<br><br><br><br>我們看著腳色的「生」，但心中已經有個定調的故事結局，也就是腳色的「死」。導演改編2012到2017年發生的新聞事件，在虛實之間，展演出一套非常新鮮的敘事手法。第一段故事，我們看著一群女孩子在聊星座、聊未來，場面輕鬆平常。畢業典禮前，他們可能在某個旅館中聚會，喝啤酒，吃點零嘴，聊心事，聊著聊著可能講到男朋友，或是未來的計劃，大家都很開心，因為他們面對著未來，在充滿未知性時，人的想法是天馬行空的。他們看著星座預測出來的結果，想要改變，用隻紅色的筆劃掉原本預測的結果，這並不是預測準不準的問題，而是他們有慾望、有企圖地想要活在一個屬於自己的世界，想要掌握生命，想要過他們自己的生活，無拘無束的活著。但在這段故事之前，導演已經告訴我們，他們去買啤酒的時候，有輛大車會衝進店裡，而有個女孩子去世了，因此在看這段影片的同時，觀眾的感受可能是同情，我們在經歷一段即將逝去的時間，以及生命逝去的事實，所以我們不知不覺地更投入在這個長鏡頭之中，更去在意這幾位女孩子的想法，以及他們青春的肉體、美麗的外表，因為我們開始憐憫青春的消逝，然而，這只是電影的一開始而已。<br><br><br><br>開場，導演便透過統計數據，開宗明義說出「每秒就會有兩人死亡」的可怕事實。但觀眾無法感受，因為我們正準備看這部電影作品，所以，不會對這項事實特別有感，反而心裡可能產生一種驚訝。我們認為：現在，我們正在看電影；明天，我們依舊活著、工作、上課，根本不把死亡放在心上。早上起床，吃早餐，上班、上課；晚上回家，洗個澡，吃個飯，收拾各種心情去睡覺。而整天投注某件事情上，完全不會在意「生死」問題。然而，如同政府宣傳死於酒駕的數量與機率，我們行走在那條路上，當下平凡無奇、健健康康、整齊有序。這種資訊所傳遞的是一種訝異、驚奇、悚動。即便知道酒駕依舊發生，死亡車禍依舊存在，只不過，我們的生活沒有遇上這類事件，因此對這類事情有些距離。<br><br><br><br>人自古有命，生有貴賤長短、發達貶抑，我們無法改變。十年生死兩茫茫，怎知男友搭上了消失的馬航？等待心臟移植的女友，剛好等到了一顆心臟，並醫治了病情，該說不巧還是可巧？女兒替老父按摩，父親睡著了，女兒又去打理家務之類的事情，離開沉眠的父親，怎知竟是兩人最後之緣？姊弟在屋頂上聊天，久違的姊姊替弟弟拍照，他心不甘情不願，她能怎樣？即便是親人，因為疏遠而散了，是人之常情。姊姊想去吃對面的海產，弟弟說「人太多」不想去。隔天，她沒了，被車撞死了。我們看著一位梳妝打理的模特兒吃東西，透過聲音傳來一位知名混血模特因為助人而被車撞死的消息。我們不知道吃著東西的模特兒是誰，可能是替身或路人甲，但她因混血模特之死而獲得難忘的機會。她落下了淚，弄花了妝，別人以為她為死去的模特傷心，但，是嗎？<br><br><br><br>暗戀人太深是否會走向死亡一途？對多數人而言，也許不會，心想：他竟會為她而死？我們會暗戀某個人，需要勇氣告白。成功失敗兩面情，可能收到別人的拒絕為多的時候，埋在心底的暗戀也變多了。在這段故事中，有許多未知的訊息，這個告白的男子可能遭逢生命之難，覺得很憂鬱，覺得世間無情，想問「情為何物」。他跟他認為他愛的女子告白，但這名女子不領情，帶著厭倦狠心拒絕他的一廂情願，之後還跟朋友道他三四。觀眾可能覺得這女孩子是反派腳色，其實不是，她反像是這件悲劇的受害者。在嘻笑之中，她怎知隔天這男的就跳樓自決？她的鐵口直斷卻害他跳樓，這兩件事情之間的訊息太少了、連結太單薄了，但生命就是如此。<br><br><br><br>本片穿插著一位百歲人瑞與一位十歲小孩，老人不說，小孩的生命觀卻很超齡，有老靈魂的他在尚未知悉生命的狀態下，會找資料了解真相。兩人都傳遞出「把握當下」、「趕快去做」的觀念。其實很難，也很諷刺，一位老人家，站都站不直了，走不快了，皮皺了，對著我們年輕一代說：去做事，不要猶豫。但事實是，老人家已經在等待死亡了，卻遲遲無法，這是命給他的安排。試問：明天，怎知不會是最後一天呢？導演替觀眾展演一段段看似隨性、靜謐的生命片段，無一不是想要大家去把握所剩的生命，繼續探索明天的生命。",
+      "forumCommentCount": 3,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 2,
+          "forumComment": "暗戀人太深是否會走向死亡一途？對多數人而言，也許不會，心想：他竟會為她而死？我們會暗戀某個人，需要勇氣告白。成功失敗兩面情，可能收到別人的拒絕為多的時候，埋在心底的暗戀也變多了。在這段故事中，有許多未知的訊息，這個告白的男子可能遭逢生命之難，覺得很憂鬱，覺得世間無情，想問「情為何物」。<br /><br />他跟他認為他愛的女子告白，但這名女子不領情，帶著厭倦狠心拒絕他的一廂情願，之後還跟朋友道他三四。觀眾可能覺得這女孩子是反派腳色，其實不是，她反像是這件悲劇的受害者。在嘻笑之中，她怎知隔天這男的就跳樓自決？她的鐵口直斷卻害他跳樓，這兩件事情之間的訊息太少了、連結太單薄了，但生命就是如此。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559029847299,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "headline": "《你的臉》你的臉，你的故事",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 15:54",
+      "forumCreateDateInSecond": 1559030053224,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "<div><span style=\"font-size: 1rem;\">最後一個長鏡頭，「我們」坐在中山堂內，那是個昏暗的空間，空蕩蕩的，微光由外而內照射。我們看這中山堂內部的一角，這個視角，是種孤獨。蔡明亮導演給我們一個短暫的時間，感受屬於自己的孤獨。</span><br></div>《你的臉》用一系列的長鏡頭特寫素人的臉，對這群素人而言，導演近距離特寫人的臉，他們可能注視鏡頭，或是劇組的某個目標物，或是建築物的特定角落，那會是尷尬、奇怪、不知所措，甚至可能帶來些微恐懼，又或是莫名激發他們表演慾的契機，甚至可能因為太認真想注意鏡頭，反而讓自己累了、睡著了。<br><br><br>在短片《秋日》，導演邀請野上照代跟李康生拍片。我記得野上女士曾說過，這(鏡頭跟人的)距離會不會太近了。然後，觀眾會看見野上女士有點不安的表情，兩眼時常聚焦在他處，或無奈地看著鏡頭，我想這是正常的，除非是李康生，因為他習慣這種創作模式，甚至可以說活在這種模式中。要一個人凝視「長鏡頭」，有一定的難度在裡頭，更何況野上女士不是演員，而是當場記出身的。<br><br><br><br>鏡頭是種侵入人世的東西，鏡頭可以比喻為人的一眼，但它是機械的、無生命的、陌生的。蘇珊桑塔格在《論攝影》一書中論述過，拍攝的一系列動作都用類似於用槍的動詞來形容，而我們拿相機的動作如同用槍，對準目標，射擊目標，目標擊斃。我們用相機偷偷瞄準陌生人會被罵被瞪，是同樣的道理。<br>安迪沃荷(Andy Warhol)曾經為許多人做過”Screen Test”(螢幕測試/試鏡)，主要是演藝明星、歌手，也有素人，但每個鏡頭維持五分鐘以下，絕對沒有蔡明亮的鏡頭來的久；以前，安東尼奧尼也做過，或是去看他的《春光乍現》(Blow-Up, 1966)。再看Steven Soderbergh獲金棕櫚獎的電影《性、謊言、錄影帶》(Sex, Lies, and Videotape, 1989)，透過不舉的男性攝影師拍攝女性的私人獨白，在私密的空間中，一種真實但難以言喻的慾望被揭露出來。又或是《偷窺狂》(Peeping Tom, 1960)中性壓抑的男性攝影師對女性下毒手前，用攝影機另類侵入最隱私、最不願面對的人性世界。<br><br><br><br>蔡明亮沒有像劇情片那樣刻意，只是有意但隨意。在《你的臉》中，被攝者他們大多是有年紀的人，李康生是最年輕的參與者，他的臉讓我感覺沒有太大的差異，反而是在片中聽李康生講他跟他父親的事情，蔡導讓李康生說話，也許二十年來跟蔡明亮合作的拍片或劇場經驗，就這部電影的「台詞」最多，而李康生當最後一位被攝者，也像是理所當然的壓軸。<br><br><br>開場鏡頭，那位女士看著鏡頭，突然露出笑瞇瞇的表情，跟導演對談起來。她覺得這個場面很奇怪，也就是說，她看見的導演本人、一台攝影機、攝影師、劇照師、錄音師、打光師等。對不熟悉這個產業的人來說，這個場景遠超出她的想像，反而感到不切實際、不自然，所以演員的偉大便在於必須在不真實的環境中，做出真實的演出。這種反差是很難的，因此入戲不入戲都是一門學問。導演用這個鏡頭開場，是巧合，也是設計。<br><br><br>以筆者的淺見，最後一個鏡頭，假設我們坐在這位受訪者(被攝者)的角度，導演讓觀眾感受當時被攝者所處的樣子。試想：一個人，坐在那感受，安靜，無事忙，清閒，聽聽漸次稀落的聲音，看看光影，而我們的心思會飄到別處去，想著周末的選舉、想著準備搭的公車班次、想著一個人、想著一部電影。導演當然可以讓觀眾經歷當下被攝者所處的樣子，那樣的話，眼前會是燈光、機器、一堆幕後陌生人跟導演本人，又或是讓拍攝鏡頭對準鏡頭，讓我們知道「我們正在做『看電影』這件事」，但這些事一堆導演做過了。然而，蔡導獻給我們一次，屬於「攝影者」與「被攝者」的經驗，既讓自己被迫面對自己，也讓自己主動面對，這些皆是成就《你的臉》難能可貴之處。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "開場鏡頭，那位女士看著鏡頭，突然露出笑瞇瞇的表情，跟導演對談起來。她覺得這個場面很奇怪，也就是說，她看見的導演本人、一台攝影機、攝影師、劇照師、錄音師、打光師等。對不熟悉這個產業的人來說，這個場景遠超出她的想像，反而感到不切實際、不自然，所以演員的偉大便在於必須在不真實的環境中，做出真實的演出。這種反差是很難的，因此入戲不入戲都是一門學問。導演用這個鏡頭開場，是巧合，也是設計。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559031266574,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "headline": "《刺青舞者》天縱英才的美麗與哀愁",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:05",
+      "forumCreateDateInSecond": 1559030714213,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "當才華變成一種負擔，無法回頭的人生又該何去何從？瑟基普魯尼曾是英國皇家芭蕾舞團史上最年輕的首席舞者，他也是當時皇家芭蕾舞團的票房保證，只要掛上瑟基普魯尼的名字，演出門票就一票難求。正當人人都在讚嘆他非凡的成就時，他在鎂光燈下的人生卻開始失控，他刺青、他酗酒、他吸毒、他夜夜笙歌。原本眾人吹捧的天才舞者，那個「優雅的野獸」，一夕之間變成媒體口中譏諷的「芭蕾壞男孩」，22歲那年，他因而宣布退出皇家芭蕾舞團。<br><br><br><br>　　放蕩不羈的名聲讓他在歐洲芭蕾舞圈無處容身，瑟基普魯尼別無選擇只好流連在俄羅斯的選秀節目，將他世不二出的天賦揮霍在追求速食娛樂的芸芸眾生之前。直到2014 年，他在 Youtube 上一支點閱率破表的舞蹈影片，才再度激起了大眾對他的好奇與重視。也多虧瑟基普魯尼成名得早，曾獲奧斯卡提名的導演史蒂芬康托得以彙整大量的第一手影像資料，並採訪瑟基普魯尼本人和親朋好友，帶著觀眾一窺這位天才舞者大起大落的生涯及其背後隱藏的人生經歷。<br><br><br><br>　　說實話，現在就拍《刺青舞者》這部紀錄片似乎太早了一點。瑟基普魯尼雖然已經見過不少大風大浪人情冷暖，但他畢竟還年輕，很多事情現在說「看破」是一回事，過了十年、二十年再回過頭來看，也許他又會有另一番體悟。他還在經歷這個蛻變和調適的過程，而且也是摸著石頭過河，所以現在就用這部紀錄片將他過往的人生和未來的可能蓋棺論定，有點言之過早。不過換個角度來說，這部電影也可能拍得正是時候，因為這個世界很有可能隨時就會失去這個寶貴的舞者。<br><br><br><br>　　這倒不是在看衰或詛咒他，就如同紀錄片最大的功能是去還原現實的原貌，從電影所呈現出來的畫面和訪談，觀眾應可從他日常生活中和周遭人的相處，還有他如何看待自己作為舞者的一種態度，發現他真的是個天真單純、彷彿沒有被世俗汙染過的大男孩。他面對人生的熱忱和柔韌，在同年齡的人裡面恐怕也找不出幾個像他一樣的，但在觀賞《刺青舞者》時，有個剎那，我突然有種很強烈的感受，我不曾在看一部紀錄片時，那麼似曾相識地覺得自己在看Discovery或是動物星球頻道的「非洲草原紀實」，只不過在《刺青舞者》這部紀錄片裡，掠食者的名字是「人生」，而苦苦掙扎想要逃出生天的獵物，則是「瑟基普魯尼」。<br><br>",
+      "forumCommentCount": 2,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "這部電影其實就是在看人生的現實與無奈，如何一點一滴的蠶食瑟基普魯尼這個年輕的靈魂。以這個角度來看，史蒂芬康托這部紀錄片拍得很成功，因為觀眾可以在這不到90分鐘的電影裡，深刻了解瑟基普魯尼這個人的性格、他的抉擇，還有他的迷惘和傷痛。就訪談內容來看，他的家人未必能夠完全了解為何他在前途一片光明時會自毀前程，也並不了解他目前在經歷的人生關卡，反而是他的兩位皇家芭蕾學院同窗更能體會他從一個鄉下男孩，一路努力走向舞台，且終於在鎂光燈下大放異彩，卻人事已非的那種無能為力。從他兼具力與美的舞姿來看，瑟基普魯尼的確是舞台上令人神往的「優雅的野獸」，只不過在他眉宇間的那股漠然和迷惘之中，他或許仍然只是一隻「誤闖叢林的小白兔」。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "藏鏡人",
+          "forumCommentAvatar": "defaultAvatar.jpg",
+          "forumCommentUserId": "defaultForumCommentID",
+          "forumCommentCreateTime": 1559030784130,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        },
+        {
+          "forumCommentId": 2,
+          "forumComment": "這倒不是在看衰或詛咒他，就如同紀錄片最大的功能是去還原現實的原貌，從電影所呈現出來的畫面和訪談，觀眾應可從他日常生活中和周遭人的相處，還有他如何看待自己作為舞者的一種態度，發現他真的是個天真單純、彷彿沒有被世俗汙染過的大男孩。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559030954161,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "headline": "布萊德利庫柏原無意演《一個巨星的誕生》男主角",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:11",
+      "forumCreateDateInSecond": 1559031061038,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "布萊德利庫柏（Bradley Cooper）曾分別以《派特的幸福劇本》（Silver Linings Playbook）、《瞞天大佈局》（American Hustle）及《美國狙擊手》（American Sniper）三度入圍奧斯卡金像獎的演員項目，目前在院線上映中的《一個巨星的誕生》（A Star Is Born）是布萊德利庫柏首部擔任導演的電影，上映至今無論票房或普遍評價皆有良好成績，也被視為本屆奧斯卡金像獎的強力競爭者之一。<br /><br /><br /><br />《一個巨星的誕生》原本一度計畫由克林伊斯威特（Clint Eastwood）執導，當時洽談演出男女主角的是布萊德利庫柏及碧昂絲（Beyoncé）。布萊德利庫柏接下《一個巨星的誕生》的導演後，原希望找音樂人演出片中的男主角，也和其心目中的理想人選見了面，但讓該名音樂人演出男主角的想法遭到片廠否決，據外電報導該名音樂人是傑克懷特（Jack White），布萊德利庫柏也在輾轉發展下親身上陣演出男主角。",
+      "forumCommentCount": 2,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "此外，片中布萊德利庫柏飾演的男主角為了不拖累女神卡卡（Lady Gaga）飾演的女主角的事業發展，最終在自家車庫上吊身亡<br />。而華納影業主席托比艾莫瑞克（Toby Emmerich）透露其看到的初版劇本對結尾的安排有些微不同，雖然仍是悲劇，男主角仍是選擇不歸路，但方式是游進海中自殺身亡。<br />後來布萊德利庫柏提議進行修改，並獲得托比艾莫瑞克的支持，結尾才是目前在上映版本中看到的情形。",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559031131054,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        },
+        {
+          "forumCommentId": 2,
+          "forumComment": "說得太棒了!",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559031471600,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "headline": "《她的錯誤教育》接受本真的自我",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:13",
+      "forumCreateDateInSecond": 1559031228395,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "1993年，卡麥蓉(Chloë Grace Moretz飾演)跟她的女友被發現在車上親熱，發現的人是卡麥蓉的男友，卡麥蓉因此被二等親以上的親戚送往一間名為「上帝有約」的夏令營，進行性向大改造。該營隊以泯除同志情愫(same sex attraction)為號召，強迫將卡麥蓉的性傾向扭曲為異性戀。「上帝有約」以宗教的愛為理由、以健康的生活品質為依歸，聚集一群被他人認定有問題的學員，讓他們一起學習、感化彼此。即便提供食衣住行育樂的協助、安排各種完善的團康活動或合適的心理諮商，在合法的作為下，仍無法掩飾他們為了「改變性傾向」的無理企圖。<br /><br /><br /><br />「上帝有約」假借醫療、教育名義，用心理學的冰山理論引導卡麥蓉了解自我，傳輸邪門歪道，強制讓她認為「愛上女孩子是件不正常的事」，甚至以宗教方面的迷信狂熱使她被迫否定、厭倦自己的身體，但卡麥蓉的潛意識告訴觀眾，她喜歡女孩子，而夢見跟男孩子親熱只會讓她從眠還醒。本片透過卡麥蓉的視角審視「上帝有約」這個機構，在許多故事情節中像是：自我揭露、一對一心理諮商、團康活動等，我們看見卡麥蓉的拘謹、無奈與膽怯，因為她在面對集體的謊言、虛偽與善意，造成她「非得說謊」的局面，而她的反抗則會成為其他人的眼中釘，所以她極力壓抑、說服自己成為一位「符合社會價值觀的正常人」。<br /><br /><br /><br />我們通常只見事情的「冰山一角」，代表著事情背後仍有許多隱情與真相，本片透過這個道理，讓觀眾理解到事情並非單純的如同表面那塊浮在水面的冰山，而「沉在水中的冰山」才是我們必須去認識的。在電影中，「上帝有約」反映的是社會的價值觀，而卡麥蓉代表著社會中的同志族群。「上帝有約」發現「同性戀」這個表象，並引用理論認為「同性戀」是錯誤的愛情認知所引起的，因而企圖更正之，但「同性戀」本身沒有對錯問題，只是「上帝有約」過於迷信並反對異己之端。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "選擇屬於自己的道路，不要被沒長進的守舊派所拘束。「我想這個選擇適合你」，是父母輩或師長輩時常告訴自己心愛的孩子的話。然而，許多時候他們替孩子選擇錯誤的道路，反倒奪走孩子的自信與自知。<br /><br />正確的做法應該是去認識孩子們，並用自己過來人的經驗進行溝通，並在溝通中找到平衡點，我想才是最適合孩子的。<br /><br />導演不賣弄酷兒電影常見的煽情、衝勁，以寫實的方式呈現同志青年面對社會的困境，即便故事背景設立在1993年，但在人權意識的高漲二十一世紀，本片道出的真相，才是我們該注重的",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559031332333,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "headline": "《四百擊》朦朧的少年愁緒",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:17",
+      "forumCreateDateInSecond": 1559031429670,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "法國導演法蘭索瓦楚浮(François Truffaut)的電影《四百擊》(Les quatre cents coups, 1959)講述了一名男孩的生命，由於家庭、學校生活的不順而離家出走，最後為了生存偷東西被抓去寄宿學校進行教化。那名男孩叫「安耑達諾」(Antoine Doinel)，也有人翻譯「安東達諾」、「安東杜內瓦爾」、「安托萬杜瓦內爾」或「安湍達內耳」，畢竟人家楚浮以這個腳色拍了五部片，跨越幾十年的法國社會，所以翻譯可能也很多元。<br /><br /><br /><br />達諾一家，有媽媽，有爸爸，兩人都有工作，白天都不在家。安耑媽媽的工作是什麼？不知道。早上她化了妝，穿起了皮草大衣跟紅艷的高跟鞋出門。回家後，安耑媽媽總是撲克臉，感覺非常的疲倦，準備一家三口的晚飯，之後便是洗澡梳洗，沒有跟家人聊天，要不多半時候都在跟安耑的爸爸鬥嘴。安耑的爸爸是繼父，跟安耑沒有血緣關係，看起來為人正直，在一家公司賺錢，可能是達諾一家主要的經濟來源。他很胖，也不太好看，講話很大聲，即便如此，跟安耑媽媽鬥嘴還是吵輸，可見他不如外表上看起來強勢。他有時很搞笑，會擺弄自己的醜臉或講起黃色笑話給安耑聽，要不他會帶大家去看電影，那是安耑笑得最高興的時刻。繼父會開著車，安耑坐在後座，總是縮著身體往雙人前座靠過去，因為可以夾在父母兩人之間，聞嗅著母親的胭脂味還有父親的香菸味，大家談論著安耑最喜歡的主題──電影、故事、腳色，這也是少數幾次達諾全家一起出遊的經驗。<br /><br /><br /><br />達諾一家聚在一塊的時間大致只有晚上，早上兩位家長去上班，安耑則是去上學。放學後，安耑在家裡必須傾倒垃圾、整理餐桌，利用時間讀書、寫作業，但沒有書桌，他便在餐桌上讀書。晚飯開動，安耑便得讓出餐桌，好讓大家可以吃著簡單、溫暖的食物。晚飯結束，也是安耑準備上床睡覺的時候。沒有休閒娛樂，沒有電視機，沒有音樂，小小的安耑會回到自己的房間，躺在簡陋、單薄的床上，可能看巴爾札克的小說、可能欣賞瑞典女明星的性感剪報以結束這一天。最後，他會像是表示個人崇拜之意般點根蠟燭，在自己設計的藏寶櫃膜拜自己的書與剪報。有次蠟燭倒了，差點引起火災，被爸爸痛罵一頓愚蠢，而那些書本跟剪報則成了灰燼，如同安耑家中的明燈消失了一樣。如果家中的希望不見了，他會期待明天的開始，因為他的朋友會在大街轉角處等他一起走路上學。<br /><br /><br /><br />安耑上課的時候有些調皮，被老師視為不愛上課的眼中釘。有次，安耑寫作業，引用巴爾札克的文章，卻被老師認為抄襲，在課堂上公然侮辱他，甚至移駕他到校長室。課堂上往往起頭作亂的安耑人緣還不錯，即便翹課，也有人願意理他，他們覺得安耑是對的，因為導師真的很討厭，裝成一個高等知識份子，受過大學洗禮，其實是想當作家卻沒有才華跟品格的傢伙，圓框的眼鏡、正式的服裝、刷亮的皮鞋，抬頭挺胸一副高高在上的威武模樣讓學生都不喜歡他，有時他的朋友也跟他一起翹課，看電影或是到遊樂園玩。翹課的時候，當然不能回家，不然會被家人或鄰居撞見。有次不巧，在街上與媽媽兩眼相會，但兩人只是裝作陌生人的樣子，互相擦肩而過，因為媽媽身旁有個「可以親嘴的他」，而安耑自知自己沒去上課。<br /><br /><br /><br />隔天，老師追問安耑何以曠課，安耑只是惱羞成怒地回答：「媽媽快死了。」父母發現後，繼父怒火中燒，媽媽哭容失色，安耑離家出走。為了生存在街上，學會偷拿擺放在門口的牛奶，要不就是找到一處沒有人煙的建築物住下來，當然，知道事情的朋友會幫助安耑，捎信息、帶點食物或是一件厚外套。有天，他朋友提議偷拿打字機，打字機價格很好。安耑繼父工作的地方有很多打字機，偷拿一台應該不會有人發現，安耑聽信後便去繼父工作場所偷打字機。然而趁著眾人下班之際順利到手的打字機卻賣不掉，因為買方編了藉口想詐騙年輕的安耑跟他朋友，及時識破的安耑雖拿回了打字機，但一台大機器拿在手裡很不方便，便再次潛入公司，偷偷地將打字機放回原位，不料就在這時被抓到了。<br /><br /><br /><br />憤怒的繼父怒把安耑視作流放殺人犯一般趕出了達諾家，送入寄宿學校，讓安耑住在那接受規訓。那裡除了讀書，還得工作，還得背頌經典，違反規矩、禮義、道德、倫理，就是鞭策。吃得不好，一碗稀粥，一塊奶油小麵包，整天工作下來，安耑早已飢腸轆轆，還不太知道規矩的安耑隨手拿了麵包吃，卻因為違反飯前祈禱的規則而被罰站，甚至不能吃這頓晚飯，還得面向眾人吃飯的模樣。母親前來探望安耑，但必須隔著一道玻璃看著彼此，母親發狠地說，父親要跟他斷絕關係；有時安耑的朋友騎著腳踏車從遠方而來，院方不准他探望安耑，拒絕於大門之外；有時隔著門，安耑盯著遠方。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "看了很難受",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "藏鏡人",
+          "forumCommentAvatar": "defaultAvatar.jpg",
+          "forumCommentUserId": "defaultForumCommentID",
+          "forumCommentCreateTime": 1559033670988,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "headline": "《三張面孔》翻山越嶺拍出好電影",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:19",
+      "forumCreateDateInSecond": 1559031542447,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "今年在坎城影展獲得最佳劇本獎的《三張面孔》在金馬影展首映。仍被伊朗政府禁止拍片，甚至限制出境的潘納希導演再度透過有限的資源進行場面調度。當然，如果看過《計程人生》(Taxi, 2015)的觀眾，又或是熟悉阿巴斯電影的觀眾，對此絕對不會感到陌生，但久久才出現一部這樣的電影，還是會讓觀眾眼睛為之一亮，潘納希導演的魔燈花招也不會讓我們失望。<br /><br /><br /><br />電影透過一位小女孩用手機自拍(直立狹長的鏡頭)，長達好幾分鐘的自殺宣言開場，原本以為只是個「幌子」或是「玩笑」，但隨著女孩子的眼淚與感情，氣氛漸漸凝重，慢慢地，觀眾知道這位女孩子將在自己面前自殺，讓本片立馬壟罩一股低氣壓。接著，畫面撐開，觀眾看見女主角看著手中的手機，她看著這個自殺宣言，眼珠滾滾滑落臉龐。<br /><br /><br /><br />Behnaz Jafari作為知名演員跟潘納希導演是兩位主角，的確，都是本人演出「自己」。兩人接獲這則「自殺」訊息，看見一位小女孩欲斷送生命，必然為之大驚，甚至會感到愧疚、驚恐。然而雖對影片內容感到不敢置信，眼淚也已流下，但訊息畢竟是間接接收的，導演態度模糊，女主角認為暗中有鬼，兩人因此開始了一趟偏鄉之旅，試圖找尋這個「自殺宣言」的真相與女孩子的下落。<br /><br /><br /><br />導演在本片再度玩弄了虛實之間的手法。兩人顧名思義是要來找人，甚至是救人的，在村中開著SUV，看似一趟尋訪之旅，卻見到一個偏鄉的怪異狀態。村人對於外來的兩人都給予熱情招待，卻對想要演戲的女孩子百般指責，認為「女子讀書」、「當戲子」、「搞失蹤」敗壞村中名聲，女孩子怒而想自殺、挑釁、鬧失蹤，看似女孩騙了女主角的淚水與導演的同情，其實不然，導演想做的事情仍是進行無語的控訴，並表現藝術創作者的無奈與深刻的社會觀察。<br /><br /><br /><br />小村落隱射整個社會狀態，其中的人物看似熱情如火的好客，實則種種偽善且另有企圖；無知的典禮、儀式與規則更顯荒謬，對居住城市的兩人來說，固然是覺得守舊怪異巴不得趕快離開；對女性，似乎所有生活標準都很高，卻偏偏不給發展事業的機會，動不動就以武力恫嚇試圖掩飾自己的無能、懦弱。<br /><br /><br /><br />全片在寫實的基準上，導演像是在拍一部關於找人的紀錄片，卻從一開始便打算拍成劇情片，雖說沒有像《計程人生》來得天衣無縫，但導演的企圖終究也隨著真相而明朗。導演駕駛的那輛車子化成了一種攝影眼、靈魂窗口，替伊朗人開道外，也替我們這群局外人開眼界，即便颳風下雨、雷擊霹靂，依舊能夠翻山越嶺拍出好電影。",
+      "forumCommentCount": 0,
+      "forumCommentArea": []
+    },
+    {
+      "id": 21,
+      "headline": "《最酷的旅伴》有光才有影",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:20",
+      "forumCreateDateInSecond": 1559031615787,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "電影中，出現兩位重新定義世界電影的大師名家，如今尚在世的兩位，安妮華達跟尚盧高達(Jean-Luc Godard)。兩人在《五點到七點的克萊歐》(Cléo de 5 à 7, 1962)一起合作拍攝演出，在片尾，高達沒有出現，留下謎語，話中有話地讓華達失望地哭泣，兩人最後到了海邊看海，華達說著過去跟丈夫賈克德米(Jacques Demy)、高達，以及當時是高達妻子的演員安娜卡琳娜(Anna Karina)的趣事。這段趣事似有若無地重現在《狂人皮埃洛》(Pierrot le fou, 1965)，飾演女主角的安娜卡琳娜在海邊好幾次說著「到底該做什麼事」，一旁是飾演男主角的貝爾蒙多(Jean-Paul Belmondo)正在埋頭寫作，這段應該是高達跟安娜私生活的寫照吧。<br /><br /><br /><br />JR安慰失望的華達時，說著「破壞電影敘事結構」，也就是說，高達未出現讓華達所設計的橋段沒辦法成功。兩人在火車上看著高達演出的短片，華達有兩個期望，一是見到高達，二是希望JR摘下墨鏡。在餐廳裡短暫歇息時，連口茶都沒喝巧妙凸顯華達的緊張，這裡是否在「演戲」？我當初在看的時候確實有這個疑問。的確，從電影的序場開始，是設計過的。兩人說著「沒在路上遇見」、「沒在公車站遇見」、「沒在買麵包時遇見」、「沒在夜店遇見」，但觀眾其實都假性地認為他們有相遇，只是沒有真的認識彼此，爾後才說出兩人見面的真正原因，因為大壁畫與水塔上的大照片，促成合作拍片的原因。前面這幾段故意的插曲表現出華達與JR設計的劇中劇，並引出接下來的故事；對應結尾這段高達沒有出現的劇情，替電影畫下「看似不完美，但其實完美」的句點。<br /><br /><br /><br />根據放映週報六月發表的文章，高達入圍坎城的新作《影像之書》(Le livre d'image, 2018)的開頭，是由《安達魯之犬》(Un chien Andalou, 1929)的那一刀開場；在《最酷的旅伴》亦提到了《安達魯之犬》。超現實主義作品《安達魯之犬》劃開眼睛的那一刀，由雲朵經過月亮而來，以上兩件事如何連接？其實就是「想像」(imagination)。《安達魯之犬》的歷史定位不只是超現實主義，或是布紐爾跟達利的合作，更有「開創」、「想像力」之意義，當然它也是重新定義電影的電影之一，影響的作品如希區考克的《意亂情迷》(Spellbound, 1945)、柏格曼的《假面》(Persona, 1966)、大衛林區的《穆荷蘭大道》(Mulholland Dr., 2001)、恐怖片《寂寞的豢養》(The Eyes of My Mother, 2016)等。<br /><br /><br /><br />可以說《最酷的旅伴》其實是部設計過的紀錄片，看似隨意卻是隨心所欲的故意，有意的引導出兩位導演關注的主題，如動物權、永續發展、女性主義等，最後回歸的還是「藝術家」、「作者」本身，更想做的其實還是「一部戲劇化的紀錄片」，華達的紀錄片作品向來都是如此。<br /><br /><br /><br />拍攝《五點到七點的克萊歐》時，高達是33歲；拍攝《最酷的旅伴》時，JR是33歲，身旁都有華達，兩片華達也都擔任導演。高達與JR在影片中成了對照，外在表象特徵相似外(墨鏡、西裝帽、富有理念)，而且兩個人的名字中的J皆是指”Jean”，JR全名為” Jean René”，但高達肯定比JR還要沉默跟憂鬱。本片中，二元身份照映，有角的羊跟沒角的羊、男與女、城市與鄉村、工業與農牧業、科技與手工、老與少、墨鏡與肉眼、照片中過去的人與世界中現在的人、過去的小照片與放大過的大照片、生者與亡者，以及JR對高達。當提出工業與農業的對照時，是否少了個「服務業」？藝術家是服務業，片中的服務業有畫家、郵差，以及作為導演的兩人。<br /><br /><br /><br />那台箱型車很像出現在《郵報：密戰》(The Post, 2017)、《一級玩家》(Ready Player One, 2018)裡的老式郵車，而當相機照下每個陌生臉孔時，印出來的大型肖像照，宛如替他們設計專屬的明信片。華達有收集照片、明信片的興趣，在《艾格妮撿風景》(Les glaneurs et la glaneuse, 2000)裡有提到，以此方式讓自己家中多一些陌生的家人。華達雖然只有一人，卻引導了「時間」的母題(年輕的自己跟現在的自己)，以及攝影機背後的作者。<br /><br /><br /><br />《安達魯之犬》中劃開的眼球應該是羊的眼球，眼球中是透明的水晶體，眼睛的感光元件，透過神經成像在腦中。華達在《沙灘上的安妮》(Les plages d'Agnès, 2008)中如此定義電影：「電影是什麼？光來自某處，被陰暗或絢麗的影像捕捉。」眼睛之重要，就在與「光」的感應、捕捉；沒有「光」，什麼都看不見。河瀨直美的《光》(Hikari, 2017)講述替視障者觀眾說電影的人，有光才有影像，才會讓眼睛作用，視障者無法見光，故腦中無法成像，得仰賴聲音，因此，說書者說電影，而視障者從語言中創造影像，這個過程便是透過想像力的發揮。<br /><br /><br /><br />電影中明白呈現華達眼睛的手術過程，看了的確驚心動魄；相對而言，JR的眼睛沒有見到，墨鏡一直成了他的保護傘。每個人看的事物不一樣，JR的攝影作品都是黑白的、放大的，將人忽略的事物放大，並利用這個「巨大圖像」說著有趣故事；髮蒼蒼的華達已經眼茫茫，看到的事物是模糊、遠視、抖動、淡色的，她注重人的裸體、微笑與皺紋。然而兩人專注的共通點是「臉」，一種不需文字符號來定義的圖像語言，每張臉說的故事都不一樣。當JR介紹兩人如何認識的時候，他打趣地說出「約會網站」這個答案，但華達極力否定，否定神祕主義；當華達想找一間水泥屋貼相片時，卻引來年輕團隊的笑話，認為水泥屋如此不堪入目，所以兩人的思考還有相當大的差距。<br /><br /><br /><br />高達一向不按牌理出牌，得到奧斯卡獎、坎城影展獎項也不會出席，今年坎城更用手機直播進行媒體會議，這也很新鮮，畢竟人家快九十了，但華達今年出席了坎城影展，參與凱特布蘭琪引領82位女性走紅毯的象徵典禮。高達跟華達的思維不一樣，拍出來的電影也大相逕庭，卻不約而同在電影史上佔有地位，而聯繫兩人之間的感情是什麼？華達會認為是友情，高達大概不會這麼說，他可能會說「我沒有朋友」之類的話吧。JR的確令華達想起高達，華達也讓觀眾非得想起高達。在《最酷的旅伴》中，華達讓這位沒有現身的「高達」成了法國新浪潮電影的重要符號，帶領我們進入電影史，這不也是種致敬嗎？如果要看更仔細一點，就再回顧《沙灘上的安妮》吧！",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "電影中明白呈現華達眼睛的手術過程，看了的確驚心動魄",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "陳靖仇",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m111111",
+          "forumCommentCreateTime": 1559031967362,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "headline": "《日常對話》只想和你說說心裏話",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:22",
+      "forumCreateDateInSecond": 1559031726131,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "今年金馬影展看了不少好電影，最打動我的，卻是部非常「小」的片子（連英文片名都有個small）：黃惠偵導演的紀錄電影《日常對話Small Talk》！這部在金馬世界首映之後，近兩週都高踞觀眾票選榜首，連《牯嶺街少年殺人事件》都屈居下風，就知道這部片子的厲害。所謂的厲害，是超越技術手法之上，回到電影本質，也就是，穿透人心的力量。那是被大場面與聲光效果、藝術姿態寵壞的電影觀眾，逐漸淡忘的觀影感受。<br /><br /><br /><br />《日常對話》片如其名，日常的生活對話，道出內心始終說不出口的肺腑之言，黃惠偵導演將人生的難言之隱，化作影像書信，寄給那身為同志的母親。導演自小與母親疏離的感情，在這部宛如告解般的電影中被重新梳理，藉由面對面的對談，將過往一切恩怨放下，彼此在情感上獲得救贖。我特別喜歡英文片名，small talk是那些言不及義的閒聊，不說心底話，只聊眼前事，那種不經意又自然的態度，反倒說著最沈重殘酷的實話，一輕一重，將這部電影的深刻，反差式的量秤出來。<br /><br /><br /><br />電影雖為紀錄形式，卻有著精心掌控的敘事策略，相較大多數台灣紀錄片在敘事結構上更為嚴謹扎實，甚至比大多數劇情片有著更峰迴路轉的跌宕轉折，純粹欣賞劇情而不深究表裡，也都富含觀賞性。我特別喜歡一開畫後，惠偵導演的閩南語口白，閒話家常的語調，娓娓道來她生命史中的那些過往傷痛、那些糾結不解、那些沈默暗啞、那些寂寞，都適得其所的還原成作者內心最真實的狀態，無論過往如何諸漏皆苦，在溫和語氣裡，都能化為一股平靜，恰似她本人說話的模樣，溫柔而堅定，更是種修為。<br /><br /><br /><br />惠偵導演從小跟著媽媽逃離具有家暴行為的爸爸，無法完成義務教育，只能輾轉跟著母親從事牽亡工作，看遍生死離別，超渡不少亡魂，終究有天得牽調自身的聚離。也許有人會覺得，家庭錄像何須拍成電影？甚至保守點的人，仍會拿著「家醜不外揚」的大旗說事。然而我私心認為，創作本身即是一種自我揭露，即使有意識地進行控制，創作者的內心世界仍難免洩露，甚至處處可見。重點從來不是題材，因為拿捏得當的話，私家情事反而更能洞見社會、反映時代。關鍵往往都在創作者的態度本身，誠摯與否罷了，如同木心所說的：「藝術是光明磊落的隱私。」<br /><br /><br /><br />《日常對話》最難得可貴，也之如此打動人心的原因在於，它方方面面揭露或展示了台灣社會之於性別、性向、階級的不平等現象。而導演的胸懷在於，她已經不試著在電影裡激烈的對抗什麼了，她只是想好好的坐下來，心平氣和的，把心底話都講出來，拿掉所有標籤，還給人本來的模樣，此時此刻，誰都不是什麼「女同志」、「異性戀」、「底層弱勢」，誰都只是一個有血有肉、需要愛與被愛、需要被理解的「人」。惠偵導演把長年身為被扭曲被忽視、被有意無意異常看待之對象的心路歷程，藉由這部電影的抒發，從此一筆勾銷，像牽亡家族的過去現在與未來，她想和解的對象不只是母親，也是整個社會，更是自己。<br /><br /><br /><br />惠偵導演彷彿只是想說，過去很糟我知道，但讓我們放下，開始彼此溝通並好好繼續活下去。唯有正常看待所有的邊緣、所有的弱勢、不抱持誰對誰錯，而是同理心的相互理解，不分高下，所謂的異與同才有和平共處的可能。《日常對話》讓我看到超越立場的姿態，回到人的本質與情感上的同理，讓所謂異同有對話的可能，有日常化的可能。<br /><br /><br /><br />最後，記得某次跟惠偵導演的「日常對話」。在一同前往午飯的路上，惠偵感嘆相比其他很大很重要的社會議題，將個人私事作為創作題材，似乎顯得微不足道，我依稀問她，這是否是你非說不可的故事？她淡淡得說，這故事她想講一輩子了，說完就沒有遺憾。我有點忘了最後我們的日常對話是如何作結，但我永遠記得一向溫柔的她，臉上閃現出那種毫無遲疑、近乎篤定的光芒。",
+      "forumCommentCount": 2,
+      "forumCommentArea": []
+    },
+    {
+      "id": 23,
+      "headline": "《計程人生》拍出的是骨氣，亦或欲拒還迎？",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:23",
+      "forumCreateDateInSecond": 1559031824965,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "「導演冒著被軟禁的風險也要拍電影，太感人了！好看！」<br><br>若身旁有影迷欣賞完《計程人生》（ تاکسی），僅有的感想便是這個，大概也不必深談了，他或他們顯然沒有看懂這部電影在講甚麼。<br><br>不難理解。礙於柏林影展第一贏家的冠冕、因於導演身處軟禁進行式的敏感、或著，出於今年香港金像獎頒給《十年》的政治對藝術風波，此時此刻上映的《計程人生》，不可免得會被如金的臺灣觀眾先入為主認定為輿論的電影、政治的故事、控訴的影像。這些觀眾看見了賈法潘納希（JAFAR PANAHI）冒著正被伊朗政府軟禁的風險拍片，稱讚他多麼骨氣傲然多麼勇氣可嘉多麼值得同情......云云。即便全片抄足了另一位伊朗導演阿巴斯(Abbas)在千禧年間的名片，一樣是計程車司機與眾乘客閒談的《十段生命的律動》（Ten）系列，似乎也值得原諒。<br><br>真的是這樣嗎？或著，真的「只有」這樣嗎？<br><br>回望一下，在電影裏，經歷一連串阿巴斯式的寡言司機與百變乘客攀談的敘事開展後，司機的姪女上車。這個想拍片的女孩趁著空擋打開車窗，拿著鏡頭對準一個在巷弄正在偷竊的扒手，她指使他不要偷，否則拍起來不像電影，「老師說，電影裡不會有罪犯」她說，扒手當然沒聽女孩的。女孩的老師要女孩，或著該說導演，對拍攝什麼的選擇做出道德的審查，女孩則以為電影只能虛構，於是她必須選擇造假才能拍出電影。其實不然，在那一刻，女孩可以選擇實拍出一部討伐街頭犯罪的紀錄片，也可以說服扒手拍成一部勸人改過的劇情片，沒有觀眾能在電影上映時質難影像的真實與否，因為無人知曉女孩是否與扒手談妥了什麼，更不提剪接與調度無比的粉飾技巧。電影沒有現實，只有看似現實的寫實，我們只能姑且聽導演的一面之辭估信其真，即使是紀錄片也一樣。<br><br>這就是那些止於輿論、止於政治、止於控訴，因而只能止於戲外花邊（是的，導演被軟禁一事與明星八卦無疑）的觀眾看不出的東西。<br><br>男孩與女孩的這段論證，同樣能指涉回《計程人生》己身。眾所皆知，本片本來真要拍成紀錄片，潘納希也真的要當司機，無奈演員與調度太困難，故事保留，改以自導自編自演，兼請專業演員唸劇本拍完。司機是真的，街景是真的，對白中種種對伊朗政府的謾罵也是真的，但這是一部真實，或著說現實的電影嗎？恐怕不是。正如女孩能在車窗上指使扒手「演」出她要的電影，司機車內車外的伊朗之一切都是他所選擇給觀眾呈現的寫實，而我們並不清楚這位沈默寡言的司機有沒有屬於他的老師，與他老師教他的自我審查標準。既然如此，當《計程人生》選擇以仿紀錄而非紀錄呈現時，即使它風格再寫實，導演批判的意圖再明確，我們都不該以同樣相信現實的心態，去信任這份只存在於車窗與銀幕框內的，不確定又曖昧的所見所聞。<br><br>但這部電影不正是以仿記錄來批判現實伊朗嗎？於是乎，潘納希在仿紀錄拍成的《計程人生》中的「質疑」政府之餘，也連帶「質疑」了自己與自己這部電影的本質－－「仿紀錄片，可信與否？」「我拍的這部電影《計程人生》，可信與否？」<br><br><br><br><br>潘納希這段之於全戲樞紐的女孩拍片事，無疑也是一場導演對著戲外的明確宣示。潘納希當然知道自己值得全球影迷同情，甚至太知道了，以至於他深知自己的敏感身份不可能讓觀眾輕易跳脫戲內戲外，給予電影公正的評價。他更清楚是：身份如此敏感之下，必然帶來某種不能說是盲目，但肯定不是理性的，觀眾出於人道而非看戲的支持－－於是，「導演冒著被軟禁的風險也要拍電影，太感人了！好看！」誕生焉。《計程人生》卻難得可貴的沒有順水推舟，反而劃出了一道隱隱的二元，後設性得將電影真實與不真實的界限，擺入他個人的境遇之中；然後，作出揶揄：<br><br>「我很誠實，但我拍的仍舊只是電影，別太相信電影！」這，才是潘納希的本意。<br><br>俄裔詩人，也是政治流犯的布洛斯基（Joseph Brodsky）勉勵也批評藝術份子該有對時局的使命感，「詩應該干涉政治，直到政治停止干涉詩」他以此句廣為人知。然而布洛斯基卻不鼓勵隨庸，反而反對詩人後輩用大眾的、街頭的、俚語式的字句入詩，在他看來，那是一種對智慧的放棄。只有當詩人放棄了出於大眾而高於大眾的觀點鍛鍊，捨棄了不人云亦云而是主動出擊的啟迪使命，詩人與藝術家才有資格使用大眾的語言、跟隨大眾的輿論、不作為號角而只作為伴奏存在。潘納希顯然不願孤處人群，也不甘說學逗唱，於是他自舒適的車廂（道德上位）內走下，化身為車窗外的小男孩，透過窗內窗內（戲內戲外）的後設界限，狠狠揶揄了現實中太容易博人同情的「自己」：ㄧ個忙於手持拍片的無知女孩。這份不為政治而怠慢藝術的辯證，這份ㄧ人雙化自嘲嘲人的自覺，才是比揶揄政府更珍貴的，一份藝術家而非政治家的超然與骨氣。<br><br>當然啦，這種自嘲嘲人也可能一種欲拒還迎的拿獎手段，證明他是個藝術政治兩不疑的大藝匠，而非汲汲營營於四大影展榮耀的投機人。為什麼潘納希在片中不願說破自己到底是扮演潘納希本人還是虛構的司機，持續混淆片內片外的認知，必然也因他心知肚明，柏林金熊獎這座太大的酬賞，值得他如此作態。此舉是骨氣亦或還迎，何為正解，就端看觀眾如何作想了。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "推",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559032590710,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "headline": "《科洛弗檔案 Cloverfield》 - 真實的偽紀錄",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:24",
+      "forumCreateDateInSecond": 1559031885611,
+      "forumName": "陳靖仇",
+      "forumNameId": "m111111",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "美國  USA<br><br>監製  J·J·亞柏拉罕<br><br>導演  麥特李夫斯 Matt Reeves（猩球崛起）<br><br>偽紀錄片、科幻、外星入侵、驚悚、劇情<br><br><br>       《科洛弗檔案》在2008年上映以來，可以說是與《厄夜叢林 The Blair Witch Project》並駕近年來電影偽紀錄片類型中的經典。本片主要在講主角準備離開美國前往日本工作，在餞別派對結束後，外星生物大舉入侵紐約曼哈頓的故事。亮點在於由於全片都是以片中角色Hod拿著V8記錄下每一分秒的偽紀錄片，從餞別派對開始時，Hod拿著V8在人物中穿梭請朋友們錄下對主角離開的感言，藉此交代出清楚的角色個性、人物關係，一直到後來災難發生，哈德也持續紀錄，讓觀眾有著第一人稱視角的觀影體驗。<br><br>       本片主要的四個角色為即將前往日本就職的Rober（Michael Stahl-David 飾演）與曾經與Rober有過一段情的Beth（Odette Annable  飾演），以及好友Hod與Hod喜歡的Merlena（該角色後來被外星生物咬後感染，爆血身亡。）<br><br><br>『準確的切入點』<br><br>       整部片非常的乾淨俐落，不拖泥帶水，沒有浪費時間去交待外星人如何入侵地球，也沒有解釋後來外星人到底被消滅了沒有，完全的聚焦在角色的逃難過程，反而會讓觀眾對於「畫面外的災難世界」更有想像空間。導演也巧妙的利用錄影機的閃光、夜視功能，讓角色們在地鐵隧道裡的戲搭陪著外星怪物的出現，有著更驚悚的效果。<br><br><br><br>『覆寫影片的特性』<br><br>       比起《厄夜叢林》本片更高明的地方是，通常偽紀錄片為了要讓「角色拿V8記錄下一切」這個設定自然，常常會在劇情最緊張的地方不得已中斷錄影，好比面對一個巨大的危險、角色間產生劇烈衝突等等，在寫實狀況下錄影的人都不太可能還會繼續錄影，因此，在後設的電影上很容易產生節奏的斷層。 <br><br>       但《科洛弗檔案》最聰明的地方是，導演讓這卷帶子是被「覆寫」的，這卷帶子原本是紀錄Robber與Beth地下情的約會影片，（與外星入侵影片交替出現）但Hod在錄影時沒有把原本的帶子取出來，所以怪物入侵的影片就直接覆寫在原本的約會影片之上，此舉正巧可以填補前段所說到偽紀錄片的缺點。更因為外星人入侵後Robber的主要任務就是去救Beth，所以在每一段救援緊急關頭影片被切斷時，我們就會看到原本兩人甜蜜出遊的畫面，兩者跳接一緩一急的處理，讓整部偽紀錄片裡外有了更緊密的呼應。<br><br>       我認為JJ亞伯拉罕真的是一個懂戲也懂操作的高手，他了解處理這樣外星類型的驚悚片該如何切入，倘若本片把外星人從入侵到地球人如何對抗都拍出來，那的確就容易落入俗套。他改變觀眾原本全知的觀點，讓觀眾使用第一人稱跟著角色一起在曼哈頓中逃難穿梭，更聰明的讓角色爬上爬下、登上直昇機，這樣鏡頭便有更多元的選擇，觀看即將崩毀的曼哈頓市，有著主觀且身歷其境的感覺。<br><br>       2016年拍的《科洛弗10號地窖》更被視為有著本片精神的續集，非但沒有俗爛的按照續集公式延續原本的故事，更用了另一個全新的故事去觀看了同一次外星怪物入侵的災難，兩部片錢都完全花在刀口上，有著獨特說故事的脈絡，特效部分也做得不多不少，非常值得學習研究。",
+      "forumCommentCount": 1,
+      "forumCommentArea": [
+        {
+          "forumCommentId": 1,
+          "forumComment": "寫得太好了",
+          "forumCommentLike": 0,
+          "forumCommentDislike": 0,
+          "forumCommentName": "于小雪",
+          "forumCommentAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+          "forumCommentUserId": "m22222",
+          "forumCommentCreateTime": 1559032581716,
+          "forumCommentCreateTimeDate": "2019/05/28 21:52"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "headline": "《時尚惡魔的盛宴》：鏡花水月",
+      "forumSpoilers": false,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:29",
+      "forumCreateDateInSecond": 1559032177484,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "雖然有人說片名有種文青感，其實原片名《五月的第一個星期一》更文青，但不得不說「時尚」、「惡魔」與「盛宴」，這三個詞確實無比關鍵。整部紀錄片不只是關於時尚界與展覽，更是一個藝術挑戰：大都會博物館如何在有限的時間下，挑戰最大規模的時尚展，而且主體還是中國！ <br /><br />全片其實非常娛樂，毫不沈悶，可看的東西非常多。縱使片名叫作「時尚惡魔」，但整體還是以館方策展人「安德魯」作為紀錄的出發點，跟著他了解當代時尚與藝術的關係，了解時尚策展的變化，以及「鏡花水月」的整個計劃。我們都知道對於某些老派思維的人而言，時尚是很難被稱得上藝術的，而要在大都會博物館展出更是一大挑戰，所幸已故大師McQueen當年的紀念展改變了一些，但安德魯這次可是要挑戰McQueen呢，與「Prada的惡魔」Vogue總編安娜，一同籌備「鏡花水月」。<br /><br />安娜則是另一個輔助且更為吸引人的觀點，讓觀眾得以從「時尚龍頭」去了解他們如何籌備活動，如何應對他人。我們可以看到真實安娜的強大氣場，快狠準的判斷與指揮，絕佳的品味，同時也不失幽默感與人性，一會直嗆辦公室的擺設，一會兒和員工說笑，一會冷言用報酬率算計來賓座位，一會兒為女兒裝扮，大大補足了人們對「Prada」惡魔的想像。<br /><br />此外，片中還有另一位關鍵人物──藝術總監「王家衛」，他的指導，則是站在藝術與中國文化的角度，與安德魯、安娜宛如三位一體的存在。全片我們不僅可以了解上述所提及的時尚與藝術關係，同時也可以看到西方舉辦「中國時尚主題」的有趣火花，一方面要展出西方設計師的「中國風」服裝，一方面也要避免文化錯譯，一方面邀請中國設計是設計，一方面也要面對中國「現代」與「傳統」美學的爭論。 <br /><br /><br /><br />片中有兩個橋段，非常令人印象深刻。一段是中國官員問安德魯，「你們展出的計劃都太偏向傳統，沒有現代中國美學。」見安德魯怎麼回答，都被官員嘲諷，王家衛只好介入並反問了：「什麼是中國現代美學？」頓時讓官員啞口無言，接著王家衛說了「前進的唯一方法是記得自己的過去。」<br /><br />另一段則是，安德魯覺得毛澤東在現代中國文化具極大的意義，決定設個毛澤東區，就安排在中式佛像區，王家衛一聽，臉色一沉，表示反對。安德魯表示對中國人民毛澤東就像神，但王家衛回說「這對兩方都不尊重」。這是一個很有趣的東西文化衝突。<br /><br /><br /><br />上述這些比較屬於「思辯的好看」。整部片子從中間到後半，幾乎都是以布展為主，我們可以看到整個「名流」展覽如何從零開始，各路人馬設計每個環節，視覺主題、光影、動線等等，接著就是與時間賽跑的各項工程陳設，試圖打造驚豔的視覺饗宴，而人員安排、流程制訂、彩排等等行政工作，也充斥著「戲劇般的好看」橋段，尤其預算不足、工程嚴重延宕，工作人員意見不一等狀況，都使觀眾在幽默氣氛底下，還是體會到被紀錄者的緊張，直到最後成功開幕。 <br /><br />開展後，就是「視覺的好看」高潮之始，我們可以看到大量設計大師、明星、球星、名流，穿著各家的時尚衣裳在紅毯上搶鎂光燈較勁，有趣的是，影片除了捕捉他們在會中如常人般的互動，也記錄了他們觀展的過程、大師們的「品頭論足」以及身為策展人員如何看待他們，很多真相藏在「魔鬼」的細節之中。<br /><br /><br /><br />接著，鏡頭瀏覽整個展覽的華美，看西方如何重新詮釋中國傳統之美，我們可以看到各時尚大師140套絕美的服裝，不只包括McQueen、我最愛的Galliano、中國的郭培等，從刺龍黃袍到青花瓷旗袍，甚至還有一件陶瓷服裝，以及最早在好萊塢成名的華裔女星黃柳霜的特展。但要完美地展現出這些服裝，除了要調好每件衣服的角度、打光外，還要有絕佳的展場設計，隨著鏡頭的帶領，我們可以看到各式各樣的文物，在不同的展區主題，與服裝相輔相成，而那些令人讚嘆的佈置：竹林的階梯、白色的光之竹林、映著月光的流水庭園、數十萬朵白玫瑰圍起的大花瓶、映著「末代皇帝」的迴廊、反射服裝的鏡面， 在令人驚歎這居然是大都會博物館內的同時，也巧妙地符合了「鏡花水月」的意境，貫徹了西方對中國的華美幻象，成如「時尚」、「展覽」、「美」、「名流印象」，都是一種幻的迷戀。<br /><br />《時尚惡魔的盛宴》在思維上有點到一些時尚文化的有趣之處，記錄佈展的過程也明快幽默毫不無聊，配樂選曲動聽，視覺更是歎為觀止，恰似領著觀眾進到大都會博物館、Vogue編輯室、甚至展場盛宴，與名流們共襄盛舉，觀賞時尚界與藝術集合的絕美，就後者而言，其實就非常值得進戲院一看。縱使影片還是有幾個缺點，譬如淡化或捨去了衝突，過於粉飾太平，有淪為展場宣傳片之嫌，敘事略亂，且多少陷入了「東方主義」的窠臼，但「鏡花水月」嘛，瑕不掩瑜，不懂時尚的人也可以從中獲得樂趣、知識與美學的饗宴，而懂時尚的人，看到那麼多設計師，我想應該更不用說了。",
+      "forumCommentCount": 0,
+      "forumCommentArea": []
+    },
+    {
+      "id": 26,
+      "headline": "《幸福的拉札洛》無知便是福",
+      "forumSpoilers": true,
+      "forumViews": 0,
+      "forumCreateDate": "2019/05/28 16:31",
+      "forumCreateDateInSecond": 1559032298313,
+      "forumName": "于小雪",
+      "forumNameId": "m22222",
+      "forumAvatar": "60f5020c-7f95-413d-bace-60243e08f073.png",
+      "forumArticlePic": "",
+      "forumReview": "《幸福的拉札洛》(Lazzaro felice, 2018)獲得去年坎城影展最佳劇本獎，真是一部令人感動與充滿反思力量的電影。一個偏鄉農村，出產菸草，拉札洛(Lazzaro)是裡頭的一名青年，長相古意、可愛、天然呆、純真、善良，不太喜色於形，對待任何人都是微笑的一號表情。他有時會發呆，站的挺直，看著遠方，旁人也不知道他在看什麼、想什麼。不管老的少的男的女的，只要能叫出他的名字，拉札洛皆聽命於他，即便不合理的事，他也乖巧照做；他任何事都可以做，吹樂器、搬重物、煮咖啡、顧雞顧羊等，他不停地做事，宛若不需要睡眠或休息，風哪往裡吹，他就往哪裡倒。<br><br><br><br>拉札洛像是宮崎駿電影裡那些可愛卻異類的腳色，如龍貓、波妞、無臉男或奇奇等，他們的好奇使他們因而改變，可能變好，波妞了解人類便保護人類；可能變壞，像無臉男因為貪欲而不停地吃，但如果回溯源頭的話，他們內心都是良善無知、沒有城府的。這類腳色不會是英雄或英雌，而是代表人的本心，那種純潔、無塵、青春的內在，時時提醒著為人該保有的初衷。電影中，相對於其他腳色，拉札洛的樣子沒變，依舊保持著老實、可愛、年輕的外貌，像是小孩一樣，但其他人都已經老化、退化、醜化，經不起歲月及人世的種種歷練，好比猜忌、心計、懷疑、困惑與迷惘，讓他們開始不相信人世，只覺得苦難不斷發生，這更顯示出拉札洛的純潔如聖、單純如一。<br><br><br><br>本片大致上分成兩段，前半段講述這群農人替一位女爵做事，透過以物易物的方式換取微薄的生活所需，沒有薪水，沒有教育，沒有科技，只有不停地工作過日子，偶爾的男女情愛、婚姻朋友關係，各自相互依靠；有天，女爵跟他兒子到莊園巡視，鬧脾氣的公子哥兒子搞失蹤，深深暗戀公子哥的女孩心急而向警方揭發了這個化外之地。這件事為世人稱作「大騙局」，因為女爵剝削這群農人，賺取非法利益，接著便開啟了後半段故事，講述這群農人進入城市後的生活，即便獲得身分證，但海海人生中沒有技能、缺乏教育，又無法務農，只能淪落街頭苟且偷生，利用偷騙的方式過日子，漸漸地被遺忘在這世界上。<br><br><br><br>拉札洛的存在是對人的提醒，成年的Antonia(Alba Rohrwacher 飾演)表示不可以讓拉札洛陪同去骨董市場騙錢，因為覺得老實的他跟著他們做壞事，實在不妥，良心過不去，對不住拉札洛。其他人不知道，因為他們從來都沒有在乎過拉札洛的存在，不是想趕走，就是利用他。因此，拉札洛是孤單的、沒有朋友的，沒有人跟他一樣，也沒有人發現他的能力，只是一味的利用、壓榨。有人說他是濫好人，但是不存不忍之心，他們就像是那女爵、剝削者、神父、銀行、財團，真正狼心狗肺的就是他們，相對的，他們所認為的狼居然是拉札洛，這也是導演最後所下的結尾。<br><br><br><br>拉札洛以為銀行讓他的朋友過得很苦，便想要去爭取，在什麼事情都不知道的狀態下，連金屬探測器或槍枝可能都不知道就跑進了銀行，被眾人誤以為是搶犯，先是低頭求饒，後來發現拉札洛根本沒有槍枝，原是虛驚一場本可避免打死他並消弭誤解，卻非得給他活生生、惡狠狠地打死，說拉札洛是嚇人的瘋子，而這些驚弓之鳥其實是現代人的寫照吧。被世局蒙蔽，認不清表象，無辜也成犯，到底什麼是真的？什麼是假的？就像是拉札洛把垃圾處理掉，發現牆頭草是可食用的植物，甚至挖到馬鈴薯，遍地都是可飽餐的野味，其他人卻只是視作無用之草。<br><br><br><br>有時，筆者反省自己是否城府極深。有天，某路人問路，一台藍色貨車違停路口，破舊的車體，一名壯年男子，整個人穿著不潔的衣物，口齒不清，嚼檳榔的紅嘴，操著一口台語，直跑到我面前。當時自己心裡也會有些恐懼，皺著眉頭露出一些嫌惡，其實這位先生只是想問路而已，當下突然發現自己多麼小人。<br><br><br><br>拉札洛進入城市後，陪著Antonia進入小小的窩，Antonia替他穿上毛外套，溫暖他。拉札洛看見熟悉的人們聚在一堂，宛若一個家庭一樣，鏡頭隨著拉札洛的眼神從門口開始橫搖360度，剎那間他們以前的模樣顯現，年輕、單純、真摯的笑顏，就像重返以前在莊園的生活，慢慢地鏡頭搖回來門口，又回到現實中。這美麗的畫面不禁讓我眼眶含淚，透過拉札洛的雙眼，了解到自己是多麼在意那些身外物、追求多少空虛而忘記在乎那些曾經同夥的朋友，好似夢到了小學的時光，見到一群好朋友，聊著無聊的小事，突然一個人講出了笑話，大家都笑了，但回到現實時，發現自己卻是寂寞的，他們在哪？過得好嗎？希望他們好。",
+      "forumCommentCount": 2,
+      "forumCommentArea": []
+    }
+  ],
+  "filmData": [
+    {
+      "id": "001",
+      "name_tw": "幸福的拉札洛",
+      "name_en": "Happy as Lazzaro",
+      "intro_tw": "★坎城影展 最佳劇本獎★美國國家電影協會五大外語片 ★西班牙錫切斯奇幻影展評審團特別獎、影評人特別獎、最佳劇情長片獎★《視與聽》雜誌年度十大電影、《電影評論》雜誌年度十大電影蜂蜜之夏》導演最新力作，以傳統十六釐米膠捲拍攝出獨有魔幻寫實風格。           拉札洛是一位內心單純的年輕農民，個性驕縱的莊園少爺坦雷迪則是他的雇主。他們生活在一個與世隔絕的義大利小城，兩個人從雇傭關係漸漸成為好友。某天，坦雷迪自導自演了一場無聊的綁架鬧劇，沒料到卻在意外中衍生出另一場意外，讓拉札洛從過去穿越時空到多年以後，展開一段出乎意料卻又美麗的奇幻旅程。",
+      "intro_en": "An unceasingly kind Italian peasant and his family are blatantly exploited by a tobacco baroness.",
+      "movie_pic": "film_HappyasLazzaro.jpg",
+      "movie_genre": [
+        "劇情"
+      ],
+      "movie_ver": "數位",
+      "movie_rating": "普遍級",
+      "trailer": "https://www.youtube.com/watch?v=LlFUC-RpMkg",
+      "pirce": [
+        "270",
+        "250",
+        "200"
+      ],
+      "schedule": "-",
+      "in_theaters": "20190426",
+      "out_theaters": "-",
+      "runtime": "128",
+      "director_tw": "艾莉絲羅爾瓦雀",
+      "director_en": "Alice Rohrwacher",
+      "country": "Italy",
+      "subtitle": "是",
+      "subtitle_lang": "中文",
+      "moviecinema": [
+        "c1"
+      ],
+      "stills": [
+        "film_HappyasLazzaro_01.jpg",
+        "film_HappyasLazzaro_02.jpg",
+        "film_HappyasLazzaro_03.jpg",
+        "film_HappyasLazzaro_04.jpg",
+        "film_HappyasLazzaro_05.jpg"
+      ],
+      "filmStar": [
+        {
+          "starId": "m22222",
+          "star": 4
+        },
+        {
+          "starId": "m111111",
+          "star": 3
+        },
+        {
+          "starId": "m33333",
+          "star": 4
+        },
+        {
+          "starId": "m1558576972555",
+          "star": 4
+        }
+      ]
+    },
+    {
+      "id": "002",
+      "name_tw": "我們的青春，在台灣",
+      "name_en": "Our Youth in Taiwan",
+      "intro_tw": "★金馬獎 最佳紀錄片★台北電影獎 最佳紀錄片   本片主角們的青春夢想，是藉由反抗體制，追求一個更好的國家，卻在動盪的兩岸關係裡，變成歷史的一部份。一個反抗中國的台灣學運明星、一個喜愛台灣的中國學生、一個政治狂熱的台灣紀錄片工作者，他們之間理應充滿矛盾，卻在社會運動裡找到合作的可能性。在一場台灣24年來最大型的社會運動之後，他們從接近成功的巔峰，逐漸墜入失望的谷底，曾經堅持的理想，還有可能延續嗎？本片從台灣觀點、政治角度切入，近距離觀看大時代下的年輕人，在實踐民主時真實的處境，進而思考，自身與民主之間的關係。",
+      "intro_en": "A star of the Taiwanese student movement, a celebrity Chinese student who loves Taiwan, and a Taiwanese documentary filmmaker passionate about politics. Each of them shared dreams of rebellion and building a better country. In the wake of the biggest social movement in Taiwan in recent years, they reflect on how close they came to realising their goals, how they were let down, and whether it is still possible to continue fighting for ideals.",
+      "movie_pic": "film_OurYouthinTaiwan.jpg",
+      "movie_genre": [
+        "紀錄"
+      ],
+      "movie_ver": "數位",
+      "movie_rating": "普遍級",
+      "trailer": "https://www.youtube.com/watch?v=_62AfanuI5Q",
+      "pirce": [
+        "270",
+        "250",
+        "200"
+      ],
+      "schedule": "-",
+      "in_theaters": "20190412",
+      "out_theaters": "-",
+      "runtime": "117",
+      "director_tw": "傅榆",
+      "director_en": "Yue Fu",
+      "country": "Taiwan",
+      "subtitle": "是",
+      "subtitle_lang": "中文",
+      "moviecinema": [
+        "c1"
+      ],
+      "stills": [
+        "film_OurYouthinTaiwan.jpg_01.jpg",
+        "film_OurYouthinTaiwan.jpg_02.jpg"
+      ],
+      "filmStar": [
+        {
+          "starId": "m22222",
+          "star": 3
+        },
+        {
+          "starId": "m111111",
+          "star": 3
+        },
+        {
+          "starId": "m33333",
+          "star": 4
+        },
+        {
+          "starId": "m1558576972555",
+          "star": 4
+        }
+      ]
+    },
+    {
+      "id": "003",
+      "name_tw": "搶救失業大作戰",
+      "name_en": "Les invisibles",
+      "intro_tw": "感動法國百萬觀眾，票房熱賣三億台幣          庇護所再三個月就即將關門大吉，當中收容的數十位無家婦女們該何去何從？！為了讓她們有自給自足的能力，庇護所的社工們決定試著開發他們的「職業力」，在面試現場無論是說謊、關說，花招百出，只為了要幫助他們找到工作，開啟人生第二春。導演路易斯朱利安派特真實走訪巴黎女性庇護所一年時間，以平行視角以及喜劇元素描述看似嚴肅的社會議題，而電影中多名演員皆由過往真實街友參與演出！",
+      "intro_en": "Following a municipal decision, Envol, SDF Women's Shelter, will close. There are only three months left for social workers to reintegrate at any cost the women they care for: falsification, pistons, lies... From now on, everything is allowed!",
+      "movie_pic": "film_Lesinvisibles.jpg",
+      "movie_genre": [
+        "劇情",
+        "喜劇"
+      ],
+      "movie_ver": "數位",
+      "movie_rating": "普遍級",
+      "trailer": "https://www.youtube.com/watch?v=_62AfanuI5Q",
+      "pirce": [
+        "270",
+        "250",
+        "200"
+      ],
+      "schedule": "-",
+      "in_theaters": "20190503",
+      "out_theaters": "-",
+      "runtime": "103",
+      "director_tw": "路易斯朱利安派特",
+      "director_en": "Louis-Julien Petit",
+      "country": "France",
+      "subtitle": "是",
+      "subtitle_lang": "中文",
+      "moviecinema": [
+        "c3"
+      ],
+      "stills": [
+        "film_Lesinvisibles_01.jpg",
+        "film_Lesinvisibles_02.jpg",
+        "film_Lesinvisibles_03.jpg"
+      ],
+      "filmStar": [
+        {
+          "starId": "m22222",
+          "star": 3
+        },
+        {
+          "starId": "m111111",
+          "star": 3
+        },
+        {
+          "starId": "m33333",
+          "star": 4
+        }
+      ]
+    },
+    {
+      "id": "004",
+      "name_tw": "赤手登峰",
+      "name_en": "Free Solo",
+      "intro_tw": "★第91屆奧斯卡最佳紀錄片★ 2018 多倫多影展觀眾票選獎             故事描述攀岩好手艾力克斯霍諾德（Alex Honnold）經過兩年多準備，挑戰徒手攀爬3200英呎高的「酋長岩（El Capitan）」創舉。這項成就不僅成功締造世界紀錄，更讓紐約客雜誌（The New Yorker）擊掌盛讚「人類最偉大的體能極限挑戰！」。電影不僅記錄霍諾德為完成夢想，所經歷的種種考驗與挫折，劇組更出動直升機高空拍攝，完整呈現他徒手攀爬酋長岩的驚險過程，讓觀眾看得頭皮發麻，直呼「緊張到暫停呼吸」。",
+      "intro_en": "Alex Honnold attempts to become the first person to ever free solo climb El Capitan.",
+      "movie_pic": "film_FreeSolo.jpg",
+      "movie_genre": [
+        "紀錄"
+      ],
+      "movie_ver": "數位",
+      "movie_rating": "保護級",
+      "trailer": "https://www.youtube.com/watch?v=_b0qn6S1D_I",
+      "pirce": [
+        "270",
+        "250",
+        "200"
+      ],
+      "schedule": "-",
+      "in_theaters": "20190517",
+      "out_theaters": "-",
+      "runtime": "100",
+      "director_tw": "金國威",
+      "director_en": "Jimmy Chin",
+      "country": "America",
+      "subtitle": "是",
+      "subtitle_lang": "中文",
+      "moviecinema": [
+        "c2"
+      ],
+      "stills": [
+        "film_FreeSolo_01.jpg",
+        "film_FreeSolo_02.jpg",
+        "film_FreeSolo_03.jpg",
+        "film_FreeSolo_04.jpg"
+      ],
+      "filmStar": [
+        {
+          "starId": "m22222",
+          "star": 3
+        },
+        {
+          "starId": "m111111",
+          "star": 3
+        },
+        {
+          "starId": "m33333",
+          "star": 4
+        }
+      ]
+    }
+  ],
+  "movietableData": [
+    {
+      "tableTtlTxt": [
+        {
+          "key": "id",
+          "label": "我是埃滴123"
+        },
+        {
+          "key": "userId",
+          "label": "使用者"
+        },
+        {
+          "key": "title",
+          "label": "標題"
+        },
+        {
+          "key": "body",
+          "label": "內容"
+        }
+      ],
+      "tableData": [
+        {
+          "userId": 1,
+          "id": 1,
+          "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+          "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+          "userId": 1,
+          "id": 2,
+          "title": "qui est esse",
+          "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis"
+        }
+      ]
+    }
+  ],
+  "movieitemData": [
+    {
+      "itemTtlTxt": [
+        "電影種類"
+      ],
+      "itemTxt": [
+        "文藝",
+        "紀錄",
+        "戰爭",
+        "動作",
+        "科幻",
+        "喜劇",
+        "偵探",
+        "戲劇",
+        "英雄",
+        "恐怖",
+        "武俠",
+        "靈異",
+        "警匪",
+        "懸疑",
+        "驚悚",
+        "愛情",
+        "動畫"
       ]
     }
   ]

@@ -4,6 +4,7 @@ import InputText_Su from './InputText_Su'
 import InputSelect_Su from './InputSelect_Su'
 import InputFile_Su from './InputFile_Su'
 import InputRadio_Su from './InputRadio_Su'
+import InputRadioForGenderSu from './InputRadioForGenderSu'
 
 //=====InputText_Su、InputSelect_Su、InputFile_Su=====
 //----------------使用說明----------------
@@ -46,31 +47,34 @@ const InputWithLabel_Su = props => {
         <Col // 這裡是input的col
           lg={8}
           className="p-0 border-0  rounded d-flex flex-nowrap align-items-center"
-          style={{ width: `${props.inputWidth}` }}
+          // style={{ width: `${props.inputWidth}` }}
         >
           {/* 根據傳入的type來判斷要使用哪一種input */}
           {props.inputType === 'text' ? (
             <InputText_Su
               id={props.id}
-              // name={props.id}
+              name={props.id}
               placeholder={props.placeholder}
+              inputWidth={props.inputWidth}
               inputHeight={props.inputHeight}
               iconLeft={props.iconLeft}
               iconLeftSize={props.iconLeftSize}
               iconRight={props.iconRight}
               iconRightSize={props.iconRightSize}
+              onChange={props.onChange}
             />
           ) : props.inputType === 'password' ? (
             <InputText_Su
               id={props.id}
               type="password"
-              // name={props.id}
+              name={props.id}
               placeholder={props.placeholder}
               inputHeight={props.inputHeight}
               iconLeft={props.iconLeft}
               iconLeftSize={props.iconLeftSize}
               iconRight={props.iconRight}
               iconRightSize={props.iconRightSize}
+              onChange={props.onChange}
             />
           ) : props.inputType === 'selector' ? (
             <>
@@ -78,22 +82,43 @@ const InputWithLabel_Su = props => {
                 iconRight={props.iconRight}
                 iconRightSize={props.iconRightSize}
                 id={props.id}
-                // name={props.id}
+                name={props.id}
                 inputHeight={props.inputHeight}
                 selectOptions={props.selectOptions}
+                onChange={props.onChange}
               />
             </>
           ) : props.inputType === 'file' ? (
             <InputFile_Su
               inputHeight={props.inputHeight}
               id={props.id}
+              name={props.id}
               placeholder={props.placeholder}
+              onChange={props.onChange}
             />
           ) : props.inputType === 'radio' ? (
             <InputRadio_Su
+              inputWidth={props.inputWidth}
               inputHeight={props.inputHeight}
               id={props.id}
+              iconLeft={props.iconLeft}
+              iconLeftSize={props.iconLeftSize}
+              name={props.id}
               selectOptions={props.selectOptions}
+              onChange={props.onChange}
+              col={props.col}
+            />
+          ) : props.inputType === 'radioGender' ? (
+            <InputRadioForGenderSu
+              inputWidth={props.inputWidth}
+              inputHeight={props.inputHeight}
+              id={props.id}
+              iconLeft={props.iconLeft}
+              iconLeftSize={props.iconLeftSize}
+              name={props.id}
+              selectOptions={props.selectOptions}
+              onChange={props.onChange}
+              col={props.col}
             />
           ) : (
             '找不到符合的input類型'

@@ -71,6 +71,7 @@ class InputCardContent_MemberSignUp extends React.Component {
         //儲存格式驗證是否通過
         email: false,
         nickname: false,
+        pwd: false,
         repwd: false,
       },
     }
@@ -119,7 +120,7 @@ class InputCardContent_MemberSignUp extends React.Component {
         if (!check) {
           //驗證格式是否正確
           document.querySelector('#' + name + 'help').innerHTML =
-            '請輸入正確的Email!'
+            '請輸入正確的Email'
         } else {
           //格式正確，再比對是否已存在
           let emailexisted = this.props.memberdata.find(
@@ -175,36 +176,81 @@ class InputCardContent_MemberSignUp extends React.Component {
     }
     //密碼驗證:長度、及比對再次確認的密碼是否相符，並變更再次確認密碼的提示狀態
     if (name === 'pwd') {
-      if (value.length < 6) {
-        document.querySelector('#' + name + 'help').innerHTML =
-          '請輸入至少6個字元'
-      } else {
-        document.querySelector('#' + name + 'help').innerHTML = ''
-      }
-      if (this.state.usertext[0].repwd) {
-        if (this.state.usertext[0].repwd === value) {
-          document.querySelector('#repwdhelp').innerHTML = ''
+      newcheckstate.pwd = false
+      newcheckstate.repwd = false
+      this.setState({ checkok: newcheckstate })
+      if (value) {
+        if (value.length < 6) {
+          document.querySelector('#' + name + 'help').innerHTML =
+            '請輸入至少6個字元'
+          if (this.state.usertext[0].repwd) {
+            if (this.state.usertext[0].repwd === value) {
+              newcheckstate.repwd = true
+              this.setState({ checkok: newcheckstate })
+              document.querySelector('#repwdhelp').innerHTML = ''
+            } else {
+              newcheckstate.repwd = false
+              this.setState({ checkok: newcheckstate })
+              document.querySelector('#repwdhelp').innerHTML =
+                '請正確輸入您設定的密碼'
+            }
+          }
         } else {
-          document.querySelector('#repwdhelp').innerHTML = '密碼錯誤'
+          newcheckstate.pwd = true
+          this.setState({ checkok: newcheckstate })
+          document.querySelector('#' + name + 'help').innerHTML = ''
+          if (this.state.usertext[0].repwd) {
+            if (this.state.usertext[0].repwd === value) {
+              newcheckstate.repwd = true
+              this.setState({ checkok: newcheckstate })
+              document.querySelector('#repwdhelp').innerHTML = ''
+            } else {
+              newcheckstate.repwd = false
+              this.setState({ checkok: newcheckstate })
+              document.querySelector('#repwdhelp').innerHTML =
+                '請正確輸入您設定的密碼'
+            }
+          }
+        }
+      } else {
+        newtext[0].pwd = ''
+        document.querySelector('#' + name + 'help').innerHTML = ''
+        this.setState({ usertext: newtext })
+        if (this.state.usertext[0].repwd !== '') {
+          document.querySelector('#repwdhelp').innerHTML = '請先設定您的密碼'
+        } else {
+          document.querySelector('#repwdhelp').innerHTML = ''
         }
       }
+      console.log(newcheckstate)
     }
 
     //再次確認密碼驗證:判斷是否與密碼相符
     if (name === 'repwd') {
+      console.log(this.state.usertext[0].pwd)
+      newcheckstate.repwd = false
+      this.setState({ checkok: newcheckstate })
       if (value) {
-        newcheckstate.repwd = false
-        this.setState({ checkok: newcheckstate })
+        //如果有值
         let pwd = this.state.usertext[0].pwd
-        if (value !== pwd) {
+        if (pwd === '') {
+          //判斷密碼欄位是否也有值，如果是空的
           document.querySelector('#' + name + 'help').innerHTML =
-            '請正確輸入您設定的密碼'
+            '請先設定您的密碼'
         } else {
-          newcheckstate.repwd = true
-          this.setState({ checkok: newcheckstate })
-          document.querySelector('#' + name + 'help').innerHTML = ''
+          //密碼不是空的，判斷再次確認的密碼是否與密碼相同，如果不相同
+          if (value !== pwd) {
+            document.querySelector('#' + name + 'help').innerHTML =
+              '請正確輸入您設定的密碼'
+          } else {
+            //相同
+            newcheckstate.repwd = true
+            this.setState({ checkok: newcheckstate })
+            document.querySelector('#' + name + 'help').innerHTML = ''
+          }
         }
       } else {
+        //此欄若沒有值，則清除提示
         document.querySelector('#' + name + 'help').innerHTML = ''
       }
       console.log(newcheckstate)
@@ -269,7 +315,7 @@ class InputCardContent_MemberSignUp extends React.Component {
             {/* 這裡是驗證碼的Row -- input + canvas */}
             <Row className="my-4 d-flex justify-content-between">
               <input
-                className="border border-warning roundedy"
+                className="border border-warning rounded"
                 style={{
                   background: '#1f242a',
                   color: '#FFA510',

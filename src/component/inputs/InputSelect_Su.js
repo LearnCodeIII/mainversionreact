@@ -4,15 +4,15 @@ const InputSelect_Su = props => {
   return (
     <>
       <div
-        class="position-absolute d-flex align-items-center border-0 rounded"
+        className="position-absolute d-flex align-items-center border-0 rounded"
         style={{
-          width: '100%',
+          width: `${props.inputWidth ? props.inputWidth : '100%'}`,
           height: '100%',
           background: '#1F242A',
         }}
       >
         <i
-          class={props.iconRight + ' position-absolute'}
+          className={props.iconRight + ' position-absolute'}
           style={{
             background: '#1F242A',
             color: '#FFA510',
@@ -27,7 +27,7 @@ const InputSelect_Su = props => {
         name={props.id}
         className="custom-select  border border-warning rounded p-0"
         style={{
-          width: '100%',
+          width: `${props.inputWidth ? props.inputWidth : '100%'}`,
           background: 'rgba(0,0,0,0)',
           color: '#FFA510',
           textAlign: 'center',
@@ -35,7 +35,7 @@ const InputSelect_Su = props => {
           height: `${props.inputHeight}`,
           zIndex: '10',
         }}
-        onChange={props.handleInputTextChange}
+        onChange={props.onChange}
       >
         {props.selectOptions.map(item => (
           <option

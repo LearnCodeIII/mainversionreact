@@ -5,7 +5,7 @@ const ForumCommentCreateRoy = props => {
     <>
       <button
         type="button"
-        className="btn btn-warning px-3"
+        className="btn m-0 btn-outline-warning"
         onClick={props.handleCommentInput}
       >
         留言
