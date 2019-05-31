@@ -13,7 +13,7 @@ const InputCard = props => {
     <>
       <Tabs
         justify
-        className="tab-box m-0"
+        className="tab-box m-0 "
         defaultActiveKey={props.eventKey1}
         id="uncontrolled-tab-example"
         style={{ width: '600px', fontSize: '20px' }}

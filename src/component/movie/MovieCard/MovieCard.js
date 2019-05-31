@@ -77,8 +77,8 @@ const MovieCard = props => (
               borderColor: 'none',
             }}
           >
-            <h5 className="card-title text-center">{props.subtitle}</h5>
-            <p className="card-text text-center">{props.title}</p>
+            <h5 className="card-title text-center">{props.title}</h5>
+            <p className="card-text text-center">{props.subtitle}</p>
           </div>
         </div>
       </LinkContainer>

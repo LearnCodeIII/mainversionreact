@@ -217,8 +217,15 @@
       "id": "m1558948500794",
       "theater": "總督數位影城",
       "title": "地球最後的夜晚",
+      "imgSrc": "https://g.udn.com.tw/upfiles/B_SH/shiow/PSN_PHOTO/591/f_24131591_1.jpg",
+      "type": "動作片戲劇片文藝片"
+    },
+    {
+      "id": "m1558948500794",
+      "theater": "總督數位影城",
+      "title": "地球最後的夜晚",
       "content": "HELLO KITTY應援男友、佛心活動～帶著「世足限量造型爆米花桶」來總督數位影城，就不用吃土囉！ 爆米花免費吃到飽！ ",
-      "imgSrc": "https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2019/01/04/99/5752350.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=1140",
+      "imgSrc": "https://g.udn.com.tw/upfiles/B_SH/shiow/PSN_PHOTO/591/f_24131591_1.jpg",
       "theaterMap": "106台北市大安區通化街24巷1號",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
@@ -228,7 +235,7 @@
       "lng": "121.544851",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "動作片戲劇片文藝片"
     },
     {
       "id": "m1558948576759",
@@ -245,14 +252,14 @@
       "lng": "120.663567",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "喜劇片戲劇片文藝片愛情片"
     },
     {
       "id": "m1558948598530",
       "theater": "文青不挑片",
-      "title": "絕園的暴風圈",
+      "title": "為瑪格麗特朗讀",
       "content": "3DMAX的全新觀賞體驗就在松山文創",
-      "imgSrc": "https://p2.bahamut.com.tw/B/2KU/77/0001307377.JPG",
+      "imgSrc": "http://alort.files.wordpress.com/2011/03/la-tete-en-friche-30749.jpg",
       "theaterMap": "100台北市中正區八德路一段1號",
       "GUINumber": "16086448",
       "website": "https://www.google.com/",
@@ -262,7 +269,7 @@
       "lng": "121.561157",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "喜劇片戲劇片文藝片"
     },
     {
       "id": "m1558948617225",
@@ -279,7 +286,7 @@
       "lng": "121.544043",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "戲劇片文藝片懸疑片愛情片"
     },
     {
       "id": "m1558948627377",
@@ -296,7 +303,7 @@
       "lng": "121.529397",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "喜劇片戲劇片文藝片愛情片"
     },
     {
       "id": "m1558948640385",
@@ -313,7 +320,7 @@
       "lng": "121.541125",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "喜劇片戲劇片文藝片愛情片"
     },
     {
       "id": "m1558948651874",
@@ -330,7 +337,7 @@
       "lng": "121.544851",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "戲劇片恐怖片靈異片文藝片懸疑片驚悚片"
     },
     {
       "id": "m1558948664395",
@@ -347,7 +354,7 @@
       "lng": "120.663567",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "戲劇片文藝片愛情片"
     },
     {
       "id": "m1558948674978",
@@ -364,7 +371,7 @@
       "lng": "121.561157",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "動作片喜劇片文藝片警匪片愛情片"
     },
     {
       "id": "m1558948696172",
@@ -381,7 +388,7 @@
       "lng": "121.544043",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "動作片喜劇片戲劇片文藝片科幻片愛情片"
     },
     {
       "id": "m1558948799830",
@@ -398,7 +405,7 @@
       "lng": "121.529397",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "動作片紀錄片文藝片驚悚片愛情片"
     },
     {
       "id": "m1558948812063",
@@ -415,7 +422,7 @@
       "lng": "121.541125",
       "joinContent": "線上報名即可參加。",
       "joinContentCurrentPeople": "無限制名額。",
-      "type": "動作片動畫片喜劇片偵探片紀錄片戲劇片英雄片恐怖片武俠片靈異片文藝片警匪片科幻片懸疑片驚悚片戰爭片愛情片"
+      "type": "喜劇片戲劇片文藝片懸疑戰爭片愛情片"
     }
   ],
   "cinema-sign-inputmsg": [
@@ -1592,7 +1599,7 @@
       "career": "資訊 / 科技",
       "join_date": "2019-05-23",
       "permission": "generalMember",
-      "collectMovie": "",
+      "collectMovie": "m1558948576759",
       "collectCinema": [
         "c1",
         "c2"
@@ -1601,8 +1608,8 @@
         "6",
         "7"
       ],
-      "collectActivity": "a1558948617225a1558948598530a1558948500794",
-      "collectActivityJoin": "a1558948500794",
+      "collectActivity": "a1558948576759a1558948640385",
+      "collectActivityJoin": "a1558948500794a1558948576759a1558948598530a1558948664395",
       "collectForum": [],
       "markList": [
         {

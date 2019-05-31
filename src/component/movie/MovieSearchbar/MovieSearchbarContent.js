@@ -2,7 +2,10 @@ import React from 'react'
 
 const MovieSearchbarContent = props => (
   <>
-    <span className={'mr-3 ' + props.className} onClick={props.handleOnClick}>
+    <span
+      className={'mr-3 mt-3 ' + props.className}
+      onClick={props.handleOnClick}
+    >
       {props.content}
     </span>
   </>

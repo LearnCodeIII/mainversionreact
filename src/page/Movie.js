@@ -366,7 +366,7 @@ class Movie extends React.Component {
             <div className="col-md-12 p-0 fix-inline-content">
               <div className="searchbar-wrapper d-flex mb-5">
                 <div>
-                  <MovieSearchbarTitle spanClass="mr-5" title={'類型'} />
+                  <MovieSearchbarTitle spanClass="mr-5 w-100" title={'類型'} />
                 </div>
                 <div>
                   {this.state.searchbarType.map((data, id) => (

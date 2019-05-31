@@ -81,7 +81,49 @@ class ActivityInfo extends React.Component {
     this.setState({ activityPageOtherData: activityPageOtherData })
     this.setState({ activityHeroImage: activityPageData.imgSrc })
   }
+  btnSubmitOnClick = async event => {
+    const id = window.location.pathname.slice(15)
+    const memberId = sessionStorage.getItem('memberId')
+    if (memberId !== null) {
+      try {
+        const res = await fetch('http://localhost:5555/member/' + memberId, {
+          method: 'GET',
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+        let data = await res.json()
+        let isCollect = data.collectActivityJoin.indexOf(id) > -1
 
+        if (isCollect) {
+          alert('已報名過此活動')
+          return false
+        } else {
+          data.collectActivityJoin += id
+          try {
+            const res = await fetch(
+              'http://localhost:5555/member/' + memberId,
+              {
+                method: 'PUT',
+                body: JSON.stringify(data),
+                headers: new Headers({
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                }),
+              }
+            )
+            console.log('修改完成')
+            return true
+          } catch (err) {
+            console.log(err)
+          }
+        }
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
   render() {
     return (
       <>
@@ -121,6 +163,7 @@ class ActivityInfo extends React.Component {
             <ActivityJoinForm
               memberAccount={this.state.memberData['name']}
               memberEmail={this.state.memberData['email']}
+              handleOnSubmit={this.btnSubmitOnClick}
             />
           </div>
         </div>

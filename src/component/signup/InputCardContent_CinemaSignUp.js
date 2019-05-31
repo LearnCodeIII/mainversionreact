@@ -569,7 +569,7 @@ class InputCardContent_CinemaSignUp extends React.Component {
       <>
         <Card
           className="card-box text-center signcard"
-          style={{ width: '600px' }}
+          style={{ width: '600px'}}
         >
           <Card.Body className="p-5 signcard">
             {this.state.inputmsg.map(item => (

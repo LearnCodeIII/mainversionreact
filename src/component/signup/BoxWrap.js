@@ -34,7 +34,7 @@ const BoxWrap = props => {
         <h1 className={props.titleClass}>{props.title}</h1>
       </Col>
       <div //登入&註冊卡片的容器div，因為感應區的問題，不能包在box裡面
-        className="position-absolute"
+        className="position-absolute signboxWrap"
         style={{
           width: '600px',
           height: '650px',
@@ -43,10 +43,15 @@ const BoxWrap = props => {
           left: `${props.left}`,
           opacity: `${props.show}`,
           transition: '.5s',
-          overflow: 'auto',
+          // overflow: 'hidden',
           overflowX: 'hidden',
+          // overflowY: 'hidden',
         }}
       >
+        {/* <div
+          className="position-relative"
+          style={{ width: '100%', height: '100%', overflow: 'hidden' }}
+          > */}
         <InputCardWrap
           memberdata={props.memberdata}
           cinemadata={props.cinemadata}
@@ -61,6 +66,7 @@ const BoxWrap = props => {
           eventKey2={props.eventKey2}
         />
       </div>
+      {/* </div> */}
     </>
   )
 }

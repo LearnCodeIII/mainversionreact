@@ -7,6 +7,7 @@ import ActivityContent from '../component/activity/ActivityContent/ActivityConte
 import ActivityQRcode from '../component/activity/ActivityQRcode/ActivityQRcode'
 import ActivityJoinBtn from '../component/activity/ActivityJoinBtn/ActivityJoinBtn'
 import ActivityCard from '../component/activity/ActivityCard/ActivityCard'
+import { async } from 'q'
 
 class ActivityInfo extends React.Component {
   constructor(props) {
@@ -100,8 +101,10 @@ class ActivityInfo extends React.Component {
             .split(id)
             .toString()
             .replace(/,/g, '')
+          alert('已取消收藏')
         } else {
           data.collectActivity += id
+          alert('已加入收藏')
         }
         this.setState({ collectActivity: data.collectActivity })
         try {
@@ -120,6 +123,33 @@ class ActivityInfo extends React.Component {
       } catch (err) {
         console.log(err)
       }
+    }
+  }
+  joinBtnOnClick = async event => {
+    const id = window.location.pathname.slice(10)
+    const memberId = sessionStorage.getItem('memberId')
+    if (memberId !== null) {
+      try {
+        const res = await fetch('http://localhost:5555/member/' + memberId, {
+          method: 'GET',
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+        let data = await res.json()
+        let isCollect = data.collectActivityJoin.indexOf(id) > -1
+
+        if (isCollect) {
+          alert('已報名過此活動')
+          return false
+        }
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      event.preventDefault()
+      alert('請先登入會員')
     }
   }
   render() {
@@ -188,7 +218,10 @@ class ActivityInfo extends React.Component {
               <ActivityQRcode imgSrc={window.location.href} />
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5 d-flex justify-content-center">
-              <ActivityJoinBtn id={this.props.match.params.id} />
+              <ActivityJoinBtn
+                id={this.props.match.params.id}
+                handleOnClick={this.joinBtnOnClick}
+              />
             </div>
           </div>
         </div>

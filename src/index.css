@@ -4,7 +4,7 @@
 
 html,
 body {
-  width:100%;
+  width: 100%;
   background: #242b34;
   margin: 0 !important;
   padding: 0 !important;
@@ -12,6 +12,9 @@ body {
   box-sizing: border-box;
   color: #d4d1cc !important;
   scroll-behavior: smooth;
+}
+.container-fluid{
+ padding:0; 
 }
 a {
   text-decoration: none;
@@ -25,44 +28,49 @@ container-fluid {
   margin: 0;
   /* max-width: 100%; */
 }
+.fit-image{
+  object-fit: cover !important;
+  height: 400px !important;
+  }
 @media screen and (max-width:540px){
   h2{
     font-size:18px !important;
   }
-  h3{
-    font-size:16px !important;
+  h3 {
+    font-size: 16px !important;
   }
-  h4{
-    font-size:14px !important;
-  } 
-  h5{
-    font-size:14px !important;
+  h4 {
+    font-size: 14px !important;
   }
-  p{
-    font-size:14px !important;
+  h5 {
+    font-size: 14px !important;
   }
-  span{
-    font-size:14px !important;
+  p {
+    font-size: 14px !important;
   }
-  .mt-5{
-    margin-top:12px !important;
+  span {
+    font-size: 14px !important;
+  }
+  .mt-5 {
+    margin-top: 12px !important;
   }
   .btn.btn-warning {
-    font-size:14px !important;
-    padding:8px 16px !important;
+    font-size: 14px !important;
+    padding: 8px 16px !important;
   }
-  html,body{
-    width:100%;
+  html,
+  body {
+    width: 100%;
   }
   .container-fluid {
     padding: 0 !important;
     margin: 0 !important;
-    width:100% !important;
+    width: 100% !important;
   }
   .fix-content {
     padding: 72px 0px;
   }
-  .navbar-nav{
+  .navbar-nav {
     display: none;
   }
   nav.navbar {
@@ -70,13 +78,13 @@ container-fluid {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9;
+    z-index: 999;
     height: 60px !important;
     background-color: #00000020 !important;
-    padding: 0 0px !important; 
+    padding: 0 0px !important;
     font-size: 32px !important;
     transition: 1s;
-    max-width:100% !important;
+    max-width: 100% !important;
   }
   nav.navbar.active {
     background-color: #1f242a !important;
@@ -87,14 +95,13 @@ container-fluid {
 
   /*private*/
   #activitymap {
-    height:300px !important;
+    height: 300px !important;
   }
   .activityInfoCard {
-    height:650px !important;
+    height: 650px !important;
   }
-  .searchbar-wrapper span.mr-5{
-    
-    margin-right:12px !important;
+  .searchbar-wrapper span.mr-5 {
+    margin-right: 12px !important;
   }
 }
 .fix-content {
@@ -132,8 +139,8 @@ img.img-fluid {
 }
 
 /* button  */
-button{
-  transition:.5s !important;
+button {
+  transition: 0.5s !important;
 }
 .border.border-warning,
 .btn-outline-warning {
@@ -148,7 +155,7 @@ button{
   border: 2px solid #ffa510 !important;
   background: #ffa510;
 }
-.btn-outline-warning:hover{
+.btn-outline-warning:hover {
   color: #2b333d !important;
 }
 
@@ -174,7 +181,7 @@ nav.navbar {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9;
+  z-index: 999;
   height: 120px;
   background-color: #00000020 !important;
   padding: 0 120px;
@@ -244,6 +251,13 @@ nav.navbar a.active.navbar-brand {
 .box-clicked {
   transition: 0.7s;
   filter: brightness(90%);
+}
+.signboxWrap {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.signboxWrap::-webkit-scrollbar {
+  display: none;
 }
 .title {
   position: absolute;
@@ -325,7 +339,8 @@ button.bg-orange {
   color: #ffa510;
   text-decoration: none;
 }
-.sidenavOption,.sidenavOptionTitle{
+.sidenavOption,
+.sidenavOptionTitle {
   margin: 0 !important;
 }
 /* -----------------------------------------------------Kaga */

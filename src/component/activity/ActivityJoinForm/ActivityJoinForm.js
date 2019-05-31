@@ -3,7 +3,11 @@ import React from 'react'
 const ActivityJoinForm = props => (
   <>
     <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5">
-      <form action="https://formspree.io/aatung0913@gmail.com" method="POST">
+      <form
+        action="https://formspree.io/aatung0913@gmail.com"
+        method="POST"
+        onSubmit={props.handleOnSubmit}
+      >
         <div class="form-group">
           <label for="memberAccount">會員姓名</label>
           <input

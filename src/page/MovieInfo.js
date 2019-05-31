@@ -1,28 +1,27 @@
 import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import ActivityPageSection from '../component/activity/ActivityPageSection/ActivityPageSection'
-import ActivityTitle from '../component/activity/ActivityTitle/ActivityTitle'
-import ActivityPageCard from '../component/activity/ActivityPageCard/ActivityPageCard'
-import ActivityContent from '../component/activity/ActivityContent/ActivityContent'
-import ActivityQRcode from '../component/activity/ActivityQRcode/ActivityQRcode'
-import ActivityJoinBtn from '../component/activity/ActivityJoinBtn/ActivityJoinBtn'
-import ActivityCard from '../component/activity/ActivityCard/ActivityCard'
+import MoviePageSection from '../component/movie/MoviePageSection/MoviePageSection'
+import MovieTitle from '../component/movie/MovieTitle/MovieTitle'
+import MoviePageCard from '../component/movie/MoviePageCard/MoviePageCard'
+import MovieContent from '../component/movie/MovieContent/MovieContent'
+import MovieQRcode from '../component/movie/MovieQRcode/MovieQRcode'
+import MovieCard from '../component/movie/MovieCard/MovieCard'
 
-class ActivityInfo extends React.Component {
+class MovieInfo extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: ['戲院資訊', '活動資訊', '相關活動', '相關影片'],
-      activityPageData: [],
-      activityPageOtherData: [],
+      title: ['影片資訊', '活動資訊', '相關活動', '相關影片'],
+      moviePageData: [],
+      moviePageOtherData: [],
       streetView: false,
-      collectActivity: '',
+      collectMovie: '',
     }
   }
 
   async componentDidMount() {
     try {
-      const res = await fetch('http://localhost:5555/activityCardData', {
+      const res = await fetch('http://localhost:5555/movieCardData', {
         method: 'GET',
         headers: new Headers({
           Accept: 'application/json',
@@ -30,16 +29,16 @@ class ActivityInfo extends React.Component {
         }),
       })
       const data = await res.json()
-      const activityPageData = data.find(
+      const moviePageData = data.find(
         item => item.id === this.props.match.params.id
       )
-      const activityPageOtherData = data.filter(
+      const moviePageOtherData = data.filter(
         item => item.id !== this.props.match.params.id
       )
-      console.log(activityPageData)
-      this.setState({ activityPageData: activityPageData })
-      this.setState({ activityPageOtherData: activityPageOtherData })
-      this.setState({ activityHeroImage: activityPageData.imgSrc })
+      console.log(moviePageData)
+      this.setState({ moviePageData: moviePageData })
+      this.setState({ moviePageOtherData: moviePageOtherData })
+      this.setState({ movieHeroImage: moviePageData.imgSrc })
     } catch (err) {
       console.log(err)
     }
@@ -54,14 +53,14 @@ class ActivityInfo extends React.Component {
         }),
       })
       const data = await res.json()
-      this.setState({ collectActivity: data.collectActivity })
+      this.setState({ collectMovie: data.collectMovie })
     } catch (err) {
       console.log(err)
     }
   }
   handleOnClick = () => {
-    this.setState({ activityPageData: [] })
-    const res = fetch('http://localhost:5555/activityCardData', {
+    this.setState({ moviePageData: [] })
+    const res = fetch('http://localhost:5555/movieCardData', {
       method: 'GET',
       headers: new Headers({
         Accept: 'application/json',
@@ -69,17 +68,17 @@ class ActivityInfo extends React.Component {
       }),
     })
     const data = res.json()
-    const activityPageData = data.find(
+    const moviePageData = data.find(
       item => item.id === this.props.match.params.id
     )
-    const activityPageOtherData = data.filter(
+    const moviePageOtherData = data.filter(
       item => item.id !== this.props.match.params.id
     )
 
-    console.log(activityPageData)
-    this.setState({ activityPageData: activityPageData })
-    this.setState({ activityPageOtherData: activityPageOtherData })
-    this.setState({ activityHeroImage: activityPageData.imgSrc })
+    console.log(moviePageData)
+    this.setState({ moviePageData: moviePageData })
+    this.setState({ moviePageOtherData: moviePageOtherData })
+    this.setState({ movieHeroImage: moviePageData.imgSrc })
   }
   handleCollect = async id => {
     const memberId = sessionStorage.getItem('memberId')
@@ -93,17 +92,17 @@ class ActivityInfo extends React.Component {
           }),
         })
         let data = await res.json()
-        let isCollect = data.collectActivity.indexOf(id) > -1
+        let isCollect = data.collectMovie.indexOf(id) > -1
 
         if (isCollect) {
-          data.collectActivity = data.collectActivity
+          data.collectMovie = data.collectMovie
             .split(id)
             .toString()
             .replace(/,/g, '')
         } else {
-          data.collectActivity += id
+          data.collectMovie += id
         }
-        this.setState({ collectActivity: data.collectActivity })
+        this.setState({ collectMovie: data.collectMovie })
         try {
           const res = await fetch('http://localhost:5555/member/' + memberId, {
             method: 'PUT',
@@ -128,11 +127,11 @@ class ActivityInfo extends React.Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12 p-0">
-              <ActivityPageSection
-                theater={this.state.activityPageData.theater}
-                title={this.state.activityPageData.title}
-                content={this.state.activityPageData.content}
-                HeroImage={this.state.activityPageData.imgSrc}
+              <MoviePageSection
+                theater={this.state.moviePageData.theater}
+                title={this.state.moviePageData.title}
+                content={this.state.moviePageData.content}
+                HeroImage={this.state.moviePageData.imgSrc}
               />
             </div>
           </div>
@@ -140,26 +139,20 @@ class ActivityInfo extends React.Component {
         <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
-              <ActivityTitle
+              <MovieTitle
                 title={this.state.title[0]}
                 className="content-title"
               />
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5">
-              <ActivityPageCard
-                theater={this.state.activityPageData.theater}
-                theaterMap={this.state.activityPageData.theaterMap}
-                phone={this.state.activityPageData.phone}
-                GUINumber={this.state.activityPageData.GUINumber}
-                website={this.state.activityPageData.website}
-                email={this.state.activityPageData.email}
-                lat={this.state.activityPageData.lat}
-                lng={this.state.activityPageData.lng}
-                streetView={this.state.streetView}
-                handleOnClickMap={() => this.setState({ streetView: true })}
-                handleOnClickMaplocal={() =>
-                  this.setState({ streetView: false })
-                }
+              <MoviePageCard
+                theater={this.state.moviePageData.theater}
+                theaterMap={this.state.moviePageData.theaterMap}
+                phone={this.state.moviePageData.phone}
+                GUINumber={this.state.moviePageData.GUINumber}
+                website={this.state.moviePageData.website}
+                email={this.state.moviePageData.email}
+                imgSrc={this.state.moviePageData.imgSrc}
               />
             </div>
           </div>
@@ -167,43 +160,40 @@ class ActivityInfo extends React.Component {
         <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
-              <ActivityTitle
+              <MovieTitle
                 title={this.state.title[1]}
                 className="content-title"
               />
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-9 mt-5">
-              <ActivityContent
-                theater={this.state.activityPageData.theater}
-                title={this.state.activityPageData.title}
-                theaterMap={this.state.activityPageData.theaterMap}
-                content={this.state.activityPageData.content}
-                joinContent={this.state.activityPageData.joinContent}
+              <MovieContent
+                theater={this.state.moviePageData.theater}
+                title={this.state.moviePageData.title}
+                theaterMap={this.state.moviePageData.theaterMap}
+                content={this.state.moviePageData.content}
+                joinContent={this.state.moviePageData.joinContent}
                 joinContentCurrentPeople={
-                  this.state.activityPageData.joinContentCurrentPeople
+                  this.state.moviePageData.joinContentCurrentPeople
                 }
               />
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-3 mt-5">
-              <ActivityQRcode imgSrc={window.location.href} />
-            </div>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-5 d-flex justify-content-center">
-              <ActivityJoinBtn id={this.props.match.params.id} />
+              <MovieQRcode imgSrc={window.location.href} />
             </div>
           </div>
         </div>
         <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
-              <ActivityTitle
+              <MovieTitle
                 title={this.state.title[2]}
                 className="content-title"
               />
             </div>
-            {this.state.activityPageOtherData.map(data => (
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-5">
+            {this.state.moviePageOtherData.map(data => (
+              <div className="col-12 col-sm-12 col-md-6 col-lg-2 mt-5">
                 {sessionStorage.getItem('memberId') !== null ? (
-                  <ActivityCard
+                  <MovieCard
                     routerId={data.id}
                     handleCollect={() => this.handleCollect(data.id)}
                     key={data.id}
@@ -212,13 +202,13 @@ class ActivityInfo extends React.Component {
                     imgSrc={data.imgSrc}
                     collectOpen
                     isCollect={
-                      this.state.collectActivity.indexOf(data.id) > -1
+                      this.state.collectMovie.indexOf(data.id) > -1
                         ? true
                         : false
                     }
                   />
                 ) : (
-                  <ActivityCard
+                  <MovieCard
                     routerId={data.id}
                     handleCollect={() => this.handleCollect(data.id)}
                     key={data.id}
@@ -236,4 +226,4 @@ class ActivityInfo extends React.Component {
   }
 }
 
-export default ActivityInfo
+export default MovieInfo
