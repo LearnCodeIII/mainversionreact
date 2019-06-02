@@ -1,23 +1,48 @@
 import React from 'react'
-import ActionButtonRoy from './ActionButtonRoy'
+// import ActionButtonRoy from './ActionButtonRoy'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
-class ActionButtonCommentRoy extends React.Component {
-  constructor() {
-    super()
-    this.state = { buttonType: '留言', iconType: 'fas fa-comment-alt' }
-  }
+// 算好BUTTON點下去後一定要讓第一筆的ID顯示在PATH上面
+const ActionButtonCommentRoy = props => {
+  // console.log(props.handleDateFilterStatus)
+  // 陣列要用複製的，不能直接拿來SLCIE會改變原陣列，算出的結果會反過來
+  const items = [...props.nowAllData]
 
-  render() {
-    return (
-      <>
-        <ActionButtonRoy
-          variant="outline-success"
-          buttonText={this.state.buttonType}
-          buttonIcon={this.state.iconType}
-        />
-      </>
-    )
+  if (props.handlCommentFilterStatus === true) {
+    // // sort by value
+    // 大到小排序
+    items.sort(function(a, b) {
+      return b.forumCommentCount - a.forumCommentCount
+    })
+  } else {
+    // 小到大排序
+    items.sort(function(a, b) {
+      return a.forumCommentCount - b.forumCommentCount
+    })
   }
+  // console.log(items.slice(0, 10)[0].id)
+  const nowPathId = items.slice(0, 10)[0].id
+
+  return (
+    <>
+      <Link to={'/forum/' + nowPathId}>
+        <button
+          type="button"
+          className="btn btn-outline-warning px-3  m-0"
+          onClick={props.handleCommentFilter}
+          hidden={props.filterBarShow ? '' : 'hidden'}
+        >
+          <i
+            className={
+              props.handlCommentFilterStatus
+                ? 'fas fa-sort-amount-up px-1'
+                : 'fas fa-sort-amount-down px-1'
+            }
+          />
+          留言
+        </button>
+      </Link>
+    </>
+  )
 }
-
 export default ActionButtonCommentRoy

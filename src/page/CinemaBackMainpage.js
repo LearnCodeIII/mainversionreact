@@ -2,7 +2,10 @@ import React from 'react'
 import { Row } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import ActivityCard from '../component/activity/ActivityCard/ActivityCard'
+import ActivityCinemaCard from '../component/activity/ActivityCard/ActivityCinemaCard'
 import ActivityTitle from '../component/activity/ActivityTitle/ActivityTitle'
+import AcitivityForm from '../component/activity/AcitivityForm/AcitivityForm'
+import AcitivityEditForm from '../component/activity/AcitivityForm/AcitivityEditForm'
 import CinemaBackSidenav from '../component/backSidenav/CinemaBackSidenav'
 import CinemaEditInfo from '../component/cinemaBack/CinemaEditInfo'
 import CinemaEditPwd from '../component/cinemaBack/CinemaEditPwd'
@@ -11,8 +14,27 @@ import AvatarOne from '../component/cinema/AvatarTypeOne/AvatarOne'
 import DataBox from '../component/cinema/DataBoxSM/DataBox'
 import CardKaga from '../component/cinema/CardKaga/v3/CardKaga'
 import MessageCinema from '../component/cinema/MessageSM/MessageCinema'
+import CinemaFilmUpdate from '../component/cinemaBack/CinemaFilmUpdate'
+import CinemaFilmTable from '../component/cinemaBack/CinemaFilmTable'
 //cinemaId
 import ActivityBtnAddActivity from '../component/activity/ActivityBtnAddActivity/ActivityBtnAddActivity'
+
+//Import SweetAlert2
+import Swal from 'sweetalert2'
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'center',
+  showConfirmButton: false,
+  timer: 2000,
+})
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-warning',
+    cancelButton: 'btn btn-danger',
+  },
+  buttonsStyling: false,
+  background: '#242b34',
+})
 const cinemaId = sessionStorage.getItem('cinemaId')
 class CinemaBackMainpage extends React.Component {
   constructor(props) {
@@ -26,6 +48,7 @@ class CinemaBackMainpage extends React.Component {
       allCinemaData: [],
       cinemaId: [],
       thisCinemaData: [],
+      thisCinemaCardData: [],
       // 戲院資訊頁
       allFilmData: [], //全部戲院資料
       AvatarOne: '', //頭像用
@@ -83,7 +106,27 @@ class CinemaBackMainpage extends React.Component {
       if (!response.ok) throw new Error(response.statusText)
       const jsonObject = await response.json()
       const data = await jsonObject.find(item => item.id === cinemaId)
-      await this.setState({ thisCinemaData: data, allCinemaData: jsonObject })
+      await this.setState({
+        thisCinemaData: data,
+        allCinemaData: jsonObject,
+      })
+    } catch (e) {
+      console.log(e)
+    }
+    try {
+      //取得戲院活動
+      const response = await fetch('http://localhost:5555/cinema/' + cinemaId, {
+        method: 'GET',
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      })
+      let data = await response.json()
+      data = JSON.parse(JSON.stringify(data.cinemaActivity))
+      await this.setState({
+        thisCinemaCardData: data,
+      })
     } catch (e) {
       console.log(e)
     }
@@ -115,7 +158,7 @@ class CinemaBackMainpage extends React.Component {
       const dataThisCinema = await dataCinema.find(item => item.id === cinemaId)
 
       // 取得影片資料
-      const resFilm = await fetch('http://localhost:5555/filmData', {
+      const resFilm = await fetch('http://localhost:5555/movieCardData', {
         method: 'GET',
         headers: new Headers({
           Accept: 'application/json',
@@ -170,12 +213,9 @@ class CinemaBackMainpage extends React.Component {
       let FilmCardUseData = [] // 在本戲院播放的影片的完整資料
       // 把有影片中有在本戲院播放的影片全部抓出來套進去
       dataFilm.map(item => {
-        item.moviecinema.map(item1 => {
-          if (item1 === dataThisCinema.id) {
-            FilmCardUseData.push(item)
-          }
-          return item1
-        })
+        if (item.theater === dataThisCinema.cinemaName) {
+          FilmCardUseData.push(item)
+        }
         return item
       })
       // 先限制只有4筆
@@ -192,12 +232,12 @@ class CinemaBackMainpage extends React.Component {
         FilmCardData.push({
           key: item.id,
           id: item.id,
-          title: item.name_tw,
-          subtitle: item.name_en,
-          img: 'http://localhost:3000/images/' + item.movie_pic,
+          title: item.title,
+          subtitle: item.titleEn,
+          img: item.imgSrc,
           link: '/movie/' + item.id,
           star: item.filmStar,
-          time: item.in_theaters + ' / ' + item.out_theaters,
+          time: item.inTheaterDate + ' / ' + item.outTheaterDate,
         })
       )
 
@@ -289,17 +329,254 @@ class CinemaBackMainpage extends React.Component {
           .then(jsonObject => {
             // sessionStorage.setItem('thisCinemaData', JSON.stringify(jsonObject))
             this.setState({ thisCinemaData: jsonObject }, () => {
-              alert('資料儲存成功')
+              // alert('資料儲存成功')
+              Toast.fire({
+                type: 'success',
+                title: '資料儲存成功！',
+              })
             })
           })
       } catch (e) {
         console.log(e)
       }
     } else {
-      alert('資料填寫有誤，請再次確認您的資料！')
+      // alert('資料填寫有誤，請再次確認您的資料！')
+      Toast.fire({
+        type: 'error',
+        title: '儲存失敗，請檢查您的資料再試一次',
+      })
     }
   }
 
+  //戲院上架儲存按鈕
+  handleCinemaFilmAdd = (data, checkok, type) => () => {
+    let isAllChecked = true
+    let checkArray = Object.values(checkok)
+    isAllChecked = checkArray.reduce((a, b) => a && b)
+    // console.log('isAllChecked: ' + isAllChecked)
+
+    if (isAllChecked) {
+      const newtext = { ...data }
+      const newData = { ...this.state.thisCinemaData }
+      let date = new Date()
+      let dateYMD =
+        date.getFullYear() +
+        '-' +
+        (date.getMonth() + 1 < 10
+          ? '0' + (date.getMonth() + 1)
+          : date.getMonth() + 1) +
+        '-' +
+        (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+      newtext.id = 'm' + +date
+      newtext.updateDate = dateYMD
+      newData.cinemaFilm = [...newData.cinemaFilm, newtext]
+      console.log(newData)
+      const newDataForMovieCard = { ...newtext }
+      if (type.find(item => item == '全選')) {
+        newDataForMovieCard.type = newDataForMovieCard.type.slice(1).join('')
+      } else {
+        newDataForMovieCard.type = newDataForMovieCard.type.join('')
+      }
+      newDataForMovieCard.theater = this.state.thisCinemaData.cinemaName
+      try {
+        fetch('http://localhost:5555/cinema/' + this.state.thisCinemaData.id, {
+          method: 'PUT',
+          body: JSON.stringify(newData),
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+          .then(res => res.json())
+          .then(jsonObject => {
+            try {
+              fetch('http://localhost:5555/movieCardData/', {
+                method: 'POST',
+                body: JSON.stringify(newDataForMovieCard),
+                headers: new Headers({
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                }),
+              })
+                .then(res => res.json())
+                .then(jsonObject => {
+                  // this.setState({ thisCinemaData: jsonObject }, () => {
+                  //   alert('資料儲存成功')
+                  // })
+                })
+            } catch (e) {
+              console.log(e)
+            }
+            this.setState({ thisCinemaData: jsonObject }, () => {
+              // alert('資料儲存成功')
+              Toast.fire({
+                type: 'success',
+                title: '影片上架完成！',
+              })
+            })
+          })
+      } catch (e) {
+        console.log(e)
+      }
+    } else {
+      // alert('資料填寫有誤，請再次確認您的資料！')
+      Toast.fire({
+        type: 'error',
+        title: '上架失敗，請檢查您的資料再試一次',
+      })
+    }
+  }
+
+  //影片編輯儲存
+  handleEditSave = (id, thisData) => () => {
+    // if (thisData.type.length == 0) {
+    //   Toast.fire({
+    //     type: 'error',
+    //     title: '沒有選擇影片類型，請檢查您的資料再試一次',
+    //   })
+    // } else {
+    const newcinemaData = { ...this.state.thisCinemaData } //這個戲院的Data
+    //找出這支影片在這個戲院影片列表中的Index
+    const thisFilmIndex = newcinemaData.cinemaFilm.findIndex(
+      item => item.id === id
+    )
+    //將這支影片原本的data替換成新的data
+    newcinemaData.cinemaFilm[thisFilmIndex] = thisData
+    this.setState({ thisCinemaData: newcinemaData })
+    const newDataForMovieCard = { ...thisData }
+    if (newDataForMovieCard.type.find(item => item == '全選')) {
+      newDataForMovieCard.type = newDataForMovieCard.type.slice(1).join('')
+    } else {
+      newDataForMovieCard.type = newDataForMovieCard.type.join('')
+    }
+    newDataForMovieCard.theater = this.state.thisCinemaData.cinemaName
+
+    try {
+      fetch('http://localhost:5555/cinema/' + this.state.thisCinemaData.id, {
+        method: 'PUT',
+        body: JSON.stringify(newcinemaData),
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      })
+        .then(res => res.json())
+        .then(jsonObject => {
+          try {
+            fetch(
+              'http://localhost:5555/movieCardData/' + newDataForMovieCard.id,
+              {
+                method: 'PUT',
+                body: JSON.stringify(newDataForMovieCard),
+                headers: new Headers({
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                }),
+              }
+            )
+              .then(res => res.json())
+              .then(jsonObject => {})
+          } catch (e) {
+            console.log(e)
+          }
+          this.setState({ thisCinemaData: jsonObject }, () => {
+            // alert('資料儲存成功')
+            Toast.fire({
+              type: 'success',
+              title: '資料儲存成功',
+            })
+          })
+        })
+    } catch (e) {
+      console.log(e)
+    }
+    // }
+  }
+  handleFilmDelete = id => () => {
+    swalWithBootstrapButtons
+      .fire({
+        title: '<span style="color:#d4d1cc">確定要刪除這支影片?</span>',
+        // text: '<span style="color:#d4d1cc">提醒：刪除的影片無法再復原</span>',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonText: '確認刪除',
+        confirmButtonClass: 'btn btn-warning addFilmSchedule mx-3',
+        reverseButtons: true,
+        cancelButtonText: '取消',
+        cancelButtonClass: 'btn btn-danger addFilmSchedule mx-3',
+      })
+      .then(result => {
+        if (result.value) {
+          const newcinemaData = { ...this.state.thisCinemaData } //這個戲院的Data
+          //找出這支影片在這個戲院影片列表中的Index
+          const thisFilmIndex = newcinemaData.cinemaFilm.findIndex(
+            item => item.id === id
+          )
+          //將這支影片從戲院影片列表中移除
+          newcinemaData.cinemaFilm.splice([thisFilmIndex], 1)
+          this.setState({ thisCinemaData: newcinemaData }, () =>
+            console.log(this.state.thisCinemaData)
+          )
+          try {
+            fetch(
+              'http://localhost:5555/cinema/' + this.state.thisCinemaData.id,
+              {
+                method: 'PUT',
+                body: JSON.stringify(newcinemaData),
+                headers: new Headers({
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                }),
+              }
+            )
+              .then(res => res.json())
+              .then(jsonObject => {
+                try {
+                  fetch('http://localhost:5555/movieCardData/' + id, {
+                    method: 'DELETE',
+                    headers: new Headers({
+                      Accept: 'application/json',
+                      'Content-Type': 'application/json',
+                    }),
+                  })
+                    .then(res => res.json())
+                    .then(jsonObject => {})
+                } catch (e) {
+                  console.log(e)
+                }
+                this.setState({ thisCinemaData: jsonObject }, () => {
+                  // alert('資料刪除成功')
+                  swalWithBootstrapButtons.fire(
+                    '<span style="color:#d4d1cc">刪除成功</span>',
+                    '<span style="color:#d4d1cc">已成功刪除影片</span>',
+                    'success'
+                  )
+                  // setTimeout(() => window.location.reload(), 1500)
+                })
+              })
+          } catch (e) {
+            console.log(e)
+            Swal.fire({
+              type: 'error',
+              title: '<span style="color:#d4d1cc">影片刪除失敗</span>',
+              text:
+                '<span style="color:#d4d1cc">刪除發生問題，請再試一次</span>',
+              showConfirmButton: true,
+              confirmButtonClass: 'btn btn-warning',
+              confirmButtonColor: '#ffa510',
+              buttonsStyling: false,
+              background: '#242b34',
+            })
+          }
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          swalWithBootstrapButtons.fire(
+            '<span style="color:#d4d1cc">取消刪除</span>',
+            '<span style="color:#d4d1cc">影片仍然還在喔！</span>',
+            'error'
+          )
+        }
+      })
+  }
   handleLogout = () => {
     //點擊登出，清除session並導回主頁
     // sessionStorage.removeItem('memberID') //不知道為什麼這個方法無效
@@ -338,8 +615,11 @@ class CinemaBackMainpage extends React.Component {
                     >
                       {/* 上面資訊列 */}
                       <AvatarOne
-                        img={this.state.AvatarOne.img}
-                        name={this.state.AvatarOne.name}
+                        img={
+                          '/images/cinemaImg/' +
+                          this.state.thisCinemaData.cinemaLogoImg
+                        }
+                        name={this.state.thisCinemaData.cinemaName}
                         purview={this.state.AvatarOne.purview}
                         SignUpDate={this.state.AvatarOne.SignUpDate}
                       />
@@ -353,28 +633,41 @@ class CinemaBackMainpage extends React.Component {
                     <div className="py-5" />
                     <TitleKaga title="上映影片" />
                     {this.state.FilmCard.length !== 0 ? (
-                      this.state.FilmCard.map(item => (
-                        <div className="d-flex flex-wrap col-lg-12 mt-4">
+                      <div className="d-flex flex-wrap col-lg-12 mt-4">
+                        {this.state.FilmCard.map(item => (
                           <CardKaga
                             key={item.key}
                             id={item.id}
                             title={item.title}
                             subtitle={item.subtitle}
-                            img={item.img}
+                            img={
+                              item.img.indexOf('http') == 0
+                                ? item.img
+                                : '/images/movieImg/' + item.img
+                            }
                             link={item.link}
                             popup
                             star={item.star}
                             AVGStar
                             time={item.time}
                           />
-                        </div>
-                      ))
+                        ))}
+                      </div>
                     ) : (
                       <div
                         className="d-flex align-items-center"
                         style={{ height: '300px', width: '100%' }}
                       >
-                        <h5 className="ml-4">目前沒有上映影片喔</h5>
+                        <h5 className="ml-4">
+                          尚無紀錄，趕快前往
+                          <a
+                            style={{ color: '#ffa510' }}
+                            href="/CinemaBackMainpage/cinema-film-post"
+                          >
+                            影片管理
+                          </a>
+                          上架影片吧！
+                        </h5>
                       </div>
                     )}
 
@@ -403,29 +696,47 @@ class CinemaBackMainpage extends React.Component {
                         className="d-flex align-items-center"
                         style={{ height: '300px', width: '100%' }}
                       >
-                        <h5 className="ml-4">目前沒有舉辦活動喔</h5>
+                        <h5 className="ml-4">
+                          尚無紀錄，趕快前往
+                          <a
+                            style={{ color: '#ffa510' }}
+                            href="/CinemaBackMainpage/cinema-activity-add"
+                          >
+                            活動管理
+                          </a>
+                          發起活動吧！
+                        </h5>
                       </div>
                     )}
 
                     <div className="py-5" />
                     <TitleKaga title="近期評論紀錄" />
-                    <div
-                      className=" d-flex flex-wrap col-lg-12 my-5"
-                      style={
-                        {
-                          // height: '300px',
+                    {this.state.MessageBoxData.length !== 0 ? (
+                      <div
+                        className=" d-flex flex-wrap col-lg-12 my-5"
+                        style={
+                          {
+                            // height: '300px',
+                          }
                         }
-                      }
-                    >
-                      {this.state.MessageBoxData.map(item => (
-                        <MessageCinema
-                          img={item.img}
-                          message={item.message}
-                          name={item.name}
-                          time={item.time}
-                        />
-                      ))}
-                    </div>
+                      >
+                        {this.state.MessageBoxData.map(item => (
+                          <MessageCinema
+                            img={item.img}
+                            message={item.message}
+                            name={item.name}
+                            time={item.time}
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <div
+                        className="d-flex align-items-center"
+                        style={{ height: '300px', width: '100%' }}
+                      >
+                        <h5 className="ml-4">尚無紀錄</h5>
+                      </div>
+                    )}
                   </>
                 </>
               ) : (
@@ -459,7 +770,7 @@ class CinemaBackMainpage extends React.Component {
                   <div className="row">
                     <div className="col-md-12 p-0">
                       <ActivityTitle
-                        title={'編輯戲院資訊'}
+                        title={'更改密碼'}
                         className="content-title"
                       />
                     </div>
@@ -475,15 +786,94 @@ class CinemaBackMainpage extends React.Component {
               ) : (
                 ''
               )}
-              {pagename === 'cinema-manage-activity' ? (
+              {pagename === 'cinema-film-info' ? (
                 <>
-                  <ActivityBtnAddActivity />
+                  <div className="row">
+                    <div className="col-md-12 p-0">
+                      <ActivityTitle
+                        title={'影片資訊一覽'}
+                        className="content-title"
+                      />
+                    </div>
+                    <div className=" d-flex flex-wrap col-lg-12 my-5">
+                      <CinemaFilmTable
+                        thisData={this.state.thisCinemaData}
+                        allCinemaData={this.state.allCinemaD}
+                        handleEditSave={this.handleEditSave}
+                        handleFilmDelete={this.handleFilmDelete}
+                      />
+                    </div>
+                  </div>
                 </>
               ) : (
                 ''
               )}
-              {pagename === 'cinema-activity-in-progress' ? <></> : ''}
-              {pagename === 'activity-costum-analysis' ? <></> : ''}
+              {pagename === 'cinema-film-post' ? (
+                <>
+                  <div className="row">
+                    <div className="col-md-12 p-0">
+                      <ActivityTitle
+                        title={'影片上架'}
+                        className="content-title"
+                      />
+                    </div>
+                    <div style={{ width: '100%' }}>
+                      <CinemaFilmUpdate
+                        thisData={this.state.thisCinemaData}
+                        allCinemaData={this.state.allCinemaD}
+                        handleCinemaFilmAdd={this.handleCinemaFilmAdd}
+                      />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                ''
+              )}
+              {pagename === 'cinema-activity-add' ? (
+                <>
+                  <AcitivityForm />
+                </>
+              ) : (
+                ''
+              )}
+              {pagename.indexOf('cinema-activity-inprogress') > -1 ? (
+                pagename.slice(27) != '' ? (
+                  <>
+                    <AcitivityEditForm />
+                  </>
+                ) : (
+                  <>
+                    <div className="row">
+                      <div className="col-md-12 p-0">
+                        <ActivityTitle
+                          title={'活動列表'}
+                          className="content-title"
+                        />
+                      </div>
+                      {this.state.thisCinemaCardData.map(data => (
+                        <div
+                          className="col-12 col-sm-12 col-md-6 col-lg-4 mt-5"
+                          style={{ width: '250px', height: '360px' }}
+                        >
+                          <ActivityCinemaCard
+                            routerId={data.id}
+                            key={data.id}
+                            title={data.title}
+                            imgSrc={
+                              data.imgSrc.indexOf('http') == 0
+                                ? data.imgSrc
+                                : '/images/activityImg/' + data.imgSrc
+                            }
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )
+              ) : (
+                ''
+              )}
+              {pagename === 'cinema-activity-analysis' ? <></> : ''}
             </div>
           </Row>
         </>

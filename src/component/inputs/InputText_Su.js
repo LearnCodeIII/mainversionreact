@@ -60,7 +60,7 @@ const InputText_Su = props => {
         name={props.id}
         type={props.type ? props.type : 'text'}
         onChange={props.onChange}
-        className="form-control border border-warning rounded"
+        className="form-control border border-warning rounded inputFontSizeSu"
         placeholder={props.placeholder}
         autoComplete="off"
         style={{

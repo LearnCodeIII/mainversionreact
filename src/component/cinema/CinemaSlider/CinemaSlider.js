@@ -15,6 +15,9 @@ class CinemaSlider extends React.Component {
     const slickImg = this.props.sData.img ? this.props.sData.img : []
     let slickImgLength = slickImg.length >= 2 ? 2 : 1
     const settings = {
+      autoplay: true,
+      autoplaySpeed: 1800,
+      cssEase: 'linear',
       dots: true,
       infinite: true,
       speed: 500,

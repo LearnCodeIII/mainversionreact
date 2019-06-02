@@ -116,7 +116,7 @@ const InputCardContent_MemberSignUp = props => (
             aria-label="With textarea"
             style={{ height: '300px', background: '#1F242A', color: '#FFA510' }}
             onChange={props.handleModalFormInputChange}
-            className="border-warning"
+            className="border-warning border"
             placeholder=""
           />
         </InputGroup>
@@ -132,9 +132,9 @@ const InputCardContent_MemberSignUp = props => (
             type="checkbox"
             style={{ height: '100%' }}
             // 要先反轉check
-            checked={!props.forumSpoilers}
+            checked={props.forumSpoilers}
             // 爆雷偵測套餐
-            onChange={props.handleSpoilerChange}
+            // onChange={props.handleSpoilerChange}
             onClick={props.handleSpoilerToggle}
           />
           <label class="form-check-label">是否爆雷</label>

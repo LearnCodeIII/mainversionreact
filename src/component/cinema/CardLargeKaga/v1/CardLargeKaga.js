@@ -1,8 +1,17 @@
 import React from 'react'
 import CardKagaStaAnimation from '../../CardKaga/v3/CardKagaStaAnimation'
 import CardKagaStar from '../../CardKaga/v3/CardKagaStar'
+//Import SweetAlert2
+import Swal from 'sweetalert2'
 const memberId = sessionStorage.getItem('memberId')
 const cinemaId = sessionStorage.getItem('cinemaId')
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'center',
+  showConfirmButton: false,
+  timer: 1500,
+})
 
 class CardLargeKaga extends React.Component {
   constructor(props) {
@@ -20,6 +29,8 @@ class CardLargeKaga extends React.Component {
       viewStar: props.star,
       updateStar: '',
       markText: '',
+      awesomeColor: false,
+      collectionColor: false,
     }
   }
   componentDidMount() {
@@ -28,6 +39,8 @@ class CardLargeKaga extends React.Component {
       awesomeLength: this.props.awesomeLength,
       collection: this.props.collection,
       collectionLength: this.props.collectionLength,
+      collectionColor: this.props.collectionColor,
+      awesomeColor: this.props.awesomeColor,
     })
   }
 
@@ -52,6 +65,7 @@ class CardLargeKaga extends React.Component {
         this.props.awesomeClick(newAwesome, awesomeLength)
         // 然後同時改變自己這層的state
         this.setState({
+          awesomeColor: false,
           awesome: newAwesome,
           awesomeLength: awesomeLength,
         })
@@ -65,15 +79,34 @@ class CardLargeKaga extends React.Component {
         this.props.awesomeClick(newAwesome, awesomeLength)
         // 然後同時改變自己這層的state
         this.setState({
+          awesomeColor: true,
           awesome: newAwesome,
           awesomeLength: awesomeLength,
         })
       }
       // 如果沒登錄的話
     } else if (cinemaId) {
-      alert('戲院會員不可以按讚喔～')
+      // alert('戲院會員不可以按讚喔～')
+      Toast.fire({
+        type: 'error',
+        title: '戲院會員不可以按讚喔～',
+      })
     } else {
-      alert('直接導向登錄會員')
+      // alert('請先登錄會員喔～')
+      Swal.fire({
+        title: '<span style="color:#d4d1cc">請先登入會員</span>',
+        type: 'info',
+        showCancelButton: true,
+        confirmButtonText: '確認',
+        cancelButtonText: '取消',
+        confirmButtonClass: ' btn-warning',
+        confirmButtonColor: '#ffa510',
+        background: '#242b34',
+      }).then(result => {
+        if (result.value) {
+          window.location.href = '/LoginSign'
+        }
+      })
     }
   }
 
@@ -100,6 +133,7 @@ class CardLargeKaga extends React.Component {
         // 然後同時改變自己這層的state
         this.setState(
           {
+            collectionColor: false,
             collection: newCollection,
             collectionLength: collectionLength,
           },
@@ -117,22 +151,35 @@ class CardLargeKaga extends React.Component {
         // 把兩個更新後的值丟回去父層
         this.props.collectionClick(newCollection, collectionLength)
         // 然後同時改變自己這層的state
-        this.setState(
-          {
-            collection: newCollection,
-            collectionLength: collectionLength,
-          },
-          () => {
-            console.log('click - state')
-            console.log(this.state.collectionLength)
-          }
-        )
+        this.setState({
+          collectionColor: true,
+          collection: newCollection,
+          collectionLength: collectionLength,
+        })
       }
       // 如果沒登錄的話
     } else if (cinemaId) {
-      alert('戲院會員不可以收藏喔～')
+      // alert('戲院會員不可以收藏喔～')
+      Toast.fire({
+        type: 'error',
+        title: '戲院會員不可以收藏喔～',
+      })
     } else {
-      alert('直接導向登錄會員')
+      // alert('請先登錄會員喔～')
+      Swal.fire({
+        title: '<span style="color:#d4d1cc">請先登入會員</span>',
+        type: 'info',
+        showCancelButton: true,
+        confirmButtonText: '確認',
+        cancelButtonText: '取消',
+        confirmButtonClass: ' btn-warning',
+        confirmButtonColor: '#ffa510',
+        background: '#242b34',
+      }).then(result => {
+        if (result.value) {
+          window.location.href = '/LoginSign'
+        }
+      })
     }
   }
 
@@ -183,17 +230,9 @@ class CardLargeKaga extends React.Component {
     return (
       <>
         <div className="col-12 my-3">
-          <div
-            className="card"
-            style={{
-              height: '450px',
-              overflow: 'hidden',
-              background: '#28333d',
-              boxShadow: '0 0 2px #000000',
-            }}
-          >
+          <div className="card cinemaBigCard">
             <div className="row no-gutters h-100">
-              <div className="col-md-6">
+              <div className="col-lg-6 col-md-12 h-100 cinemaBigCardImg">
                 <img
                   src={this.props.img}
                   className="card-img h-100"
@@ -201,10 +240,10 @@ class CardLargeKaga extends React.Component {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <div className="col-md-6 d-flex flex-column h-100">
+              <div className="col-lg-6 col-md-12 h-md-50 d-flex flex-column h-100 cinemaBigCardText">
                 {/* 上方區塊 */}
                 <div className="d-flex h-100 my-2">
-                  <div className="col-3 d-flex flex-column justify-content-around ml-4 px-0">
+                  <div className="col-3 d-flex flex-column justify-content-around ml-lg-4 px-0">
                     <h4 className="mr-3">地址</h4>
                     <h4 className="mr-3">電話</h4>
                     <h4 className="mr-3">統一編號</h4>
@@ -245,7 +284,7 @@ class CardLargeKaga extends React.Component {
                   </div>
                 </div>
                 {this.props.wantStar ? (
-                  <div className="col mb-4 d-flex pl-3 align-items-center">
+                  <div className="col mb-lg-4 d-flex pl-lg-3 align-items-center">
                     <h4 className="ml-2 mr-5">喜好程度</h4>
                     <div className="ml-4 mb-2">
                       <CardKagaStaAnimation
@@ -282,26 +321,54 @@ class CardLargeKaga extends React.Component {
                 )}
                 {/* 下方區塊 */}
                 <div className="d-flex mb-4 mt-3" style={{ fontSize: '25px' }}>
-                  <div
-                    className="mx-4"
-                    onClick={this.awesomeCardClick}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    <i className="fas fa-thumbs-up mr-2" />
-                    {this.state.awesomeLength}
-                  </div>
+                  {/* 按讚數 */}
+                  {this.state.awesomeColor === false ? (
+                    <div
+                      className="mx-4"
+                      onClick={this.awesomeCardClick}
+                      style={{ cursor: 'pointer', color: '#ccc' }}
+                    >
+                      <i className="fas fa-thumbs-up mr-2" />
+                      {this.state.awesomeLength}
+                    </div>
+                  ) : (
+                    <div
+                      className="mx-4"
+                      onClick={this.awesomeCardClick}
+                      style={{ cursor: 'pointer', color: 'rgb(253,149,17)' }}
+                    >
+                      <i className="fas fa-thumbs-up mr-2" />
+                      {this.state.awesomeLength}
+                    </div>
+                  )}
+
+                  {/* 瀏覽數 */}
                   <div className="mx-5">
                     <i className="fas fa-eye mr-2" />
                     {this.props.pageviews}
                   </div>
-                  <div
-                    className="ml-4"
-                    onClick={this.collectionCardClick}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    <i className="fas fa-bookmark mr-2" />
-                    {this.state.collectionLength}
-                  </div>
+
+                  {/* 訂閱數 */}
+                  {this.state.collectionColor === false ? (
+                    <div
+                      className="ml-4"
+                      onClick={this.collectionCardClick}
+                      style={{ cursor: 'pointer', color: '#ccc' }}
+                    >
+                      <i className="fas fa-bookmark mr-2" />
+                      {this.state.collectionLength}
+                    </div>
+                  ) : (
+                    <div
+                      id="collecIconArea"
+                      className="ml-4"
+                      onClick={this.collectionCardClick}
+                      style={{ cursor: 'pointer', color: 'rgb(253,149,17)' }}
+                    >
+                      <i className="fas fa-bookmark mr-2" />
+                      {this.state.collectionLength}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

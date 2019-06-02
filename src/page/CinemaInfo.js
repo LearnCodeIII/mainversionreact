@@ -22,16 +22,19 @@ class TheateInfo extends React.Component {
       dataFile: '',
       HeroSection: '',
       BigCarData: '',
-      SliderData: '',
+      SliderData: [],
       ActivityCardData: [],
       FilmCardData: [],
       MessageBoard: [],
       messageLength: 4,
+      elseCard: [],
     }
+    this.handleScroll = this.handleScroll.bind(this)
   }
 
   // 在元件完成載入時fetch 這張表格的資料進來整理成個元件需要的資料
   async componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
     try {
       //劇院
       const resCinema = await fetch('http://localhost:5555/cinema', {
@@ -52,8 +55,21 @@ class TheateInfo extends React.Component {
       const dataLoginCine = dataAllCinema.filter(item => item.id === cinemaId)
       const dataLoginCinema = dataLoginCine[0]
 
-      console.log('dataCinema')
-      console.log(dataCinema)
+      // 更新瀏覽數
+      dataCinema.cinemaPageViews = +dataCinema.cinemaPageViews + 1
+      const response = await fetch(
+        'http://localhost:5555/cinema/' + this.props.match.params.id,
+        {
+          method: 'PUT',
+          body: JSON.stringify(dataCinema),
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        }
+      )
+      const jsonObject = await response.json()
+
       //會員
       const resMember = await fetch('http://localhost:5555/member', {
         method: 'GET',
@@ -91,26 +107,20 @@ class TheateInfo extends React.Component {
       // 所以該劇院的活動資料就是 dataActivity
 
       // 影片
-      const resFilm = await fetch('http://localhost:5555/filmData', {
+      const resFilm = await fetch('http://localhost:5555/movieCardData', {
         method: 'GET',
         headers: new Headers({
           Accept: 'application/json',
           'Content-Type': 'application/json',
         }),
       })
-      //完整得影片資料
+      // 完整得影片資料
       const dataFil = await resFilm.json()
-      // 篩選出影片json中上映影院根本影院一樣的
-      const dataFilm = []
-      dataFil.map(item => {
-        item.moviecinema.map(item1 => {
-          if (item1 === dataCinema.id) {
-            dataFilm.push(item)
-          }
-        })
-        return item
-      })
-      // 所以該劇院的影片資料就是 dataFilm
+
+      // 篩選出影片json中上映影院和本影院一樣的
+      const dataFilm = dataFil.filter(
+        el => el.theater === dataCine[0].cinemaName
+      )
 
       // HeroSection參數整理
       const HeroSection = {
@@ -120,7 +130,7 @@ class TheateInfo extends React.Component {
           (dataCinema.cinemaCity ? dataCinema.cinemaCity : '') +
           '/' +
           (dataCinema.cinemaArea ? dataCinema.cinemaArea : ''),
-        smallSlogan: dataCinema.cinemaInfoText,
+        smallSlogan: dataCinema.cinemaIntro,
       }
 
       // 大卡片參數整理 戲院+會員
@@ -156,14 +166,17 @@ class TheateInfo extends React.Component {
         // 如果你沒登陸或是沒評過分 一開始就顯示平均分數
       } else {
         const dataStarArray = thisCinema.cinemaStar.map(el => el.star)
-        const dataStarSum = dataStarArray.reduce((a, b) => a + b)
-        const dataStarAverage = dataStarSum / dataStarArray.length
-        dataStar = Math.round(dataStarAverage)
+        if (dataStarArray.length === 0) {
+          dataStar = 0
+        } else {
+          const dataStarSum = dataStarArray.reduce((a, b) => a + b)
+          const dataStarAverage = dataStarSum / dataStarArray.length
+          dataStar = Math.round(dataStarAverage)
+        }
       }
-
       const BigCarData = {
         id: dataCinema.id,
-        img: dataCinema.cinemaHeroImg,
+        img: dataCinema.cinemaLogoImg,
         address: dataCinema.cinemaAddress,
         phone: dataCinema.cinemaPhone,
         taxid: dataCinema.cinemaTaxid,
@@ -180,13 +193,13 @@ class TheateInfo extends React.Component {
         starLength: starLength,
       }
 
+      this.setState({ BigCarData: BigCarData })
       // 照片框參數整理
       const SliderData = {
         id: dataCinema.id,
         img: dataCinema.cinemaImg,
       }
-      console.log('dataThisMember')
-      console.log(dataThisMember)
+
       // 活動小卡片參數整理
       const ActivityCardData = dataActivity.map(item => ({
         key: item.id,
@@ -197,7 +210,10 @@ class TheateInfo extends React.Component {
           item.content.length > 12
             ? item.content.slice(0, 12) + '...'
             : item.content,
-        img: item.imgSrc,
+        img:
+          item.imgSrc.indexOf('http') == 0
+            ? item.imgSrc
+            : '/images/activityImg/' + item.imgSrc,
         // 因為是原頁面跳轉 所以直接帶這樣才能實現跳轉
         link: '/activity/' + item.id,
         // 不先驗證是否有會員的會會跳錯
@@ -205,27 +221,60 @@ class TheateInfo extends React.Component {
       }))
 
       // 影片小卡片需要參數
-      const FilmCardData = dataFilm.map(item => ({
-        key: item.id,
-        id: item.id,
-        title:
-          item.name_tw.length > 6
-            ? item.name_tw.slice(0, 6) + '...'
-            : item.name_tw, //
-        subtitle:
-          item.name_en.length > 12
-            ? item.name_en.slice(0, 12) + '...'
-            : item.name_en,
-        img: item.movie_pic,
-        // 因為是原頁面跳轉 所以直接帶這樣才能實現跳轉
-        link: '/movie/' + item.id,
-        // 不先驗證是否有會員的會會跳錯
-        collection: memberId
-          ? String(
-              dataThisMember[0].collectFilm.some(item1 => item1 === item.id)
-            )
-          : [],
-      }))
+      const FilmCardData = dataFilm.map(item => {
+        return {
+          key: item.id,
+          id: item.id,
+          title:
+            item.title.length > 6 ? item.title.slice(0, 6) + '...' : item.title, //
+          subtitle:
+            item.titleEn.length > 12
+              ? item.titleEn.slice(0, 12) + '...'
+              : item.titleEn,
+          img:
+            item.imgSrc.indexOf('http') == 0
+              ? item.imgSrc
+              : '/images/movieImg/' + item.imgSrc,
+          // 因為是原頁面跳轉 所以直接帶這樣才能實現跳轉
+          link: '/movie/' + item.id,
+          // 不先驗證是否有會員的會會跳錯
+          collection: memberId
+            ? String(
+                dataThisMember[0].collectFilm.some(item1 => item1 === item.id)
+              )
+            : [],
+        }
+      })
+
+      // dataAllCinema 全部戲院的原始資料
+      // dataCinema 這頁顯示的戲院原始資料
+      const elseCardDat = dataAllCinema.filter(
+        el => el.cinemaType === dataCinema.cinemaType
+      )
+      const elseCardData = elseCardDat.filter(el => el.id !== dataCinema.id)
+      console.log('elseCardData')
+      console.log(elseCardData)
+      const elseCardFourData = []
+      elseCardData.map((el, index) => {
+        if (index < 4) {
+          elseCardFourData.push(el)
+        }
+        return el
+      })
+
+      const elseCard = elseCardFourData.map(el => {
+        return {
+          key: el.id,
+          id: el.id,
+          title: el.cinemaName,
+          subtitle: el.cinemaCity + '/' + el.cinemaArea,
+          img: 'http://localhost:3000/images/cinemaImg/' + el.cinemaHeroImg,
+          // 因為是原頁面跳轉 所以直接帶這樣才能實現跳轉
+          link: '/cinema/' + dataCinema.id + '/' + el.id,
+          // 不先驗證是否有會員的會會跳錯
+          collection: [],
+        }
+      })
 
       this.setState({
         cinemaData: dataCinema,
@@ -235,15 +284,19 @@ class TheateInfo extends React.Component {
         activityData: dataAct,
         filmData: dataFil,
         HeroSection: HeroSection,
-        BigCarData: BigCarData,
         SliderData: SliderData,
         ActivityCardData: ActivityCardData,
         FilmCardData: FilmCardData,
         MessageBoard: dataCinema.cinemaMessage,
+        elseCard: elseCard,
       })
     } catch (err) {
       console.log(err)
     }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
   // 大卡按讚功能跟資料庫對接----完成
@@ -252,36 +305,15 @@ class TheateInfo extends React.Component {
     //按讚資料改變只影響到戲院本身資料 所以先做好要蓋回戲院的資料
     try {
       //改變後的資料
-      const NewMemberData = {
-        id: this.state.cinemaData.id,
-        cinemaName: this.state.cinemaData.cinemaName,
-        cinemaCity: this.state.cinemaData.cinemaCity,
-        cinemaArea: this.state.cinemaData.cinemaArea,
-        cinemaLogoImg: this.state.cinemaData.cinemaLogoImg,
-        cinemaImg: this.state.cinemaData.cinemaImg,
-        cinemaHeroImg: this.state.cinemaData.cinemaHeroImg,
-        cinemaInfoText: this.state.cinemaData.cinemaInfoText,
-        cinemaAccount: this.state.cinemaData.cinemaAccount,
-        cinemaPassword: this.state.cinemaData.cinemaPassword,
-        cinemaStar: this.state.cinemaData.cinemaStar,
-        cinemaAddress: this.state.cinemaData.cinemaAddress,
-        cinemaPhone: this.state.cinemaData.cinemaPhone,
-        cinemaTaxid: this.state.cinemaData.cinemaTaxid,
-        cinemaWeb: this.state.cinemaData.cinemaWeb,
-        cinemaEmail: this.state.cinemaData.cinemaEmail,
-        cinemaBackupEmail: this.state.cinemaData.cinemaBackupEmail,
-        cinemaAwesome: newAwesome,
-        cinemaPageViews: this.state.cinemaData.cinemaPageViews,
-        cinemaSignUpDate: this.state.cinemaData.cinemaSignUpDate,
-        permission: this.state.cinemaData.permission,
-        cinemaMessage: this.state.cinemaData.cinemaMessage,
-      }
+      const newCinemaData = this.state.cinemaData
+      newCinemaData.cinemaAwesome = newAwesome
+
       //蓋回去資料庫
       const response = await fetch(
         'http://localhost:5555/cinema/' + this.props.match.params.id,
         {
           method: 'PUT',
-          body: JSON.stringify(NewMemberData),
+          body: JSON.stringify(newCinemaData),
           headers: new Headers({
             Accept: 'application/json',
             'Content-Type': 'application/json',
@@ -327,29 +359,9 @@ class TheateInfo extends React.Component {
       memberThisDataOutArray = this.state.memberThisData
     }
     try {
-      const NewMemberData = {
-        id: memberThisDataOutArray.id,
-        name: memberThisDataOutArray.name,
-        nickname: memberThisDataOutArray.nickname,
-        gender: memberThisDataOutArray.gender,
-        mobile: memberThisDataOutArray.mobile,
-        birth: memberThisDataOutArray.birth,
-        email: memberThisDataOutArray.email,
-        pwd: memberThisDataOutArray.pwd,
-        avatar: memberThisDataOutArray.avatar,
-        city: memberThisDataOutArray.city,
-        address: memberThisDataOutArray.address,
-        fav_type: memberThisDataOutArray.fav_type,
-        career: memberThisDataOutArray.career,
-        join_date: memberThisDataOutArray.permission,
-        permission: memberThisDataOutArray.permission,
-        collectFilm: memberThisDataOutArray.collectFilm,
-        collectCinema: newCollectionm,
-        collectArticle: memberThisDataOutArray.collectArticle,
-        collectActivity: memberThisDataOutArray.collectActivity,
-        collectForum: memberThisDataOutArray.collectForum,
-        markList: memberThisDataOutArray.markList,
-      }
+      const NewMemberData = memberThisDataOutArray
+      NewMemberData.collectCinema = newCollectionm
+
       //蓋回去資料庫
       const response = await fetch('http://localhost:5555/member/' + memberId, {
         method: 'PUT',
@@ -402,11 +414,7 @@ class TheateInfo extends React.Component {
       memberThisDataOutArray = this.state.memberThisData
     }
     // 驗證現在這個會員的收藏裡是否已有收藏過
-    console.log('memberThisDataOutArray')
-    console.log(memberThisDataOutArray)
-    let haveTrueOrFalse = memberThisDataOutArray.collectFilm.some(
-      item => item === id
-    )
+    // 這邊拿到最新的NewMemberData.collectFilm陣列
     let newCollectionData = []
     if (val === 'false') {
       // 如果回傳是false 等等要裝進去的資料就是拿掉此影片以外的所有收藏id
@@ -417,29 +425,11 @@ class TheateInfo extends React.Component {
       // 如果回傳是true 就加上去
       newCollectionData = [...memberThisDataOutArray.collectFilm, id]
     }
-    const NewMemberData = {
-      id: memberThisDataOutArray.id,
-      name: memberThisDataOutArray.name,
-      nickname: memberThisDataOutArray.nickname,
-      gender: memberThisDataOutArray.gender,
-      mobile: memberThisDataOutArray.mobile,
-      birth: memberThisDataOutArray.birth,
-      email: memberThisDataOutArray.email,
-      pwd: memberThisDataOutArray.pwd,
-      avatar: memberThisDataOutArray.avatar,
-      city: memberThisDataOutArray.city,
-      address: memberThisDataOutArray.address,
-      fav_type: memberThisDataOutArray.fav_type,
-      career: memberThisDataOutArray.career,
-      join_date: memberThisDataOutArray.permission,
-      permission: memberThisDataOutArray.permission,
-      collectFilm: newCollectionData,
-      collectCinema: memberThisDataOutArray.collectCinema,
-      collectArticle: memberThisDataOutArray.collectArticle,
-      collectActivity: memberThisDataOutArray.collectActivity,
-      collectForum: memberThisDataOutArray.collectForum,
-      markList: memberThisDataOutArray.markList,
-    }
+
+    // 把剛拿到最新的陣列丟回去這個會員的會員資料中
+    const NewMemberData = memberThisDataOutArray
+    NewMemberData.collectFilm = newCollectionData
+
     // //蓋回去資料庫
     const response = await fetch('http://localhost:5555/member/' + memberId, {
       method: 'PUT',
@@ -492,29 +482,9 @@ class TheateInfo extends React.Component {
       // 如果回傳是true 就加上去
       newCollectionData = [...memberThisDataOutArray.collectFilm, id]
     }
-    const NewMemberData = {
-      id: memberThisDataOutArray.id,
-      name: memberThisDataOutArray.name,
-      nickname: memberThisDataOutArray.nickname,
-      gender: memberThisDataOutArray.gender,
-      mobile: memberThisDataOutArray.mobile,
-      birth: memberThisDataOutArray.birth,
-      email: memberThisDataOutArray.email,
-      pwd: memberThisDataOutArray.pwd,
-      avatar: memberThisDataOutArray.avatar,
-      city: memberThisDataOutArray.city,
-      address: memberThisDataOutArray.address,
-      fav_type: memberThisDataOutArray.fav_type,
-      career: memberThisDataOutArray.career,
-      join_date: memberThisDataOutArray.permission,
-      permission: memberThisDataOutArray.permission,
-      collectFilm: memberThisDataOutArray.collectFilm,
-      collectCinema: memberThisDataOutArray.collectCinema,
-      collectArticle: memberThisDataOutArray.collectArticle,
-      collectActivity: newCollectionData,
-      collectForum: memberThisDataOutArray.collectForum,
-      markList: memberThisDataOutArray.markList,
-    }
+    const NewMemberData = memberThisDataOutArray
+    NewMemberData.collectActivity = newCollectionData
+
     // //蓋回去資料庫
     // const response = await fetch('http://localhost:5555/member/' + memberId, {
     //   method: 'PUT',
@@ -616,9 +586,11 @@ class TheateInfo extends React.Component {
     })
   }
 
-  //星星數改變接資料庫----完成
+  // 大卡星星數改變接資料庫----完成
   StarChange = async (id, star) => {
     // 先判斷對方有沒有平過分
+    console.log('this.state.cinemaData')
+    console.log(this.state.cinemaData)
     let hadOrNot = this.state.cinemaData.cinemaStar.some(
       el => el.starId === memberId
     )
@@ -662,226 +634,331 @@ class TheateInfo extends React.Component {
     const jsonObject = await resCinema.json()
     console.log(jsonObject)
   }
+
+  handleScroll = event => {
+    console.log()
+    if (window.pageYOffset > document.body.offsetHeight - 1200) {
+      document.querySelector('.elseCard').style =
+        // 'bottom:-' + window.pageYOffset + 'px'
+        'left:0;opacity:1'
+    }
+    if (window.pageYOffset <= document.body.offsetHeight - 1000) {
+      document.querySelector('.elseCard').style =
+        // 'bottom:-' + window.pageYOffset + 'px'
+        'left:-100%;opacity:0'
+    }
+    console.log('the scroll things', window.pageYOffset)
+  }
+
+  elseCardExitHandleOver = () => {
+    document.querySelector('#elseCardBtn').style =
+      'background:rgba(0, 0, 0, 0.2) ; color:#ffa510 ; font-size:80px'
+  }
+
+  elseCardExitHandleOut = () => {
+    document.querySelector('#elseCardBtn').style =
+      'background:rgba(0, 0, 0, 0) ; font-size:60px'
+  }
+
+  elseCardExitHandleClick = () => {
+    document.querySelector('.elseCard').style = 'left:-100% ; opacity:0'
+  }
+
   render() {
     return (
       <>
-        {/* 英雄頁面----串接完成 */}
-        <CinemaSection
-          pictureSrc={
-            'http://localhost:3000/images/cinemaImg/' +
-            this.state.HeroSection.pictureSrc
-          }
-          bigSlogan={this.state.HeroSection.bigSlogan}
-          midSlogan={this.state.HeroSection.midSlogan}
-          smallSlogan={this.state.HeroSection.smallSlogan}
-        />
+        <div className="overflow-hidden">
+          {/* 英雄頁面----串接完成 */}
+          <CinemaSection
+            pictureSrc={
+              'http://localhost:3000/images/cinemaImg/' +
+              this.state.HeroSection.pictureSrc
+            }
+            bigSlogan={this.state.HeroSection.bigSlogan}
+            midSlogan={this.state.HeroSection.midSlogan}
+            smallSlogan={this.state.HeroSection.smallSlogan}
+          />
 
-        <div
-          className="container-fluid h-100"
-          style={{ padding: '100px 120px' }}
-        >
-          {/* 大的卡片----製作與串接完成 */}
-          <TitleKaga title="戲院資訊" />
-          <div className="h-100 d-flex justify-content-center">
-            {memberId ? (
-              <CardLargeKaga
-                key={this.state.BigCarData.id}
-                id={this.state.BigCarData.id}
-                img={
-                  'http://localhost:3000/images/cinemaImg/' +
-                  this.state.BigCarData.img
-                }
-                address={this.state.BigCarData.address}
-                phone={this.state.BigCarData.phone}
-                taxid={this.state.BigCarData.taxid}
-                web={this.state.BigCarData.web}
-                email={this.state.BigCarData.email}
-                awesome={this.state.BigCarData.awesome}
-                awesomeLength={this.state.BigCarData.awesomeLength}
-                pageviews={this.state.BigCarData.pageviews}
-                collection={this.state.BigCarData.collection}
-                collectionLength={this.state.BigCarData.collectionLength}
-                awesomeClick={this.awesomeClick}
-                collectionClick={this.collectionClick}
-                wantStar
-                star={this.state.BigCarData.star}
-                StarChange={this.StarChange}
-                starLength={this.state.BigCarData.starLength}
-              />
-            ) : (
-              <CardLargeKaga
-                key={this.state.BigCarData.id}
-                id={this.state.BigCarData.id}
-                img={
-                  'http://localhost:3000/images/cinemaImg/' +
-                  this.state.BigCarData.img
-                }
-                address={this.state.BigCarData.address}
-                phone={this.state.BigCarData.phone}
-                taxid={this.state.BigCarData.taxid}
-                web={this.state.BigCarData.web}
-                email={this.state.BigCarData.email}
-                awesome={this.state.BigCarData.awesome}
-                awesomeLength={this.state.BigCarData.awesomeLength}
-                pageviews={this.state.BigCarData.pageviews}
-                collection={this.state.BigCarData.collection}
-                collectionLength={this.state.BigCarData.collectionLength}
-                awesomeClick={this.awesomeClick}
-                collectionClick={this.collectionClick}
-                justStar
-                star={this.state.BigCarData.star}
-                starLength={this.state.BigCarData.starLength}
-              />
-            )}
-          </div>
-
-          {/* 圖片列 */}
-          <div className="py-5">
-            <TitleKaga title="環境照片" />
-          </div>
-          <Row className="justify-content-md-center w-100">
-            <Col md={11}>
-              <CinemaSlider sData={this.state.SliderData} />
-            </Col>
-          </Row>
-
-          {/* 上映影片卡片 */}
-          <div className="py-5">
-            <TitleKaga title="目前上映" />
-          </div>
-          <div className="row justify-content-center">
-            <div
-              className=" d-flex flex-wrap col-lg-10"
-              style={{
-                height: '100%',
-                weight: '100%',
-                overflow: 'hidden',
-              }}
-            >
-              {this.state.FilmCardData.length !== 0 ? (
-                memberId !== null ? (
-                  this.state.FilmCardData.map(item => (
-                    <CardKaga
-                      key={item.id}
-                      id={item.id}
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      img={'http://localhost:3000/images/' + item.img}
-                      link={item.link}
-                      collectionIcon
-                      collectionClick={this.collectionClickFilm}
-                      collection={item.collection}
-                    />
-                  ))
-                ) : (
-                  this.state.FilmCardData.map(item => (
-                    <CardKaga
-                      key={item.id}
-                      id={item.id}
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      img={'http://localhost:3000/images/' + item.img}
-                      link={item.link}
-                    />
-                  ))
-                )
-              ) : (
-                <div
-                  className="d-flex justify-content-center align-items-center w-100"
-                  style={{ height: '300px', fontSize: '30px' }}
-                >
-                  目前沒有進行中的活動喔
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* 活動卡片 */}
-          <div className="py-5">
-            <TitleKaga title="目前進行中活動" />
-          </div>
-          <div className="row justify-content-center">
-            <div
-              className=" d-flex flex-wrap col-lg-10"
-              style={{
-                height: '100%',
-                weight: '100%',
-                overflow: 'hidden',
-              }}
-            >
-              {this.state.ActivityCardData.length !== 0 ? (
-                memberId !== null ? (
-                  this.state.ActivityCardData.map(item => (
-                    <CardKaga
-                      key={item.id}
-                      id={item.id}
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      img={item.img}
-                      link={item.link}
-                      collectionIcon
-                      collectionClick={this.collectionClickActivity}
-                      collection={item.collection}
-                    />
-                  ))
-                ) : (
-                  this.state.ActivityCardData.map(item => (
-                    <CardKaga
-                      key={item.id}
-                      id={item.id}
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      img={item.img}
-                      link={item.link}
-                    />
-                  ))
-                )
-              ) : (
-                <div
-                  className="d-flex justify-content-center align-items-center w-100"
-                  style={{ height: '300px', fontSize: '30px' }}
-                >
-                  目前沒有進行中的活動喔
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* 留言板區塊 */}
-          <div className="col h-100">
-            <div className="py-5">
-              <TitleKaga title="評論區" />
-            </div>
-            {this.state.MessageBoard.map((item, index) =>
-              index < this.state.messageLength ? (
-                <MessageBoard
-                  listData={item}
+          <div
+            className="container-fluid h-100 "
+            style={{ padding: '100px 120px' }}
+          >
+            {/* 大的卡片----製作與串接完成 */}
+            <TitleKaga title="戲院資訊" />
+            <div className="h-100 d-flex justify-content-center" id="bigCard">
+              {memberId ? (
+                <CardLargeKaga
+                  key={this.state.BigCarData.id}
+                  id={this.state.BigCarData.id}
+                  img={
+                    'http://localhost:3000/images/cinemaImg/' +
+                    this.state.BigCarData.img
+                  }
+                  address={this.state.BigCarData.address}
+                  phone={this.state.BigCarData.phone}
+                  taxid={this.state.BigCarData.taxid}
+                  web={this.state.BigCarData.web}
+                  email={this.state.BigCarData.email}
+                  awesome={this.state.BigCarData.awesome}
+                  awesomeLength={this.state.BigCarData.awesomeLength}
+                  pageviews={this.state.BigCarData.pageviews}
+                  collection={this.state.BigCarData.collection}
+                  collectionLength={this.state.BigCarData.collectionLength}
                   awesomeClick={this.awesomeClick}
-                  booeClick={this.booeClick}
+                  collectionClick={this.collectionClick}
+                  wantStar
+                  star={this.state.BigCarData.star}
+                  StarChange={this.StarChange}
+                  starLength={this.state.BigCarData.starLength}
+                  collectionColor={
+                    this.state.BigCarData.collection !== undefined
+                      ? this.state.BigCarData.collection.some(
+                          el => el === this.state.BigCarData.id
+                        )
+                      : []
+                  }
+                  awesomeColor={
+                    this.state.BigCarData.awesome !== undefined
+                      ? this.state.BigCarData.awesome.some(
+                          el => el === memberId
+                        )
+                      : []
+                  }
                 />
               ) : (
-                ''
-              )
-            )}
-            <div className="d-flex justify-content-center">
-              {this.state.MessageBoard.length > this.state.messageLength ? (
-                <button
-                  type="button"
-                  class="btn btn-outline-warning mb-5 mx-auto"
-                  onClick={this.messageLengthChange}
-                >
-                  更多評論
-                </button>
-              ) : (
-                ''
+                <CardLargeKaga
+                  key={this.state.BigCarData.id}
+                  id={this.state.BigCarData.id}
+                  img={
+                    'http://localhost:3000/images/cinemaImg/' +
+                    this.state.BigCarData.img
+                  }
+                  address={this.state.BigCarData.address}
+                  phone={this.state.BigCarData.phone}
+                  taxid={this.state.BigCarData.taxid}
+                  web={this.state.BigCarData.web}
+                  email={this.state.BigCarData.email}
+                  awesome={this.state.BigCarData.awesome}
+                  awesomeLength={this.state.BigCarData.awesomeLength}
+                  pageviews={this.state.BigCarData.pageviews}
+                  collection={this.state.BigCarData.collection}
+                  collectionLength={this.state.BigCarData.collectionLength}
+                  awesomeClick={this.awesomeClick}
+                  collectionClick={this.collectionClick}
+                  justStar
+                  star={this.state.BigCarData.star}
+                  starLength={this.state.BigCarData.starLength}
+                  collectionColor={false}
+                  awesomeColor={false}
+                />
               )}
             </div>
-            <MessageBoardInput MessageBoardSave={this.MessageBoardSave} />
+
+            {/* 圖片列 */}
+            <div className="py-5">
+              <TitleKaga title="環境照片" />
+            </div>
+            <div style={{ height: '400px' }}>
+              <Row className="justify-content-md-center w-100">
+                <Col md={11}>
+                  <CinemaSlider sData={this.state.SliderData} />
+                </Col>
+              </Row>
+            </div>
+
+            {/* 上映影片卡片 */}
+            <div className="py-5">
+              <TitleKaga title="目前上映" />
+            </div>
+            <div className="row justify-content-center">
+              <div
+                className=" d-flex flex-wrap col-lg-10"
+                style={{
+                  height: '100%',
+                  weight: '100%',
+                  overflow: 'hidden',
+                }}
+              >
+                {this.state.FilmCardData.length !== 0 ? (
+                  memberId !== null ? (
+                    this.state.FilmCardData.map(item => (
+                      <CardKaga
+                        key={item.id}
+                        id={item.id}
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        img={item.img}
+                        link={item.link}
+                        collectionIcon
+                        collectionClick={this.collectionClickFilm}
+                        collection={item.collection}
+                      />
+                    ))
+                  ) : (
+                    this.state.FilmCardData.map(item => (
+                      <CardKaga
+                        key={item.id}
+                        id={item.id}
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        img={item.img}
+                        link={item.link}
+                      />
+                    ))
+                  )
+                ) : (
+                  <div
+                    className="d-flex justify-content-center align-items-center w-100"
+                    style={{ height: '300px', fontSize: '30px' }}
+                  >
+                    目前沒有上架的影片喔
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* 活動卡片 */}
+            <div className="py-5">
+              <TitleKaga title="目前進行中活動" />
+            </div>
+            <div className="row justify-content-center">
+              <div
+                className=" d-flex flex-wrap col-lg-10"
+                style={{
+                  height: '100%',
+                  weight: '100%',
+                  overflow: 'hidden',
+                }}
+              >
+                {this.state.ActivityCardData.length !== 0 ? (
+                  memberId !== null ? (
+                    this.state.ActivityCardData.map(item => (
+                      <CardKaga
+                        key={item.id}
+                        id={item.id}
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        img={item.img}
+                        link={item.link}
+                        collectionIcon
+                        collectionClick={this.collectionClickActivity}
+                        collection={item.collection}
+                      />
+                    ))
+                  ) : (
+                    this.state.ActivityCardData.map(item => (
+                      <CardKaga
+                        key={item.id}
+                        id={item.id}
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        img={item.img}
+                        link={item.link}
+                      />
+                    ))
+                  )
+                ) : (
+                  <div
+                    className="d-flex justify-content-center align-items-center w-100"
+                    style={{ height: '300px', fontSize: '30px' }}
+                  >
+                    目前沒有進行中的活動喔
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* 留言板區塊 */}
+            <div className="col h-100">
+              <div className="py-5">
+                <TitleKaga title="評論區" />
+              </div>
+              {this.state.MessageBoard.map((item, index) =>
+                index < this.state.messageLength ? (
+                  <MessageBoard
+                    listData={item}
+                    awesomeClick={this.awesomeClick}
+                    booeClick={this.booeClick}
+                  />
+                ) : (
+                  ''
+                )
+              )}
+              <div className="d-flex justify-content-center">
+                {this.state.MessageBoard.length > this.state.messageLength ? (
+                  <button
+                    type="button"
+                    class="btn btn-outline-warning mb-5 mx-auto"
+                    onClick={this.messageLengthChange}
+                  >
+                    更多評論
+                  </button>
+                ) : (
+                  ''
+                )}
+              </div>
+              <MessageBoardInput MessageBoardSave={this.MessageBoardSave} />
+            </div>
+            {/* <div style={{ height: '10px' }} /> */}
           </div>
-          <div style={{ height: '10px' }} />
+        </div>
+
+        <div id="elseCard" class="elseCard d-flex justify-content-end">
+          {/* 標題區 */}
+          <div
+            id="elseCardBtn"
+            onMouseOver={this.elseCardExitHandleOver}
+            onMouseOut={this.elseCardExitHandleOut}
+            onClick={this.elseCardExitHandleClick}
+            className="col-1 mt-0 d-flex justify-content-center h-100 align-items-center"
+            style={{ fontSize: '60px' }}
+          >
+            <i class="fas fa-arrow-circle-left" />
+          </div>
+          {/* 內容區 */}
+          <div className="d-flex flex-column col-11">
+            {cinemaId ? (
+              <>
+                <div className="py-2 text-white">
+                  <TitleKaga title="相似對手" />
+                </div>
+                <div className="d-flex flex-wrap col-lg-11">
+                  {this.state.elseCard.map(item => (
+                    <CardKaga
+                      key={item.id}
+                      id={item.id}
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      img={item.img}
+                      link={item.link}
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="py-2 text-white mb-2">
+                  <TitleKaga title="推薦戲院" />
+                </div>
+                <div className="d-flex flex-wrap col-lg-11">
+                  {this.state.elseCard.map(item => (
+                    <CardKaga
+                      key={item.id}
+                      id={item.id}
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      img={item.img}
+                      link={item.link}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </>
     )
   }
 }
+
 export default TheateInfo

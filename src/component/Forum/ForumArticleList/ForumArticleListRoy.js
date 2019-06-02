@@ -10,13 +10,14 @@ const ForumArticleListRoy = props => {
   return (
     <>
       <div
+        id={'listHover' + props.currentId}
         // type="button"
-        className=" px-4 p-2  my-2"
+        className=" px-4 p-2  my-2 mx-1"
         onClick={props.onClick}
         style={{
           border: 'none',
-          background: 'none',
-          boxShadow: '0 2px 6px #191C20',
+          background: '#242B34',
+          boxShadow: ' 0px 2px 6px #000000',
         }}
       >
         {/* 列表上排 */}
@@ -33,7 +34,7 @@ const ForumArticleListRoy = props => {
           style={{ height: '40px' }}
         >
           {/* 個人頭像，包含名稱與照片 */}
-          <div className="col-6 p-0">
+          <div className="col-5 p-0">
             <ListAvatarRoy
               listforumName={props.listforumName}
               listforumAvatar={props.listforumAvatar}
@@ -42,13 +43,18 @@ const ForumArticleListRoy = props => {
             />
           </div>
           {/* 發文時間 */}
-          <div className="col-6 p-0">
-            <ListIssueDateRoy listforumCreateDate={props.listforumCreateDate} />{' '}
+          <div className="col-5 p-0">
+            <ListIssueDateRoy listforumCreateDate={props.listforumCreateDate} />
           </div>
           {/* 觀看次數 */}
-          {/* <div className="col-3 p-0 d-flex justify-content-end">
-            <ListViewsRoy listforumViews={props.listforumViews} />
-          </div> */}
+          <div className="col-2 p-0 d-flex justify-content-end">
+            <ListViewsRoy
+              // 共用排序傳遞的數據，根據不同STATE引入帶入不同值
+              listforumViews={props.listforumViews}
+              // 切換列表顯示的圖片是根據哪種排序
+              listFilterAccorddingPic={props.listFilterAccorddingPic}
+            />
+          </div>
         </div>
       </div>
     </>

@@ -45,7 +45,7 @@ const MemberBackSidenav = props => {
       >
         <div
           style={{
-            height: '194px',
+            height: '240px',
           }}
         />
         <h3 className="text-center mb-4">會員中心</h3>

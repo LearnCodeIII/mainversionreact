@@ -1,9 +1,9 @@
-import React from 'react';
-import './article.css';
-import ArticleCard from './ArticleCard';
+import React from 'react'
+import './article.css'
+import ArticleCard from './ArticleCard'
 
 const ArticleList = props => {
-  console.log('ArticleListKey' + props.sid);
+  // console.log('ArticleListKey' + props.sid)
   return (
     <ArticleCard
       sid={props.sid}
@@ -12,7 +12,7 @@ const ArticleList = props => {
       cardText={props.cardText}
       isMarked={props.isMarked}
     />
-  );
-};
+  )
+}
 
-export default ArticleList;
+export default ArticleList

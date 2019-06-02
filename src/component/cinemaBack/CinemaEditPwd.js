@@ -4,6 +4,14 @@ import InputWithLabel_Su from '../inputs/InputWithLabel_Su'
 import CheckboxMultiSu from '../inputs/CheckboxMultiSu'
 import ActivityTitle from '../activity/ActivityTitle/ActivityTitle'
 import { Row } from 'react-bootstrap'
+//Import SweetAlert2
+import Swal from 'sweetalert2'
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'center',
+  showConfirmButton: false,
+  timer: 3000,
+})
 
 class CinemaEditInfo extends React.Component {
   constructor(props) {
@@ -59,15 +67,21 @@ class CinemaEditInfo extends React.Component {
           .then(res => res.json())
           .then(jsonObject => {
             this.setState({ thisData: jsonObject }, () => {
-              alert('資料儲存成功')
-              window.location.reload()
+              Toast.fire({
+                type: 'success',
+                title: '密碼更改完成！',
+              })
+              setTimeout(() => window.location.reload(), 1500)
             })
           })
       } catch (e) {
         console.log(e)
       }
     } else {
-      alert('資料填寫有誤，請再次確認您的資料！')
+      Toast.fire({
+        type: 'error',
+        title: '資料填寫有誤，請再次確認您的資料！',
+      })
     }
   }
 

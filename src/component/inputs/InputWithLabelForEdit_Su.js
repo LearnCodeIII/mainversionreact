@@ -33,7 +33,7 @@ import InputRadioForCinemaTypeSu from './InputRadioForCinemaTypeSu'
 //----------------我是分隔線----------------
 //=====以下是 Label (col-lg-3) + Input (col-lg-8) 的組合元件======
 
-const InputWithLabel_Su = props => {
+const InputWithLabelForEdit_Su = props => {
   return (
     <>
       <Row className="my-4">
@@ -104,6 +104,9 @@ const InputWithLabel_Su = props => {
               onChange={props.onChange}
               thisData={props.thisData}
               multiple={props.multiple}
+              iconRight={props.iconRight ? props.iconRight : "fas fa-upload"}
+              iconRightSize={props.iconRightSize}
+
             />
           ) : props.inputType === 'radio' ? (
             <InputRadio_Su
@@ -147,6 +150,21 @@ const InputWithLabel_Su = props => {
               value={props.thisData[props.id]}
               thisData={props.thisData}
             />
+          ) : props.inputType === 'date' ? (
+            <InputText_Su
+              inputWidth={props.inputWidth}
+              inputHeight={props.inputHeight}
+              id={props.id}
+              iconLeft={props.iconLeft}
+              iconLeftSize={props.iconLeftSize}
+              name={props.id}
+              selectOptions={props.selectOptions}
+              onChange={props.onChange}
+              col={props.col}
+              value={props.thisData[props.id]}
+              thisData={props.thisData}
+              type="date"
+            />
           ) : (
             '找不到符合的input類型'
           )}
@@ -156,4 +174,4 @@ const InputWithLabel_Su = props => {
   )
 }
 
-export default InputWithLabel_Su
+export default InputWithLabelForEdit_Su

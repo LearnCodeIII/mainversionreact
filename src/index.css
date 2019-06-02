@@ -5,7 +5,7 @@
 html,
 body {
   width: 100%;
-  background: #242b34;
+  background: #242b34 !important;
   margin: 0 !important;
   padding: 0 !important;
   font-family: 'Noto Sans TC', sans-serif;
@@ -13,8 +13,8 @@ body {
   color: #d4d1cc !important;
   scroll-behavior: smooth;
 }
-.container-fluid{
- padding:0; 
+.container-fluid {
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -28,13 +28,13 @@ container-fluid {
   margin: 0;
   /* max-width: 100%; */
 }
-.fit-image{
+.fit-image {
   object-fit: cover !important;
   height: 400px !important;
-  }
-@media screen and (max-width:540px){
-  h2{
-    font-size:18px !important;
+}
+@media screen and (max-width: 540px) {
+  h2 {
+    font-size: 18px !important;
   }
   h3 {
     font-size: 16px !important;
@@ -157,6 +157,9 @@ button {
 }
 .btn-outline-warning:hover {
   color: #2b333d !important;
+}
+.btn.btn-warning:hover {
+  filter: brightness(85%) !important;
 }
 
 .bg-warning {
@@ -329,6 +332,9 @@ input.activitySearch::placeholder {
 .bg-back-table {
   background: #394149;
 }
+.bg-back-input {
+  background: #1f242a;
+}
 button.bg-orange {
   border: 2px solid #ffa510;
 }
@@ -339,10 +345,41 @@ button.bg-orange {
   color: #ffa510;
   text-decoration: none;
 }
+.sidenavOption {
+  font-size: 18px;
+}
 .sidenavOption,
 .sidenavOptionTitle {
   margin: 0 !important;
 }
+.inputFontSizeSu {
+  font-size: 18px;
+}
+.inputFileChooseBtn {
+  border-top: 2px solid #ffa510;
+  border-bottom: 2px solid #ffa510;
+  border-right: 2px solid #ffa510;
+}
+.inputFileNameDiv {
+  border-top: 2px solid #ffa510;
+  border-bottom: 2px solid #ffa510;
+  border-left: 2px solid #ffa510;
+}
+.btn.btn-warning.addFilmSchedule {
+  border: 1px solid #ffa510 !important;
+}
+.addFilmSchedule:hover {
+  box-shadow: #d4d1cc 0px 0px 2px;
+  transform: scale(1.2, 1.2);
+  filter: brightness(110%);
+}
+.btnTableEdit {
+  font-size: 18px;
+}
+.btnTableEdit:hover {
+  color: #242b34;
+}
+
 /* -----------------------------------------------------Kaga */
 .cardAreaBgKaga {
   background-position: center;
@@ -372,6 +409,56 @@ button.bg-orange {
 }
 .cardStar {
   color: #ffa510;
+  transition: 0.5s;
+}
+
+.CardHover {
+  transition: 0.5s;
+  opacity: 0.7;
+  transform: scale(1);
+  box-shadow: 0 0 3px #1f242a;
+}
+.CardHoverBig {
+  transition: 0.3s;
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px #111;
+}
+.elseCard {
+  display: flex;
+  align-items: center;
+  background: rgba(36, 43, 52, 0.95);
+  height: 445px !important;
+  /* height: 0; */
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  /* bottom: -5000px; */
+  opacity: 0;
+  transition: 1s;
+  left: -100%;
+  z-index: 999;
+}
+#elseCardBtn {
+  transition: 0.5s;
+}
+.cinemaBigCard {
+  height: 450px;
+  overflow: hidden;
+  background: #28333d;
+  box-shadow: 0 0 2px #000000;
+}
+@media screen and (max-width: 991px) {
+  .cinemaBigCard {
+    height: 900px !important;
+  }
+  .cinemaBigCardImg {
+    height: 450px !important;
+  }
+  .cinemaBigCardText {
+    height: 450px !important;
+    justify-content: center !important;
+  }
 }
 /* -------------------------------------------------------forum */
 .articleInput,
@@ -381,4 +468,75 @@ button.bg-orange {
 
 #forumListScollTop::-webkit-scrollbar {
   width: 0 !important;
+}
+@media screen and (max-width: 991px) {
+  .listRWDHeight {
+    height: 250px !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  .forumLeftArea,
+  .forumRighttArea {
+    max-width: 83% !important;
+    flex: 0 0 83% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .listRWDHeight {
+    height: 300px !important;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1700px) {
+  .forumRighttArea {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .forumLeftArea {
+    max-width: 33% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/*activity private*/
+
+.activityForm .form-group label {
+  font-size: 24px;
+}
+
+.activityForm .form-group input {
+  font-size: 24px;
+  color: #ffa510;
+}
+
+.activityForm .form-group input.form-control {
+  color: #ffa510;
+  background: #1f242a;
+  border: 1px solid #ffa510;
+  max-width: 400px;
+}
+.activityForm .form-group input.form-control::placeholder {
+  color: #ffa310b0;
+}
+.activityForm .form-group textarea.form-control {
+  font-size: 24px;
+  color: #ffa510;
+  background: #1f242a;
+  border: 1px solid #ffa510;
+}
+.activityForm .form-group textarea.form-control::placeholder {
+  color: #ffa310b0;
+}
+
+.activityForm .form-group button.btn.btn-warning.btn-toggle {
+  color: #ffa310;
+  font-size: 24px;
+  background: #1f242a;
+  width: 15% !important;
+}
+.activityForm .form-group button.btn.btn-warning.btn-toggle.active {
+  color: #1f242a;
+  font-size: 24px;
+  background: #ffa310;
+  width: 15% !important;
 }

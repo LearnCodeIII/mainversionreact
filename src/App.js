@@ -45,20 +45,6 @@ class App extends React.Component {
       window.location.pathname.indexOf('BackMainpage') == -1 &&
       window.location.pathname.indexOf('CinemaBackMainpage') == -1
     ) {
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
-      console.log('enter')
       let currentHeight = document.documentElement.scrollTop
       this.setState({ currentHeight: currentHeight })
       let prevHeight = this.state.prevHeight
@@ -115,13 +101,12 @@ class App extends React.Component {
       window.location.pathname.indexOf('BackMainpage') == -1 &&
       window.location.pathname.indexOf('CinemaBackMainpage') == -1
     ) {
-      console.log('here')
       let currentHeight = document.documentElement.scrollTop
       this.setState({ currentHeight: currentHeight })
       let prevHeight = this.state.prevHeight
       if (document.documentElement.scrollTop > 630) {
         this.setState({ navbar: 'active' })
-        if (document.documentElement.scrollTop > 750) {
+        if (document.documentElement.scrollTop > 800) {
           if (currentHeight > prevHeight) {
             this.setState({ navbar: 'active hiddenNav' })
           } else {
@@ -172,7 +157,7 @@ class App extends React.Component {
                 </LinkContainer>
                 {sessionStorage.getItem('cinemaId') !== null ? (
                   <>
-                    <LinkContainer to="/CinemaBackMainpage">
+                    <LinkContainer to="/CinemaBackMainpage/cinema-info-preview">
                       <Nav.Link className="mr-5">戲院後台</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/mainpage">
@@ -203,8 +188,9 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Mainpage} />
             <Route path="/mainpage" component={Mainpage} />
+            <Redirect from="/cinema/:id/:id" to="/cinema/:id" />
             <Route path="/cinema/:id" component={CinemaInfo} />
-            <Route path="/cinema" component={Cinema} />
+            <Route exact path="/cinema" component={Cinema} />
             <Redirect from="/movie/:id/return" to="/movie/:id" />
             <Route path="/movie/:id" component={MovieInfo} />
             <Route path="/movie" component={Movie} />
@@ -218,12 +204,16 @@ class App extends React.Component {
             <Route path="/forum" component={Forum} />
             <Route path="/LoginSign" component={LoginSign} />
             <Route path="/BackMainpage" component={BackMainpage} />
+            {/* <Route
+              path="/CinemaBackMainpage/cinema-activity-inprogress/:id"
+              component={CinemaBackMainpage}
+            /> */}
             <Route path="/CinemaBackMainpage" component={CinemaBackMainpage} />
           </Switch>
           {window.location.pathname == '/LoginSign' ? (
             ''
           ) : (
-            <div className="container-fluid" style={{}}>
+            <div className="container-fluid row justify-content-center">
               <Footer />
             </div>
           )}

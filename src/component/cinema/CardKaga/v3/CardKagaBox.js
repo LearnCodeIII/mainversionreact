@@ -13,6 +13,18 @@ const CardKagaBox = props => {
     return final
   }
   const link = props.link ? props.link : '#'
+  let hoverChange = null
+
+  const LinkhoverChange = () => {
+    //hoverChange = Link這個元素
+    hoverChange.className =
+      'CardHoverBig card text-center flex-column border-0 cardAreaBgKaga'
+  }
+  const LinkOutChange = () => {
+    //hoverChange = Link這個元素
+    hoverChange.className =
+      'CardHover card text-center flex-column border-0 cardAreaBgKaga'
+  }
   return (
     <>
       <Link
@@ -22,10 +34,13 @@ const CardKagaBox = props => {
       >
         {/* 外框＋底圖 */}
         <div
-          className="card text-center flex-column border-0 cardAreaBgKaga"
+          className="card text-center flex-column border-0 cardAreaBgKaga CardHover"
           style={{
             backgroundImage: `url(${props.img})`,
           }}
+          onMouseOver={LinkhoverChange}
+          onMouseOut={LinkOutChange}
+          ref={el => (hoverChange = el)}
         >
           {/* 上方淺色遮罩 */}
           <div className="pr-1 cardTopMaskKaga" />

@@ -4,7 +4,7 @@ const ForumArticleContentTiltleRoy = props => {
   // console.log(props.contentheadlineId)
   return (
     <div className=" d-flex align-items-center justify-content-between">
-      <div className=" my-4 text-center text-light border-bottom border-light  ">
+      <div className=" mb-4 text-center text-light border-bottom border-light  ">
         <h4
           id={'contentheadlineId' + props.contentheadlineId}
           onKeyPress={props.handleHeadlineEditKeyboardControl}
@@ -27,7 +27,7 @@ const ForumArticleContentTiltleRoy = props => {
         <div className="justify-content-end d-flex align-items-center ">
           <button
             className={
-              'btn my-0 mr-0 btn-outline-warning  ' +
+              'btn my-0  mb-4 mr-0 btn-outline-warning  ' +
               props.HeadlineCancelBtnStatus
             }
             // 如果不是登入者不可觸發功能
@@ -40,10 +40,10 @@ const ForumArticleContentTiltleRoy = props => {
             取消
           </button>
         </div>
-        <div className="justify-content-end d-flex align-items-center  ">
+        <div className="justify-content-end d-flex align-items-center  ml-2  ">
           <button
             className={
-              'btn my-0 mr-0  btn-outline-warning  ' +
+              'btn mt-0 mb-4 mr-0  btn-outline-warning  ' +
               props.HeadlineEditBtnStatus +
               '' +
               // 驗證session
@@ -64,7 +64,7 @@ const ForumArticleContentTiltleRoy = props => {
         <div className="justify-content-end d-flex  align-items-center  ">
           <button
             className={
-              'btn btn-outline-warning my-0 mr-0 ' + props.HeadlineSaveBtnStatus
+              'btn btn-outline-warning mb-4 mr-0 ' + props.HeadlineSaveBtnStatus
             }
             onClick={
               // 如果不是登入者不可觸發功能

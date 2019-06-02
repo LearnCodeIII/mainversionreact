@@ -132,6 +132,33 @@ class ArticlePage extends React.Component {
         console.log(err)
       }
     }
+    let newViewData = {
+      id: this.state.articleInfo.id,
+      title: this.state.articleInfo.title,
+      author: this.state.articleInfo.author,
+      avatar: this.state.articleInfo.avatar,
+      date: this.state.articleInfo.date,
+      content: this.state.articleInfo.content,
+      image: this.state.articleInfo.image,
+      link: this.state.articleInfo.link,
+      markId: this.state.articleInfo.markId,
+      likeId: this.state.articleInfo.likeId,
+      viewCounter: +this.state.articleInfo.viewCounter + 1,
+    }
+
+    // const data = newViewData
+
+    const resView = await fetch(
+      'http://localhost:5555/articleCardData/' + this.state.thisId,
+      {
+        method: 'PUT',
+        body: JSON.stringify(newViewData),
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
   }
   // 偵測留言
   handleChange = event => {
@@ -338,7 +365,7 @@ class ArticlePage extends React.Component {
               author={this.state.articleInfo.author}
               content={this.state.articleInfo.content}
               date={this.state.articleInfo.date}
-              pageImg={'/images//article/' + this.state.articleInfo.image}
+              pageImg={'/images/article/' + this.state.articleInfo.image}
               isMarked={this.state.isMarked}
               markCounter={this.state.markCounter}
               isLiked={this.state.isLiked}

@@ -12,7 +12,7 @@ const InputSelect_Su = props => {
         }}
       >
         <i
-          className={props.iconRight + ' position-absolute'}
+          className={(props.iconRight ? props.iconRight : "fas fa-caret-square-down") + ' position-absolute'}
           style={{
             background: '#1F242A',
             color: '#FFA510',
@@ -25,7 +25,7 @@ const InputSelect_Su = props => {
       <select
         id={props.id}
         name={props.id}
-        className="custom-select  border border-warning rounded p-0"
+        className="custom-select  border border-warning rounded p-0 inputFontSizeSu"
         style={{
           width: `${props.inputWidth ? props.inputWidth : '100%'}`,
           background: 'rgba(0,0,0,0)',
@@ -41,6 +41,7 @@ const InputSelect_Su = props => {
           <option
             key={item.id}
             value={item.id}
+            className="inputFontSizeSu"
             style={{ textAlign: 'center', background: '#1F242A' }}
           >
             {item.name}

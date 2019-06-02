@@ -9,9 +9,7 @@ class MemberCollectTable extends React.Component {
     }
   }
 
-  async componentDidMount() {}
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('childDerived')
     // this.setState({ thisData: nextProps.thisData }) 這不能這樣setStae，要用下面的寫法
     let stateToBeReturned = null
     if (prevState.thisData == 0 || prevState.myForumData == 0) {
@@ -22,9 +20,6 @@ class MemberCollectTable extends React.Component {
       }
     }
 
-    console.log(nextProps)
-    console.log(prevState)
-    console.log(stateToBeReturned)
     return stateToBeReturned
   }
 

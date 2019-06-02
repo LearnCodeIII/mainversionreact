@@ -37,12 +37,16 @@ const ForumArticleCommentRoy = props => {
                 刪除
               </button>
             </div>
-            <div className="m-o p-0">
+            {/* <div className="m-o p-0">
               <ForumArticleCommentThumbRoy
+                handleCommentLike={props.handleCommentLike}
+                handleCommentDislike={props.handleCommentDislike}
                 commentLike={props.commentLike}
                 commentDislike={props.commentDislike}
+                commentlikeStatus={props.commentlikeStatus}
+                commentDislikeStatus={props.commentDislikeStatus}
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="text-light ">

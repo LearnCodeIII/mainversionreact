@@ -183,71 +183,88 @@ class ForumBackMainpage extends React.Component {
     return (
       <>
         <div className="col-md-12 p-0 my-5">
-          <div className="" style={{ height: '450px' }}>
-            <table className="table table-dark m-0 border-0 ">
-              <thead className=" border-0">
-                <tr className="mb-5 border-0">
-                  <th scope="col" style={thStyle}>
-                    文章編號
-                  </th>
-                  <th scope="col" style={thStyle}>
-                    標題
-                  </th>
-                  <th scope="col" style={thStyle}>
-                    發文日期
-                  </th>
-                  <th scope="col" style={thStyle}>
-                    留言數
-                  </th>
-                  <th scope="col" style={thStyle}>
-                    推數
-                  </th>
-                  <th scope="col" style={thStyle}>
-                    前往文章
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.forumBackReverse.map((e, index) => (
-                  <tr className="text-center" key={e.id}>
-                    <th scope="row" style={tdStyle}>
-                      {e.id}
+          <div
+            className={
+              this.state.myPostRecord.length === 0
+                ? ' d-flex align-items-center'
+                : ''
+            }
+            style={{ height: '450px' }}
+          >
+            {this.state.myPostRecord.length === 0 ? (
+              <h5 className="text-center text-mywhite mx-auto">
+                尚無紀錄，趕快
+                <a href="/forum" style={{ color: '#ffa510' }}>
+                  前往論壇
+                </a>
+                發表評論吧！
+              </h5>
+            ) : (
+              <table className="table table-dark m-0 border-0 ">
+                <thead className=" border-0">
+                  <tr className="mb-5 border-0">
+                    <th scope="col" style={thStyle}>
+                      文章編號
                     </th>
-                    <td className="" style={tdStyle}>
-                      {e.headline}
-                    </td>
-                    <td className="" style={tdStyle}>
-                      {e.forumCreateDate}
-                    </td>
-                    <td className="" style={tdStyle}>
-                      {e.forumCommentCount}
-                    </td>
-                    <td className="" style={tdStyle}>
-                      {e.forumViews}
-                    </td>
+                    <th scope="col" style={thStyle}>
+                      標題
+                    </th>
+                    <th scope="col" style={thStyle}>
+                      發文日期
+                    </th>
+                    <th scope="col" style={thStyle}>
+                      留言數
+                    </th>
+                    <th scope="col" style={thStyle}>
+                      被蒐藏數
+                    </th>
+                    <th scope="col" style={thStyle}>
+                      前往文章
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.forumBackReverse.map((e, index) => (
+                    <tr className="text-center" key={e.id}>
+                      <th scope="row" style={tdStyle}>
+                        {e.id}
+                      </th>
+                      <td className="" style={tdStyle}>
+                        {e.headline}
+                      </td>
+                      <td className="" style={tdStyle}>
+                        {e.forumCreateDate}
+                      </td>
+                      <td className="" style={tdStyle}>
+                        {e.forumCommentCount}
+                      </td>
+                      <td className="" style={tdStyle}>
+                        {e.forumViews}
+                      </td>
 
-                    <td className="" style={tdStyle}>
-                      <div className="m-0 p-0 d-flex justify-content-center">
-                        <Link
-                          to={'/forum/' + e.id}
-                          className=" mr-2 p-0"
-                          style={{ color: '#FFA510' }}
-                        >
-                          <i class="fas fa-eye" />
-                        </Link>
-                        {/* <Link
+                      <td className="" style={tdStyle}>
+                        <div className="m-0 p-0 d-flex justify-content-center">
+                          <Link
+                            to={'/forum/' + e.id}
+                            className=" mr-2 p-0"
+                            style={{ color: '#FFA510' }}
+                          >
+                            <i class="fas fa-eye" />
+                          </Link>
+                          {/* <Link
                         to=""
                         className=" ml-2 p-0"
                         style={{ color: '#FFA510' }}
                       >
                         <i class="fas fa-trash-alt" />
                       </Link> */}
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
           </div>
           <div className="d-flex justify-content-between  m-0 w-100">
             <div className="m-5 p-0  d-flex justify-content-center w-100">

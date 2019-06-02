@@ -8,6 +8,7 @@ import ActivityQRcode from '../component/activity/ActivityQRcode/ActivityQRcode'
 import ActivityJoinBtn from '../component/activity/ActivityJoinBtn/ActivityJoinBtn'
 import ActivityCard from '../component/activity/ActivityCard/ActivityCard'
 import ActivityJoinForm from '../component/activity/ActivityJoinForm/ActivityJoinForm'
+import Swal from 'sweetalert2'
 
 class ActivityInfo extends React.Component {
   constructor(props) {
@@ -97,7 +98,16 @@ class ActivityInfo extends React.Component {
         let isCollect = data.collectActivityJoin.indexOf(id) > -1
 
         if (isCollect) {
-          alert('已報名過此活動')
+          // alert('已報名過此活動')
+          Swal.fire({
+            type: 'error',
+            title: '<span style="color:#d4d1cc">已報名過此活動</span>',
+            showConfirmButton: true,
+            confirmButtonClass: 'btn btn-warning',
+            confirmButtonColor: '#ffa510',
+            buttonsStyling: false,
+            background: '#242b34',
+          })
           return false
         } else {
           data.collectActivityJoin += id

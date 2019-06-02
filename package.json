@@ -25,6 +25,7 @@
     "react-scripts": "3.0.1",
     "react-slick": "^0.24.0",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^8.11.7",
     "uuid": "^3.3.2"
   },
   "scripts": {

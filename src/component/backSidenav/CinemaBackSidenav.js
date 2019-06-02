@@ -17,10 +17,7 @@ const CinemaBackSidenav = props => {
       defaultPage = 'cinema-info'
       break
     case 'cinema-film-info':
-    case 'cinema-edit-film-info':
-    case 'cinema-change-film-setting':
-    case 'cinema-film-post-delete':
-    case 'cinema-film-analysis':
+    case 'cinema-film-post':
       defaultPage = 'cinema-film'
       break
     case 'cinema-manage-activity':
@@ -45,7 +42,7 @@ const CinemaBackSidenav = props => {
       >
         <div
           style={{
-            height: '194px',
+            height: '240px',
           }}
         />
         <h3 className="text-center mb-4">戲院中心</h3>

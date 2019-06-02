@@ -16,6 +16,7 @@ import {
 import { MdFavorite } from 'react-icons/md'
 import ArticleBtnGroup from '../ArticleList/ArticleButton/ArticleBtnGroup'
 import ArticleCommentInput from './ArticleCommentInput'
+import { async } from 'q'
 
 const memberId = sessionStorage.getItem('memberId')
 
@@ -37,7 +38,7 @@ class ViewPage extends React.Component {
     }
     return (
       <>
-        <Row className="my-2 justify-content-center">
+        <Row className="mt-5 pt-5 justify-content-center">
           <Col md={8} sm={12} className="box-shadow">
             <div class="mb-3 p-3">
               <div
@@ -108,7 +109,7 @@ class ViewPage extends React.Component {
               {/* --------------我是內文---------------危險的引入 innerHTML 方法 */}
               <div className="mt-3">
                 <p
-                  class="card-text"
+                  className="card-text px-2"
                   dangerouslySetInnerHTML={{ __html: this.props.content }}
                   style={{ lineHeight: 2.5 }}
                 />

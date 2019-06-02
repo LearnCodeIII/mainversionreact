@@ -182,4 +182,81 @@ router.post('/cinema-upload-single', upload.single('myfile'), (req, res) => {
   res.json(result)
 })
 
+//戲院影片檔案上傳(single)
+router.post('/cinemaFilm-upload-single', upload.single('myfile'), (req, res) => {
+  console.log(req.file)
+  let ext = ''
+  let finalname = uuidv4()
+  const result = {
+    success: false,
+    info: '',
+    filename: '',
+  }
+  if (req.file && req.file.originalname) {
+    //判斷檔案屬性及檔案名稱是否為空
+    switch (req.file.mimetype) {
+      case 'image/png':
+        ext = '.png'
+      case 'image/jpeg':
+        if (!ext) {
+          ext = '.jpg'
+        }
+        fs.createReadStream(req.file.path).pipe(
+          fs.createWriteStream(
+            __dirname + '/../../public/images/movieImg/' + finalname + ext
+          )
+        )
+
+        res.json({
+          success: true,
+          filename: finalname + ext,
+        })
+        return
+      default:
+        result.info = '檔案格式不符，請重新選擇 !'
+    }
+  } else {
+    result.info = '沒有選擇檔案'
+  }
+  res.json(result)
+})
+
+router.post('/activity-upload-single', upload.single('myfile'), (req, res) => {
+  console.log(req.file)
+  let ext = ''
+  let finalname = uuidv4()
+  const result = {
+    success: false,
+    info: '',
+    filename: '',
+  }
+  if (req.file && req.file.originalname) {
+    //判斷檔案屬性及檔案名稱是否為空
+    switch (req.file.mimetype) {
+      case 'image/png':
+        ext = '.png'
+      case 'image/jpeg':
+        if (!ext) {
+          ext = '.jpg'
+        }
+        fs.createReadStream(req.file.path).pipe(
+          fs.createWriteStream(
+            __dirname + '/../../public/images/activityImg/' + finalname + ext
+          )
+        )
+
+        res.json({
+          success: true,
+          filename: finalname + ext,
+        })
+        return
+      default:
+        result.info = '檔案格式不符，請重新選擇 !'
+    }
+  } else {
+    result.info = '沒有選擇檔案'
+  }
+  res.json(result)
+})
+
 module.exports = router

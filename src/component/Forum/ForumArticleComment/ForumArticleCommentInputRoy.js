@@ -11,7 +11,7 @@ const ForumArticleCommentInputRoy = props => {
           className="text-light bg-dark border border-warning"
           as="textarea"
           aria-label="With textarea"
-          placeholder="請輸入留言"
+          placeholder={props.commentCount === 0 ? '搶頭香!' : '請輸入留言'}
           rows="3"
           name="forumComment"
           // 留言內容變更同時更動state

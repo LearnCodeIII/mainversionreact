@@ -100,29 +100,9 @@ class Cinema extends React.Component {
       // 如果回傳是true 就加上去
       newCollectionData = [...this.state.memberThisData.collectCinema, id]
     }
-    const NewMemberData = {
-      id: this.state.memberThisData.id,
-      name: this.state.memberThisData.name,
-      nickname: this.state.memberThisData.nickname,
-      gender: this.state.memberThisData.gender,
-      mobile: this.state.memberThisData.mobile,
-      birth: this.state.memberThisData.birth,
-      email: this.state.memberThisData.email,
-      pwd: this.state.memberThisData.pwd,
-      avatar: this.state.memberThisData.avatar,
-      city: this.state.memberThisData.city,
-      address: this.state.memberThisData.address,
-      fav_type: this.state.memberThisData.fav_type,
-      career: this.state.memberThisData.career,
-      join_date: this.state.memberThisData.permission,
-      permission: this.state.memberThisData.permission,
-      collectFilm: this.state.memberThisData.collectFilm,
-      collectCinema: newCollectionData,
-      collectArticle: this.state.memberThisData.collectArticle,
-      collectActivity: this.state.memberThisData.collectActivity,
-      collectForum: this.state.memberThisData.collectForum,
-      markList: this.state.memberThisData.markList,
-    }
+    const NewMemberData = this.state.memberThisData
+    NewMemberData.collectCinema = newCollectionData
+
     // //蓋回去資料庫
     const response = await fetch('http://localhost:5555/member/' + memberId, {
       method: 'PUT',
@@ -384,11 +364,14 @@ class Cinema extends React.Component {
       <>
         <ActivitySection
           pictureSrc="http://localhost:3000/images/cinemaImg/cinemaSearch.jpg"
-          bigSlogan="為每位影人找尋落腳角落"
-          midSlogan="探詢簡潔優雅的閱聽地點"
+          bigSlogan="遍尋每位影人駐足的角落"
+          midSlogan="在眾多劇場堆疊成的影視花園裡沈迷"
           smallSlogan="開始瀏覽"
+          // section={'#test'}
+          pagename={'/cinema/'}
+          pageid={'#search'}
         />
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" id="search">
           <div
             className=" d-flex flex-wrap col-lg-10"
             style={{
@@ -402,12 +385,12 @@ class Cinema extends React.Component {
               <div className="ml-3 my-3">
                 <TitleKaga title="篩選資訊" />
               </div>
-              <div className="col d-flex align-items-center my-4">
-                <h4 className="col-1">地區</h4>
+              <div className="col d-flex flex-wrap align-items-center my-4">
+                <h4 className="col-lg-1 col-sm-12  my-1">地區</h4>
                 <ButtonCity CitySearchClick={this.CitySearchClick} />
               </div>
-              <div className="col d-flex align-items-center mb-3">
-                <h4 className="col-1">類型</h4>
+              <div className="col d-flex flex-wrap  align-items-center mb-3">
+                <h4 className="col-lg-1 col-sm-12  my-1">類型</h4>
                 <ButtonType TypeSearchClick={this.TypeSearchClick} />
               </div>
             </div>

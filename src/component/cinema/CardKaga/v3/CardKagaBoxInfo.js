@@ -172,17 +172,17 @@ class CardKagaBox extends React.Component {
                   <h6>{this.props.time}</h6>
                   <div className="row d-flex justify-content-center mt-4">
                     <Button
-                      style={{ width: '80px' }}
+                      style={{ width: '80px', margin: '0 8px 0 0' }}
                       type="button"
-                      variant="warning"
-                      href={'CinemaBackMainpage/cinema-film-info'}
+                      variant="primary"
+                      href={'/CinemaBackMainpage/cinema-film-info'}
                     >
                       管理
                     </Button>
                     <Button
                       style={{ width: '80px' }}
                       type="button"
-                      variant="warning"
+                      variant="danger"
                       href={'/movie/' + this.props.id}
                     >
                       頁面
@@ -193,9 +193,9 @@ class CardKagaBox extends React.Component {
                 <>
                   {/* <h4 className="card-title mt-3">檔期</h4> */}
                   <Button
-                    style={{ width: '80px' }}
+                    style={{ width: '80px', margin: '0 8px 0 0' }}
                     type="button"
-                    variant="warning"
+                    variant="primary"
                     href={'CinemaBackMainpage/cinema-manage-activity'}
                   >
                     管理
@@ -203,7 +203,7 @@ class CardKagaBox extends React.Component {
                   <Button
                     style={{ width: '80px' }}
                     type="button"
-                    variant="warning"
+                    variant="danger"
                     href={'/activity/' + this.props.id}
                   >
                     頁面

@@ -63,37 +63,6 @@ class MemberEditInfo extends React.Component {
     this.setState({ originData: this.props.thisData })
   }
 
-  //儲存按鈕onclick
-  // handleSaveInfo = () => {
-  //   let memberid = this.state.thisData.id
-  //   let isAllChecked = true
-  //   let checkArray = Object.values(this.state.checkok)
-  //   isAllChecked = checkArray.reduce((a, b) => a && b)
-  //   console.log('isAllChecked: ' + isAllChecked)
-  //   if (isAllChecked) {
-  //     try {
-  //       fetch('http://localhost:5555/member/' + memberid, {
-  //         method: 'PUT',
-  //         body: JSON.stringify(this.state.thisData),
-  //         headers: new Headers({
-  //           Accept: 'application/json',
-  //           'Content-Type': 'application/json',
-  //         }),
-  //       })
-  //         .then(res => res.json())
-  //         .then(jsonObject => {
-  //           this.setState({ thisData: jsonObject }, () => {
-  //             alert('資料儲存成功')
-  //             window.location.reload()
-  //           })
-  //         })
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   } else {
-  //     alert('資料填寫有誤，請再次確認您的資料！')
-  //   }
-  // }
 
   //輸入框change事件
   handleInputTextChange = event => {
@@ -363,7 +332,7 @@ class MemberEditInfo extends React.Component {
             {/* 這裡放頭像(含編輯按鈕)、email、權限 */}
             <AvatarTwo
               img={'/images/member/' + this.state.thisData.avatar}
-              name={this.props.avatarOne.name}
+              name={this.state.thisData.nickname}
               purview={this.props.avatarOne.purview}
               SignUpDate={this.props.avatarOne.SignUpDate}
               onChange={this.handleInputTextChange}

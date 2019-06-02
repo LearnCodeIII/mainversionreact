@@ -182,8 +182,8 @@ class CinemaEditInfo extends React.Component {
       if (value) {
         //先判斷是否有值，有值再進行進一步判斷
 
-        if (value.length < 11) {
-          //判斷是否字元數 < 11 (至少=縣市:3、行政區:3、路名:3、號碼:2)
+        if (value.length < 10) {
+          //判斷是否字元數 < 10 (至少=縣市:3、行政區:2、路名:3、號碼:2)
           document.querySelector('#' + eventName + 'help').innerHTML =
             '請輸入正確的地址'
         } else {
@@ -317,8 +317,8 @@ class CinemaEditInfo extends React.Component {
       eventName === 'cinemaAddress' ||
       eventName === 'cinemaPhone' ||
       eventName === 'cinemaBackupEmail' ||
-      eventName === 'cinemaWeb'
-      // name === 'cinemaLogoImg' ||
+      eventName === 'cinemaWeb' ||
+      eventName === 'cinemaIntro'
       // name === 'cinemaHeroImg' ||
     ) {
       copyData[eventName] = value
@@ -534,7 +534,7 @@ class CinemaEditInfo extends React.Component {
               style={{ width: '100%' }}
             />
           </div>
-          <div className="col-lg-5 mt-3">
+          <div className="col-lg-5 mt-3 mb-5">
             {/* 這裡放頭像(含編輯按鈕)、email、權限 */}
             <AvatarTwo
               img={'/images/cinemaImg/' + this.state.thisData.cinemaLogoImg}
@@ -546,6 +546,19 @@ class CinemaEditInfo extends React.Component {
               id={'cinemaLogoImg'}
               classShow={this.state.hasNewAvatar}
               uploadtip={this.state.avatarUploadFailed}
+            />
+            <p className="h5 mt-5 mb-4">戲院簡介</p>
+            <textarea
+              name="cinemaIntro"
+              className="border border-warning bg-back-input rounded text-orange"
+              placeholder="請輸入介紹內容..."
+              style={{
+                width: '100%',
+                height: '350px',
+              }}
+              onChange={this.handleInputTextChange}
+              // cols="50"
+              // rows="5"
             />
           </div>
         </Row>

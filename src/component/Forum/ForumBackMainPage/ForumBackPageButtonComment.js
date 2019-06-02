@@ -32,7 +32,13 @@ const ForumBackPageButtonComment = props => {
       >
         <div className="m-1 p-0" onClick={props.handlePrevPage}>
           <Link to={'/Backmainpage/myComment'} className="text-warning">
-            <button className="btn btn-outline-warning m-0  px-3  ">
+            <button
+              className={
+                props.forumBackArticlePages === 0
+                  ? 'd-none'
+                  : 'btn btn-outline-warning m-0  px-3  '
+              }
+            >
               <i class="fas fa-chevron-left" />
             </button>
           </Link>
@@ -43,7 +49,13 @@ const ForumBackPageButtonComment = props => {
         {/* <div className="btn btn-outline-warning">/ {props.ForumTotalPages}</div> */}
         <div className="m-1 p-0" onClick={props.handleNextvPage}>
           <Link to={'/Backmainpage/myComment'} className="text-warning">
-            <button className={'btn  m-0 btn-outline-warning  px-3 '}>
+            <button
+              className={
+                props.forumBackArticlePages === 0
+                  ? 'd-none'
+                  : 'btn btn-outline-warning m-0  px-3  '
+              }
+            >
               <i class="fas fa-chevron-right" />
             </button>
           </Link>

@@ -274,82 +274,102 @@ class ForumBackComment extends React.Component {
     return (
       <>
         <div className="col-md-12 p-0 my-5">
-          <div className="col-md-12 p-0 my-5" style={{ height: '450px' }}>
-            <table className="table table-dark">
-              <thead>
-                <tr>
-                  <th scope="col" style={thStyle}>
-                    留言文章編號
-                  </th>
-                  <th scope="col" style={thStyle}>
-                    文章標題
-                  </th>
-                  {/* <th scope="col" style={thStyle}> */}
-                  {/* 留言日期 */}
-                  {/* </th> */}
-                  {/* <th scope="col" style={thStyle}> */}
-                  {/* 推數 */}
-                  {/* </th> */}
-                  {/* <th scope="col" style={thStyle}> */}
-                  {/* 噓數 */}
-                  {/* </th> */}
-                  <th scope="col" style={thStyle}>
-                    前往留言
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.forumBackReverse.map((e, index) => (
-                  <>
-                    {/* {console.log(this.state.forumBackReverse)} */}
-                    {console.log(e)}
-                    {/* {console.log(this.state.currentSwitchIndex[index])} */}
-                    {/* key藥用唯一的。 */}
-                    <tr className="text-center" key={e.forumCreateDateInSecond}>
-                      <th scope="row" style={tdStyle}>
-                        {e.id}
-                      </th>
-                      <td className="" style={tdStyle}>
-                        {e.headline}
-                      </td>
-                      {/* <td className="" style={tdStyle}> */}
-                      {/* 如撈資料時所描述利用目前map索引值當index去撈之前存好陣列的索引值，再帶入這裡當索引值 */}
-                      {/* { */}
-                      {/* e.forumCommentArea[ */}
-                      {/* this.state.currentSwitchIndex[index] */}
-                      {/* ].forumCommentCreateTimeDate */}
-                      {/* } */}
-                      {/* </td> */}
-                      {/* <td className="" style={tdStyle}> */}
-                      {/* {e.forumCommentArea.forumCommentLike} */}
-                      {/* </td> */}
-                      {/* <td className="" style={tdStyle}> */}
-                      {/* {e.forumCommentArea.forumCommentDislike} */}
-                      {/* </td> */}
-                      <td className="" style={tdStyle}>
-                        <div className="m-0 p-0 d-flex justify-content-center">
-                          <Link
-                            to={'/forum/' + e.id}
-                            className=" mr-2 p-0"
-                            style={{ color: '#FFA510' }}
-                            onClick={this.forumArticleId}
-                          >
-                            <i class="fas fa-eye" />
-                          </Link>
-                          {/* <Link
+          <div
+            className={
+              this.state.myForumCommentIndex.length === 0
+                ? ' d-flex align-items-center'
+                : ''
+            }
+            style={{ height: '450px' }}
+          >
+            {this.state.myForumCommentIndex.length === 0 ? (
+              <h5 className="text-center text-mywhite mx-auto">
+                尚無紀錄，趕快
+                <a href="/forum" style={{ color: '#ffa510' }}>
+                  前往論壇
+                </a>
+                留言吧！
+              </h5>
+            ) : (
+              <table className="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col" style={thStyle}>
+                      留言文章編號
+                    </th>
+                    <th scope="col" style={thStyle}>
+                      文章標題
+                    </th>
+                    {/* <th scope="col" style={thStyle}> */}
+                    {/* 留言日期 */}
+                    {/* </th> */}
+                    {/* <th scope="col" style={thStyle}> */}
+                    {/* 推數 */}
+                    {/* </th> */}
+                    {/* <th scope="col" style={thStyle}> */}
+                    {/* 噓數 */}
+                    {/* </th> */}
+                    <th scope="col" style={thStyle}>
+                      前往該留言
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.forumBackReverse.map((e, index) => (
+                    <>
+                      {/* {console.log(this.state.forumBackReverse)} */}
+                      {console.log(e)}
+                      {/* {console.log(this.state.currentSwitchIndex[index])} */}
+                      {/* key藥用唯一的。 */}
+                      <tr
+                        className="text-center"
+                        key={e.forumCreateDateInSecond}
+                      >
+                        <th scope="row" style={tdStyle}>
+                          {e.id}
+                        </th>
+                        <td className="" style={tdStyle}>
+                          {e.headline}
+                        </td>
+                        {/* <td className="" style={tdStyle}> */}
+                        {/* 如撈資料時所描述利用目前map索引值當index去撈之前存好陣列的索引值，再帶入這裡當索引值 */}
+                        {/* { */}
+                        {/* e.forumCommentArea[ */}
+                        {/* this.state.currentSwitchIndex[index] */}
+                        {/* ].forumCommentCreateTimeDate */}
+                        {/* } */}
+                        {/* </td> */}
+                        {/* <td className="" style={tdStyle}> */}
+                        {/* {e.forumCommentArea.forumCommentLike} */}
+                        {/* </td> */}
+                        {/* <td className="" style={tdStyle}> */}
+                        {/* {e.forumCommentArea.forumCommentDislike} */}
+                        {/* </td> */}
+                        <td className="" style={tdStyle}>
+                          <div className="m-0 p-0 d-flex justify-content-center">
+                            <Link
+                              to={'/forum/' + e.id}
+                              className=" mr-2 p-0"
+                              style={{ color: '#FFA510' }}
+                              onClick={this.forumArticleId}
+                            >
+                              <i class="fas fa-eye" />
+                            </Link>
+                            {/* <Link
                           to="/forum/"
                           className=" ml-2 p-0"
                           style={{ color: '#FFA510' }}
                         >
                           <i class="fas fa-trash-alt" />
                         </Link> */}
-                        </div>
-                      </td>
-                    </tr>
-                  </>
-                ))}
-              </tbody>
-            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </>
+                  ))}
+                </tbody>
+              </table>
+            )}
           </div>
           <div className="d-flex justify-content-between  m-0 w-100">
             <div className="m-5 p-0  d-flex justify-content-center w-100">

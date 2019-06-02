@@ -20,15 +20,19 @@
   color: #d4d1cc;
   text-decoration: none;
 }
+.link-a:hover .link_orang {
+  color: #ffa510;
+  text-decoration: none;
+}
 
 .articlePageImg {
-  background-image: ;
+  /* background-image: ; */
 }
 
 /* 圖片背景遮罩 */
 .bigDarkBG {
   position: absolute;
-  background: rgba(0, 0, 0, 0.300);
+  background: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   transition: 0.5s;
@@ -85,6 +89,13 @@
   top: 42%;
 }
 
+.shadowBtn {
+  color: #d4d1cc;
+}
+.shadowBtn:hover {
+  color: #ffa510;
+}
+
 .textColor1 {
   color: #d4d1cc;
 }
@@ -130,9 +141,13 @@
   z-index: 2;
 }
 
+/* .cardWrap {
+  max-height: 300px;
+} */
+
 .article_pic {
   overflow: hidden;
-  height: 240px;
+  max-height: 300px;
 }
 
 .img56 {

@@ -8,7 +8,7 @@ import ActivityQRcode from '../component/activity/ActivityQRcode/ActivityQRcode'
 import ActivityJoinBtn from '../component/activity/ActivityJoinBtn/ActivityJoinBtn'
 import ActivityCard from '../component/activity/ActivityCard/ActivityCard'
 import { async } from 'q'
-
+import Swal from 'sweetalert2'
 class ActivityInfo extends React.Component {
   constructor(props) {
     super(props)
@@ -37,7 +37,11 @@ class ActivityInfo extends React.Component {
       const activityPageOtherData = data.filter(
         item => item.id !== this.props.match.params.id
       )
-      console.log(activityPageData)
+      activityPageData.imgSrc =
+        activityPageData.imgSrc.indexOf('http') == 0
+          ? activityPageData.imgSrc
+          : '/images/activityImg/' + activityPageData.imgSrc
+
       this.setState({ activityPageData: activityPageData })
       this.setState({ activityPageOtherData: activityPageOtherData })
       this.setState({ activityHeroImage: activityPageData.imgSrc })
@@ -101,10 +105,26 @@ class ActivityInfo extends React.Component {
             .split(id)
             .toString()
             .replace(/,/g, '')
-          alert('已取消收藏')
+          // alert('已取消收藏')
+          Swal.fire({
+            // position: 'top-end',
+            type: 'success',
+            title: '<span style="color:#d4d1cc">已取消收藏</span>',
+            showConfirmButton: false,
+            buttonsStyling: false,
+            background: '#242b34',
+          })
         } else {
           data.collectActivity += id
-          alert('已加入收藏')
+          // alert('已加入收藏')
+          Swal.fire({
+            // position: 'top-end',
+            type: 'success',
+            title: '<span style="color:#d4d1cc">已加入收藏</span>',
+            showConfirmButton: false,
+            buttonsStyling: false,
+            background: '#242b34',
+          })
         }
         this.setState({ collectActivity: data.collectActivity })
         try {
@@ -141,7 +161,16 @@ class ActivityInfo extends React.Component {
         let isCollect = data.collectActivityJoin.indexOf(id) > -1
 
         if (isCollect) {
-          alert('已報名過此活動')
+          // alert('已報名過此活動')
+          Swal.fire({
+            type: 'error',
+            title: '<span style="color:#d4d1cc">已報名過此活動</span>',
+            showConfirmButton: true,
+            confirmButtonClass: 'btn btn-warning',
+            confirmButtonColor: '#ffa510',
+            buttonsStyling: false,
+            background: '#242b34',
+          })
           return false
         }
       } catch (err) {
@@ -149,7 +178,16 @@ class ActivityInfo extends React.Component {
       }
     } else {
       event.preventDefault()
-      alert('請先登入會員')
+      // alert('請先登入會員')
+      Swal.fire({
+        type: 'info',
+        title: '<span style="color:#d4d1cc">請先登入會員</span>',
+        showConfirmButton: true,
+        confirmButtonClass: 'btn btn-warning',
+        confirmButtonColor: '#ffa510',
+        buttonsStyling: false,
+        background: '#242b34',
+      })
     }
   }
   render() {
@@ -242,7 +280,11 @@ class ActivityInfo extends React.Component {
                     key={data.id}
                     title={data.theater}
                     subtitle={data.title}
-                    imgSrc={data.imgSrc}
+                    imgSrc={
+                      data.imgSrc.indexOf('http') == 0
+                        ? data.imgSrc
+                        : '/images/activityImg/' + data.imgSrc
+                    }
                     collectOpen
                     isCollect={
                       this.state.collectActivity.indexOf(data.id) > -1
@@ -257,7 +299,11 @@ class ActivityInfo extends React.Component {
                     key={data.id}
                     title={data.theater}
                     subtitle={data.title}
-                    imgSrc={data.imgSrc}
+                    imgSrc={
+                      data.imgSrc.indexOf('http') == 0
+                        ? data.imgSrc
+                        : '/images/activityImg/' + data.imgSrc
+                    }
                   />
                 )}
               </div>

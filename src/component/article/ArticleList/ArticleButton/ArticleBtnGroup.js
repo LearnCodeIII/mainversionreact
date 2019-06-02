@@ -9,11 +9,22 @@ import {
 
 import { ButtonToolbar, OverlayTrigger, Tooltip, Button } from 'react-bootstrap'
 
-const ArticleBtnGroup = props => {
-  return (
-    <>
-      <div className="btnGroupV text-light btn-group-vertical d-flex justify-content-start">
-        {/* <button className="btn textColor1">
+class ArticleBtnGroup extends React.Component {
+  constructor(props) {
+    super(props)
+    this.handleGoBack = this.handleGoBack.bind(this)
+  }
+
+  // 返回上一頁套餐
+
+  handleGoBack = () => {
+    this.props.history.goBack()
+  }
+  render() {
+    return (
+      <>
+        <div className="btnGroupV text-light btn-group-vertical d-flex justify-content-start">
+          {/* <button className="btn textColor1">
           <FaBookmark onClick={props.handleMarkClick} title="加入收藏" />
         </button>
         <button className="btn textColor1">
@@ -25,34 +36,34 @@ const ArticleBtnGroup = props => {
         <button className="btn textColor1">
           <FaReply title="返回列表" />
         </button> */}
-        <ButtonToolbar className="d-flex flex-column m-3">
-          <OverlayTrigger
-            className=""
-            placement={'left'}
-            overlay={<Tooltip id={`tooltip-${'left'}`}>加入收藏</Tooltip>}
-          >
-            <div
-              variant="secondary"
-              className="my-3"
-              onClick={props.handleMarkClick}
+          <ButtonToolbar className="d-flex flex-column m-3">
+            <OverlayTrigger
+              className=""
+              placement={'left'}
+              overlay={<Tooltip id={`tooltip-${'left'}`}>加入收藏</Tooltip>}
             >
-              <FaBookmark />
-            </div>
-          </OverlayTrigger>
-          <OverlayTrigger
-            placement={'left'}
-            overlay={<Tooltip id={`tooltip-${'left'}`}>按讚此篇文章</Tooltip>}
-          >
-            <div
-              variant="secondary"
-              className="my-3"
-              onClick={props.handleLikeClick}
+              <div
+                variant="secondary"
+                className="my-3"
+                onClick={this.props.handleMarkClick}
+              >
+                <FaBookmark />
+              </div>
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement={'left'}
+              overlay={<Tooltip id={`tooltip-${'left'}`}>按讚此篇文章</Tooltip>}
             >
-              <FaThumbsUp />
-            </div>
-          </OverlayTrigger>
-          {/* 分享 暫無功能 */}
-          {/* <OverlayTrigger
+              <div
+                variant="secondary"
+                className="my-3"
+                onClick={this.props.handleLikeClick}
+              >
+                <FaThumbsUp />
+              </div>
+            </OverlayTrigger>
+            {/* 分享 暫無功能 */}
+            {/* <OverlayTrigger
             placement={'left'}
             overlay={<Tooltip id={`tooltip-${'left'}`}>分享</Tooltip>}
           >
@@ -60,18 +71,23 @@ const ArticleBtnGroup = props => {
               <FaShareSquare />
             </Button>
           </OverlayTrigger> */}
-          <OverlayTrigger
-            placement={'left'}
-            overlay={<Tooltip id={`tooltip-${'left'}`}>返回列表</Tooltip>}
-          >
-            <div variant="secondary" className="my-3">
-              <FaReply />
-            </div>
-          </OverlayTrigger>
-        </ButtonToolbar>
-      </div>
-    </>
-  )
+            <OverlayTrigger
+              placement={'left'}
+              overlay={<Tooltip id={`tooltip-${'left'}`}>返回列表</Tooltip>}
+            >
+              <div
+                variant="secondary"
+                className="my-3"
+                onClick={this.handleGoBack}
+              >
+                <FaReply />
+              </div>
+            </OverlayTrigger>
+          </ButtonToolbar>
+        </div>
+      </>
+    )
+  }
 }
 
 export default ArticleBtnGroup

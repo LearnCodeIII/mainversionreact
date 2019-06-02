@@ -8,43 +8,51 @@ class ButtonType extends React.Component {
     if (
       // 選取全部
       event.target.id === 't0' &&
-      event.target.className === 'btn btn-outline-warning'
+      event.target.className === 'btn btn-outline-warning mr-2 my-1'
     ) {
-      document.querySelector('#t0').className = 'btn btn-warning'
-      document.querySelector('#t1').className = 'btn btn-warning'
-      document.querySelector('#t2').className = 'btn btn-warning'
-      document.querySelector('#t3').className = 'btn btn-warning'
-      document.querySelector('#t4').className = 'btn btn-warning'
-      document.querySelector('#t5').className = 'btn btn-warning'
+      document.querySelector('#t0').className = 'btn btn-warning mr-2 my-1'
+      document.querySelector('#t1').className = 'btn btn-warning mr-2 my-1'
+      document.querySelector('#t2').className = 'btn btn-warning mr-2 my-1'
+      document.querySelector('#t3').className = 'btn btn-warning mr-2 my-1'
+      document.querySelector('#t4').className = 'btn btn-warning mr-2 my-1'
+      document.querySelector('#t5').className = 'btn btn-warning mr-2 my-1'
       this.props.TypeSearchClick(event.target.value, 'allplus')
     } else if (
       event.target.id === 't0' &&
-      event.target.className === 'btn btn-warning'
+      event.target.className === 'btn btn-warning mr-2 my-1'
     ) {
-      document.querySelector('#t0').className = 'btn btn-outline-warning'
-      document.querySelector('#t1').className = 'btn btn-outline-warning'
-      document.querySelector('#t2').className = 'btn btn-outline-warning'
-      document.querySelector('#t3').className = 'btn btn-outline-warning'
-      document.querySelector('#t4').className = 'btn btn-outline-warning'
-      document.querySelector('#t5').className = 'btn btn-outline-warning'
+      document.querySelector('#t0').className =
+        'btn btn-outline-warning mr-2 my-1'
+      document.querySelector('#t1').className =
+        'btn btn-outline-warning mr-2 my-1'
+      document.querySelector('#t2').className =
+        'btn btn-outline-warning mr-2 my-1'
+      document.querySelector('#t3').className =
+        'btn btn-outline-warning mr-2 my-1'
+      document.querySelector('#t4').className =
+        'btn btn-outline-warning mr-2 my-1'
+      document.querySelector('#t5').className =
+        'btn btn-outline-warning mr-2 my-1'
       //然後傳按下去的那個按鈕的值回老闆層 給他一個加或減的屬性
       this.props.TypeSearchClick(event.target.value, 'alldel')
     } else if (
       event.target.id !== 't0' &&
-      event.target.className === 'btn btn-outline-warning'
+      event.target.className === 'btn btn-outline-warning mr-2 my-1'
     ) {
       // 判斷是否為按下狀態
       //先改變按鈕狀態
-      document.querySelector('#t0').className = 'btn btn-outline-warning'
+      document.querySelector('#t0').className =
+        'btn btn-outline-warning mr-2 my-1'
       document.querySelector('#' + event.target.id).className =
-        'btn btn-warning'
+        'btn btn-warning mr-2 my-1'
       //然後傳按下去的那個按鈕的值回老闆層 給他一個加或減的屬性
       this.props.TypeSearchClick(event.target.value, 'plus')
     } else {
       //先改變按鈕狀態
-      document.querySelector('#t0').className = 'btn btn-outline-warning'
+      document.querySelector('#t0').className =
+        'btn btn-outline-warning mr-2 my-1'
       document.querySelector('#' + event.target.id).className =
-        'btn btn-outline-warning'
+        'btn btn-outline-warning mr-2 my-1'
       //然後傳按下去的那個按鈕的值回老闆層 給他一個加或減的屬性
       this.props.TypeSearchClick(event.target.value, 'del')
     }
@@ -55,7 +63,7 @@ class ButtonType extends React.Component {
         <button
           id="t0"
           type="button"
-          class="btn btn-warning"
+          class="btn btn-warning mr-2 my-1"
           onClick={this.click}
           value="全選"
         >
@@ -64,7 +72,7 @@ class ButtonType extends React.Component {
         <button
           id="t1"
           type="button"
-          class="btn btn-warning"
+          class="btn btn-warning mr-2 my-1"
           onClick={this.click}
           value="藝廊"
         >
@@ -73,7 +81,7 @@ class ButtonType extends React.Component {
         <button
           id="t2"
           type="button"
-          class="btn btn-warning"
+          class="btn btn-warning mr-2 my-1"
           onClick={this.click}
           value="酒吧"
         >
@@ -82,7 +90,7 @@ class ButtonType extends React.Component {
         <button
           id="t3"
           type="button"
-          class="btn btn-warning"
+          class="btn btn-warning mr-2 my-1"
           onClick={this.click}
           value="餐廳"
         >
@@ -91,7 +99,7 @@ class ButtonType extends React.Component {
         <button
           id="t4"
           type="button"
-          class="btn btn-warning"
+          class="btn btn-warning mr-2 my-1"
           onClick={this.click}
           value="影院"
         >
@@ -100,7 +108,7 @@ class ButtonType extends React.Component {
         <button
           id="t5"
           type="button"
-          class="btn btn-warning"
+          class="btn btn-warning mr-2 my-1"
           onClick={this.click}
           value="咖啡廳"
         >

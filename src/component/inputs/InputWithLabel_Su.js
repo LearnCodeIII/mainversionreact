@@ -40,14 +40,14 @@ const InputWithLabel_Su = props => {
           lg={3}
           className="d-flex align-items-center justify-content-center"
         >
-          <label className="m-0" for={props.id}>
+          <label className="m-0 inputFontSizeSu" for={props.id}>
             {props.inputLabel}
           </label>
         </Col>
         <Col // 這裡是input的col
           lg={8}
           className="p-0 border-0  rounded d-flex flex-nowrap align-items-center"
-          // style={{ width: `${props.inputWidth}` }}
+        // style={{ width: `${props.inputWidth}` }}
         >
           {/* 根據傳入的type來判斷要使用哪一種input */}
           {props.inputType === 'text' ? (
@@ -79,7 +79,7 @@ const InputWithLabel_Su = props => {
           ) : props.inputType === 'selector' ? (
             <>
               <InputSelect_Su
-                iconRight={props.iconRight}
+                iconRight={props.iconRight ? props.iconRight : "fas fa-caret-square-down"}
                 iconRightSize={props.iconRightSize}
                 id={props.id}
                 name={props.id}
@@ -95,6 +95,8 @@ const InputWithLabel_Su = props => {
               name={props.id}
               placeholder={props.placeholder}
               onChange={props.onChange}
+              iconRight={props.iconRight ? props.iconRight : "fas fa-upload"}
+              iconRightSize={props.iconRightSize}
             />
           ) : props.inputType === 'radio' ? (
             <InputRadio_Su
@@ -120,9 +122,24 @@ const InputWithLabel_Su = props => {
               onChange={props.onChange}
               col={props.col}
             />
+          ) : props.inputType === 'date' ? (
+            <InputText_Su
+              inputWidth={props.inputWidth}
+              inputHeight={props.inputHeight}
+              id={props.id}
+              iconLeft={props.iconLeft}
+              iconLeftSize={props.iconLeftSize}
+              name={props.id}
+              selectOptions={props.selectOptions}
+              onChange={props.onChange}
+              col={props.col}
+              // value={props.thisData[props.id]}
+              thisData={props.thisData}
+              type="date"
+            />
           ) : (
-            '找不到符合的input類型'
-          )}
+                          '找不到符合的input類型'
+                        )}
         </Col>
       </Row>
     </>

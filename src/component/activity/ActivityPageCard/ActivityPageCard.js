@@ -1,5 +1,5 @@
 import React from 'react'
-// import ActivityMap from './ActivityMap'
+import ActivityMap from './ActivityMap'
 
 const ActivityPageCard = props => (
   <>
@@ -23,11 +23,11 @@ const ActivityPageCard = props => (
         }}
       >
         <div class="col-md-7">
-          {/* <ActivityMap
+          <ActivityMap
             lat={props.lat}
             lng={props.lng}
             streetView={props.streetView}
-          /> */}
+          />
         </div>
         <div class="col-md-5">
           <div
