@@ -45,6 +45,31 @@ class ActivityInfo extends React.Component {
       this.setState({ activityPageData: activityPageData })
       this.setState({ activityPageOtherData: activityPageOtherData })
       this.setState({ activityHeroImage: activityPageData.imgSrc })
+      try {
+        fetch('http://localhost:5555/cinema/' + activityPageData.theaterId)
+          .then(res => res.json())
+          .then(res => {
+            const data = JSON.parse(JSON.stringify(res))
+            if (sessionStorage.getItem('memberId') == null) {
+              data.cinemaD3guessLook += 1
+            } else {
+              data.cinemaD3memberLook += 1
+            }
+            fetch(
+              'http://localhost:5555/cinema/' + activityPageData.theaterId,
+              {
+                method: 'PUT',
+                body: JSON.stringify(data),
+                headers: new Headers({
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                }),
+              }
+            )
+          })
+      } catch (err) {
+        console.log(err)
+      }
     } catch (err) {
       console.log(err)
     }
@@ -173,6 +198,36 @@ class ActivityInfo extends React.Component {
           })
           setTimeout(() => window.history.go(-1), 1000)
           return false
+        } else {
+          try {
+            fetch(
+              'http://localhost:5555/cinema/' +
+                this.state.activityPageData.theaterId
+            )
+              .then(res => res.json())
+              .then(res => {
+                const dataForD3 = JSON.parse(JSON.stringify(res))
+                dataForD3.cinemaD3memberJoin += 1
+                fetch(
+                  'http://localhost:5555/cinema/' +
+                    this.state.activityPageData.theaterId,
+                  {
+                    method: 'PUT',
+                    body: JSON.stringify(dataForD3),
+                    headers: new Headers({
+                      Accept: 'application/json',
+                      'Content-Type': 'application/json',
+                    }),
+                  }
+                )
+                  .then(res => res.json())
+                  .then(res => {
+                    console.log(res)
+                  })
+              })
+          } catch (err) {
+            console.log(err)
+          }
         }
       } catch (err) {
         console.log(err)

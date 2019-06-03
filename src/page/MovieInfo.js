@@ -74,27 +74,32 @@ class MovieInfo extends React.Component {
         .then(res => res.json())
         .then(data => {
           let totalScore = 0
-          let starData = Object.keys(this.state.moviePageData.filmStar)
           let theaterName = data.cinemaAddress
-          let getScore = Object.values(
-            this.state.moviePageData.filmStar
-          ).forEach(item => (totalScore += Number(JSON.stringify(item.star))))
-          console.log(totalScore)
-          let totalPeople = starData.length
-          if (totalPeople != 0) {
-            console.log(totalPeople)
-            let scoreData =
-              parseFloat(
-                Math.round((totalScore / totalPeople) * 100) / 100
-              ).toFixed(2) +
-              '/ 5 分' +
-              ' ( 總共 : ' +
-              totalPeople +
-              ' 人評分'
-            this.setState({ score: scoreData })
+          if (this.state.moviePageData.filmStars != null || undefined) {
+            let starData = Object.keys(this.state.moviePageData.filmStar)
+            let getScore = Object.values(
+              this.state.moviePageData.filmStar
+            ).forEach(item => (totalScore += Number(JSON.stringify(item.star))))
+            console.log(totalScore)
+            let totalPeople = starData.length
+            if (totalPeople != 0) {
+              console.log(totalPeople)
+              let scoreData =
+                parseFloat(
+                  Math.round((totalScore / totalPeople) * 100) / 100
+                ).toFixed(2) +
+                '/ 5 分' +
+                ' ( 總共 : ' +
+                totalPeople +
+                ' 人評分'
+              this.setState({ score: scoreData })
+            } else {
+              this.setState({ score: '目前還沒有人評分' })
+            }
           } else {
             this.setState({ score: '目前還沒有人評分' })
           }
+
           fetch(
             'https://maps.googleapis.com/maps/api/geocode/json?address=' +
               theaterName +
@@ -272,7 +277,7 @@ class MovieInfo extends React.Component {
         <div className="container-fluid fix-content" id="text">
           <div className="row">
             <div className="col-md-12 p-0">
-              <MovieTitle title={'相關活動'} className="content-title" />
+              <MovieTitle title={'相關電影'} className="content-title" />
             </div>
             {this.state.moviePageOtherData.map(data => (
               <div className="col-12 col-sm-12 col-md-6 col-lg-2 mt-5">

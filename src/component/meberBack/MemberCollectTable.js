@@ -38,56 +38,56 @@ class MemberCollectTable extends React.Component {
             添加你的收藏吧！
           </h5>
         ) : ( */}
-            <table class="table table-borderless text-center h5">
-              <thead>
-                <tr
-                  className="text-center"
-                  style={{ border: '2px solid #ffa510 ', color: '#ffa510' }}
+        <table class="table table-borderless text-center h5">
+          <thead>
+            <tr
+              className="text-center"
+              style={{ border: '2px solid #ffa510 ', color: '#ffa510' }}
+            >
+              <th style={{ width: '60px' }}>#</th>
+              <th scope="col-lg-6">文章標題</th>
+              <th scope="col-lg-4">作者</th>
+              <th scope="col-lg-3">發布日期</th>
+            </tr>
+          </thead>
+          <tbody className="bg-back-table text-mywhite">
+            {this.state.thisCollectArticleData.map((item, index) => (
+              <tr
+                key={item.id}
+                style={{
+                  borderBottom: '2px solid #2B333D',
+                }}
+              >
+                <th scope="row">{index + 1}</th>
+                <td
+                  style={{
+                    borderLeft: '2px solid #2B333D',
+                    borderRight: '2px solid #2B333D',
+                  }}
                 >
-                  <th style={{ width: '60px' }}>#</th>
-                  <th scope="col-lg-6">文章標題</th>
-                  <th scope="col-lg-4">作者</th>
-                  <th scope="col-lg-3">發布日期</th>
-                </tr>
-              </thead>
-              <tbody className="bg-back-table text-mywhite">
-                {this.state.thisCollectArticleData.map((item, index) => (
-                  <tr
-                    key={item.id}
-                    style={{
-                      borderBottom: '2px solid #2B333D',
-                    }}
-                  >
-                    <th scope="row">{index + 1}</th>
-                    <td
-                      style={{
-                        borderLeft: '2px solid #2B333D',
-                        borderRight: '2px solid #2B333D',
-                      }}
-                    >
-                      <a href={'/article/' + item.id}>{item.title}</a>
-                    </td>
-                    <td
-                      style={{
-                        borderLeft: '2px solid #2B333D',
-                        borderRight: '2px solid #2B333D',
-                      }}
-                    >
-                      {item.author}
-                    </td>
-                    <td
-                      style={{
-                        borderLeft: '2px solid #2B333D',
-                        borderRight: '2px solid #2B333D',
-                      }}
-                    >
-                      {item.date}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          {/* )} */}
+                  <a href={'/article/' + item.id}>{item.title}</a>
+                </td>
+                <td
+                  style={{
+                    borderLeft: '2px solid #2B333D',
+                    borderRight: '2px solid #2B333D',
+                  }}
+                >
+                  {item.author}
+                </td>
+                <td
+                  style={{
+                    borderLeft: '2px solid #2B333D',
+                    borderRight: '2px solid #2B333D',
+                  }}
+                >
+                  {item.date}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {/* )} */}
       </>
     )
   }

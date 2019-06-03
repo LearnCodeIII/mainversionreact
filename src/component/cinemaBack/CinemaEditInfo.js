@@ -454,20 +454,9 @@ class CinemaEditInfo extends React.Component {
               copyData['cinemaImg'] = copyData['cinemaImg'].filter(
                 item => item !== obj.filename
               )
-              // if (
-              //   event.target.parentNode ==
-              //   document.querySelector('#cinemaImgPreview').childNodes[0]
-              // ) {
-              //   console.log('Target===button')
               document
                 .querySelector('#cinemaImgPreview')
                 .removeChild(event.target.parentNode)
-              // } else {
-              //   console.log('Target===i')
-              //   document
-              //     .querySelector('#cinemaImgPreview')
-              //     .removeChild(event.target.parentNode.parentNode)
-              // }
               let successFileNum = this.state.successFileNum
               successFileNum--
               this.setState(
@@ -484,9 +473,13 @@ class CinemaEditInfo extends React.Component {
             eleImg.setAttribute('src', '/images/cinemaImg/' + obj.filename)
             eleImg.setAttribute(
               'style',
-              'height: 200px; box-shadow:#000 2px 2px 2px'
+              'width: 100%; box-shadow:#000 2px 2px 2px; objectFit:cover'
             )
             eleImg.classList.add('thumb')
+            imgBox.setAttribute(
+              'style',
+              'width: 300px; height:200px; overflow:hidden'
+            )
             imgBox.appendChild(delBtn)
             imgBox.appendChild(eleImg)
             document.querySelector('#cinemaImgPreview').appendChild(imgBox)
@@ -571,11 +564,13 @@ class CinemaEditInfo extends React.Component {
                 />
               </>
             ))}
-            <div
-              id="cinemaImgPreview"
-              className="d-flex flex-wrap"
-              style={{ width: '100%' }}
-            />
+            <Row>
+              <div
+                id="cinemaImgPreview"
+                className="d-flex flex-wrap"
+                style={{ width: '100%' }}
+              />
+            </Row>
           </div>
           <div className="col-lg-5 mt-3 mb-5">
             {/* 這裡放頭像(含編輯按鈕)、email、權限 */}
@@ -600,6 +595,7 @@ class CinemaEditInfo extends React.Component {
                 height: '350px',
               }}
               onChange={this.handleInputTextChange}
+              value={this.state.thisData.cinemaIntro}
               // cols="50"
               // rows="5"
             />

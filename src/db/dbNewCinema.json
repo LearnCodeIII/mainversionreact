@@ -1,4 +1,1098 @@
 {
+  "cinema": [
+    {
+      "find9527": "開發用記得要拔掉",
+      "id": "c001",
+      "cinemaName": "碼農Cafe",
+      "cinemaCity": "台北市",
+      "cinemaArea": "大安區",
+      "cinemaActivity": [
+        {
+          "id": "a1559406546061",
+          "title": "喝咖啡配電影",
+          "content": "碼農累了嗎？現在來碼農咖啡邊喝咖啡邊配電影解放你的大腦吧！",
+          "imgSrc": "a4cf6483-a9a9-4b75-aebb-89f36e3acd78.png",
+          "lat": "25.0316633",
+          "lng": "121.5540038",
+          "joinContent": "線上報名即可。",
+          "joinContentCurrentPeople": "10",
+          "place": "北部,影院",
+          "theaterMap": "106台北市大安區通化街24巷1號"
+        }
+      ],
+      "cinemaLogoImg": "0465d345-669d-450d-ae97-1d26ad39ea68.png",
+      "cinemaImg": [
+        "spott.jpg",
+        "spoth.jpg",
+        "nocho.jpg",
+        "eslite.jpg",
+        "65f25c0a-1eea-45c4-984d-f3afff1f9845.jpg",
+        "e528875d-afd8-4b31-9c28-a641bb3ccf53.jpg"
+      ],
+      "cinemaHeroImg": "a2fa5157-b1b3-4aff-bded-60687f695387.png",
+      "cinemaAccount": "1111",
+      "cinemaPassword": "1111",
+      "cinemaType": "cafe",
+      "cinemaFilm": [
+        {
+          "id": "m1000000",
+          "title": "赤手登峰",
+          "titleEn": "english filmname",
+          "movie_rating": "普遍級",
+          "imgSrc": "https://g.udn.com.tw/upfiles/B_SH/shiow/PSN_PHOTO/591/f_24131591_1.jpg",
+          "type": [
+            "懸疑片"
+          ],
+          "director": "導演名字",
+          "language": "華語",
+          "intro": "電影簡介",
+          "fullIntro": "電影介紹",
+          "filmTime": "200",
+          "updateDate": "2019-04-11",
+          "inTheaterDate": "2019-05-01",
+          "outTheaterDate": "2019-08-01",
+          "schedule": [
+            "2019-05-31 18:00",
+            "2019-06-01 10:00",
+            "2019-06-01 13:00",
+            "2019-06-01 18:00",
+            "2019-06-02 10:00",
+            "2019-06-02 13:00",
+            "2019-06-02 18:00"
+          ],
+          "filmStar": [
+            {
+              "starId": "m111111",
+              "star": 5
+            },
+            {
+              "starId": "m22222",
+              "star": 5
+            },
+            {
+              "starId": "m1558576972555",
+              "star": 5
+            }
+          ]
+        },
+        {
+          "id": "m1559461949823",
+          "title": "輕鬆+愉快",
+          "titleEn": "Free and Easy",
+          "movie_rating": "保護級 6+",
+          "imgSrc": "71cf6163-45da-49e1-8384-ecd8a95aa97e.jpg",
+          "type": [
+            "喜劇片",
+            "動畫片",
+            "偵探片"
+          ],
+          "director": "耿軍",
+          "language": "華語",
+          "intro": "耿軍黑色喜劇《輕鬆+愉快》，以一座宛如廢墟的東北城鎮為背景，聚集了推銷肥皂的騙子、逢人結緣的假和尚、到處找媽的基督徒、疲於奔命的林務員、以及破不了案的警察。互騙互害、互相傷害，人生才能輕鬆又愉快！",
+          "fullIntro": "以《錘子鐮刀都休息》擒下2014金馬獎最佳短片的耿軍，黑色喜劇新作《輕鬆+愉快》，以一座宛如廢墟的東北城鎮為背景，聚集了推銷肥皂的騙子、逢人結緣的假和尚、到處找媽的基督徒、疲於奔命的林務員、以及破不了案的警察，他們的擁抱像在廝殺，關愛彷彿猜疑，相愛又相殘。\n\n劇情描述，在一座宛如廢墟的東北城鎮裡，出現了推銷肥皂的騙子、逢人結緣的假和尚、到處找媽的基督徒、發課程傳單的武術青年、疲於奔命的林務員、以及破不了案又濫用權力的警察……。歹徒不夠兇惡、受害者也不令人同情，擁抱像在廝殺，關愛彷彿猜疑，相愛又相殘，只好互騙互害、互相傷害，人生才能輕鬆又愉快。\n\n影片充滿耿軍對環境的批判、人性的觀察，以及吉姆賈木許、郭利斯馬基的冷調幽默，獨到的視野及手法，更獲得本屆日舞影展評審團特別獎。",
+          "filmTime": "98",
+          "updateDate": "2019-06-02",
+          "inTheaterDate": "2019-05-01",
+          "outTheaterDate": "2019-06-30",
+          "schedule": [
+            "2019-06-03 10:00",
+            "2019-06-03 00:00",
+            "2019-06-03 15:00",
+            "2019-06-05 10:00"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559479473377",
+          "title": "一一",
+          "titleEn": "YIYI",
+          "movie_rating": "普遍級 0+",
+          "imgSrc": "7618ef2f-c72d-4247-8ecb-1ae19c48620a.jpg",
+          "type": [
+            "戲劇片"
+          ],
+          "director": "楊德昌",
+          "language": "華語",
+          "intro": "故事劇情描寫台北一家人的感情起落及生活故事，探討人生在不同階段將會面臨到的困惑與危機，表達出對人的關懷與尊重。整個舞臺環繞台北為場景，藉由看似平凡無奇的都市生活，感受周遭的人情冷暖及生老病死，隱喻大家如何看待生命的意義究竟為何",
+          "fullIntro": "在台北市住著一戶中產階級的家庭：丈夫簡南峻，妻子敏敏，大女兒婷婷和年僅8歲的小兒子洋洋，他們和敏敏的母親共同生活著。\n\n在敏敏的弟弟阿弟的婚禮中發生了一系列的麻煩事，先是阿弟的舊情人雲雲在阿弟與小燕的婚禮上大吵大鬧，而後在電梯口，簡南峻與自己30年前的舊情人Sherry相遇，接著是婆婆倒在自家垃圾場而被送進了醫院…… 婆婆因腦溢血而陷入了昏迷狀態，婷婷一直很內疚，認為婆婆的病和自己有關。\n\n醫生告誡家人需要每天輪流跟婆婆講話，以幫助其康復。每個人面對著沉睡中的婆婆漸漸詞窮，最後不得不請護士念報紙來解脫尷尬困境。為尋求精神上的解脫，敏敏上山入宿寺廟了。\n\n新搬來的鄰居莉莉和她的男友吵架了，兩人分手後，莉莉的男友胖子開始主動和婷婷約會。可婷婷最終發現胖子真正愛的人不是自己，他的內心深處還在愛著莉莉，這一切都讓婷婷覺得悲傷。\n\n兒子洋洋受父親的影響愛上了照相機，他覺得人只能看到一半的事情--只能看到前面，看不到後面，於是他開始拍攝人的背面，用兒童單純而奇特的視角拍攝周圍的生活。他在學校總是受主任的刁難，他便用自己的手段報復主任。\n\n胖子一直關注著莉莉，他認為莉莉和她的老師有關係，一日等在她家樓下殺了那個男人。\n\n簡南峻借著去日本出差的機會和舊情人Sherry重敘舊情，卻無法從頭再來。\n\n在婆婆的葬禮上，洋洋念了一段自己寫的話送給婆婆：「婆婆，對不起。不是我不喜歡跟你講話，只是我覺得我能跟你講的，你一定老早就知道了。不然，你就不會每次都叫我『聽話』。就像他們都說你走了，你也沒有告訴我你去了哪裡。所以我覺得，那一定是我們都知道的地方。婆婆，我不知道的事情太多了，所以，你知道我以後想做什麼嗎？我要去告訴別人他們不知道的事，給別人看他們看不到的東西。我想，這樣一定天天都很好玩。說不定，有一天，我會發現你到底去了哪裡。到時候，我可不可以跟大家講，找大家一起過來看你呢？婆婆，我好想你，尤其是我看到那個，還沒有名字的小表弟。就會想起你常跟我說：你老了。我很想跟他說：我也覺得……我也老了。」",
+          "filmTime": "174",
+          "updateDate": "2019-06-02",
+          "inTheaterDate": "2019-01-01",
+          "outTheaterDate": "2019-12-31",
+          "schedule": [
+            "2019-03-01 01:00"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559527582830",
+          "title": "結婚哪有那麼男",
+          "titleEn": "My Big Gay Italian Wedding",
+          "movie_rating": "保護級 6+",
+          "imgSrc": "7c062cd9-5a8f-44de-b6e2-f170bbbb41cd.jpg",
+          "type": [
+            "戲劇片",
+            "喜劇片",
+            "愛情片"
+          ],
+          "director": "亞歷山卓傑諾韋西",
+          "language": "義大利語",
+          "intro": "★ 天菜帥哥Ｘ熊熊暖男 最萌組合結婚大作戰 ",
+          "fullIntro": "「各位親愛的親戚朋友～在這美好的幸福時刻要與你們分享喜訊：交往三年的我們終於要結婚了！但是爸媽還不知道，我要結婚的對象是個男的...」\n　　安東尼奧終於向同居男友保羅求婚了，兩人決定要陪伴彼此共度一生，可是這對同志伴侶一個還沒跟親友出櫃，另一個則是與媽媽斷絕往來。他們鼓起勇氣飛回義大利老家希望獲得家人的祝福，但他們的購物狂房東與變裝大叔室友也緊黏同行，原本看似開明的父母也因婚事意見分歧，與兒子冷戰的丈母娘依舊避不見面，還有突然冒出來鬧場的前女友，種種困難等著夫夫破關，結婚怎麼會這麼難？",
+          "filmTime": "90",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-03",
+          "outTheaterDate": "2019-06-06",
+          "schedule": [
+            "2019-06-03 13:40",
+            "2019-06-03 21:45",
+            "2019-06-04 20:15",
+            "2019-06-05 11:20",
+            "2019-06-05 19:15",
+            "2019-06-06 10:20"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559529445148",
+          "title": "爺爺與喵",
+          "titleEn": "The Island of Cats",
+          "movie_rating": "普遍級 0+",
+          "imgSrc": "1e669b11-197e-40d3-90d2-eb17e49e8b1b.jpg",
+          "type": [
+            "戲劇片"
+          ],
+          "director": "岩合光昭 Mitsuaki Iwago",
+          "language": "日語",
+          "intro": "「小玉啊……你會陪我到最後吧？」",
+          "fullIntro": "退休校長大吉爺爺在老伴先一步離開人世後，和貓咪小玉一人一貓相依為命，天氣冷的時候就一起窩在暖爐旁取暖、吃飯時間一起開心吃著生魚片，只要有小玉在，就一點也不會感到寂寞。因為思念起老伴作的豌豆炊飯，大吉爺爺在小玉喵的幫(搗)助(蛋)之下，大吉靠著老伴親筆寫的一本食譜完成了這道料理。在咖啡廳女主人的鼓勵之下，大吉爺爺開始一頁一頁地親筆填滿這本食譜。可是，身體向來硬朗的爺爺卻不敵病魔來襲，突然倒下了……。",
+          "filmTime": "103",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-06",
+          "outTheaterDate": "2019-06-07",
+          "schedule": [
+            "2019-06-06 18:45"
+          ],
+          "filmStar": []
+        }
+      ],
+      "cinemaStar": [
+        {
+          "starId": "m111111",
+          "star": 5
+        },
+        {
+          "starId": "m22222",
+          "star": 5
+        },
+        {
+          "starId": "m1558576972555",
+          "star": 5
+        }
+      ],
+      "cinemaAddress": "106台北市大安區通化街24巷1號",
+      "cinemaPhone": "02-2511-1111",
+      "cinemaTaxid": "16086448",
+      "cinemaWeb": "http://manonCafe.com.tw",
+      "cinemaEmail": "manon@gg.com",
+      "cinemaBackupEmail": "manonCafe@gmail.com",
+      "cinemaAwesome": [
+        "m111111",
+        "m22222",
+        "m1558576972555"
+      ],
+      "cinemaPageViews": 621,
+      "cinemaSignUpDate": "1955-03-12",
+      "purview": "cinemaMember",
+      "cinemaIntro": "提供碼農們安心Coding、享受咖啡和電影的休憩場所",
+      "cinemaMessage": [
+        {
+          "id": 1559151687850,
+          "name": "訪客",
+          "img": "asianman.jpg",
+          "message": "ㄊsdcec",
+          "time": 1559151687850,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1559138289149,
+          "name": "光點台北",
+          "img": "spott.jpg",
+          "message": "我已改變發文放置順序...  所以下面資料順序就不要管他惹！！",
+          "time": 1559138289149,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1559138199665,
+          "name": "光點台北",
+          "img": "spott.jpg",
+          "message": "wergva",
+          "time": 1559138199665,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": "002",
+          "name": "東尼大木",
+          "img": "asianman.jpg",
+          "message": "嘎嘎嘎我要留爆這邊",
+          "time": "1558494913221",
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": "001",
+          "name": "佐佐木小次郎",
+          "img": "asian.jpg",
+          "message": "啊啊啊  不給你留爆",
+          "time": "1558494913758",
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1558975629869,
+          "name": "光點華山",
+          "img": [
+            "spoth.jpg"
+          ],
+          "message": "戲院留言測試... 接資料庫惹賣鬧喔！＠！",
+          "time": 1558975629869,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1558975673440,
+          "name": "小雪",
+          "img": "asianman.jpg",
+          "message": "會員留言測試... 三小～～不要爆在這喔",
+          "time": 1558975673440,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1558975709879,
+          "name": "訪客",
+          "img": "asianman.jpg",
+          "message": "沒登陸的訪客留言測試...   這過關就可以去抽煙惹...",
+          "time": 1558975709879,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        },
+        {
+          "id": 1559132033032,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "fgchvjbk",
+          "time": 1559132033032,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132794325,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "fghvjbknm bg",
+          "time": 1559132794325,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132797535,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "ikjhbvgjbkb",
+          "time": 1559132797535,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132834170,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "fuygvhujkhj",
+          "time": 1559132834170,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559132838478,
+          "name": "小雪",
+          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
+          "message": "ghcvjkbvg",
+          "time": 1559132838478,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "member"
+        },
+        {
+          "id": 1559138044578,
+          "name": "光點台北",
+          "img": "spott.jpg",
+          "message": "test",
+          "time": 1559138044578,
+          "awesome": [],
+          "boo": [],
+          "imgLocation": "cinemaImg"
+        }
+      ]
+    },
+    {
+      "id": "c1559487285640",
+      "cinemaName": "光點台北",
+      "cinemaCity": "台北市",
+      "cinemaArea": "中山區",
+      "cinemaLogoImg": "9823c704-97c3-41bd-a403-b42dc2dec3ed.jpg",
+      "cinemaImg": [
+        "22d2146d-87cf-4005-91b2-4bade519dcd8.jpg",
+        "c82f5d6c-981a-42fb-8105-19b833724d6a.jpg",
+        "da4b92d2-c637-4a61-bd94-a76e2ca90eda.jpg",
+        "ef1c2a19-65f1-4556-8d4b-58f7848a0b76.jpg",
+        "e581dbcf-a06e-4f68-bee2-e470d92dbbfa.jpg"
+      ],
+      "cinemaHeroImg": "4861b85b-ca64-4046-8acc-36a0c2757535.jpg",
+      "cinemaAccount": "spottaipei",
+      "cinemaPassword": "1111",
+      "cinemaActivity": [],
+      "cinemaFilm": [
+        {
+          "id": "m1559530196922",
+          "title": "馬拉松武士",
+          "titleEn": "Samurai Marathon",
+          "movie_rating": "普遍級 0+",
+          "imgSrc": "204289bd-1cd6-4538-8fc7-13c345a4181f.png",
+          "type": [
+            "戲劇片"
+          ],
+          "director": "柏納德羅斯 Bernard Rose",
+          "language": "日語",
+          "intro": "改編自日本作家土橋章弘的同名小說\n集結超強明星陣容，重現日本史上第一場馬拉松比賽",
+          "fullIntro": "江戶幕府末期，鎖國的日本面臨美國強迫開國的威脅，安中藩主－板倉勝明（長谷川博己 飾）為此鍛鍊武士，要求武士們進行一場馬拉松賽跑，最終優勝者就能獲得實現願望的機會。消息一出，全城武士群起激動。但在比賽前夕卻有人藉機計畫謀反，僅有一人察覺到了事情的不對勁，他是幕府派來的間諜－唐澤甚內（佐藤健 飾）。隨著比賽聲響起，各懷鬼胎的參賽者們終於起跑，與此同時，刺客們也準備展開襲擊。為了拯救所愛之人、守護重要之物，唐澤開始全力奔跑！",
+          "filmTime": "104",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-05-31",
+          "outTheaterDate": "2019-06-06",
+          "schedule": [
+            "2019-05-31 12:30",
+            "2019-06-06 12:30",
+            "2019-06-05 13:00",
+            "2019-06-04 12:30",
+            "2019-06-03 11:00",
+            "2019-06-03 15:00"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559530974637",
+          "title": "這條路上：百年童謠的誕生",
+          "titleEn": "The Old Road—Konomichi",
+          "movie_rating": "普遍級 0+",
+          "imgSrc": "101a25be-7ba7-4270-9819-92ecb5063326.jpg",
+          "type": [
+            "戲劇片",
+            "文藝片"
+          ],
+          "director": "佐佐部清 Kiyoshi Sasabe",
+          "language": "日語",
+          "intro": "全日本最經典童謠，千萬人傳唱，慶祝百年誕辰!\n鬼才詩人北原白秋x天才音樂家山田耕筰 打造童謠詞曲創作組合",
+          "fullIntro": "北原白秋（大森南朋 飾）從中學時期就開始投稿詩作，隨後發表一系列童謠創作，成為家喻戶曉的音樂詩人。個性嚴謹的山田耕筰（AKIRA 飾）是日本最早的古典音樂作曲家之一，兩位個性與風格南轅北轍音樂家，原本王不見王，卻因大時代因素而聚首，組成童謠詞曲二人組，替全日本的孩童，創作出許多經典童謠，帶來快樂童年時光。本片將兩人數十年動人的友誼，首次搬上大銀幕。",
+          "filmTime": "104",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-05-31",
+          "outTheaterDate": "2019-06-06",
+          "schedule": [
+            "2019-06-06 10:30",
+            "2019-06-05 11:00",
+            "2019-06-05 19:35",
+            "2019-06-04 10:30",
+            "2019-06-04 21:25",
+            "2019-06-03 13:00",
+            "2019-06-03 19:25",
+            "2019-06-02 17:15",
+            "2019-06-02 21:15"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559532873696",
+          "title": "鈴木家的謊言",
+          "titleEn": "Lying To Mom",
+          "movie_rating": "普遍級 0+",
+          "imgSrc": "27c3c35a-1ce2-4787-8572-1d2b04042f41.jpg",
+          "type": [
+            "戲劇片"
+          ],
+          "director": "野尻克己 Katsumi Nojiri",
+          "language": "日語",
+          "intro": "★ 東京影展「日本電影Splash 部門」最佳影片",
+          "fullIntro": "鈴木家的大哥自殺了。深愛兒子的媽媽因為大受驚嚇而失憶，忘了哥哥已經死去的事實，妹妹和爸爸決定欺騙母親「哥哥找到新工作，現在在阿根廷生活！」之後的每一天，爸爸到原宿買了切格瓦拉的衣服給全家人，當成哥哥寄來的紀念品；妹妹則寫了無數的信和明信片，佯裝成哥哥在報平安。從前擔心哥哥總足不出戶的媽媽，終於一天比一天開朗，然而這樣的謊言能夠持續多久呢？\n\nKoichi (Ryo Kase) is a son in the Suzuki family. He is a hikikomori and dies suddenly. The rest of Suzuki family, father Yukio (Ittoku Kishibe), mother Yuko (Hideko Hara) and daughter Fumi (Mai Kiryu), fall into confusion. Especially the mother Yuko, who is shocked by her son's death, and loses her memory. Fumi lies to her mother and tells her \"Koichi stopped being a hikikomori and now works in Argentina.\"",
+          "filmTime": "104",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-21",
+          "outTheaterDate": "2019-06-30",
+          "schedule": [],
+          "filmStar": []
+        },
+        {
+          "id": "m1559549728936",
+          "title": "最親愛的陌生兒子",
+          "titleEn": "Dear Son",
+          "movie_rating": "保護級 6+",
+          "imgSrc": "03515e28-000d-4350-a182-9452bde7b7a5.jpg",
+          "type": [
+            "戲劇片"
+          ],
+          "director": "穆罕默德班阿提亞",
+          "language": "法語",
+          "intro": "★ 2018 坎城影展 導演雙週\n\n《推銷員之戀》柏林金獎導演新作；金棕櫚得主達頓兄弟摯情監製；\n真實事件改編。",
+          "fullIntro": "在碼頭擔任作業員的里亞，與妻子結婚多年，感情漸漸被時間沖淡，兩人的獨生子薩米便成為家庭生活的重心。只是升學大考將至，薩米卻一直為偏頭痛所苦，看了各科醫生仍不見好轉。里亞不惜耗盡一切資源，希望能治癒兒子的偏頭痛，也讓原本計劃退休的自己陷入壓力之中。就在家中氣氛越來越緊繃之時，薩米卻突然消失不見，而里亞也意外在兒子房間裡，發現了不可告人的天大秘密。他開始打包行李，決定動身前往遠方，誓死找回最親愛的兒子……。\n\nA Tunisian middle class couple with high hopes for the future of their only son discover he's left to join ISIS in Syria.",
+          "filmTime": "104",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-21",
+          "outTheaterDate": "2019-06-30",
+          "schedule": [],
+          "filmStar": []
+        }
+      ],
+      "cinemaStar": [
+        {
+          "starId": "m22222",
+          "star": 5
+        },
+        {
+          "starId": "m1558576972555",
+          "star": 1
+        }
+      ],
+      "cinemaAddress": "台北市中山區中山北路二段18號",
+      "cinemaPhone": "02-2511-7786",
+      "cinemaTaxid": "28468385",
+      "cinemaWeb": "http://www.spot.org.tw/",
+      "cinemaEmail": "taipei.spotdesign@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 14,
+      "cinemaSignUpDate": "2019-06-02",
+      "purview": "cinemaMember",
+      "cinemaIntro": "她，令當年的尼克遜，在擔任美國副總統來到台灣訪問時，沒住豪華大酒店，\n卻看上這棟老洋房，還在這裡睡過幾個晚上。\n她，保存了原來的古典風情，讓藝術不做過多裝扮，\n令人體會藝術原來是現代人生活的養分，很容易親近，也很容易消化。\n她，以歷史為中山北路注入了一抹亮麗粧顏，\n以古蹟建築傳唱中山北路百年風流雅緻的人文歷史。",
+      "cinemaMessage": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559489066363",
+      "cinemaName": "光點華山",
+      "cinemaCity": "台北市",
+      "cinemaArea": "中正區",
+      "cinemaLogoImg": "14b5e833-43d1-4742-bcd2-759091c438b7.jpg",
+      "cinemaImg": [],
+      "cinemaFilm": [
+        {
+          "id": "m1559533490304",
+          "title": "亡命之途",
+          "titleEn": "Paradise Next",
+          "movie_rating": "輔導級 15+",
+          "imgSrc": "dbf5f16e-c021-4458-8048-068d07ad2c91.jpg",
+          "type": [
+            "驚悚片",
+            "懸疑片",
+            "戲劇片"
+          ],
+          "director": "半野喜弘",
+          "language": "日語",
+          "intro": "台、日跨國合拍鉅作，全程台灣取景拍攝！\n日本兩大男神妻夫木聰 ╳ 豐川悅司攜手打造懸疑犯罪電影！\n奧斯卡最佳配樂，世界級音樂大師量身打造電影配樂！ ",
+          "fullIntro": "因涉入一宗枉死案件被日本角頭追殺而躲避到台灣的痞子牧野（妻夫木聰 飾），找上同樣因此事件自我放逐的冷酷殺手島（豐川悅司 飾），兩名負罪的旅人一路逃亡來到了花蓮，認識了開朗的當地女孩小恩（謝欣穎 飾），三人在這趟流浪的旅程中，竟遭到一位如同鬼魅般的神秘殺手（莊凱勛 飾）追殺，他的出現即將揭露出什麼殘酷的真相？三人的命運是否就此改變？",
+          "filmTime": "100",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-06",
+          "outTheaterDate": "2019-06-08",
+          "schedule": [
+            "2019-06-06 16:20",
+            "2019-06-06 20:55"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559533716933",
+          "title": "亨利先生的秘密",
+          "titleEn": "The Mystery of Henri Pick",
+          "movie_rating": "保護級 6+",
+          "imgSrc": "6303adaa-b575-4592-9aeb-4013dd0b639a.jpg",
+          "type": [
+            "驚悚片",
+            "懸疑片",
+            "喜劇片"
+          ],
+          "director": "雷米貝桑松 ",
+          "language": "華語",
+          "intro": "★法國暢銷文學作品改編 熱賣40萬冊 版權狂銷14國\n★出版業、行銷鬼才看了絕對有共鳴的幽默喜劇！",
+          "fullIntro": "一本神秘的暢銷書 掀起文壇筆戰……\n在法國的某個小鎮裡，有著一座專門收「退稿」的圖書館。某日，年輕的編輯達芬妮在館內發現了一本書稿，由一位叫做亨利皮克的比薩師傅所寫的小說《一段愛情故事的彌留時刻》。瘋狂著迷於書稿中文字的達芬妮，決定前往拜訪亨利的遺孀，請求她答應出版這本曠世鉅作。果不其然，小說上市後立刻掀起一股熱潮，但隨即也遭到書評人胡許的質疑，他不相信比薩師傅能寫出如此令人驚艷的作品，於是他決定與亨利的女兒喬瑟芬聯手展開調查，希望能找出關於這本書的秘密……。",
+          "filmTime": "101",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-05-24",
+          "outTheaterDate": "2019-06-05",
+          "schedule": [
+            "2019-06-03 15:25",
+            "2019-06-03 21:20",
+            "2019-06-04 15:00",
+            "2019-06-05 16:55"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559534438201",
+          "title": "爺爺與喵",
+          "titleEn": "The Island of Cats",
+          "movie_rating": "普遍級 0+",
+          "imgSrc": "5c37fea7-a3aa-4911-92d8-972f762bc9eb.jpg",
+          "type": [
+            "戲劇片"
+          ],
+          "director": "岩合光昭",
+          "language": "日語",
+          "intro": "人氣圖文作家貓蒔療癒系漫畫作品《爺爺與小玉喵》改編。\n《岩合光昭的貓步走世界》知名動物攝影師岩合光昭執導。 ",
+          "fullIntro": "退休校長大吉爺爺在老伴先一步離開人世後，和貓咪小玉一人一貓相依為命，天氣冷的時候就一起窩在暖爐旁取暖、吃飯時間一起開心吃著生魚片，只要有小玉在，就一點也不會感到寂寞。因為思念起老伴作的豌豆炊飯，大吉爺爺在小玉喵的幫(搗)助(蛋)之下，大吉靠著老伴親筆寫的一本食譜完成了這道料理。在咖啡廳女主人的鼓勵之下，大吉爺爺開始一頁一頁地親筆填滿這本食譜。可是，身體向來硬朗的爺爺卻不敵病魔來襲，突然倒下了……。",
+          "filmTime": "103",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-06",
+          "outTheaterDate": "2019-06-15",
+          "schedule": [
+            "2019-06-06 18:45"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559549100356",
+          "title": "與神同愛",
+          "titleEn": "Believer",
+          "movie_rating": "保護級 6+",
+          "imgSrc": "3c9d2567-b46e-427d-a085-07ad2dac5c01.jpg",
+          "type": [
+            "紀錄片"
+          ],
+          "director": "唐阿戈特 Don Argott",
+          "language": "英語",
+          "intro": "謎幻樂團主唱丹雷諾茲以音樂啟發人性，力挺LGBTQ ",
+          "fullIntro": "本片乃記錄著丹雷諾茲在創作「信徒」(Believer)一曲與《超進化》(Evolve)專輯時的心路歷程－他該如何在信仰與信念間尋求解答？該如何透過個人的號召力改變教會、教友反同婚平權的立場？該如何藉由音樂的力量影響更多民眾了解LGBTQ議題？又該如何用實際行動帶給許多LGBTQ族群及其家庭、學校、社福單位更多的幫助？ 最終，丹雷諾茲乃與同為虔誠摩門教徒的霓虹樹樂團出櫃主唱泰勒格倫合作舉辦LoveLoud Festival，並成立永久組織給予LGBTQ的摩門教徒更多協助，讓猶他州的LGBTQ青少年自殺率得以降低。",
+          "filmTime": "101",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-05-29",
+          "outTheaterDate": "2019-06-06",
+          "schedule": [
+            "2019-06-03 13:00",
+            "2019-06-04 22:00",
+            "2019-06-05 14:55"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559549321529",
+          "title": "祝我好好孕",
+          "titleEn": "Our Happy Birth Day",
+          "movie_rating": "保護級 6+",
+          "imgSrc": "f09a0855-418a-40fe-b214-17004ac656ee.jpg",
+          "type": [
+            "紀錄片"
+          ],
+          "director": "陳育青",
+          "language": "華語",
+          "intro": "★ 2016 國藝會紀錄片專案補助\n★ 2018 釜山國際影展 Wide Angle競賽單元入選 ",
+          "fullIntro": "琬婷是崇尚自然的芳療師，參與劇場演出時她意外懷孕，當她在舞臺大喊「我不要剖腹產」，現實中，她卻有個胎位不正的寶寶，在家生產的希望，越來越渺茫。詩薇在助產師萬美麗的協助下，老公與女兒的陪伴下，溫馨迎接家中第一位男嬰，但上天卻給了她殘酷的考驗……。琬婷和詩薇選擇生產的方式與台灣99.9%女性不同，讓她們對誕生和死亡有了全新的認識。",
+          "filmTime": "81",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-07",
+          "outTheaterDate": "2019-06-29",
+          "schedule": [],
+          "filmStar": []
+        }
+      ],
+      "cinemaHeroImg": "943f516d-6836-4a0b-a17c-7e6197553c45.jpg",
+      "cinemaAccount": "spothwashang",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市中正區八德路一段1號",
+      "cinemaPhone": "02-2394-0622",
+      "cinemaTaxid": "28468381",
+      "cinemaWeb": "http://www.spot-hs.org.tw/",
+      "cinemaEmail": "taipei.spot@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 20,
+      "cinemaSignUpDate": "2019-06-02",
+      "purview": "cinemaMember",
+      "cinemaIntro": "光點華山電影館,位於華山文創園區中六館，原為酒廠再製酒包裝室，1996年由文化部規劃指導，改建為電影館，並由侯孝賢導演領軍之團隊「台灣電影文化協會」經營管理，於2012年11月正式開幕，為全國首座國家級藝術電影館。整館空間保留舊建築結構並結合新的創意元素，為老屋新力之創新展現",
+      "cinemaMessage": [],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559489867561",
+      "cinemaName": "文青不挑片",
+      "cinemaCity": "台北市",
+      "cinemaArea": "信義區",
+      "cinemaLogoImg": "e13b7324-6b1e-4575-8ca8-6a9537076ee4.jpg",
+      "cinemaImg": [
+        "f53138c7-7678-45c9-931b-b696a8031bbb.jpg",
+        "bebeded2-2a89-401e-8ea8-2e475467df4e.jpg"
+      ],
+      "cinemaHeroImg": "3537b353-a448-452b-9cc2-71152debe704.jpg",
+      "cinemaAccount": "spacebarroom",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市信義區和平東路三段291號",
+      "cinemaPhone": "02-2738-5660",
+      "cinemaTaxid": "54346058",
+      "cinemaWeb": "https://www.spacebarfilm.com/",
+      "cinemaEmail": "spacebarroom@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 4,
+      "cinemaSignUpDate": "2019-06-02",
+      "purview": "cinemaMember",
+      "cinemaIntro": "想在台北看一場好電影，除了電影院，你還有其他的選擇。鄰近六張犁捷運站的影像工作室 Spacebar Studio，到了週五晚上搖身一變成為「文青不挑片」的聚會所，吸引許多電影愛好者定時上門拜訪。Spacebar Studio 的 Mossy 透露，本來只是公司的親朋好友們下班後在辦公空間地下室舉辦的電影小聚，卻因為有設立 Facebook 公開的活動頁面而廣為人知，逐漸變成每週一次、對外開放的觀影活動。",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "bar"
+    },
+    {
+      "id": "c1559491685943",
+      "cinemaName": "誠品電影院",
+      "cinemaCity": "台北市",
+      "cinemaArea": "信義區",
+      "cinemaLogoImg": "a201a691-833b-4f65-a665-0299b5f1aa29.png",
+      "cinemaImg": [],
+      "cinemaHeroImg": "a7938ed9-21e3-445c-a9f2-69fb4f7c378f.jpg",
+      "cinemaAccount": "eslite",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市信義區菸廠路80號B2",
+      "cinemaPhone": "02-6636-5888",
+      "cinemaTaxid": "23155531",
+      "cinemaWeb": "https://meet.eslite.com/tw/tc",
+      "cinemaEmail": "service@eslite.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 8,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559493900163",
+      "cinemaName": "桃園光影",
+      "cinemaCity": "桃園市",
+      "cinemaArea": "中壢區",
+      "cinemaLogoImg": "fd377cc7-c370-436b-9c77-d7f512249526.png",
+      "cinemaImg": [
+        "3007835e-919e-4bd5-91bb-a90f8113bc8d.jpg"
+      ],
+      "cinemaHeroImg": "168c3621-a7cc-4c6f-9904-dd82f6b38c3b.jpg",
+      "cinemaAccount": "taoyuanartscinema",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "桃園市中壢區龍清街116巷31號",
+      "cinemaPhone": "03-458-1598",
+      "cinemaTaxid": "24337932",
+      "cinemaWeb": "http://www.taoyuan.arts-cinema.com/",
+      "cinemaEmail": "taoyuanartscinema@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 3,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "電影是一扇窗，讓人們窺見所處環境之外的世界，而對世界的瞭解與洞見，能夠讓人們回過頭來關照自身的環境，從而找到讓社會與生命更加美好的出口。我們期待，桃園光影能夠成為將世界帶進桃園的門戶，就像一直以來，桃園作為台灣的門戶，將台灣人帶往世界各地一樣。",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559497318854",
+      "cinemaName": "萬代福影城",
+      "cinemaCity": "台中市",
+      "cinemaArea": "中區",
+      "cinemaLogoImg": "ba769804-f3da-4905-971d-76f3ad8e2af7.jpg",
+      "cinemaImg": [
+        "f6231bb5-a584-40ec-9229-60d43b290e77.jpg",
+        "815b1323-6c74-45a1-80cd-cb2c2305930a.jpg"
+      ],
+      "cinemaHeroImg": "b4e193ea-ee96-4f73-b0d0-82e0a16b3ace.jpg",
+      "cinemaAccount": "wdful1",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台中市中區公園路38號",
+      "cinemaPhone": "04-2221-0356",
+      "cinemaTaxid": "52664555",
+      "cinemaWeb": "http://www.wdful.com.tw/",
+      "cinemaEmail": "wdful999@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 2,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "萬代福影城成立於1981年，2004年重新改裝,\n全新整裝的萬代福影城 Wonderful Cinemas 不只內部重金整修，在硬體設備提升更高的水準與舒適度，持續獨家上映許多深受好評的藝術電影、各國影展片，並舉辦電影特映會以及校園的露天電影晚會。",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559536645628",
+      "cinemaName": "府中15紀錄片放映院",
+      "cinemaCity": "新北市",
+      "cinemaArea": "板橋區",
+      "cinemaLogoImg": "2bcbef80-4582-4a35-8bcc-39c3f287482b.jpg",
+      "cinemaImg": [
+        "8529092f-b0e1-45b8-adf8-d9b8c23c82d6.jpg",
+        "fef12eed-cda9-4207-9caa-032bc24dcf30.jpg"
+      ],
+      "cinemaHeroImg": "2c5e077a-becd-4b05-8c3c-22ed04590022.jpg",
+      "cinemaAccount": "fuzhong15",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "新北市板橋區府中路15號B1",
+      "cinemaPhone": "02-2965-7186",
+      "cinemaTaxid": "23322222",
+      "cinemaWeb": "http://web.fuzhong15.ntpc.gov.tw/films/contact.aspx",
+      "cinemaEmail": "fuzhong15.films@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 10,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "為了培養紀錄片觀影人口、建立紀錄片工作者發表平台，新北市政府於100年12月3日啟用全國第一個以紀錄片為主題放映的場地—「『府中15』新北市紀錄片放映院」。除了作為優質紀錄片定點放映、舉辦名人講座之地點外，並結合府中商圈，打造市民休閒及觀賞藝術電影的藝文特區。",
+      "cinemaMessage": [],
+      "cinemaFilm": [
+        {
+          "id": "m1559537083753",
+          "title": "銀翼殺手 2049",
+          "titleEn": "Blade Runner 2049",
+          "movie_rating": "輔導級 12+",
+          "imgSrc": "f532f9e3-be42-44e8-8784-c3c22838ab0b.jpg",
+          "type": [
+            "動作片",
+            "科幻片"
+          ],
+          "director": "丹尼維勒納夫",
+          "language": "英語",
+          "intro": "2018芝加哥影評人協會最佳藝術指導、最佳攝影\n2018BAFTA英國電影學院獎最佳攝影、視覺效果\n2018奧斯卡金像獎最佳攝影、視覺效果",
+          "fullIntro": "2049年時，仿生人奴隸已成為文明躍進過程的關鍵，儘管掌權者試圖築起高牆以區分人種，但人造人與真實人類的界線卻越趨模糊、真假難分，引發正反兩面的一連串影響。銀翼殺手K，為阻止現況演變成不可挽救的局面，因此踏上尋找掌握重要線索的關鍵人物。",
+          "filmTime": "164",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-30",
+          "outTheaterDate": "2019-07-01",
+          "schedule": [
+            "2019-06-30 16:40"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559537281279",
+          "title": "我要活下去",
+          "titleEn": "Miracle on the Mountain",
+          "movie_rating": "輔導級 12+",
+          "imgSrc": "6412953e-9b47-497b-a284-f4e78619a857.jpg",
+          "type": [
+            "戲劇片",
+            "紀錄片"
+          ],
+          "director": "史考特沃爾",
+          "language": "英語",
+          "intro": "★ 繼《127小時》後，又一撼動人心的「奇蹟生還」真人真事改編！\n★ 冰天雪地，糧盡援絕，前奧運選手必須在死亡邊緣挑戰生存極限！",
+          "fullIntro": "他不放棄希望，因為家人還在等他\n前奧運選手艾瑞克（喬許哈奈特飾演），某日上山滑雪時，遭遇一場突如其來的暴風雪，讓他受困在無邊無際的冰雪之中。在寒冷的雪山裡，他找不到救援，並被低溫症、飢餓、狼群、凍傷、脫水、戒斷症狀與幻覺輪番折磨。除了生理瀕臨崩潰極限，他的內心也正經歷一場生死較量。因為毒品的戒斷症狀，使得幻覺在他腦海中不斷翻騰，也讓他在這遺世獨立的雪山之中，被迫開始審視自己的一生。他意識到自己必須戰勝心魔，否則就將迎來死亡。在這個毫無生還希望的雪山裡，他竟奇蹟似地存活八天，就在他的身體與意志瀕臨崩解邊緣時，他焦急的母親（蜜拉索維諾飾演）也不放棄地懇求搜救隊出動救援。然而被搜救隊發現的前提是，艾瑞克必須克服艱難考驗，爬上頂峰，才有獲救的可能… 。",
+          "filmTime": "98",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-01",
+          "outTheaterDate": "2019-06-08",
+          "schedule": [
+            "2019-06-01 14:00"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559548288472",
+          "title": "家戰",
+          "titleEn": "Custody",
+          "movie_rating": "輔導級 12+",
+          "imgSrc": "9d620bc1-62cc-4600-a881-e76c72efb12b.jpg",
+          "type": [
+            "戲劇片"
+          ],
+          "director": "札維耶勒葛洪(",
+          "language": "法語",
+          "intro": "2017威尼斯影展最佳新銳導演獎\n2017西班牙聖賽巴斯提安觀眾票選獎\n2018法國凱薩獎最佳電影、最佳女主角、最佳原創劇本、最佳剪輯",
+          "fullIntro": "米蘭與安東的婚姻已走到盡頭，但他們對小兒子朱利安的監護權卻難以妥協，夾在失和父母親之間的小兒子，處境尷尬艱難。他被迫面對心愛母親的傷痛、及父親不可預知的情緒轉變，而試圖阻止最壞情勢發生，但隨兩造對峙情勢逐漸升級緊張，這場爭奪戰也逐漸脫序失控。",
+          "filmTime": "93",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-06-08",
+          "outTheaterDate": "2019-06-10",
+          "schedule": [
+            "2019-06-08 14:00"
+          ],
+          "filmStar": []
+        },
+        {
+          "id": "m1559548836073",
+          "title": "藍色大門 [數位修復版]",
+          "titleEn": "Blue Gate Crossing",
+          "movie_rating": "普遍級 0+",
+          "imgSrc": "006f818b-ba2c-40ed-93d7-e2bbcb59c83e.jpg",
+          "type": [
+            "戲劇片",
+            "愛情片"
+          ],
+          "director": "易智言",
+          "language": "華語",
+          "intro": "2002坎城影展導演雙週單元\n2002多倫多影展\n2002釜山影展",
+          "fullIntro": "孟克柔與林月珍是情同姊妹的同學，兩人無話不談。一天月珍告訴克柔她喜歡同校的游泳隊健將張士豪，要求克柔代為表白。當克柔拗不過月珍哀求，上前向士豪示愛時，月珍卻害羞地跑掉了，士豪因此誤以為克柔是因為害羞，才假藉替朋友表白來認識他。士豪被克柔深深吸引而開始追求她，但克柔卻始終逃避避重就輕。最後，克柔向士豪吐露了一個秘密。",
+          "filmTime": "83",
+          "updateDate": "2019-06-03",
+          "inTheaterDate": "2019-05-18",
+          "outTheaterDate": "2019-06-01",
+          "schedule": [
+            "2019-05-18 14:00"
+          ],
+          "filmStar": []
+        }
+      ],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559557725086",
+      "cinemaName": "高雄市電影館",
+      "cinemaCity": "台南市",
+      "cinemaArea": "鹽埕區",
+      "cinemaLogoImg": "b80d009d-dd65-473b-ace3-2e023f2251e1.jpg",
+      "cinemaImg": [
+        "b6ea5f48-53d0-4fe4-aec1-caf0e2d8e373.jpg",
+        "8b950efb-32a1-44bb-902e-eb95a459433d.jpg"
+      ],
+      "cinemaHeroImg": "7748c8c3-8b18-45a5-8194-c4bd592f6b04.jpg",
+      "cinemaAccount": "kmfa11",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台南市高雄市鹽埕區育仁里河西路10號",
+      "cinemaPhone": "07-551-1211",
+      "cinemaTaxid": "80892714",
+      "cinemaWeb": "http://kfa.kcg.gov.tw/",
+      "cinemaEmail": "kmfa1@kcg.gov.tw",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 1,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "座落在愛河畔、河西路段的「高雄市電影館」，潔淨而帶有透 明感的建築，散發著寧謐的藍紫光芒，沉靜且迷人；當微風拂過，電影館與波光粼粼的河水互動對話，形成水岸最 美麗的風景。長久以來，南部地區一直沒有電影文化的推廣，以及相關的軟硬體設施，電影界所舉辦的各項活動也以北部為重心，基於對於台灣文化產業的關心，以及推動電影產業的夢想，更為了替南台灣的民眾帶來更豐富、更多元的影像視野，高雄市政府從2000年開始，積極催生「高雄市電影館」。\n",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559558725044",
+      "cinemaName": "台南真善美劇院",
+      "cinemaCity": "台南市",
+      "cinemaArea": "中西區",
+      "cinemaLogoImg": "39d6d2ea-74cb-4b6e-b55c-d16656350eea.jpg",
+      "cinemaImg": [
+        "a64728a4-089c-4a9d-a74f-1ee4601b09ca.jpg",
+        "9936ef97-5cb9-44cf-884d-d9447eaf391f.jpg",
+        "f78f8169-1054-40e7-87b3-73b7c26e54e3.jpg"
+      ],
+      "cinemaHeroImg": "bb6b9afd-94f4-48e3-8acc-b11ecb8659a7.jpg",
+      "cinemaAccount": "tainanwonderful",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台南市中西區西門路二段120號四樓",
+      "cinemaPhone": "06-222-9768",
+      "cinemaTaxid": "97293474",
+      "cinemaWeb": "http://tainanwonderful.movie.com.tw/time",
+      "cinemaEmail": "tainanwonderful@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 2,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "真善美劇院八十五年元月一日藝術電影院開張成立，顛覆傳統電影商業風格，開創文藝先鋒，堪稱台灣地區最早最用心經營藝文電影之首輪戲院，隨時提供給您最新、最優質的藝文電影。在西門盯最熱鬧、最多元、最多選擇的商圈中，我們堅持電影的選擇也應該如此，長期與藝文電影發行商相互合作，真善美戲院的口碑與對於藝文電影的經營已是有目共睹。",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559561634311",
+      "cinemaName": "全美戲院",
+      "cinemaCity": "台南市",
+      "cinemaArea": "中西區",
+      "cinemaLogoImg": "e64460a8-3962-478a-9525-94a2f0f020fc.jpg",
+      "cinemaImg": [
+        "80dc97e5-345b-4d88-bcb6-9f9ef5452e7e.jpg",
+        "0f58db01-911b-43bb-9dd2-594cafb439d6.jpg",
+        "9eebfa26-a52f-40ce-8c9f-c0cb841ca889.jpg",
+        "826b593e-f48b-4095-82c3-989c592ada23.jpg",
+        "e1fe22c9-0001-4d7a-92a8-0ba2fedaabca.jpg"
+      ],
+      "cinemaHeroImg": "cbfa51e5-dc0e-4277-a400-bbe5f672714c.jpg",
+      "cinemaAccount": "allbeauty",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台南市中西區永福路二段187號",
+      "cinemaPhone": "06-222-4726",
+      "cinemaTaxid": "68209998",
+      "cinemaWeb": "https://www.cm-movie.com.tw/",
+      "cinemaEmail": "nomail@nomail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 3,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "1960年代前後出生的老台南人都知道，台南有「第一全成」、「大全成」和「小全成」三家全成戲院，「第一全成」就是全美戲院的前身，而「小全成」是後來的今日戲院。\n日本時代，昭和年間以前，在大宮町一丁目（今永福路二段 大井頭 旁），葉飛雄先生在此蓋了一棟三連間的豪華住宅兼店鋪，但二戰末期毀於美軍的轟炸。1950年，始由經營電影業的歐家兄弟重建為巴洛克風建築的第一全成戲院。",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "theater"
+    },
+    {
+      "id": "c1559562738350",
+      "cinemaName": "Xiaomijo小米酒咖啡館",
+      "cinemaCity": "台北市",
+      "cinemaArea": "永康街",
+      "cinemaLogoImg": "04ccb572-02bf-4c88-8666-fe037a602e11.jpg",
+      "cinemaImg": [
+        "87a4876e-33ad-4935-8f81-1b160567d5e0.jpg",
+        "7f641e74-6f90-46f5-9ea9-703d6e60ee8f.jpg"
+      ],
+      "cinemaHeroImg": "cfbaf4e6-2d45-48f4-aefb-1f5f749a3593.jpg",
+      "cinemaAccount": "Xiaomijo",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市永康街41巷5號",
+      "cinemaPhone": "02-2395-7617",
+      "cinemaTaxid": "28847204",
+      "cinemaWeb": "https://www.facebook.com/cafexiaomijo/",
+      "cinemaEmail": "nomail1@nomail1.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 2,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "cafe"
+    },
+    {
+      "id": "c1559564419891",
+      "cinemaName": "開機咖啡Rolling Cafe",
+      "cinemaCity": "台北市",
+      "cinemaArea": "萬華區",
+      "cinemaLogoImg": "43c13e0c-064e-4d5a-be7b-66a67c8db7f9.jpg",
+      "cinemaImg": [
+        "987563af-87be-443b-ad1d-daddb2f77292.jpg",
+        "95343042-b48b-43ea-84de-c3c1308a8ce9.jpg",
+        "e0aed756-732f-48c1-974b-6a3703bba71a.jpg"
+      ],
+      "cinemaHeroImg": "d6e753b3-88dd-4d6c-932c-92e0053ed8b5.jpg",
+      "cinemaAccount": "rollingtaipei",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市萬華區武昌街二段38號2樓",
+      "cinemaPhone": "02-2381-0826",
+      "cinemaTaxid": "24534321",
+      "cinemaWeb": "https://www.facebook.com/rollingtaipei/",
+      "cinemaEmail": "rollingtaipei@gmail.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 2,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "restaurant"
+    },
+    {
+      "id": "c1559565666729",
+      "cinemaName": "Woolloomooloo",
+      "cinemaCity": "台北市",
+      "cinemaArea": "萬華區",
+      "cinemaLogoImg": "d0f828ff-faea-4233-b417-854b2e51057c.jpg",
+      "cinemaImg": [
+        "7ccf010e-f029-4038-abe4-a0acabb2419f.jpg",
+        "5878450e-9362-4123-bb93-3bb3d451d036.jpg",
+        "827035b4-25c0-4f2c-9bb6-9d21d9f56139.jpg"
+      ],
+      "cinemaHeroImg": "8917272c-f262-4b59-933c-c845b99fe8d4.jpg",
+      "cinemaAccount": "moonshiner",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市萬華區武昌街2段120巷2號",
+      "cinemaPhone": "02-8789-2078",
+      "cinemaTaxid": "12345678",
+      "cinemaWeb": "http://woolloomooloo.tw/xhibit/",
+      "cinemaEmail": "moonshiner@woolloomooloo.tw",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 2,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "bar"
+    },
+    {
+      "id": "c1559566018944",
+      "cinemaName": "別所 shelter",
+      "cinemaCity": "台北市",
+      "cinemaArea": "大同區",
+      "cinemaLogoImg": "7dfe59db-20b9-4aff-89d2-5eaa6d22084a.jpg",
+      "cinemaImg": [
+        "c41fde6d-9628-4228-9acc-32429113adc9.jpg",
+        "d66cc17e-1ee0-44dd-97d2-342e220f5648.jpg",
+        "beeeb8ce-fa32-434c-92a8-ea076e4b9dad.jpg"
+      ],
+      "cinemaHeroImg": "2b7c1cbb-ce10-4531-933d-edadc6976927.jpg",
+      "cinemaAccount": "shelter",
+      "cinemaPassword": "111111",
+      "cinemaStar": [],
+      "cinemaAddress": "台北市大同區承德路三段51巷18號",
+      "cinemaPhone": "02-2599-1811",
+      "cinemaTaxid": "24577412",
+      "cinemaWeb": "https://www.facebook.com/pg/shelterCafeandFood/about/?ref=page_internal",
+      "cinemaEmail": "nomail@nomail2.com",
+      "cinemaBackupEmail": "",
+      "cinemaAwesome": [],
+      "cinemaPageViews": 2,
+      "cinemaSignUpDate": "2019-06-03",
+      "purview": "cinemaMember",
+      "cinemaIntro": "自然不做作的空間。健康，純粹與在地元素是我們的宗旨，當你在別所放鬆地喝上一杯咖啡，也可以在這裡找到一些熟悉的台灣老滋味。我們堅持使用台灣小農食材，從飲品餐點與醬料，都歡迎你來試試我們用天然食材秘製的季節風味飲品與老闆不私藏特色小料理！\n\n在別所的角落會有Chill度滿點的黑膠區塊，我們將不時更換店裡的試聽黑膠唱片，當然，你也可以帶著你的珍藏來和我們交流！\n",
+      "cinemaMessage": [],
+      "cinemaFilm": [],
+      "cinemaActivity": [],
+      "cinemaType": "cafe"
+    }
+  ],
   "thisIsSample": [
     {
       "id": 1,
@@ -2066,585 +3160,6 @@
       "collectActivityJoin": "",
       "collectForum": [],
       "markList": []
-    }
-  ],
-  "cinema": [
-    {
-      "find9527": "開發用記得要拔掉",
-      "id": "c001",
-      "cinemaName": "碼農Cafe",
-      "cinemaCity": "台北市",
-      "cinemaArea": "大安區",
-      "cinemaActivity": [
-        {
-          "id": "a1559406546061",
-          "title": "喝咖啡配電影",
-          "content": "碼農累了嗎？現在來碼農咖啡邊喝咖啡邊配電影解放你的大腦吧！",
-          "imgSrc": "a4cf6483-a9a9-4b75-aebb-89f36e3acd78.png",
-          "lat": "25.0316633",
-          "lng": "121.5540038",
-          "joinContent": "線上報名即可。",
-          "joinContentCurrentPeople": "10",
-          "place": "北部,影院",
-          "theaterMap": "106台北市大安區通化街24巷1號"
-        }
-      ],
-      "cinemaLogoImg": "0465d345-669d-450d-ae97-1d26ad39ea68.png",
-      "cinemaImg": [
-        "spott.jpg",
-        "spoth.jpg",
-        "nocho.jpg",
-        "eslite.jpg",
-        "65f25c0a-1eea-45c4-984d-f3afff1f9845.jpg",
-        "e528875d-afd8-4b31-9c28-a641bb3ccf53.jpg"
-      ],
-      "cinemaHeroImg": "a2fa5157-b1b3-4aff-bded-60687f695387.png",
-      "cinemaAccount": "1111",
-      "cinemaPassword": "1111",
-      "cinemaType": "cafe",
-      "cinemaFilm": [
-        {
-          "id": "m1000000",
-          "title": "赤手登峰",
-          "titleEn": "english filmname",
-          "movie_rating": "普遍級",
-          "imgSrc": "https://g.udn.com.tw/upfiles/B_SH/shiow/PSN_PHOTO/591/f_24131591_1.jpg",
-          "type": [
-            "懸疑片"
-          ],
-          "director": "導演名字",
-          "language": "華語",
-          "intro": "電影簡介",
-          "fullIntro": "電影介紹",
-          "filmTime": "200",
-          "updateDate": "2019-04-11",
-          "inTheaterDate": "2019-05-01",
-          "outTheaterDate": "2019-08-01",
-          "schedule": [
-            "2019-05-31 18:00",
-            "2019-06-01 10:00",
-            "2019-06-01 13:00",
-            "2019-06-01 18:00",
-            "2019-06-02 10:00",
-            "2019-06-02 13:00",
-            "2019-06-02 18:00"
-          ],
-          "filmStar": [
-            {
-              "starId": "m111111",
-              "star": 5
-            },
-            {
-              "starId": "m22222",
-              "star": 5
-            },
-            {
-              "starId": "m1558576972555",
-              "star": 5
-            }
-          ]
-        },
-        {
-          "id": "m1559377711803",
-          "title": "測試影片編輯",
-          "titleEn": "English Title",
-          "movie_rating": "普遍級 0+",
-          "imgSrc": "0e05e3cb-6bdc-4a72-b93d-f03a0dffa894.jpg",
-          "type": [
-            "戲劇片",
-            "英雄片",
-            "恐怖片"
-          ],
-          "director": "碼農一號",
-          "language": "西班牙語",
-          "intro": "摘要編輯",
-          "fullIntro": "介紹編輯",
-          "filmTime": "120",
-          "updateDate": "2019-04-30",
-          "inTheaterDate": "2019-05-01",
-          "outTheaterDate": "2019-05-31",
-          "schedule": [
-            "2019-06-06 10:00",
-            "2019-06-06 00:00",
-            "2019-06-12 14:00"
-          ],
-          "filmStar": []
-        },
-        {
-          "id": "m1559389596294",
-          "title": "測試777",
-          "titleEn": "",
-          "movie_rating": "",
-          "imgSrc": "a4cf6483-a9a9-4b75-aebb-89f36e3acd78.png",
-          "type": [
-            "英雄片",
-            "動作片"
-          ],
-          "director": "",
-          "language": "",
-          "intro": "123",
-          "fullIntro": "123",
-          "filmTime": "",
-          "updateDate": "2019-06-01",
-          "inTheaterDate": "2019-06-01",
-          "outTheaterDate": "2019-06-11",
-          "schedule": [],
-          "filmStar": []
-        },
-        {
-          "id": "m1559456527550",
-          "title": "第二天測試",
-          "titleEn": "SecondDay",
-          "movie_rating": "保護級 6+",
-          "imgSrc": "d23e1de0-3167-4bea-918e-4a06b5c926f0.png",
-          "type": [],
-          "director": "碼農一號",
-          "language": "英語",
-          "intro": "測試功能是否健在",
-          "fullIntro": "功能寫好的第二天，究竟會不會有神奇的力量導致新的BUG出現?!\n讓我們繼續看下去...",
-          "filmTime": "100",
-          "updateDate": "2019-06-02",
-          "inTheaterDate": "2019-06-05",
-          "outTheaterDate": "2019-07-02",
-          "schedule": [
-            "2019-06-02 13:30",
-            "2019-06-02 15:30"
-          ],
-          "filmStar": []
-        },
-        {
-          "id": "m1559457230226",
-          "title": "測試影片海報",
-          "titleEn": "Test Poster",
-          "movie_rating": "保護級 6+",
-          "imgSrc": "cbb3d84e-725e-44c6-94d6-bdb2a7a02a22.jpg",
-          "type": [
-            "動作片",
-            "動畫片",
-            "懸疑片",
-            "喜劇片"
-          ],
-          "director": "碼農一號",
-          "language": "韓語",
-          "intro": "影片海報顯示、編輯更新",
-          "fullIntro": "因為發現圖片儲存路徑不同，所以重新測試是否有沒修改到的地方",
-          "filmTime": "100",
-          "updateDate": "2019-06-02",
-          "inTheaterDate": "2019-05-31",
-          "outTheaterDate": "2019-06-30",
-          "schedule": [
-            "2019-06-07 23:00",
-            "2019-06-07 12:00"
-          ],
-          "filmStar": []
-        },
-        {
-          "id": "m1559461949823",
-          "title": "輕鬆+愉快",
-          "titleEn": "Free and Easy",
-          "movie_rating": "保護級 6+",
-          "imgSrc": "71cf6163-45da-49e1-8384-ecd8a95aa97e.jpg",
-          "type": [
-            "喜劇片",
-            "動畫片",
-            "偵探片"
-          ],
-          "director": "耿軍",
-          "language": "華語",
-          "intro": "耿軍黑色喜劇《輕鬆+愉快》，以一座宛如廢墟的東北城鎮為背景，聚集了推銷肥皂的騙子、逢人結緣的假和尚、到處找媽的基督徒、疲於奔命的林務員、以及破不了案的警察。互騙互害、互相傷害，人生才能輕鬆又愉快！",
-          "fullIntro": "以《錘子鐮刀都休息》擒下2014金馬獎最佳短片的耿軍，黑色喜劇新作《輕鬆+愉快》，以一座宛如廢墟的東北城鎮為背景，聚集了推銷肥皂的騙子、逢人結緣的假和尚、到處找媽的基督徒、疲於奔命的林務員、以及破不了案的警察，他們的擁抱像在廝殺，關愛彷彿猜疑，相愛又相殘。\n\n劇情描述，在一座宛如廢墟的東北城鎮裡，出現了推銷肥皂的騙子、逢人結緣的假和尚、到處找媽的基督徒、發課程傳單的武術青年、疲於奔命的林務員、以及破不了案又濫用權力的警察……。歹徒不夠兇惡、受害者也不令人同情，擁抱像在廝殺，關愛彷彿猜疑，相愛又相殘，只好互騙互害、互相傷害，人生才能輕鬆又愉快。\n\n影片充滿耿軍對環境的批判、人性的觀察，以及吉姆賈木許、郭利斯馬基的冷調幽默，獨到的視野及手法，更獲得本屆日舞影展評審團特別獎。",
-          "filmTime": "98",
-          "updateDate": "2019-06-02",
-          "inTheaterDate": "2019-05-01",
-          "outTheaterDate": "2019-06-30",
-          "schedule": [
-            "2019-06-03 10:00",
-            "2019-06-03 00:00",
-            "2019-06-03 15:00",
-            "2019-06-05 10:00"
-          ],
-          "filmStar": []
-        },
-        {
-          "id": "cf1559479473377",
-          "title": "一一",
-          "titleEn": "YIYI",
-          "movie_rating": "普遍級 0+",
-          "imgSrc": "7618ef2f-c72d-4247-8ecb-1ae19c48620a.jpg",
-          "type": [
-            "戲劇片"
-          ],
-          "director": "楊德昌",
-          "language": "華語",
-          "intro": "故事劇情描寫台北一家人的感情起落及生活故事，探討人生在不同階段將會面臨到的困惑與危機，表達出對人的關懷與尊重。整個舞臺環繞台北為場景，藉由看似平凡無奇的都市生活，感受周遭的人情冷暖及生老病死，隱喻大家如何看待生命的意義究竟為何",
-          "fullIntro": "在台北市住著一戶中產階級的家庭：丈夫簡南峻，妻子敏敏，大女兒婷婷和年僅8歲的小兒子洋洋，他們和敏敏的母親共同生活著。\n\n在敏敏的弟弟阿弟的婚禮中發生了一系列的麻煩事，先是阿弟的舊情人雲雲在阿弟與小燕的婚禮上大吵大鬧，而後在電梯口，簡南峻與自己30年前的舊情人Sherry相遇，接著是婆婆倒在自家垃圾場而被送進了醫院…… 婆婆因腦溢血而陷入了昏迷狀態，婷婷一直很內疚，認為婆婆的病和自己有關。\n\n醫生告誡家人需要每天輪流跟婆婆講話，以幫助其康復。每個人面對著沉睡中的婆婆漸漸詞窮，最後不得不請護士念報紙來解脫尷尬困境。為尋求精神上的解脫，敏敏上山入宿寺廟了。\n\n新搬來的鄰居莉莉和她的男友吵架了，兩人分手後，莉莉的男友胖子開始主動和婷婷約會。可婷婷最終發現胖子真正愛的人不是自己，他的內心深處還在愛著莉莉，這一切都讓婷婷覺得悲傷。\n\n兒子洋洋受父親的影響愛上了照相機，他覺得人只能看到一半的事情--只能看到前面，看不到後面，於是他開始拍攝人的背面，用兒童單純而奇特的視角拍攝周圍的生活。他在學校總是受主任的刁難，他便用自己的手段報復主任。\n\n胖子一直關注著莉莉，他認為莉莉和她的老師有關係，一日等在她家樓下殺了那個男人。\n\n簡南峻借著去日本出差的機會和舊情人Sherry重敘舊情，卻無法從頭再來。\n\n在婆婆的葬禮上，洋洋念了一段自己寫的話送給婆婆：「婆婆，對不起。不是我不喜歡跟你講話，只是我覺得我能跟你講的，你一定老早就知道了。不然，你就不會每次都叫我『聽話』。就像他們都說你走了，你也沒有告訴我你去了哪裡。所以我覺得，那一定是我們都知道的地方。婆婆，我不知道的事情太多了，所以，你知道我以後想做什麼嗎？我要去告訴別人他們不知道的事，給別人看他們看不到的東西。我想，這樣一定天天都很好玩。說不定，有一天，我會發現你到底去了哪裡。到時候，我可不可以跟大家講，找大家一起過來看你呢？婆婆，我好想你，尤其是我看到那個，還沒有名字的小表弟。就會想起你常跟我說：你老了。我很想跟他說：我也覺得……我也老了。」",
-          "filmTime": "174",
-          "updateDate": "2019-06-02",
-          "inTheaterDate": "2019-01-01",
-          "outTheaterDate": "2019-12-31",
-          "schedule": [
-            "2019-03-01 01:00"
-          ],
-          "filmStar": []
-        }
-      ],
-      "cinemaStar": [
-        {
-          "starId": "m111111",
-          "star": 5
-        },
-        {
-          "starId": "m22222",
-          "star": 5
-        },
-        {
-          "starId": "m1558576972555",
-          "star": 5
-        }
-      ],
-      "cinemaAddress": "106台北市大安區通化街24巷1號",
-      "cinemaPhone": "02-2511-1111",
-      "cinemaTaxid": "16086448",
-      "cinemaWeb": "http://manonCafe.com.tw",
-      "cinemaEmail": "manon@gg.com",
-      "cinemaBackupEmail": "manonCafe@gmail.com",
-      "cinemaAwesome": [
-        "m111111",
-        "m22222",
-        "m1558576972555"
-      ],
-      "cinemaPageViews": 613,
-      "cinemaSignUpDate": "1955-03-12",
-      "purview": "cinemaMember",
-      "cinemaMessage": [
-        {
-          "id": 1559151687850,
-          "name": "訪客",
-          "img": "asianman.jpg",
-          "message": "ㄊsdcec",
-          "time": 1559151687850,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        },
-        {
-          "id": 1559138289149,
-          "name": "光點台北",
-          "img": "spott.jpg",
-          "message": "我已改變發文放置順序...  所以下面資料順序就不要管他惹！！",
-          "time": 1559138289149,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        },
-        {
-          "id": 1559138199665,
-          "name": "光點台北",
-          "img": "spott.jpg",
-          "message": "wergva",
-          "time": 1559138199665,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        },
-        {
-          "id": "002",
-          "name": "東尼大木",
-          "img": "asianman.jpg",
-          "message": "嘎嘎嘎我要留爆這邊",
-          "time": "1558494913221",
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        },
-        {
-          "id": "001",
-          "name": "佐佐木小次郎",
-          "img": "asian.jpg",
-          "message": "啊啊啊  不給你留爆",
-          "time": "1558494913758",
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        },
-        {
-          "id": 1558975629869,
-          "name": "光點華山",
-          "img": [
-            "spoth.jpg"
-          ],
-          "message": "戲院留言測試... 接資料庫惹賣鬧喔！＠！",
-          "time": 1558975629869,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        },
-        {
-          "id": 1558975673440,
-          "name": "小雪",
-          "img": "asianman.jpg",
-          "message": "會員留言測試... 三小～～不要爆在這喔",
-          "time": 1558975673440,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "member"
-        },
-        {
-          "id": 1558975709879,
-          "name": "訪客",
-          "img": "asianman.jpg",
-          "message": "沒登陸的訪客留言測試...   這過關就可以去抽煙惹...",
-          "time": 1558975709879,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        },
-        {
-          "id": 1559132033032,
-          "name": "小雪",
-          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
-          "message": "fgchvjbk",
-          "time": 1559132033032,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "member"
-        },
-        {
-          "id": 1559132794325,
-          "name": "小雪",
-          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
-          "message": "fghvjbknm bg",
-          "time": 1559132794325,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "member"
-        },
-        {
-          "id": 1559132797535,
-          "name": "小雪",
-          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
-          "message": "ikjhbvgjbkb",
-          "time": 1559132797535,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "member"
-        },
-        {
-          "id": 1559132834170,
-          "name": "小雪",
-          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
-          "message": "fuygvhujkhj",
-          "time": 1559132834170,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "member"
-        },
-        {
-          "id": 1559132838478,
-          "name": "小雪",
-          "img": "97d0f732-be81-4c4f-b773-72dd5395a21a.png",
-          "message": "ghcvjkbvg",
-          "time": 1559132838478,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "member"
-        },
-        {
-          "id": 1559138044578,
-          "name": "光點台北",
-          "img": "spott.jpg",
-          "message": "test",
-          "time": 1559138044578,
-          "awesome": [],
-          "boo": [],
-          "imgLocation": "cinemaImg"
-        }
-      ]
-    },
-    {
-      "id": "c1559487285640",
-      "cinemaName": "光點台北",
-      "cinemaCity": "台北市",
-      "cinemaArea": "中山區",
-      "cinemaLogoImg": "9823c704-97c3-41bd-a403-b42dc2dec3ed.jpg",
-      "cinemaImg": [
-        "22d2146d-87cf-4005-91b2-4bade519dcd8.jpg",
-        "c82f5d6c-981a-42fb-8105-19b833724d6a.jpg",
-        "da4b92d2-c637-4a61-bd94-a76e2ca90eda.jpg",
-        "ef1c2a19-65f1-4556-8d4b-58f7848a0b76.jpg",
-        "e581dbcf-a06e-4f68-bee2-e470d92dbbfa.jpg"
-      ],
-      "cinemaHeroImg": "4861b85b-ca64-4046-8acc-36a0c2757535.jpg",
-      "cinemaAccount": "spottaipei",
-      "cinemaPassword": "111111",
-      "cinemaStar": [],
-      "cinemaAddress": "台北市中山區中山北路二段18號",
-      "cinemaPhone": "02-2511-7786",
-      "cinemaTaxid": "28468385",
-      "cinemaWeb": "http://www.spot.org.tw/",
-      "cinemaEmail": "taipei.spotdesign@gmail.com",
-      "cinemaBackupEmail": "",
-      "cinemaAwesome": [],
-      "cinemaPageViews": 11,
-      "cinemaSignUpDate": "2019-06-02",
-      "purview": "cinemaMember",
-      "cinemaIntro": "她，令當年的尼克遜，在擔任美國副總統來到台灣訪問時，沒住豪華大酒店，\n卻看上這棟老洋房，還在這裡睡過幾個晚上。\n她，保存了原來的古典風情，讓藝術不做過多裝扮，\n令人體會藝術原來是現代人生活的養分，很容易親近，也很容易消化。\n她，以歷史為中山北路注入了一抹亮麗粧顏，\n以古蹟建築傳唱中山北路百年風流雅緻的人文歷史。",
-      "cinemaMessage": [],
-      "cinemaFilm": [],
-      "cinemaActivity": [],
-      "cinemaType": "theater"
-    },
-    {
-      "id": "c1559489066363",
-      "cinemaName": "光點華山",
-      "cinemaCity": "台北市",
-      "cinemaArea": "中正區",
-      "cinemaLogoImg": "14b5e833-43d1-4742-bcd2-759091c438b7.jpg",
-      "cinemaImg": [
-        "56a2a47c-9c38-4a17-8d83-4c244ac71942.jpg",
-        "858ead35-4798-47dc-a16e-56a83ef51fa2.jpg",
-        "a7fc066c-0941-4392-9f89-784be40f2a94.jpg",
-        "0a6565ba-968a-4d1b-a010-a5c6211c2059.jpg",
-        "cb1a93ef-bfdb-43df-9151-8ca7992bc30a.jpg",
-        "d02ba4c3-79ee-4d21-a232-e9425a06fbc4.jpg",
-        "7c23be22-f94f-4e24-bf87-381c09ff6e41.jpg",
-        "f2a69c06-941f-4186-b4fa-b0391694e6ea.jpg"
-      ],
-      "cinemaHeroImg": "943f516d-6836-4a0b-a17c-7e6197553c45.jpg",
-      "cinemaAccount": "spothwashang",
-      "cinemaPassword": "111111",
-      "cinemaStar": [],
-      "cinemaAddress": "台北市中正區八德路一段1號",
-      "cinemaPhone": "02-2394-0622",
-      "cinemaTaxid": "28468381",
-      "cinemaWeb": "http://www.spot-hs.org.tw/",
-      "cinemaEmail": "taipei.spot@gmail.com",
-      "cinemaBackupEmail": "",
-      "cinemaAwesome": [],
-      "cinemaPageViews": 16,
-      "cinemaSignUpDate": "2019-06-02",
-      "purview": "cinemaMember",
-      "cinemaIntro": "光點華山電影館,位於華山文創園區中六館，原為酒廠再製酒包裝室，1996年由文化部規劃指導，改建為電影館，並由侯孝賢導演領軍之團隊「台灣電影文化協會」經營管理，於2012年11月正式開幕，為全國首座國家級藝術電影館。整館空間保留舊建築結構並結合新的創意元素，為老屋新力之創新展現",
-      "cinemaMessage": [],
-      "cinemaFilm": [],
-      "cinemaActivity": [],
-      "cinemaType": "theater"
-    },
-    {
-      "id": "c1559489867561",
-      "cinemaName": "文青不挑片",
-      "cinemaCity": "台北市",
-      "cinemaArea": "信義區",
-      "cinemaLogoImg": "e13b7324-6b1e-4575-8ca8-6a9537076ee4.jpg",
-      "cinemaImg": [
-        "f53138c7-7678-45c9-931b-b696a8031bbb.jpg",
-        "bebeded2-2a89-401e-8ea8-2e475467df4e.jpg"
-      ],
-      "cinemaHeroImg": "3537b353-a448-452b-9cc2-71152debe704.jpg",
-      "cinemaAccount": "spacebarroom",
-      "cinemaPassword": "111111",
-      "cinemaStar": [],
-      "cinemaAddress": "台北市信義區和平東路三段291號",
-      "cinemaPhone": "02-2738-5660",
-      "cinemaTaxid": "54346058",
-      "cinemaWeb": "https://www.spacebarfilm.com/",
-      "cinemaEmail": "spacebarroom@gmail.com",
-      "cinemaBackupEmail": "",
-      "cinemaAwesome": [],
-      "cinemaPageViews": 2,
-      "cinemaSignUpDate": "2019-06-02",
-      "purview": "cinemaMember",
-      "cinemaIntro": "想在台北看一場好電影，除了電影院，你還有其他的選擇。鄰近六張犁捷運站的影像工作室 Spacebar Studio，到了週五晚上搖身一變成為「文青不挑片」的聚會所，吸引許多電影愛好者定時上門拜訪。Spacebar Studio 的 Mossy 透露，本來只是公司的親朋好友們下班後在辦公空間地下室舉辦的電影小聚，卻因為有設立 Facebook 公開的活動頁面而廣為人知，逐漸變成每週一次、對外開放的觀影活動。",
-      "cinemaMessage": [],
-      "cinemaFilm": [],
-      "cinemaActivity": [],
-      "cinemaType": "bar"
-    },
-    {
-      "id": "c1559491685943",
-      "cinemaName": "誠品電影院",
-      "cinemaCity": "台北市",
-      "cinemaArea": "信義區",
-      "cinemaLogoImg": "a201a691-833b-4f65-a665-0299b5f1aa29.png",
-      "cinemaImg": [],
-      "cinemaHeroImg": "a7938ed9-21e3-445c-a9f2-69fb4f7c378f.jpg",
-      "cinemaAccount": "eslite",
-      "cinemaPassword": "111111",
-      "cinemaStar": [],
-      "cinemaAddress": "台北市信義區菸廠路80號B2",
-      "cinemaPhone": "02-6636-5888",
-      "cinemaTaxid": "23155531",
-      "cinemaWeb": "https://meet.eslite.com/tw/tc",
-      "cinemaEmail": "service@eslite.com",
-      "cinemaBackupEmail": "",
-      "cinemaAwesome": [],
-      "cinemaPageViews": 7,
-      "cinemaSignUpDate": "2019-06-03",
-      "purview": "cinemaMember",
-      "cinemaIntro": "",
-      "cinemaMessage": [],
-      "cinemaFilm": [],
-      "cinemaActivity": [],
-      "cinemaType": "theater"
-    },
-    {
-      "id": "c1559493900163",
-      "cinemaName": "桃園光影",
-      "cinemaCity": "桃園市",
-      "cinemaArea": "中壢區",
-      "cinemaLogoImg": "fd377cc7-c370-436b-9c77-d7f512249526.png",
-      "cinemaImg": [
-        "3007835e-919e-4bd5-91bb-a90f8113bc8d.jpg"
-      ],
-      "cinemaHeroImg": "168c3621-a7cc-4c6f-9904-dd82f6b38c3b.jpg",
-      "cinemaAccount": "taoyuanartscinema",
-      "cinemaPassword": "111111",
-      "cinemaStar": [],
-      "cinemaAddress": "桃園市中壢區龍清街116巷31號",
-      "cinemaPhone": "03-458-1598",
-      "cinemaTaxid": "24337932",
-      "cinemaWeb": "http://www.taoyuan.arts-cinema.com/",
-      "cinemaEmail": "taoyuanartscinema@gmail.com",
-      "cinemaBackupEmail": "",
-      "cinemaAwesome": [],
-      "cinemaPageViews": 2,
-      "cinemaSignUpDate": "2019-06-03",
-      "purview": "cinemaMember",
-      "cinemaIntro": "電影是一扇窗，讓人們窺見所處環境之外的世界，而對世界的瞭解與洞見，能夠讓人們回過頭來關照自身的環境，從而找到讓社會與生命更加美好的出口。我們期待，桃園光影能夠成為將世界帶進桃園的門戶，就像一直以來，桃園作為台灣的門戶，將台灣人帶往世界各地一樣。",
-      "cinemaMessage": [],
-      "cinemaFilm": [],
-      "cinemaActivity": [],
-      "cinemaType": "theater"
-    },
-    {
-      "id": "c1559497318854",
-      "cinemaName": "萬代福影城",
-      "cinemaCity": "台中市",
-      "cinemaArea": "中區",
-      "cinemaLogoImg": "ba769804-f3da-4905-971d-76f3ad8e2af7.jpg",
-      "cinemaImg": [
-        "f6231bb5-a584-40ec-9229-60d43b290e77.jpg",
-        "815b1323-6c74-45a1-80cd-cb2c2305930a.jpg"
-      ],
-      "cinemaHeroImg": "b4e193ea-ee96-4f73-b0d0-82e0a16b3ace.jpg",
-      "cinemaAccount": "wdful1",
-      "cinemaPassword": "111111",
-      "cinemaStar": [],
-      "cinemaAddress": "台中市中區公園路38號",
-      "cinemaPhone": "04-2221-0356",
-      "cinemaTaxid": "52664555",
-      "cinemaWeb": "http://www.wdful.com.tw/",
-      "cinemaEmail": "wdful999@gmail.com",
-      "cinemaBackupEmail": "",
-      "cinemaAwesome": [],
-      "cinemaPageViews": 1,
-      "cinemaSignUpDate": "2019-06-03",
-      "purview": "cinemaMember",
-      "cinemaIntro": "萬代福影城成立於1981年，2004年重新改裝,\n全新整裝的萬代福影城 Wonderful Cinemas 不只內部重金整修，在硬體設備提升更高的水準與舒適度，持續獨家上映許多深受好評的藝術電影、各國影展片，並舉辦電影特映會以及校園的露天電影晚會。",
-      "cinemaMessage": [],
-      "cinemaFilm": [],
-      "cinemaActivity": [],
-      "cinemaType": "theater"
     }
   ],
   "articleCardData": [

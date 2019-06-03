@@ -6,7 +6,9 @@ import ArticleMark from '../ArticleList/ArticleButton/Mark'
 import ArticleShare from '../ArticleList/ArticleButton/Share'
 import ArticleCommentbtn from '../ArticleList/ArticleButton/Comment'
 import ResCommentInput from './ResCommentInput'
+import Swal from 'sweetalert2'
 
+const memberId = sessionStorage.getItem('memberId')
 class ArticleComment extends React.Component {
   constructor(props) {
     super(props)
@@ -47,46 +49,99 @@ class ArticleComment extends React.Component {
 
   //送出留言  TODO:重新渲染
   goResComment = async () => {
-    alert(this.state.inputTextRes)
-
-    let newRes = {
-      rid: +this.props.sid,
-      date: new Date().toDateString(), //時間 TODO:調整格式
-      authorID: this.props.memberId,
-      author: this.props.author,
-      avatar: this.props.avatar,
-      content: this.state.inputTextRes,
-    }
-    // 倒入 json資料庫
-    try {
-      const res = await fetch('http://localhost:5555/articleResComment', {
-        method: 'POST',
-        body: JSON.stringify(newRes),
-        headers: new Headers({
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        }),
+    if (memberId) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 1500,
       })
-      const newResData = await res.json()
-      // console.log(newComment)
-      // const newCommentData = newComment.filter(
-      //   item => item.aid === +this.state.thisId
-      // )
+      Toast.fire({
+        type: 'success',
+        title: '留言成功!!',
+      })
 
-      const news = this.state.resComment.find(
-        item => +item.id === +newResData.id
-      )
-        ? true
-        : // ? this.setState({ articleComment: this.state.articleComment })
-          this.setState({
-            resComment: [newRes, ...this.state.resComment],
-          })
-      console.log(newResData)
-      console.log(news)
-      // 清空輸入框
-      document.querySelector('#resInput').value = []
-    } catch (err) {
-      console.log(err)
+      let newRes = {
+        rid: +this.props.sid,
+        date: new Date().toDateString(), //時間 TODO:調整格式
+        authorID: this.props.memberId,
+        author: this.props.author,
+        avatar: this.props.avatar,
+        content: this.state.inputTextRes,
+      }
+      // 倒入 json資料庫
+      try {
+        const res = await fetch('http://localhost:5555/articleResComment', {
+          method: 'POST',
+          body: JSON.stringify(newRes),
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+        const newResData = await res.json()
+
+        const news = this.state.resComment.find(
+          item => +item.id === +newResData.id
+        )
+          ? true
+          : // ? this.setState({ articleComment: this.state.articleComment })
+            this.setState({
+              resComment: [newRes, ...this.state.resComment],
+            })
+        console.log(newResData)
+        console.log(news)
+        // 清空輸入框
+        document.querySelector('#resInput').value = []
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      let newRes = {
+        rid: +this.props.sid,
+        date: new Date().toDateString(), //時間 TODO:調整格式
+        authorID: 'unknow',
+        author: '匿名',
+        avatar: 'null.jpg',
+        content: this.state.inputTextRes,
+      }
+      // 倒入 json資料庫
+      try {
+        const res = await fetch('http://localhost:5555/articleResComment', {
+          method: 'POST',
+          body: JSON.stringify(newRes),
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+        const newResData = await res.json()
+
+        const news = this.state.resComment.find(
+          item => +item.id === +newResData.id
+        )
+          ? true
+          : // ? this.setState({ articleComment: this.state.articleComment })
+            this.setState({
+              resComment: [newRes, ...this.state.resComment],
+            })
+        console.log(newResData)
+        console.log(news)
+        // 清空輸入框
+        document.querySelector('#resInput').value = []
+      } catch (err) {
+        console.log(err)
+      }
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 1500,
+      })
+      Toast.fire({
+        type: 'success',
+        title: '留言成功!!',
+      })
     }
   }
 

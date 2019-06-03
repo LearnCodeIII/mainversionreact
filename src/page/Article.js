@@ -6,6 +6,8 @@ import ArticleCard from '../component/article/ArticleCard'
 import ArticleSlider from '../component/article/ArticleList/ArticleSlider/ArticleSlider'
 // import ContactForm from '../component/article/ArticleMail/send'
 
+import Swal from 'sweetalert2'
+
 const memberId = sessionStorage.getItem('memberId')
 var data
 
@@ -150,13 +152,11 @@ class Article extends React.Component {
   }
 
   // 捲動套餐
-
   handleScrollToElement() {
     window.scrollTo(0, this.myRef.current.offsetTop)
   }
 
   // 收藏套餐
-
   handleClick = (id, isMarked) => async () => {
     // alert('1324')
     console.log('================')
@@ -175,12 +175,32 @@ class Article extends React.Component {
           return element !== id
         })
         await this.setState({ memberInfo: newMark })
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'center',
+          showConfirmButton: false,
+          timer: 2000,
+        })
+        Toast.fire({
+          type: 'success',
+          title: '已移除收藏!!',
+        })
       } else {
         newMark = await [id, ...this.state.memberInfo]
         await this.setState({ memberInfo: newMark })
         console.log(typeof this.state.thisId + ':' + this.state.thisId)
         console.log('false')
         console.log(newMark)
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'center',
+          showConfirmButton: false,
+          timer: 2000,
+        })
+        Toast.fire({
+          type: 'success',
+          title: '收藏成功!!',
+        })
       }
 
       // 新的會員資訊 (更新收藏文章項目)
@@ -239,7 +259,24 @@ class Article extends React.Component {
         console.log(err)
       }
     } else {
-      alert('請先登入會員')
+      Swal.fire({
+        // position: 'top-end',
+        title: '請先登入會員',
+        text: '請點選確認繼續或取消離開',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonText: '確認',
+        cancelButtonText: '取消',
+        // cancelButtonColor: ' #d33',
+        confirmButtonClass: ' btn-warning',
+        confirmButtonColor: '#ffa510',
+        background: '#242b34',
+      }).then(result => {
+        // 確認有按下上傳確認鍵後開始FETCH
+        if (result.value) {
+          window.location.href = '/LoginSign'
+        }
+      })
     }
   }
 

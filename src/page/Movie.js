@@ -16,7 +16,7 @@ class Movie extends React.Component {
       smallSlogan: '尋找好片',
       heroSectionPic:
         'https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80',
-      title: ['活動列表'],
+      title: ['電影列表'],
       movieCardData: [],
       movieCardDataResult: 0,
       searchbarRegion: ['全部', '北部', '中部', '南部', '東部'],
@@ -420,7 +420,7 @@ class Movie extends React.Component {
                     onClick={() => this.searchbarOnClick('清空')}
                     className="btn btn-warning"
                   >
-                    沒有符合此條件的活動，請重新搜尋
+                    沒有符合此條件的電影，請重新搜尋
                   </button>
                 </div>
               </div>

@@ -26,7 +26,7 @@ const SliderItem = props => {
           alt="..."
         /> */}
         <div className="bigDarkBG" />
-        <div className="py-2 px-5 darkText">
+        <div className="py-2 px-5 darkText" style={{ cursor: 'pointer' }}>
           {/* 標題只取20個字+點點 */}
           <h5>{props.title.substr(0, 16) + '......'}</h5>
           <p>

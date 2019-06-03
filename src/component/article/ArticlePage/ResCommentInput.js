@@ -22,6 +22,7 @@ class ResCommentInput extends React.Component {
           className="typeBtn"
           role={'button'}
           onClick={this.handleCommentShow}
+          style={{ cursor: 'pointer' }}
         >
           回覆
         </span>
@@ -32,7 +33,8 @@ class ResCommentInput extends React.Component {
               onChange={this.props.handleResChange}
               value={this.props.inputTextRes}
               type="text"
-              class="form-control"
+              className="form-control inp_email"
+              style={{ backgroundColor: '#bbbbbb' }}
               placeholder="請輸入留言"
               aria-label="請輸入留言"
               aria-describedby="button-addon2"

@@ -10,21 +10,21 @@ class MemberArticleTable extends React.Component {
     }
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    // this.setState({ thisData: nextProps.thisData }) 這不能這樣setStae，要用下面的寫法
-    let stateToBeReturned = null
-    if (prevState.thisData == 0 || prevState.thisCollectArticleData == 0) {
-      stateToBeReturned = {
-        ...prevState,
-        thisData: nextProps.thisData,
-        thisCollectArticleData: nextProps.thisCollectArticleData,
-      }
-    }
-    console.log(nextProps)
-    console.log(prevState)
-    console.log(stateToBeReturned)
-    return stateToBeReturned
-  }
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   // this.setState({ thisData: nextProps.thisData }) 這不能這樣setStae，要用下面的寫法
+  //   let stateToBeReturned = null
+  //   if (prevState.thisData == 0 || prevState.thisCollectArticleData == 0) {
+  //     stateToBeReturned = {
+  //       ...prevState,
+  //       thisData: nextProps.thisData,
+  //       thisCollectArticleData: nextProps.thisCollectArticleData,
+  //     }
+  //   }
+  //   console.log(nextProps)
+  //   console.log(prevState)
+  //   console.log(stateToBeReturned)
+  //   return stateToBeReturned
+  // }
 
   render() {
     // if (this.props.thisData == 0) {
@@ -55,7 +55,7 @@ class MemberArticleTable extends React.Component {
             </tr>
           </thead>
           <tbody className="bg-back-table text-mywhite">
-            {this.state.thisCollectArticleData.map((item, index) => (
+            {this.props.thisCollectArticleData.map((item, index) => (
               <tr
                 key={item.id}
                 style={{
@@ -93,7 +93,10 @@ class MemberArticleTable extends React.Component {
                     borderRight: '2px solid #2B333D',
                   }}
                 >
-                  <FaTrash onClick={this.props.handleMarkClick(item.id)} />
+                  <FaTrash
+                    onClick={this.props.handleMarkClick(item.id)}
+                    style={{ cursor: 'pointer' }}
+                  />
                 </td>
               </tr>
             ))}

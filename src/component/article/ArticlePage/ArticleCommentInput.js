@@ -47,7 +47,7 @@ class ArticleCommentInput extends React.Component {
             onChange={this.props.handleChange}
             value={this.props.inputText}
             type="text"
-            className="form-control"
+            className="form-control inp_email"
             placeholder="請輸入留言"
             aria-label="請輸入留言"
             aria-describedby="button-addon2"

@@ -428,14 +428,14 @@ button.bg-orange {
   display: flex;
   align-items: center;
   background: rgba(36, 43, 52, 0.95);
-  height: 445px !important;
+  height: 460px !important;
   /* height: 0; */
   overflow: hidden;
   width: 100%;
   position: absolute;
   /* bottom: -5000px; */
   opacity: 0;
-  transition: 1s;
+  transition: 1.5s;
   left: -100%;
   z-index: 999;
 }

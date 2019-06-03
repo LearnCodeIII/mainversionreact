@@ -1,7 +1,6 @@
 /* eslint-disable array-callback-return */
 import React from 'react'
-import ArricleList from '../component/article/ArticleList'
-import ActivitySection from '../component/activity/ActivitySection/ActivitySection'
+
 import { Row, Col } from 'react-bootstrap'
 import Pagination from '../component/article/ArticleList/ArticleButton/Pagination'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -10,7 +9,7 @@ import ViewPage from '../component/article/ArticlePage/ViewPage'
 import ArticleComment from '../component/article/ArticlePage/ArticleComment'
 import ArticleCommentInput from '../component/article/ArticlePage/ArticleCommentInput'
 import ArticleBtnGroup from '../component/article/ArticleList/ArticleButton/ArticleBtnGroup'
-import { async } from 'q'
+import Swal from 'sweetalert2'
 
 const memberId = sessionStorage.getItem('memberId')
 
@@ -175,7 +174,16 @@ class ArticlePage extends React.Component {
   // 留言送出
   goComment = async () => {
     if (memberId) {
-      alert('回應成功!!!SID:' + this.state.thisId)
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 2000,
+      })
+      Toast.fire({
+        type: 'success',
+        title: '回應成功!!',
+      })
       let newRes = {
         aid: +this.state.thisId,
         date: new Date().toDateString(),
@@ -212,12 +220,39 @@ class ArticlePage extends React.Component {
         console.log(newI)
         // 清空輸入框
         document.querySelector('#commentInput').value = []
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'center',
+          showConfirmButton: false,
+          timer: 1500,
+        })
+        Toast.fire({
+          type: 'success',
+          title: '留言成功!!',
+        })
       } catch (err) {
         console.log(err)
       }
       // this.forceUpdate()
     } else {
-      alert('請先登入')
+      Swal.fire({
+        // position: 'top-end',
+        title: '請先登入會員',
+        text: '請點選確認繼續或取消離開',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonText: '確認',
+        cancelButtonText: '取消',
+        // cancelButtonColor: ' #d33',
+        confirmButtonClass: ' btn-warning',
+        confirmButtonColor: '#ffa510',
+        background: '#242b34',
+      }).then(result => {
+        // 確認有按下上傳確認鍵後開始FETCH
+        if (result.value) {
+          window.location.href = '/LoginSign'
+        }
+      })
     }
   }
 
@@ -297,14 +332,40 @@ class ArticlePage extends React.Component {
         console.log(err)
       }
     } else {
-      alert('please login')
+      Swal.fire({
+        // position: 'top-end',
+        title: '請先登入會員',
+        text: '請點選確認繼續或取消離開',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonText: '確認',
+        cancelButtonText: '取消',
+        // cancelButtonColor: ' #d33',
+        confirmButtonClass: ' btn-warning',
+        confirmButtonColor: '#ffa510',
+        background: '#242b34',
+      }).then(result => {
+        // 確認有按下上傳確認鍵後開始FETCH
+        if (result.value) {
+          window.location.href = '/LoginSign'
+        }
+      })
     }
   }
 
   // ----------------------按讚套餐--------------------------
   handleLikeClick = async () => {
     if (memberId) {
-      alert('按讚成功!!!')
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'center',
+        showConfirmButton: false,
+        timer: 2000,
+      })
+      Toast.fire({
+        type: 'success',
+        title: '已讚!!',
+      })
       console.log(this.state.memberAllData.id)
       // 按讚清單所用的新資料  原本陣列 memberAllData
       let newLikeData = {
@@ -350,7 +411,24 @@ class ArticlePage extends React.Component {
         console.log(err)
       }
     } else {
-      alert('please login')
+      Swal.fire({
+        // position: 'top-end',
+        title: '請先登入會員',
+        text: '請點選確認繼續或取消離開',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonText: '確認',
+        cancelButtonText: '取消',
+        // cancelButtonColor: ' #d33',
+        confirmButtonClass: ' btn-warning',
+        confirmButtonColor: '#ffa510',
+        background: '#242b34',
+      }).then(result => {
+        // 確認有按下上傳確認鍵後開始FETCH
+        if (result.value) {
+          window.location.href = '/LoginSign'
+        }
+      })
     }
   }
 

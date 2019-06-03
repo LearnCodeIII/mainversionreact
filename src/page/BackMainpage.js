@@ -60,6 +60,7 @@ class BackSidenav extends React.Component {
       activityMemberJoin: [],
       collectActivity: '',
     }
+    this.handleMarkClick = this.handleMarkClick.bind(this)
   }
 
   async componentDidMount() {
@@ -858,6 +859,7 @@ class BackSidenav extends React.Component {
     }
   }
 
+  // ＝＝＝＝＝＝＝＝＝刪除文章收藏套餐＝＝＝＝＝＝＝＝＝＝
   handleMarkClick = articleID => async () => {
     if (memberId) {
       console.log(this.state.thisMemberData)
@@ -910,7 +912,11 @@ class BackSidenav extends React.Component {
           }
         )
         const newMarkData = await res.json()
-        this.setState({ thisMemberData: newMarkData })
+
+        const newArticle = await this.state.thisCollectArticleData.filter(
+          item => item.id !== articleID
+        )
+        await this.setState({ thisCollectArticleData: newArticle })
         const newMarkA = newMarkData.collectArticle
         console.log(newMarkData)
         console.log('Aid:')
@@ -918,7 +924,16 @@ class BackSidenav extends React.Component {
         // fetch新資料後的判斷渲染套餐(收藏)
         // const MarkYN
 
-        this.shouldComponentUpdate()
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'center',
+          showConfirmButton: false,
+          timer: 2000,
+        })
+        Toast.fire({
+          type: 'success',
+          title: '移除成功!!',
+        })
       } catch (err) {
         console.log(err)
       }
@@ -944,46 +959,71 @@ class BackSidenav extends React.Component {
     }).then(result => {
       if (result.value) {
         try {
-          let memberData = []
-          fetch(
-            'http://localhost:5555/member/' + sessionStorage.getItem('memberId')
-          )
+          fetch('http://localhost:5555/activityCardData/' + id)
             .then(res => res.json())
-            .then(data => {
-              console.log('ID: ' + id)
-              memberData = JSON.parse(JSON.stringify(data))
-
-              memberData.collectActivityJoin = memberData.collectActivityJoin
-                .split(id)
-                .toString()
-                .replace(/,/g, '')
-              fetch(
-                'http://localhost:5555/member/' +
-                  sessionStorage.getItem('memberId'),
-                {
-                  method: 'PUT',
-                  body: JSON.stringify(memberData),
-                  headers: new Headers({
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                  }),
-                }
-              )
+            .then(res => {
+              const data = JSON.parse(JSON.stringify(res))
+              const theaterId = JSON.parse(JSON.stringify(data.theaterId))
+              fetch('http://localhost:5555/cinema/' + theaterId)
                 .then(res => res.json())
                 .then(res => {
-                  Swal.fire({
-                    type: 'success',
-                    title: '<span style="color:#d4d1cc">已取消報名</span>',
-                    showConfirmButton: false,
-                    buttonsStyling: false,
-                    background: '#242b34',
+                  const data = JSON.parse(JSON.stringify(res))
+                  data.cinemaD3memberCancel += 1
+                  fetch('http://localhost:5555/cinema/' + theaterId, {
+                    method: 'PUT',
+                    body: JSON.stringify(data),
+                    headers: new Headers({
+                      Accept: 'application/json',
+                      'Content-Type': 'application/json',
+                    }),
                   })
-                  setTimeout(
-                    () =>
-                      (window.location.pathname =
-                        '/BackMainpage/activityMemberSignUp'),
-                    3000
-                  )
+                    .then(res => res.json)
+                    .then(res => {
+                      let memberData = []
+                      fetch(
+                        'http://localhost:5555/member/' +
+                          sessionStorage.getItem('memberId')
+                      )
+                        .then(res => res.json())
+                        .then(data => {
+                          memberData = JSON.parse(JSON.stringify(data))
+
+                          memberData.collectActivityJoin = memberData.collectActivityJoin
+                            .split(id)
+                            .toString()
+                            .replace(/,/g, '')
+                          fetch(
+                            'http://localhost:5555/member/' +
+                              sessionStorage.getItem('memberId'),
+                            {
+                              method: 'PUT',
+                              body: JSON.stringify(memberData),
+                              headers: new Headers({
+                                Accept: 'application/json',
+                                'Content-Type': 'application/json',
+                              }),
+                            }
+                          )
+                            .then(res => res.json())
+                            .then(res => {
+                              Swal.fire({
+                                type: 'success',
+                                title:
+                                  '<span style="color:#d4d1cc">已取消報名</span>',
+                                showConfirmButton: false,
+                                buttonsStyling: false,
+                                background: '#242b34',
+                              }).then(
+                                setTimeout(
+                                  () =>
+                                    (window.location.pathname =
+                                      '/BackMainpage/activityMemberSignUp'),
+                                  3000
+                                )
+                              )
+                            })
+                        })
+                    })
                 })
             })
         } catch (err) {
@@ -1126,7 +1166,7 @@ class BackSidenav extends React.Component {
                     >
                       <h5 className="">
                         尚無紀錄，趕快
-                        <a style={{ color: '#ffa510' }} href="/movie">
+                        <a style={{ color: '#ffa510' }} href="/article">
                           前往文章
                         </a>
                         添加你的收藏吧！
@@ -1264,7 +1304,7 @@ class BackSidenav extends React.Component {
                     >
                       <h5 className="ml-4">
                         尚無紀錄，趕快
-                        <a style={{ color: '#ffa510' }} href="/cinema">
+                        <a style={{ color: '#ffa510' }} href="/article">
                           前往文章
                         </a>
                         添加你的收藏吧！
@@ -1446,7 +1486,11 @@ class BackSidenav extends React.Component {
                           key={data.id}
                           title={data.theater}
                           subtitle={data.title}
-                          imgSrc={data.imgSrc}
+                          imgSrc={
+                            data.imgSrc.indexOf('http') == 0
+                              ? data.imgSrc
+                              : '/images/activityImg/' + data.imgSrc
+                          }
                         />
                         <button
                           className="btn btn-warning"

@@ -520,7 +520,9 @@ class TheateInfo extends React.Component {
     //抓到發文人的ip
     // require module
 
-    let thisMember = this.state.memberThisData[0] //現在登陸的這名會員
+    let thisMember = this.state.memberThisData[0]
+      ? this.state.memberThisData[0]
+      : this.state.memberThisData //現在登陸的這名會員
     let thisCinema = this.state.cinemaThisData //現在登陸的戲院
     let thisLogin = {}
     if (memberId) {

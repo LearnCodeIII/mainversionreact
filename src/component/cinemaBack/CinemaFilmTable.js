@@ -64,17 +64,14 @@ class MemberCollectTable extends React.Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     // this.setState({ thisData: nextProps.thisData }) 這不能這樣setStae，要用下面的寫法
     let stateToBeReturned = null
-    if (
-      prevState.thisData !== nextProps.thisData ||
-      prevState.thisData === 0 ||
-      prevState.thisFilmData === 0
-    ) {
+    if (prevState.thisData == 0 || prevState.thisFilmData == 0) {
       stateToBeReturned = {
         ...prevState,
         thisData: nextProps.thisData,
         thisFilmData: nextProps.thisData.cinemaFilm,
       }
     }
+
     console.log(nextProps)
     console.log(prevState)
     console.log(stateToBeReturned)
@@ -283,6 +280,10 @@ class MemberCollectTable extends React.Component {
     this.setState({ thisFilmData: 0 })
     this.props.handleEditSave(id, this.state.thisData)()
   }
+  handleFilmDeleteInTable = id => () => {
+    this.setState({ thisData: 0, thisFilmData: 0 })
+    this.props.handleFilmDelete(id)()
+  }
   render() {
     if (this.props.thisData == 0) {
       return <></>
@@ -415,7 +416,8 @@ class MemberCollectTable extends React.Component {
                     </button>
                     <button
                       className="btn btn-outline-warning mx-2"
-                      onClick={this.props.handleFilmDelete(item.id)}
+                      // onClick={this.props.handleFilmDelete(item.id)}
+                      onClick={this.handleFilmDeleteInTable(item.id)}
                     >
                       <i className="fas fa-trash btnTableEdit" />
                     </button>

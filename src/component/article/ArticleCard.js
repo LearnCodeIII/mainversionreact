@@ -11,6 +11,7 @@ import {
 } from 'react-icons/fa'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import ReadMore from './ArticleList/ArticleButton/ReadMore'
+import Swal from 'sweetalert2'
 
 const memberId = sessionStorage.getItem('memberId')
 

@@ -19,7 +19,7 @@ class Footer extends React.Component {
   render() {
     return (
       // 如果下面爆了出現卷軸  就是這裡的問題!!          ↓
-      <Col md={11} className="justify-content-center">
+      <Col md={11} className="justify-content-center mt-5">
         <Row className="mb-4">
           <Col className="" md={'8'}>
             <div className="">

@@ -48,7 +48,7 @@ class ArticleBtnGroup extends React.Component {
                 className="my-3"
                 onClick={this.props.handleMarkClick}
               >
-                <FaBookmark />
+                <FaBookmark style={{ cursor: 'pointer' }} />
               </div>
             </OverlayTrigger>
             <OverlayTrigger
@@ -60,7 +60,7 @@ class ArticleBtnGroup extends React.Component {
                 className="my-3"
                 onClick={this.props.handleLikeClick}
               >
-                <FaThumbsUp />
+                <FaThumbsUp style={{ cursor: 'pointer' }} />
               </div>
             </OverlayTrigger>
             {/* 分享 暫無功能 */}
@@ -81,7 +81,7 @@ class ArticleBtnGroup extends React.Component {
                 className="my-3"
                 onClick={this.handleGoBack}
               >
-                <FaReply />
+                <FaReply style={{ cursor: 'pointer' }} />
               </div>
             </OverlayTrigger>
           </ButtonToolbar>
