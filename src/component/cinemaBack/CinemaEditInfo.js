@@ -419,6 +419,8 @@ class CinemaEditInfo extends React.Component {
             )
             delBtn.addEventListener('click', event => {
               // alert(obj.filename)
+              // console.log(event.target)
+              event.stopPropagation()
               copyData['cinemaImg'] = copyData['cinemaImg'].filter(
                 item => item !== obj.filename
               )
@@ -426,10 +428,12 @@ class CinemaEditInfo extends React.Component {
                 event.target.parentNode ==
                 document.querySelector('#cinemaImgPreview').childNodes[0]
               ) {
+                console.log('Target===button')
                 document
                   .querySelector('#cinemaImgPreview')
                   .removeChild(event.target.parentNode)
               } else {
+                console.log('Target===i')
                 document
                   .querySelector('#cinemaImgPreview')
                   .removeChild(event.target.parentNode.parentNode)

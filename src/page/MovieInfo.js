@@ -49,39 +49,6 @@ class MovieInfo extends React.Component {
       this.setState({ moviePageData: moviePageData })
       this.setState({ moviePageOtherData: moviePageOtherData })
       this.setState({ movieHeroImage: moviePageData.imgSrc })
-
-      try {
-        fetch('http://localhost:5555/cinema/c001')
-          .then(res => res.json())
-          .then(data => {
-            let totalScore = 0
-            let starData = Object.keys(this.state.moviePageData.filmStar)
-
-            let getScore = Object.values(
-              this.state.moviePageData.filmStar
-            ).forEach(item => (totalScore += Number(JSON.stringify(item.star))))
-            console.log(totalScore)
-            let totalPeople = starData.length
-            if (totalPeople != 0) {
-              console.log(totalPeople)
-              let scoreData =
-                parseFloat(
-                  Math.round((totalScore / totalPeople) * 100) / 100
-                ).toFixed(2) +
-                '/ 5 分' +
-                ' ( 總共 : ' +
-                totalPeople +
-                ' 人評分'
-              this.setState({ score: scoreData })
-            } else {
-              this.setState({ score: '目前還沒有人評分' })
-            }
-
-            this.setState({ theaterData: data })
-          })
-      } catch (err) {
-        console.log(err)
-      }
     } catch (err) {
       console.log(err)
     }
@@ -101,6 +68,48 @@ class MovieInfo extends React.Component {
       console.log(err)
     }
     const pagename = window.location.pathname.slice(7)
+
+    try {
+      fetch('http://localhost:5555/cinema/' + this.state.moviePageData.cinemaId)
+        .then(res => res.json())
+        .then(data => {
+          let totalScore = 0
+          let starData = Object.keys(this.state.moviePageData.filmStar)
+          let theaterName = data.cinemaAddress
+          let getScore = Object.values(
+            this.state.moviePageData.filmStar
+          ).forEach(item => (totalScore += Number(JSON.stringify(item.star))))
+          console.log(totalScore)
+          let totalPeople = starData.length
+          if (totalPeople != 0) {
+            console.log(totalPeople)
+            let scoreData =
+              parseFloat(
+                Math.round((totalScore / totalPeople) * 100) / 100
+              ).toFixed(2) +
+              '/ 5 分' +
+              ' ( 總共 : ' +
+              totalPeople +
+              ' 人評分'
+            this.setState({ score: scoreData })
+          } else {
+            this.setState({ score: '目前還沒有人評分' })
+          }
+          fetch(
+            'https://maps.googleapis.com/maps/api/geocode/json?address=' +
+              theaterName +
+              '&key=AIzaSyABvTY8JdjI-UKYsJ-if4LJTkmjJr-mPSU'
+          )
+            .then(res => res.json())
+            .then(res => {
+              data.lat = res.results[0].geometry.location.lat.toString()
+              data.lng = res.results[0].geometry.location.lng.toString()
+              this.setState({ theaterData: data })
+            })
+        })
+    } catch (err) {
+      console.log(err)
+    }
   }
   handleOnClick = () => {
     this.setState({ moviePageData: [] })
@@ -228,10 +237,6 @@ class MovieInfo extends React.Component {
                 cardContent7={this.state.moviePageData.outTheaterDate}
                 cardContent8={this.state.score}
               />
-              <MovieTitle
-                title={'Todo fetch ？資料有問題 lat lng'}
-                className="content-title"
-              />
             </div>
           </div>
         </div>
@@ -248,8 +253,8 @@ class MovieInfo extends React.Component {
                 GUINumber={this.state.theaterData.cinemaTaxid}
                 website={this.state.theaterData.cinemaWeb}
                 email={this.state.theaterData.cinemaEmail}
-                // lat={this.state.theaterData.lat}
-                // lng={this.state.theaterData.lng}
+                lat={this.state.theaterData.lat}
+                lng={this.state.theaterData.lng}
                 streetView={this.state.streetView}
                 handleOnClickMap={() => this.setState({ streetView: true })}
                 handleOnClickMaplocal={() =>

@@ -1076,6 +1076,28 @@ class BackSidenav extends React.Component {
                 ''
               )}
 
+              {pagename === 'collect-article' ? (
+                <>
+                  <TitleKaga title="收藏文章" />
+                  <MemberCollectTable
+                    thisData={this.state.thisMemberData}
+                    thisCollectArticleData={this.state.thisCollectArticleData}
+                  />
+                </>
+              ) : (
+                <div
+                  className="d-flex align-items-center justify-content-center"
+                  style={{ height: '300px', width: '100%' }}
+                >
+                  <h5 className="ml-4">
+                    尚無收藏紀錄，趕快
+                    <a style={{ color: '#ffa510' }} href="/cinema">
+                      前往戲院
+                    </a>
+                    收藏戲院吧！
+                  </h5>
+                </div>
+              )}
               {pagename === 'collect-cinema' ? (
                 this.state.filmCollecCard.length !== 0 ? (
                   <>

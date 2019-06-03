@@ -822,7 +822,8 @@
         "2019-06-05 10:00"
       ],
       "filmStar": [],
-      "theater": "碼農Cafe"
+      "theater": "碼農Cafe",
+      "cinemaId": "c001"
     },
     {
       "id": "m1559479473377",
@@ -856,7 +857,8 @@
           "star": 5
         }
       ],
-      "theater": "碼農Cafe"
+      "theater": "碼農Cafe",
+      "cinemaId": "c001"
     }
   ],
   "cinema-sign-inputmsg": [
@@ -2911,7 +2913,7 @@
       "link": "",
       "markId": [],
       "likeId": [],
-      "viewCounter": "1"
+      "viewCounter": 2
     },
     {
       "id": "2",

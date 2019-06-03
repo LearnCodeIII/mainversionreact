@@ -56,6 +56,8 @@ class CinemaBackMainpage extends React.Component {
       FilmCard: [], //影片卡用
       ActivityCard: [], //活動卡用
       MessageBoxData: [],
+      // 戲院影片刪除強制render用的state
+      cinemaFilmDeleteRender: false,
     }
     // console.log('parent-constructor')
   }
@@ -378,6 +380,7 @@ class CinemaBackMainpage extends React.Component {
         newDataForMovieCard.type = newDataForMovieCard.type.join('')
       }
       newDataForMovieCard.theater = this.state.thisCinemaData.cinemaName
+      newDataForMovieCard.cinemaId = this.state.thisCinemaData.id
       try {
         fetch('http://localhost:5555/cinema/' + this.state.thisCinemaData.id, {
           method: 'PUT',
@@ -429,7 +432,7 @@ class CinemaBackMainpage extends React.Component {
 
   //影片編輯儲存
   handleEditSave = (id, thisData) => () => {
-    // if (thisData.type.length == 0) {
+    // if (thisData.type.length === 0) {
     //   Toast.fire({
     //     type: 'error',
     //     title: '沒有選擇影片類型，請檢查您的資料再試一次',
@@ -444,7 +447,7 @@ class CinemaBackMainpage extends React.Component {
     newcinemaData.cinemaFilm[thisFilmIndex] = thisData
     this.setState({ thisCinemaData: newcinemaData })
     const newDataForMovieCard = { ...thisData }
-    if (newDataForMovieCard.type.find(item => item == '全選')) {
+    if (newDataForMovieCard.type.find(item => item === '全選')) {
       newDataForMovieCard.type = newDataForMovieCard.type.slice(1).join('')
     } else {
       newDataForMovieCard.type = newDataForMovieCard.type.join('')
@@ -496,7 +499,7 @@ class CinemaBackMainpage extends React.Component {
     swalWithBootstrapButtons
       .fire({
         title: '<span style="color:#d4d1cc">確定要刪除這支影片?</span>',
-        // text: '<span style="color:#d4d1cc">提醒：刪除的影片無法再復原</span>',
+        html: '<span style="color:#d4d1cc">提醒：刪除的影片無法再復原</span>',
         type: 'warning',
         showCancelButton: true,
         confirmButtonText: '確認刪除',
@@ -544,15 +547,22 @@ class CinemaBackMainpage extends React.Component {
                 } catch (e) {
                   console.log(e)
                 }
-                this.setState({ thisCinemaData: jsonObject }, () => {
-                  // alert('資料刪除成功')
-                  swalWithBootstrapButtons.fire(
-                    '<span style="color:#d4d1cc">刪除成功</span>',
-                    '<span style="color:#d4d1cc">已成功刪除影片</span>',
-                    'success'
-                  )
-                  // setTimeout(() => window.location.reload(), 1500)
-                })
+                this.setState(
+                  {
+                    thisCinemaData: jsonObject,
+                    cinemaFilmDeleteRender: !this.state.cinemaFilmDeleteRender,
+                  },
+                  () => {
+                    // alert('資料刪除成功')
+                    swalWithBootstrapButtons.fire(
+                      '<span style="color:#d4d1cc">刪除成功</span>',
+                      '<span style="color:#d4d1cc">已成功刪除影片</span>',
+                      'success'
+                    )
+
+                    // setTimeout(() => window.location.reload(), 1500)
+                  }
+                )
               })
           } catch (e) {
             console.log(e)
@@ -641,7 +651,7 @@ class CinemaBackMainpage extends React.Component {
                             title={item.title}
                             subtitle={item.subtitle}
                             img={
-                              item.img.indexOf('http') == 0
+                              item.img.indexOf('http') === 0
                                 ? item.img
                                 : '/images/movieImg/' + item.img
                             }
