@@ -102,8 +102,13 @@ class MovieInfo extends React.Component {
           )
             .then(res => res.json())
             .then(res => {
-              data.lat = res.results[0].geometry.location.lat.toString()
-              data.lng = res.results[0].geometry.location.lng.toString()
+              if (res.results.length != 0) {
+                data.lat = res.results[0].geometry.location.lat.toString()
+                data.lng = res.results[0].geometry.location.lng.toString()
+              } else {
+                data.lat = 0
+                data.lng = 0
+              }
               this.setState({ theaterData: data })
             })
         })

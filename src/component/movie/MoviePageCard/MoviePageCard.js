@@ -5,7 +5,7 @@ const MoviePageCard = props => (
     <div
       class="activityInfoCard card mb-3"
       style={{
-        maxWidth: '800px',
+        maxWidth: '1000px',
         height: '400px',
         maxHeight: '1200px',
         margin: 'auto',
@@ -17,7 +17,7 @@ const MoviePageCard = props => (
       <div
         class="row no-gutters"
         style={{
-          maxWidth: '800px',
+          maxWidth: '1000px',
           height: '100%',
         }}
       >

@@ -180,6 +180,9 @@ class ForumBackMainpage extends React.Component {
       // margin: '3px auto',
       zIndex: '10',
     }
+    if (this.state.myPostRecord.length === 0) {
+      return <></>
+    }
     return (
       <>
         <div className="col-md-12 p-0 my-5">

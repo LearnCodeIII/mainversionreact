@@ -228,21 +228,21 @@ class Footer extends React.Component {
         <Row className="footer_brand mt-3 mb-5">
           {/* 這邊可選擇純文字、logo1、logo2的樣式 */}
           <div className="col-auto">
-            <h2 style={{ display: 'inline' }} className="mr-3">
+            {/* <h2 style={{ display: 'inline' }} className="mr-3">
               .Movieee
-            </h2>
+            </h2> */}
             {/* <img
               src="/images/brand04.png"
               width={160}
               style={{ verticalAlign: 'middle' }}
               className="mr-3"
             /> */}
-            {/* <img
+            <img
               src="/images/brand03.png"
               width={170}
               style={{ verticalAlign: 'text-bottom' }}
               className="mr-3"
-            /> */}
+            />
             enjoy life, &nbsp; every one, &nbsp; every thing
           </div>
           <div className="col-auto mr-auto aling-items-end" />

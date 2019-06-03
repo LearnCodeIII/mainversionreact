@@ -171,6 +171,7 @@ class ActivityInfo extends React.Component {
             buttonsStyling: false,
             background: '#242b34',
           })
+          setTimeout(() => window.history.go(-1), 1000)
           return false
         }
       } catch (err) {

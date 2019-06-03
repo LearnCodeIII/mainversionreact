@@ -12,13 +12,16 @@ import ActivityTitle from '../component/activity/ActivityTitle/ActivityTitle'
 import MemberEditInfo from '../component/meberBack/MemberEditInfo'
 import MemberEditPwd from '../component/meberBack/MemberEditPwd'
 import MemberCollectTable from '../component/meberBack/MemberCollectTable'
+import MemberArticleTable from '../component/article/articleBack/MemberArticleTable'
 import MemberCollectTableForForum from '../component/meberBack/MemberCollectTableForForum'
 import CheckboxMultiForFavTypeReadSu from '../component/inputs/CheckboxMultiForFavTypeReadSu'
 import CinemaEditInfo from '../component/cinemaBack/CinemaEditInfo'
 import ForumBackArticle from './ForumBackArticle'
 import ForumBackComment from './ForumBackComment'
+import ForumBackCollect from './ForumBackCollect'
 //Import SweetAlert2
 import Swal from 'sweetalert2'
+import { async } from 'q'
 const Toast = Swal.mixin({
   toast: true,
   position: 'center',
@@ -802,7 +805,7 @@ class BackSidenav extends React.Component {
     // console.log(prevState)
   }
 
-  handleCollect = async id => {
+  handleCollect = id => async () => {
     const memberId = sessionStorage.getItem('memberId')
     if (memberId !== null) {
       try {
@@ -853,6 +856,149 @@ class BackSidenav extends React.Component {
         console.log(err)
       }
     }
+  }
+
+  handleMarkClick = articleID => async () => {
+    if (memberId) {
+      console.log(this.state.thisMemberData)
+      // var newMark = []
+      var newMark = [...this.state.thisMemberData.collectArticle]
+
+      newMark = newMark.filter(element => {
+        return element !== articleID
+      })
+
+      // 新的會員資訊 (更新收藏文章項目)
+      let newMemberData = {
+        id: this.state.thisMemberData.id,
+        name: this.state.thisMemberData.name,
+        nickname: this.state.thisMemberData.nickname,
+        gender: this.state.thisMemberData.gender,
+        mobile: this.state.thisMemberData.mobile,
+        birth: this.state.thisMemberData.birth,
+        email: this.state.thisMemberData.email,
+        pwd: this.state.thisMemberData.pwd,
+        avatar: this.state.thisMemberData.avatar,
+        city: this.state.thisMemberData.city,
+        address: this.state.thisMemberData.address,
+        fav_type: this.state.thisMemberData.fav_type,
+        career: this.state.thisMemberData.career,
+        join_date: this.state.thisMemberData.join_date,
+        permission: this.state.thisMemberData.permission,
+        collectFilm: this.state.thisMemberData.collectFilm,
+        collectMovie: this.state.thisMemberData.collectMovie,
+        collectCinema: this.state.thisMemberData.collectCinema,
+        collectArticle: newMark,
+        collectActivity: this.state.thisMemberData.collectActivity,
+        collectActivityJoin: this.state.thisMemberData.collectActivityJoin,
+        collectForum: this.state.thisMemberData.collectForum,
+        markList: this.state.thisMemberData.markList,
+      }
+
+      const data = newMemberData
+
+      try {
+        const res = await fetch(
+          'http://localhost:5555/member/' + this.state.thisMemberData.id,
+          {
+            method: 'PUT',
+            body: JSON.stringify(data), //新的會員收藏資料
+            headers: new Headers({
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            }),
+          }
+        )
+        const newMarkData = await res.json()
+        this.setState({ thisMemberData: newMarkData })
+        const newMarkA = newMarkData.collectArticle
+        console.log(newMarkData)
+        console.log('Aid:')
+        console.log(newMarkA)
+        // fetch新資料後的判斷渲染套餐(收藏)
+        // const MarkYN
+
+        this.shouldComponentUpdate()
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      alert('please login')
+    }
+  }
+  handleActivityJoinCancel = id => {
+    console.log('test')
+    Swal.fire({
+      type: 'question',
+      title: '<span style="color:#d4d1cc">確定要取消報名這場活動嗎？</span>',
+      showConfirmButton: true,
+      showCancelButton: true,
+      confirmButtonClass: 'btn btn-warning mr-5',
+      confirmButtonColor: '#ffa510',
+      confirmButtonText: '是的，我要取消。',
+      cancelButtonClass: 'btn btn-warning mr-5',
+      cancelButtonColor: '#ffa510',
+      cancelButtonText: '沒有，我再考慮。',
+      buttonsStyling: false,
+      background: '#242b34',
+    }).then(result => {
+      if (result.value) {
+        try {
+          let memberData = []
+          fetch(
+            'http://localhost:5555/member/' + sessionStorage.getItem('memberId')
+          )
+            .then(res => res.json())
+            .then(data => {
+              console.log('ID: ' + id)
+              memberData = JSON.parse(JSON.stringify(data))
+
+              memberData.collectActivityJoin = memberData.collectActivityJoin
+                .split(id)
+                .toString()
+                .replace(/,/g, '')
+              fetch(
+                'http://localhost:5555/member/' +
+                  sessionStorage.getItem('memberId'),
+                {
+                  method: 'PUT',
+                  body: JSON.stringify(memberData),
+                  headers: new Headers({
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                  }),
+                }
+              )
+                .then(res => res.json())
+                .then(res => {
+                  Swal.fire({
+                    type: 'success',
+                    title: '<span style="color:#d4d1cc">已取消報名</span>',
+                    showConfirmButton: false,
+                    buttonsStyling: false,
+                    background: '#242b34',
+                  })
+                  setTimeout(
+                    () =>
+                      (window.location.pathname =
+                        '/BackMainpage/activityMemberSignUp'),
+                    3000
+                  )
+                })
+            })
+        } catch (err) {
+          console.log(err)
+        }
+      } else {
+        Swal.fire({
+          type: 'warning',
+          title: '<span style="color:#d4d1cc">沒有取消該筆報名活動！</span>',
+          showConfirmButton: false,
+          buttonsStyling: false,
+          background: '#242b34',
+        })
+      }
+    })
   }
   render() {
     if (!sessionStorage.getItem('memberId')) {
@@ -954,7 +1100,7 @@ class BackSidenav extends React.Component {
                       style={{ height: '300px', width: '100%' }}
                     >
                       <h5 className="">
-                        尚無收藏紀錄，趕快
+                        尚無紀錄，趕快
                         <a style={{ color: '#ffa510' }} href="/movie">
                           前往影片
                         </a>
@@ -962,15 +1108,32 @@ class BackSidenav extends React.Component {
                       </h5>
                     </div>
                   )}
-
                   <div className="py-5" />
                   <TitleKaga title="收藏文章" />
-                  <div className=" d-flex flex-wrap col-lg-12 my-5">
-                    <MemberCollectTable
-                      thisData={this.state.thisMemberData}
-                      thisCollectArticleData={this.state.thisCollectArticleData}
-                    />
-                  </div>
+                  {this.state.thisCollectArticleData.length != 0 ? (
+                    <div className=" d-flex flex-wrap col-lg-12 my-5">
+                      <MemberCollectTable
+                        thisData={this.state.thisMemberData}
+                        thisCollectArticleData={
+                          this.state.thisCollectArticleData
+                        }
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="d-flex align-items-center justify-content-center"
+                      style={{ height: '300px', width: '100%' }}
+                    >
+                      <h5 className="">
+                        尚無紀錄，趕快
+                        <a style={{ color: '#ffa510' }} href="/movie">
+                          前往文章
+                        </a>
+                        添加你的收藏吧！
+                      </h5>
+                    </div>
+                  )}
+
                   <div className="py-5" />
                   <TitleKaga title="發文紀錄" />
                   <div className=" d-flex flex-wrap col-lg-12 my-5">
@@ -1059,18 +1222,22 @@ class BackSidenav extends React.Component {
                     </div>
                   </>
                 ) : (
-                  <div
-                    className="d-flex align-items-center justify-content-center"
-                    style={{ height: '300px', width: '100%' }}
-                  >
-                    <h5 className="ml-4">
-                      尚無收藏紀錄，趕快
-                      <a style={{ color: '#ffa510' }} href="/movie">
-                        前往影片
-                      </a>
-                      收藏影片吧！
-                    </h5>
-                  </div>
+                  <>
+                    <TitleKaga title="收藏影片" />
+
+                    <div
+                      className="d-flex align-items-center justify-content-center"
+                      style={{ height: '300px', width: '100%' }}
+                    >
+                      <h5 className="ml-4">
+                        尚無收藏紀錄，趕快
+                        <a style={{ color: '#ffa510' }} href="/movie">
+                          前往電影
+                        </a>
+                        收藏影片吧！
+                      </h5>
+                    </div>
+                  </>
                 )
               ) : (
                 ''
@@ -1078,25 +1245,35 @@ class BackSidenav extends React.Component {
 
               {pagename === 'collect-article' ? (
                 <>
-                  <TitleKaga title="收藏文章" />
-                  <MemberCollectTable
-                    thisData={this.state.thisMemberData}
-                    thisCollectArticleData={this.state.thisCollectArticleData}
-                  />
+                  {/* ＝＝＝＝＝＝＝＝＝＝＝＝文章表格套餐＝＝＝＝＝＝＝＝＝ */}
+                  <ActivityTitle title={'收藏文章'} className="content-title" />
+                  {this.state.thisCollectArticleData.length != 0 ? (
+                    <div className=" d-flex flex-wrap col-lg-12 my-5">
+                      <MemberArticleTable
+                        thisData={this.state.thisMemberData}
+                        thisCollectArticleData={
+                          this.state.thisCollectArticleData
+                        }
+                        handleMarkClick={this.handleMarkClick}
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="d-flex align-items-center justify-content-center"
+                      style={{ height: '300px', width: '100%' }}
+                    >
+                      <h5 className="ml-4">
+                        尚無紀錄，趕快
+                        <a style={{ color: '#ffa510' }} href="/cinema">
+                          前往文章
+                        </a>
+                        添加你的收藏吧！
+                      </h5>
+                    </div>
+                  )}
                 </>
               ) : (
-                <div
-                  className="d-flex align-items-center justify-content-center"
-                  style={{ height: '300px', width: '100%' }}
-                >
-                  <h5 className="ml-4">
-                    尚無收藏紀錄，趕快
-                    <a style={{ color: '#ffa510' }} href="/cinema">
-                      前往戲院
-                    </a>
-                    收藏戲院吧！
-                  </h5>
-                </div>
+                ''
               )}
               {pagename === 'collect-cinema' ? (
                 this.state.filmCollecCard.length !== 0 ? (
@@ -1125,18 +1302,22 @@ class BackSidenav extends React.Component {
                     </div>
                   </>
                 ) : (
-                  <div
-                    className="d-flex align-items-center justify-content-center"
-                    style={{ height: '300px', width: '100%' }}
-                  >
-                    <h5 className="ml-4">
-                      尚無收藏紀錄，趕快
-                      <a style={{ color: '#ffa510' }} href="/cinema">
-                        前往戲院
-                      </a>
-                      收藏戲院吧！
-                    </h5>
-                  </div>
+                  <>
+                    <TitleKaga title="收藏戲院" />
+
+                    <div
+                      className="d-flex align-items-center justify-content-center"
+                      style={{ height: '300px', width: '100%' }}
+                    >
+                      <h5 className="ml-4">
+                        尚無收藏紀錄，趕快
+                        <a style={{ color: '#ffa510' }} href="/cinema">
+                          前往戲院
+                        </a>
+                        收藏戲院吧！
+                      </h5>
+                    </div>
+                  </>
                 )
               ) : (
                 ''
@@ -1256,7 +1437,7 @@ class BackSidenav extends React.Component {
                     </div>
                     {this.state.activityMemberJoin.map(data => (
                       <div
-                        className="col-12 col-sm-12 col-md-6 col-lg-4 mt-5"
+                        className="col-12 col-sm-12 col-md-6 col-lg-4 mt-5 mb-5"
                         style={{ width: '250px', height: '360px' }}
                       >
                         <ActivityCard
@@ -1267,6 +1448,12 @@ class BackSidenav extends React.Component {
                           subtitle={data.title}
                           imgSrc={data.imgSrc}
                         />
+                        <button
+                          className="btn btn-warning"
+                          onClick={() => this.handleActivityJoinCancel(data.id)}
+                        >
+                          取消報名
+                        </button>
                       </div>
                     ))}
                   </div>
@@ -1299,6 +1486,21 @@ class BackSidenav extends React.Component {
                       />
                     </div>
                     <ForumBackComment />
+                  </div>
+                </>
+              ) : (
+                ''
+              )}
+              {pagename == 'myCollect' ? (
+                <>
+                  <div className="row">
+                    <div className="col-md-12 p-0">
+                      <ActivityTitle
+                        title={'收藏紀錄'}
+                        className="content-title"
+                      />
+                    </div>
+                    <ForumBackCollect />
                   </div>
                 </>
               ) : (

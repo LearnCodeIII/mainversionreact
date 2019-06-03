@@ -29,7 +29,7 @@ class MemberCollectTable extends React.Component {
     // }
     return (
       <>
-        {this.state.thisCollectArticleData.length == 0 ? (
+        {/* {this.state.thisCollectArticleData.length == 0 ? (
           <h5 className="text-center text-mywhite mx-auto">
             尚無紀錄，趕快
             <a href="/article" style={{ color: '#ffa510' }}>
@@ -37,7 +37,7 @@ class MemberCollectTable extends React.Component {
             </a>
             添加你的收藏吧！
           </h5>
-        ) : (
+        ) : ( */}
             <table class="table table-borderless text-center h5">
               <thead>
                 <tr
@@ -87,7 +87,7 @@ class MemberCollectTable extends React.Component {
                 ))}
               </tbody>
             </table>
-          )}
+          {/* )} */}
       </>
     )
   }

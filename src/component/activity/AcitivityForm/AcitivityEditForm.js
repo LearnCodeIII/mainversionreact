@@ -261,7 +261,7 @@ class AcitivityEditForm extends React.Component {
   }
   deleteFile = () => {
     Swal.fire({
-      type: 'error',
+      type: 'question',
       title: '<span style="color:#d4d1cc">請問要刪除這筆活動嗎？</span>',
       showConfirmButton: true,
       showCancelButton: true,

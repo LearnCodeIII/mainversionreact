@@ -56,7 +56,41 @@ class ArticlePage extends React.Component {
       console.log('page')
       console.log(page)
       this.setState({ articleInfo: page })
-      this.setState({ viewCounter: page.viewCounter })
+      this.setState({ viewCounter: +page.viewCounter + 1 })
+
+      let newViewData = await {
+        id: this.state.articleInfo.id,
+        title: this.state.articleInfo.title,
+        author: this.state.articleInfo.author,
+        avatar: this.state.articleInfo.avatar,
+        date: this.state.articleInfo.date,
+        content: this.state.articleInfo.content,
+        image: this.state.articleInfo.image,
+        link: this.state.articleInfo.link,
+        markId: this.state.articleInfo.markId,
+        likeId: this.state.articleInfo.likeId,
+        viewCounter: +this.state.articleInfo.viewCounter + 1,
+      }
+
+      // const data = newViewData
+
+      fetch('http://localhost:5555/articleCardData/' + this.state.thisId, {
+        method: 'PUT',
+        body: JSON.stringify(newViewData),
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      })
+        .then(res => res.json(data))
+        .then(data => console.log(res))
+
+      // const vData = await resView.json
+      // const vPage = vData.find(item => item.id === this.state.thisId)
+      // console.log('view')
+      // this.setState({ articleInfo: vPage })
+      // this.setState({ viewCounter: vPage.viewCounter })
+      // console.log(this.state.viewCounter)
 
       //該篇文章按讚的會員ID
       const likeSid = page.likeId
@@ -132,33 +166,6 @@ class ArticlePage extends React.Component {
         console.log(err)
       }
     }
-    let newViewData = {
-      id: this.state.articleInfo.id,
-      title: this.state.articleInfo.title,
-      author: this.state.articleInfo.author,
-      avatar: this.state.articleInfo.avatar,
-      date: this.state.articleInfo.date,
-      content: this.state.articleInfo.content,
-      image: this.state.articleInfo.image,
-      link: this.state.articleInfo.link,
-      markId: this.state.articleInfo.markId,
-      likeId: this.state.articleInfo.likeId,
-      viewCounter: +this.state.articleInfo.viewCounter + 1,
-    }
-
-    // const data = newViewData
-
-    const resView = await fetch(
-      'http://localhost:5555/articleCardData/' + this.state.thisId,
-      {
-        method: 'PUT',
-        body: JSON.stringify(newViewData),
-        headers: new Headers({
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        }),
-      }
-    )
   }
   // 偵測留言
   handleChange = event => {
@@ -254,6 +261,7 @@ class ArticlePage extends React.Component {
         join_date: this.state.memberAllData.join_date,
         permission: this.state.memberAllData.permission,
         collectFilm: this.state.memberAllData.collectFilm,
+        collectMovie: this.state.memberAllData.collectMovie,
         collectCinema: this.state.memberAllData.collectCinema,
         collectArticle: newMark,
         collectActivity: this.state.memberAllData.collectActivity,

@@ -4,7 +4,6 @@ import { Row, Col } from 'react-bootstrap'
 import Pagination from '../component/article/ArticleList/ArticleButton/Pagination'
 import ArticleCard from '../component/article/ArticleCard'
 import ArticleSlider from '../component/article/ArticleList/ArticleSlider/ArticleSlider'
-import { async } from 'q'
 // import ContactForm from '../component/article/ArticleMail/send'
 
 const memberId = sessionStorage.getItem('memberId')
@@ -25,6 +24,8 @@ class Article extends React.Component {
       width: 0,
       inputText: '',
       isSeached: true,
+      mbemerAllData: [],
+      memberInfo: [],
     }
     this.byNew = this.byNew.bind(this)
     this.byHot = this.byHot.bind(this)
@@ -33,12 +34,45 @@ class Article extends React.Component {
     this.handleSearch = this.handleSearch.bind(this)
     this.handleScrollToElement = this.handleScrollToElement.bind(this)
     this.myRef = React.createRef()
+    this.handleClick = this.handleClick.bind(this)
   }
 
   async componentDidMount() {
-    // 偵聽視窗寬度
+    // 偵聽視窗寬度套餐
     this.updateWindowDimensions()
     window.addEventListener('resize', this.updateWindowDimensions)
+
+    if (memberId) {
+      try {
+        // 這邊先寫死 取快樂碼農資料
+        const memberRes = await fetch(
+          'http://localhost:5555/member/' + memberId,
+          {
+            method: 'GET',
+            headers: new Headers({
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            }),
+          }
+        )
+        const memberData = await memberRes.json()
+        console.log(memberData)
+
+        // 全部資料的長度除以 per page 並且無條件進位
+        this.setState({ memberAllData: memberData })
+        const memberInfo = memberData.collectArticle
+        console.log(memberInfo) //快樂碼農
+        this.setState({ memberInfo: memberInfo })
+        // if (memberInfo.find(item => item == this.this.props.sid)) {
+        //   this.setState({ isMarked: true })
+        // } else {
+        //   this.setState({ isMarked: false })
+        // }
+      } catch (err) {
+        console.log(err)
+      }
+    }
+
     try {
       // 倒入文章資訊
       const res = await fetch('http://localhost:5555/articleCardData', {
@@ -119,6 +153,94 @@ class Article extends React.Component {
 
   handleScrollToElement() {
     window.scrollTo(0, this.myRef.current.offsetTop)
+  }
+
+  // 收藏套餐
+
+  handleClick = (id, isMarked) => async () => {
+    // alert('1324')
+    console.log('================')
+    console.log(id)
+    if (memberId) {
+      console.log(this.state.memberAllData)
+      // var newMark = []
+      var newMark = [...this.state.memberInfo]
+
+      // const Marked = newMark.find(item => item === this.state.thisId)
+
+      // this.setState({ isMarked: !this.state.isMarked })
+
+      if (isMarked) {
+        newMark = await newMark.filter(element => {
+          return element !== id
+        })
+        await this.setState({ memberInfo: newMark })
+      } else {
+        newMark = await [id, ...this.state.memberInfo]
+        await this.setState({ memberInfo: newMark })
+        console.log(typeof this.state.thisId + ':' + this.state.thisId)
+        console.log('false')
+        console.log(newMark)
+      }
+
+      // 新的會員資訊 (更新收藏文章項目)
+      let newMemberData = {
+        id: this.state.memberAllData.id,
+        name: this.state.memberAllData.name,
+        nickname: this.state.memberAllData.nickname,
+        gender: this.state.memberAllData.gender,
+        mobile: this.state.memberAllData.mobile,
+        birth: this.state.memberAllData.birth,
+        email: this.state.memberAllData.email,
+        pwd: this.state.memberAllData.pwd,
+        avatar: this.state.memberAllData.avatar,
+        city: this.state.memberAllData.city,
+        address: this.state.memberAllData.address,
+        fav_type: this.state.memberAllData.fav_type,
+        career: this.state.memberAllData.career,
+        join_date: this.state.memberAllData.join_date,
+        permission: this.state.memberAllData.permission,
+        collectFilm: this.state.memberAllData.collectFilm,
+        collectMovie: this.state.memberAllData.collectMovie,
+        collectCinema: this.state.memberAllData.collectCinema,
+        collectArticle: newMark,
+        collectActivity: this.state.memberAllData.collectActivity,
+        collectActivityJoin: this.state.memberAllData.collectActivityJoin,
+        collectForum: this.state.memberAllData.collectForum,
+        markList: this.state.memberAllData.markList,
+      }
+
+      const data = newMemberData
+
+      try {
+        const res = await fetch(
+          'http://localhost:5555/member/' + this.state.memberAllData.id,
+          {
+            method: 'PUT',
+            body: JSON.stringify(data), //新的會員收藏資料
+            headers: new Headers({
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            }),
+          }
+        )
+        const newMarkData = await res.json()
+        const newMarkA = newMarkData.collectArticle
+        this.setState({ memberInfo: newMarkA })
+        // this.setState({ articleData:  })
+        console.log(newMarkData)
+        console.log('Aid:')
+        console.log(newMarkA)
+        // fetch新資料後的判斷渲染套餐(收藏)
+        // const MarkYN
+
+        // this.shouldComponentUpdate()
+      } catch (err) {
+        console.log(err)
+      }
+    } else {
+      alert('請先登入會員')
+    }
   }
 
   render() {
@@ -232,6 +354,9 @@ class Article extends React.Component {
                       cardText={element.content}
                       viewCounter={element.viewCounter}
                       handleClick={this.handleClick}
+                      isMarked={this.state.memberInfo.find(
+                        item => item == element.id
+                      )}
                     />
                   ))}
                 </>

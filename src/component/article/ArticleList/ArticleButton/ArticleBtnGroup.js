@@ -18,8 +18,9 @@ class ArticleBtnGroup extends React.Component {
   // 返回上一頁套餐
 
   handleGoBack = () => {
-    this.props.history.goBack()
+    window.location.href = '/article'
   }
+
   render() {
     return (
       <>

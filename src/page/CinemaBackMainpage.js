@@ -6,6 +6,7 @@ import ActivityCinemaCard from '../component/activity/ActivityCard/ActivityCinem
 import ActivityTitle from '../component/activity/ActivityTitle/ActivityTitle'
 import AcitivityForm from '../component/activity/AcitivityForm/AcitivityForm'
 import AcitivityEditForm from '../component/activity/AcitivityForm/AcitivityEditForm'
+import ActivityD3 from '../component/activity/ActivityD3/ActivityD3'
 import CinemaBackSidenav from '../component/backSidenav/CinemaBackSidenav'
 import CinemaEditInfo from '../component/cinemaBack/CinemaEditInfo'
 import CinemaEditPwd from '../component/cinemaBack/CinemaEditPwd'
@@ -453,6 +454,7 @@ class CinemaBackMainpage extends React.Component {
       newDataForMovieCard.type = newDataForMovieCard.type.join('')
     }
     newDataForMovieCard.theater = this.state.thisCinemaData.cinemaName
+    newDataForMovieCard.cinemaId = this.state.thisCinemaData.id
 
     try {
       fetch('http://localhost:5555/cinema/' + this.state.thisCinemaData.id, {
@@ -691,7 +693,11 @@ class CinemaBackMainpage extends React.Component {
                             id={item.id}
                             title={item.title}
                             subtitle={item.subtitle}
-                            img={item.img}
+                            img={
+                              item.img.indexOf('http') == 0
+                                ? item.img
+                                : '/images/activityImg/' + item.img
+                            }
                             link={item.link}
                             popup
                             // mark={item.mark}
@@ -883,7 +889,13 @@ class CinemaBackMainpage extends React.Component {
               ) : (
                 ''
               )}
-              {pagename === 'cinema-activity-analysis' ? <></> : ''}
+              {pagename === 'cinema-activity-analysis' ? (
+                <>
+                  <ActivityD3 />
+                </>
+              ) : (
+                ''
+              )}
             </div>
           </Row>
         </>

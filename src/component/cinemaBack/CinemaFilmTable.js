@@ -64,7 +64,11 @@ class MemberCollectTable extends React.Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     // this.setState({ thisData: nextProps.thisData }) 這不能這樣setStae，要用下面的寫法
     let stateToBeReturned = null
-    if (prevState.thisData == 0 || prevState.thisFilmData == 0) {
+    if (
+      prevState.thisData !== nextProps.thisData ||
+      prevState.thisData === 0 ||
+      prevState.thisFilmData === 0
+    ) {
       stateToBeReturned = {
         ...prevState,
         thisData: nextProps.thisData,
