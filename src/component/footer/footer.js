@@ -232,10 +232,11 @@ class Footer extends React.Component {
               .Movieee
             </h2> */}
             <img
-              src="/images/brand04.png"
+              src="/images/brand05.png"
               width={160}
               style={{ verticalAlign: 'middle' }}
               className="mr-3"
+              title=".Movieee"
             />
             {/* <img
               src="/images/brand03.png"

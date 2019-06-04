@@ -135,11 +135,11 @@ class App extends React.Component {
               <Navbar.Brand>
                 .Movieee
                 {/* <img
-                  src="/images/brand04.png"
+                  src="/images/brand05.png"
                   width={180}
                   style={{ verticalAlign: 'bottom' }}
                   className="mr-3"
-                />  */}
+                /> */}
               </Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
