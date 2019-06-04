@@ -150,13 +150,13 @@ class AcitivityForm extends React.Component {
               }),
             })
               .then(res => res.json())
-              .then(obj => {
+              .then(async obj => {
                 cinemaDBdataForCard = JSON.parse(JSON.stringify(obj))
                 this.setState({ cinemaDBdataForCard: cinemaDBdataForCard })
                 cinemaDBdata = JSON.parse(JSON.stringify(obj))
                 cinemaDBdata.cinemaActivity.push(this.state.formData)
                 try {
-                  fetch('http://localhost:5555/cinema/' + cinemaId, {
+                  await fetch('http://localhost:5555/cinema/' + cinemaId, {
                     method: 'PUT',
                     body: JSON.stringify(cinemaDBdata),
                     headers: new Headers({
@@ -167,53 +167,53 @@ class AcitivityForm extends React.Component {
                     .then(res => res.json())
                     .then(obj => {
                       console.log(obj)
-                      let cardData = {
-                        id: this.state.formData.id,
-                        theater: this.state.cinemaDBdataForCard.cinemaName,
-                        title: this.state.formData.title,
-                        content: this.state.formData.content,
-                        imgSrc: this.state.formData.imgSrc,
-                        theaterMap: this.state.formData.theaterMap,
-                        GUINumber: this.state.cinemaDBdataForCard.cinemaTaxid,
-                        website: this.state.cinemaDBdataForCard.cinemaWeb,
-                        email: this.state.cinemaDBdataForCard.cinemaEmail,
-                        phone: this.state.cinemaDBdataForCard.cinemaPhone,
-                        lat: this.state.formData.lat,
-                        lng: this.state.formData.lng,
-                        joinContent: this.state.formData.joinContent,
-                        joinContentCurrentPeople: this.state.formData
-                          .joinContentCurrentPeople,
-                        place: this.state.formData.place,
-                        joinMember: '',
-                      }
-                      try {
-                        fetch('http://localhost:5555/activityCardData/', {
-                          method: 'POST',
-                          body: JSON.stringify(cardData),
-
-                          headers: new Headers({
-                            Accept: 'application/json',
-                            'Content-Type': 'application/json',
-                          }),
-                        })
-                          .then(res => res.json())
-                          .then(obj => {
-                            // alert('已上架完成')
-                            Swal.fire({
-                              // position: 'top-end',
-                              type: 'success',
-                              title:
-                                '<span style="color:#d4d1cc">已上架完成</span>',
-                              showConfirmButton: false,
-                              buttonsStyling: false,
-                              background: '#242b34',
-                              timer: 1000,
-                            }).then()
-                          })
-                      } catch (e) {
-                        console.log(e)
-                      }
                     })
+                  try {
+                    let cardData = {
+                      id: this.state.formData.id,
+                      theater: this.state.cinemaDBdataForCard.cinemaName,
+                      title: this.state.formData.title,
+                      content: this.state.formData.content,
+                      imgSrc: this.state.formData.imgSrc,
+                      theaterMap: this.state.formData.theaterMap,
+                      GUINumber: this.state.cinemaDBdataForCard.cinemaTaxid,
+                      website: this.state.cinemaDBdataForCard.cinemaWeb,
+                      email: this.state.cinemaDBdataForCard.cinemaEmail,
+                      phone: this.state.cinemaDBdataForCard.cinemaPhone,
+                      lat: this.state.formData.lat,
+                      lng: this.state.formData.lng,
+                      joinContent: this.state.formData.joinContent,
+                      joinContentCurrentPeople: this.state.formData
+                        .joinContentCurrentPeople,
+                      place: this.state.formData.place,
+                      joinMember: '',
+                    }
+                    fetch('http://localhost:5555/activityCardData/', {
+                      method: 'POST',
+                      body: JSON.stringify(cardData),
+
+                      headers: new Headers({
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                      }),
+                    })
+                      .then(res => res.json())
+                      .then(obj => {
+                        // alert('已上架完成')
+                        Swal.fire({
+                          // position: 'top-end',
+                          type: 'success',
+                          title:
+                            '<span style="color:#d4d1cc">已上架完成</span>',
+                          showConfirmButton: false,
+                          buttonsStyling: false,
+                          background: '#242b34',
+                          timer: 1000,
+                        }).then()
+                      })
+                  } catch (e) {
+                    console.log(e)
+                  }
                 } catch (e) {
                   console.log(e)
                 }
