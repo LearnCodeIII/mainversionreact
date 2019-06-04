@@ -614,7 +614,7 @@ class Forum extends React.Component {
     // console.log(HoverControl)
     HoverControl.setAttribute(
       'style',
-      'border: none; background: #242B34; box-shadow: rgb(25, 28, 32) 0px 2px 8px; transition:  .3s ease-in-out; background:#343a40;transform: scale(1,1.1)'
+      'border: none; background: #242B34; box-shadow: rgb(25, 28, 32) 0px 2px 8px; transition:  .3s ease-in-out; background:#343a40;height: 110px'
     )
   }
 
@@ -623,7 +623,7 @@ class Forum extends React.Component {
     const HoverControl = document.querySelector('#listHover' + element.id)
     HoverControl.setAttribute(
       'style',
-      'border: none; background: #242B34; box-shadow: 0px 2px 6px #000000; transition:  .3s ease-in-out;'
+      'border: none; background: #2b333d; box-shadow: 0px 2px 6px #000000; transition:  .3s ease-in-out;height: 98px'
     )
   }
   // --------------------------------列表點選控制state供後續渲染文章end-------------

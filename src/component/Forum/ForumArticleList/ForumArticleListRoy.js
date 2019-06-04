@@ -16,8 +16,10 @@ const ForumArticleListRoy = props => {
         onClick={props.onClick}
         style={{
           border: 'none',
-          background: '#242B34',
+          background: '#2b333d',
           boxShadow: ' 0px 2px 6px #000000',
+          height: '98px',
+          transition: '.3s ease-in-out',
         }}
       >
         {/* 列表上排 */}
