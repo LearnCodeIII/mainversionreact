@@ -208,12 +208,13 @@ class AcitivityForm extends React.Component {
                               buttonsStyling: false,
                               background: '#242b34',
                               timer: 1000,
-                            })
-                            setTimeout(
-                              () =>
-                                (window.location.pathname =
-                                  '/CinemaBackMainpage/cinema-activity-inprogress'),
-                              1000
+                            }).then(
+                              setTimeout(
+                                () =>
+                                  (window.location.pathname =
+                                    '/CinemaBackMainpage/cinema-activity-inprogress'),
+                                1000
+                              )
                             )
                           })
                       } catch (e) {
