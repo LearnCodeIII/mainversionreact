@@ -51,19 +51,32 @@ class MemberEditInfo extends React.Component {
       console.log(e)
     }
   }
-  componentWillReceiveProps() {
-    //若不設定，當頁刷新會無資料
-    // console.log(this.state.thisData == 0)
-    if (this.state.thisData == 0) {
-      //如果state中的資料為空(設定""或{}無效，必須是0)，則將props資料設定給state
-      this.setState({ thisData: this.props.thisData })
-      this.setState({ thisfavType: this.props.thisData['fav_type'] })
+  // componentWillReceiveProps() {
+  //   //若不設定，當頁刷新會無資料
+  //   // console.log(this.state.thisData == 0)
+  //   if (this.state.thisData == 0) {
+  //     //如果state中的資料為空(設定""或{}無效，必須是0)，則將props資料設定給state
+  //     this.setState({ thisData: this.props.thisData })
+  //     this.setState({ thisfavType: this.props.thisData['fav_type'] })
+  //   }
+  //   // 另外儲存一份原始資料...比對暱稱時要用來過濾掉自己原本的名稱
+  //   this.setState({ originData: this.props.thisData })
+  // }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('childDerived')
+    // this.setState({ thisData: nextProps.thisData }) 這不能這樣setStae，要用下面的寫法
+
+    let stateToBeReturned = null
+    if (prevState.thisData == 0) {
+      stateToBeReturned = {
+        ...prevState,
+        thisData: nextProps.thisData,
+        originData: nextProps.thisData,
+        thisfavType: nextProps.thisData['fav_type'],
+      }
     }
-    // 另外儲存一份原始資料...比對暱稱時要用來過濾掉自己原本的名稱
-    this.setState({ originData: this.props.thisData })
   }
-
-
   //輸入框change事件
   handleInputTextChange = event => {
     console.log(event.target)
