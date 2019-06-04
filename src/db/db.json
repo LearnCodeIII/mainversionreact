@@ -2345,7 +2345,7 @@
         "7"
       ],
       "collectActivity": "m1559406546061a1558948500794a1558948627377a1559406546061",
-      "collectActivityJoin": "a1559406546061",
+      "collectActivityJoin": "",
       "collectForum": [],
       "markList": [
         {
@@ -2898,7 +2898,7 @@
       "cinemaD3guessLook": 34,
       "cinemaD3memberLook": 15,
       "cinemaD3memberJoin": 10,
-      "cinemaD3memberCancel": 5
+      "cinemaD3memberCancel": 6
     },
     {
       "id": "c1559487285640",
