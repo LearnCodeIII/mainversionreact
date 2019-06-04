@@ -41,7 +41,7 @@ class ArticleCommentInput extends React.Component {
   render() {
     return (
       <>
-        <div className="d-flex my-4">
+        <div className="d-flex my-4 input-group">
           <input
             id="commentInput"
             onChange={this.props.handleChange}
@@ -54,12 +54,11 @@ class ArticleCommentInput extends React.Component {
           />
           <div class="input-group-append">
             <button
-              class="btn btn-warning nomarginBtn col"
-              type="button"
+              class="btn btn_Subscribe nomarginBtn"
               id="button-addon2"
               onClick={this.props.goComment}
             >
-              送出留言
+              送出
             </button>
           </div>
         </div>

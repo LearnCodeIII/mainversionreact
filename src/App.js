@@ -132,7 +132,15 @@ class App extends React.Component {
         <ScroolToTop>
           <Navbar bg="light" expand="lg" className={this.state.navbar}>
             <LinkContainer to="/">
-              <Navbar.Brand>.Movieee</Navbar.Brand>
+              <Navbar.Brand>
+                .Movieee
+                {/* <img
+                  src="/images/brand04.png"
+                  width={180}
+                  style={{ verticalAlign: 'bottom' }}
+                  className="mr-3"
+                />  */}
+              </Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse

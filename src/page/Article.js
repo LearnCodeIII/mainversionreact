@@ -28,6 +28,8 @@ class Article extends React.Component {
       isSeached: true,
       mbemerAllData: [],
       memberInfo: [],
+      isHot: false,
+      isNew: false,
     }
     this.byNew = this.byNew.bind(this)
     this.byHot = this.byHot.bind(this)
@@ -87,7 +89,7 @@ class Article extends React.Component {
       data = await res.json()
       console.log(data)
       // 該頁的文章為  第1~5
-      const articleData = data.slice(0, 7)
+      const articleData = data.slice(0, 10)
       const SliderData = data.slice(0, 6)
 
       // 全部資料的長度除以 per page 並且無條件進位
@@ -110,12 +112,40 @@ class Article extends React.Component {
   }
 
   byNew() {
-    const byNewArray = data.reverse()
-    console.log(byNewArray)
-    this.setState({ articleData: byNewArray })
+    // const byNewArray = data.reverse()
+
+    let byNewArray = data.sort(function(a, b) {
+      return (
+        Date.parse(new Date(b.date)) / 1000 -
+        Date.parse(new Date(a.date)) / 1000
+      )
+    })
+
+    let byOldArray = data.sort(function(a, b) {
+      return (
+        Date.parse(new Date(b.date)) / 1000 -
+        Date.parse(new Date(a.date)) / 1000
+      )
+    })
+    this.setState({ isNew: !this.state.isNew })
+    this.setState({ isHot: false })
+
+    if (this.state.isNew) {
+      this.setState({ articleData: byOldArray })
+      console.log(byOldArray)
+      console.log(this.state.isNew)
+    } else {
+      this.setState({ articleData: byNewArray })
+      console.log(byNewArray)
+      console.log(this.state.isNew)
+    }
+
+    // Date.parse(new Date(b.date))
   }
 
   byHot() {
+    this.setState({ isNew: false })
+    this.setState({ isHot: true })
     let byHotArray = data.sort(function(a, b) {
       return b.viewCounter - a.viewCounter
     })
@@ -335,17 +365,29 @@ class Article extends React.Component {
                   className="text-center border-bottom border-light"
                   onClick={this.byNew}
                 >
-                  <h4 className="text-light" style={{ cursor: 'pointer' }}>
-                    最新消息
-                  </h4>{' '}
+                  {this.state.isNew ? (
+                    <h4 className="text-warning" style={{ cursor: 'pointer' }}>
+                      最新消息
+                    </h4>
+                  ) : (
+                    <h4 className="text-light" style={{ cursor: 'pointer' }}>
+                      最新消息
+                    </h4>
+                  )}
                 </div>
                 <div
-                  className="mx-3 text-center border-bottom border-light"
+                  className="mx-4 text-center border-bottom border-light"
                   onClick={this.byHot}
                 >
-                  <h4 className="text-light" style={{ cursor: 'pointer' }}>
-                    熱門文章
-                  </h4>
+                  {this.state.isHot ? (
+                    <h4 className="text-warning" style={{ cursor: 'pointer' }}>
+                      熱門文章
+                    </h4>
+                  ) : (
+                    <h4 className="text-light" style={{ cursor: 'pointer' }}>
+                      熱門文章
+                    </h4>
+                  )}
                 </div>
                 {/* <div className="mx-3 text-center border-bottom border-light">
                 <h4 className="text-light">影評專欄</h4>

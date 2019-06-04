@@ -4,7 +4,9 @@ import {
   FaShareSquare,
   FaCommentAlt,
   FaThumbsUp,
+  FaRegBookmark,
   FaReply,
+  FaHeart,
 } from 'react-icons/fa'
 
 import { ButtonToolbar, OverlayTrigger, Tooltip, Button } from 'react-bootstrap'
@@ -43,25 +45,37 @@ class ArticleBtnGroup extends React.Component {
               placement={'left'}
               overlay={<Tooltip id={`tooltip-${'left'}`}>加入收藏</Tooltip>}
             >
-              <div
-                variant="secondary"
-                className="my-3"
-                onClick={this.props.handleMarkClick}
-              >
-                <FaBookmark style={{ cursor: 'pointer' }} />
-              </div>
+              {this.props.isMarked ? (
+                <div type="" className="">
+                  <FaBookmark
+                    className="my-4  text-warning"
+                    onClick={this.props.handleMarkClick}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </div>
+              ) : (
+                <div type="" className="">
+                  {/* 加入點閱的func */}
+                  <FaRegBookmark
+                    className="my-4 text-warning"
+                    onClick={this.props.handleMarkClick}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </div>
+              )}
             </OverlayTrigger>
             <OverlayTrigger
               placement={'left'}
               overlay={<Tooltip id={`tooltip-${'left'}`}>按讚此篇文章</Tooltip>}
             >
-              <div
-                variant="secondary"
-                className="my-3"
-                onClick={this.props.handleLikeClick}
-              >
-                <FaThumbsUp style={{ cursor: 'pointer' }} />
-              </div>
+              {this.props.isLiked ? (
+                <FaHeart
+                  className="mr-1 text-danger my-3"
+                  style={{ cursor: 'pointer' }}
+                />
+              ) : (
+                <FaHeart className="mr-1" style={{ cursor: 'pointer' }} />
+              )}
             </OverlayTrigger>
             {/* 分享 暫無功能 */}
             {/* <OverlayTrigger

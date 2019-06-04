@@ -44,7 +44,7 @@ class Footer extends React.Component {
             <div className="">
               <h3 className="mb-3">訂閱我們</h3>
 
-              <div className="input-group" style={{ maxWidth: 320 }}>
+              <div className="input-group" style={{ maxWidth: 360 }}>
                 <input
                   type="text"
                   className="form-control inp_email"
@@ -231,18 +231,18 @@ class Footer extends React.Component {
             {/* <h2 style={{ display: 'inline' }} className="mr-3">
               .Movieee
             </h2> */}
-            {/* <img
+            <img
               src="/images/brand04.png"
               width={160}
               style={{ verticalAlign: 'middle' }}
               className="mr-3"
-            /> */}
-            <img
+            />
+            {/* <img
               src="/images/brand03.png"
               width={170}
               style={{ verticalAlign: 'text-bottom' }}
               className="mr-3"
-            />
+            /> */}
             enjoy life, &nbsp; every one, &nbsp; every thing
           </div>
           <div className="col-auto mr-auto aling-items-end" />

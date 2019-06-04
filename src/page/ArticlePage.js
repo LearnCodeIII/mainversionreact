@@ -235,24 +235,63 @@ class ArticlePage extends React.Component {
       }
       // this.forceUpdate()
     } else {
-      Swal.fire({
-        // position: 'top-end',
-        title: '請先登入會員',
-        text: '請點選確認繼續或取消離開',
-        type: 'question',
-        showCancelButton: true,
-        confirmButtonText: '確認',
-        cancelButtonText: '取消',
-        // cancelButtonColor: ' #d33',
-        confirmButtonClass: ' btn-warning',
-        confirmButtonColor: '#ffa510',
-        background: '#242b34',
-      }).then(result => {
-        // 確認有按下上傳確認鍵後開始FETCH
-        if (result.value) {
-          window.location.href = '/LoginSign'
-        }
-      })
+      let newRes = {
+        aid: +this.state.thisId,
+        date: new Date().toLocaleString('chinese', {
+          hour12: false,
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+        }),
+        // new Date().toDateString(),
+        authorID: 'unknow',
+        author: '匿名',
+        avatar: 'null.jpg',
+        content: this.state.inputText,
+      }
+      try {
+        const res = await fetch('http://localhost:5555/articleComment', {
+          method: 'POST',
+          body: JSON.stringify(newRes),
+          headers: new Headers({
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }),
+        })
+        const newComment = await res.json()
+        // console.log(newComment)
+        // const newCommentData = newComment.filter(
+        //   item => item.aid === +this.state.thisId
+        // )
+        // fetch新資料後的判斷渲染套餐
+        const newI = this.state.articleComment.find(
+          item => +item.id === +newComment.id
+        )
+          ? true
+          : // ? this.setState({ articleComment: this.state.articleComment })
+            this.setState({
+              articleComment: [newComment, ...this.state.articleComment],
+            })
+
+        console.log(newComment)
+        console.log(newI)
+        // 清空輸入框
+        document.querySelector('#commentInput').value = []
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'center',
+          showConfirmButton: false,
+          timer: 1500,
+        })
+        Toast.fire({
+          type: 'success',
+          title: '留言成功!!',
+        })
+      } catch (err) {
+        console.log(err)
+      }
     }
   }
 
@@ -268,10 +307,31 @@ class ArticlePage extends React.Component {
       this.setState({ isMarked: !this.state.isMarked })
 
       if (this.state.isMarked) {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'center',
+          showConfirmButton: false,
+          timer: 2000,
+        })
+        Toast.fire({
+          type: 'success',
+          title: '已移除收藏!!',
+        })
+
         newMark = newMark.filter(element => {
           return element !== this.state.thisId
         })
       } else {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'center',
+          showConfirmButton: false,
+          timer: 2000,
+        })
+        Toast.fire({
+          type: 'success',
+          title: '已收藏!!',
+        })
         newMark = [this.state.thisId, ...this.state.memberInfo]
         console.log(typeof this.state.thisId + ':' + this.state.thisId)
         console.log('false')
@@ -441,6 +501,8 @@ class ArticlePage extends React.Component {
             <ArticleBtnGroup
               handleMarkClick={this.handleMarkClick}
               handleLikeClick={this.handleLikeClick}
+              isMarked={this.state.isMarked}
+              isLiked={this.state.isLiked}
             />
           </div>
           <Row className="">

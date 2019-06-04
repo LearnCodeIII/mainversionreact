@@ -806,7 +806,7 @@ class BackSidenav extends React.Component {
     // console.log(prevState)
   }
 
-  handleCollect = id => async () => {
+  handleCollect = async id => {
     const memberId = sessionStorage.getItem('memberId')
     if (memberId !== null) {
       try {
@@ -826,17 +826,24 @@ class BackSidenav extends React.Component {
             .toString()
             .replace(/,/g, '')
           // alert('已取消收藏')
-          Toast.fire({
+          Swal.fire({
+            // position: 'top-end',
             type: 'success',
-            title: '已取消收藏',
+            title: '<span style="color:#d4d1cc">已取消收藏</span>',
+            showConfirmButton: false,
+            buttonsStyling: false,
+            background: '#242b34',
           })
-          // window.location.reload()
         } else {
           data.collectActivity += id
           // alert('已加入收藏')
-          Toast.fire({
+          Swal.fire({
+            // position: 'top-end',
             type: 'success',
-            title: '已加入收藏',
+            title: '<span style="color:#d4d1cc">已加入收藏</span>',
+            showConfirmButton: false,
+            buttonsStyling: false,
+            background: '#242b34',
           })
         }
         this.setState({ collectActivity: data.collectActivity })

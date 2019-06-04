@@ -41,12 +41,11 @@ class ResCommentInput extends React.Component {
             />
             <div class="input-group-append">
               <button
-                class="btn btn-warning nomarginBtn"
-                type="button"
+                class="btn btn_Subscribe nomarginBtn"
                 id="button-addon2"
                 onClick={this.props.goResComment}
               >
-                送出留言
+                送出
               </button>
             </div>
           </div>

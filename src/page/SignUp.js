@@ -574,7 +574,7 @@ class SignUp extends React.Component {
                   Swal.fire({
                     type: 'success',
                     title: '<span style="color:#d4d1cc">戲院註冊成功</span>',
-                    text: '<span style="color:#d4d1cc">請重新登入</span>',
+                    html: '<span style="color:#d4d1cc">請重新登入</span>',
                     showConfirmButton: true,
                     confirmButtonClass: 'btn btn-warning',
                     confirmButtonColor: '#ffa510',
