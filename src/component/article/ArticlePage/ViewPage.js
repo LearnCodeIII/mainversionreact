@@ -87,11 +87,13 @@ class ViewPage extends React.Component {
                       <FaHeart
                         className="mb-1 mr-1 text-danger"
                         style={{ cursor: 'pointer' }}
+                        onClick={this.props.handleLikeClick}
                       />
                     ) : (
                       <FaHeart
                         className="mb-1 mr-1"
                         style={{ cursor: 'pointer' }}
+                        onClick={this.props.handleLikeClick}
                       />
                     )}
                     {this.props.likeCounter}

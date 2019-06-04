@@ -72,9 +72,14 @@ class ArticleBtnGroup extends React.Component {
                 <FaHeart
                   className="mr-1 text-danger my-3"
                   style={{ cursor: 'pointer' }}
+                  onClick={this.props.handleLikeClick}
                 />
               ) : (
-                <FaHeart className="mr-1" style={{ cursor: 'pointer' }} />
+                <FaHeart
+                  className="mr-1"
+                  style={{ cursor: 'pointer' }}
+                  onClick={this.props.handleLikeClick}
+                />
               )}
             </OverlayTrigger>
             {/* 分享 暫無功能 */}
