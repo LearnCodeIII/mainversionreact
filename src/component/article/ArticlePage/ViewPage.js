@@ -39,7 +39,12 @@ class ViewPage extends React.Component {
     return (
       <>
         <Row className="mt-5 pt-5 justify-content-center">
-          <Col md={8} sm={12} className="box-shadow">
+          <Col
+            md={8}
+            sm={12}
+            className="box-shadow"
+            style={{ backgroundColor: '#2b333d' }}
+          >
             <div class="mb-3 p-3">
               <div
                 className="my-4 d-flex justify-content-center"

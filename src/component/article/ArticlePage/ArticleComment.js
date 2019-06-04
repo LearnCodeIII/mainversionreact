@@ -156,7 +156,12 @@ class ArticleComment extends React.Component {
     return (
       <>
         <Row className="my-3 justify-content-md-center">
-          <Col md={8} xs={12} className="box-shadow p-4">
+          <Col
+            md={8}
+            xs={12}
+            className="box-shadow p-4"
+            style={{ backgroundColor: '#2b333d' }}
+          >
             <Row class="media-body d-flex py-5 justify-content-center">
               <Col xs={4} md={2} className="row">
                 <div className="avatar mx-2">

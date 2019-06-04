@@ -147,7 +147,10 @@ class ArticleCard extends React.Component {
       <>
         <Row className="my-3 articleCard justify-content-center">
           <Col className="justify-content-center" xs={12} md={11}>
-            <div className="mb-3 article-card">
+            <div
+              className="mb-3 article-card "
+              style={{ backgroundColor: '#2b333d' }}
+            >
               {this.props.isMarked ? (
                 <div type="" className="">
                   <FaBookmark
